@@ -38,12 +38,12 @@ namespace HalabchiCRM
         public string FName { get; set; }
         [MaxLength(50)]
         public string LName { get; set; }
-        [MaxLength(11)]
+        [MaxLength(25)]
         public string Mobile { get; set; }
         [MaxLength(50)]
         public string Email { get; set; }
         public byte SecurityQuestion { get; set; }
-        [MaxLength(50)]
+        [MaxLength(90)]
         public string SecurityQAnswer { get; set; }
         public bool IsAdmin { get; set; }
     }

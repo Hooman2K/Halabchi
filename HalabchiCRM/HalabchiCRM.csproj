@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AESAlgorithm.cs" />
     <Compile Include="AppInfo.cs" />
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
