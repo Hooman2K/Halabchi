@@ -11,6 +11,7 @@ namespace HalabchiCRM
         public static string Username = "";
         public static string FName = "";
         public static string LName = "";
+        public static string Mobile = "";
         public static bool IsAdmin = false;
     }
 }

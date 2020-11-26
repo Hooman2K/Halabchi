@@ -17,5 +17,10 @@ namespace HalabchiCRM
         {
             InitializeComponent();
         }
+
+        private void frmRegisterAdmin_Load(object sender, EventArgs e)
+        {
+            cmbxSecurityQuestion.SelectedIndex = 0;
+        }
     }
 }
