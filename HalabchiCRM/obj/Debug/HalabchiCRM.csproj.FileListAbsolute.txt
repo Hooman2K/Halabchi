@@ -29,3 +29,4 @@ C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmM
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmRegisterAdmin.resources
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\DevComponents.DotNetBar2.dll
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmLogin.resources

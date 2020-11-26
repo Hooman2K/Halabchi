@@ -58,8 +58,8 @@ namespace HalabchiCRM
                     }
                     else
                     {
-                        frmMain main = new frmMain();
-                        main.Show();
+                        frmLogin login = new frmLogin();
+                        login.Show();
                         this.Close();
                     }
                 }
