@@ -1,0 +1,14 @@
+c:\users\hooman\documents\visual studio 2015\Projects\HalabchiCRM\HalabchiCRM\bin\Debug\HalabchiCRM.exe.config
+c:\users\hooman\documents\visual studio 2015\Projects\HalabchiCRM\HalabchiCRM\obj\Debug\HalabchiCRM.csprojResolveAssemblyReference.cache
+c:\users\hooman\documents\visual studio 2015\Projects\HalabchiCRM\HalabchiCRM\obj\Debug\HalabchiCRM.frmSplashScreen.resources
+c:\users\hooman\documents\visual studio 2015\Projects\HalabchiCRM\HalabchiCRM\obj\Debug\HalabchiCRM.Properties.Resources.resources
+c:\users\hooman\documents\visual studio 2015\Projects\HalabchiCRM\HalabchiCRM\obj\Debug\HalabchiCRM.csproj.GenerateResource.Cache
+c:\users\hooman\documents\visual studio 2015\Projects\HalabchiCRM\HalabchiCRM\bin\Debug\HalabchiCRM.exe
+c:\users\hooman\documents\visual studio 2015\Projects\HalabchiCRM\HalabchiCRM\bin\Debug\HalabchiCRM.pdb
+c:\users\hooman\documents\visual studio 2015\Projects\HalabchiCRM\HalabchiCRM\bin\Debug\EntityFramework.dll
+c:\users\hooman\documents\visual studio 2015\Projects\HalabchiCRM\HalabchiCRM\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\hooman\documents\visual studio 2015\Projects\HalabchiCRM\HalabchiCRM\bin\Debug\EntityFramework.xml
+c:\users\hooman\documents\visual studio 2015\Projects\HalabchiCRM\HalabchiCRM\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\hooman\documents\visual studio 2015\Projects\HalabchiCRM\HalabchiCRM\obj\Debug\HalabchiCRM.exe
+c:\users\hooman\documents\visual studio 2015\Projects\HalabchiCRM\HalabchiCRM\obj\Debug\HalabchiCRM.pdb
+C:\Users\Hooman\Documents\Visual Studio 2015\Projects\HalabchiCRM\HalabchiCRM\bin\Debug\FarsiMessageBox.dll
