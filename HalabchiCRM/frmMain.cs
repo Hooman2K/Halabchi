@@ -7,10 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevComponents.DotNetBar;
 
 namespace HalabchiCRM
 {
-    public partial class frmMain : Form
+    public partial class frmMain : Office2007Form
     {
         public frmMain()
         {
