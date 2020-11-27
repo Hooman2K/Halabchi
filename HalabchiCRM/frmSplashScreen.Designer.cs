@@ -39,12 +39,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("IranNastaliq", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(134, 31);
+            this.label1.Font = new System.Drawing.Font("IranNastaliq", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label1.Location = new System.Drawing.Point(125, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 74);
+            this.label1.Size = new System.Drawing.Size(196, 87);
             this.label1.TabIndex = 0;
-            this.label1.Text = "شرکت فولاد حلب چی";
+            this.label1.Text = "صنایع فولاد حلب چی";
             // 
             // timer1
             // 

@@ -46,13 +46,13 @@
             this.txtSecurityAnswer = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtEMail = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.cmbxSecurityQuestion = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.btnRegister = new DevComponents.DotNetBar.ButtonX();
-            this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.comboItem1 = new DevComponents.Editors.ComboItem();
             this.comboItem2 = new DevComponents.Editors.ComboItem();
             this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.comboItem4 = new DevComponents.Editors.ComboItem();
             this.comboItem5 = new DevComponents.Editors.ComboItem();
+            this.btnRegister = new DevComponents.DotNetBar.ButtonX();
+            this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.SuspendLayout();
             // 
             // labelX1
@@ -313,6 +313,26 @@
             this.cmbxSecurityQuestion.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmbxSecurityQuestion.TabIndex = 7;
             // 
+            // comboItem1
+            // 
+            this.comboItem1.Text = "نام کتاب مورد علاقه شما چیست ؟";
+            // 
+            // comboItem2
+            // 
+            this.comboItem2.Text = "نام اتومبیل مورد علاقه شما چیست ؟";
+            // 
+            // comboItem3
+            // 
+            this.comboItem3.Text = "رشته ورزشی مورد علاقه شما چیست ؟";
+            // 
+            // comboItem4
+            // 
+            this.comboItem4.Text = "نام فیلم مورد علاقه شما چیست ؟";
+            // 
+            // comboItem5
+            // 
+            this.comboItem5.Text = "شما در کدام شهر متولد شدید ؟";
+            // 
             // btnRegister
             // 
             this.btnRegister.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -334,26 +354,6 @@
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "لغو";
-            // 
-            // comboItem1
-            // 
-            this.comboItem1.Text = "نام کتاب مورد علاقه شما چیست ؟";
-            // 
-            // comboItem2
-            // 
-            this.comboItem2.Text = "نام اتومبیل مورد علاقه شما چیست ؟";
-            // 
-            // comboItem3
-            // 
-            this.comboItem3.Text = "رشته ورزشی مورد علاقه شما چیست ؟";
-            // 
-            // comboItem4
-            // 
-            this.comboItem4.Text = "نام فیلم مورد علاقه شما چیست ؟";
-            // 
-            // comboItem5
-            // 
-            this.comboItem5.Text = "شما در کدان شهر متولد شدید ؟";
             // 
             // frmRegisterAdmin
             // 

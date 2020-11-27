@@ -19,7 +19,7 @@ namespace HalabchiCRM.Migrations
                 Setting set = new Setting()
                 {
                     AdminRegister = false,
-                    Theme = "Black"
+                    Theme = "Blue"
                 };
                 context.Settings.Add(set);
                 base.Seed(context);
