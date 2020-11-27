@@ -160,7 +160,7 @@
             // 
             // 
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX8.Location = new System.Drawing.Point(261, 244);
+            this.labelX8.Location = new System.Drawing.Point(267, 244);
             this.labelX8.Name = "labelX8";
             this.labelX8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX8.Size = new System.Drawing.Size(123, 18);

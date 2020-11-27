@@ -63,6 +63,12 @@
   <ItemGroup>
     <Compile Include="AESAlgorithm.cs" />
     <Compile Include="AppInfo.cs" />
+    <Compile Include="frmForgetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForgetPassword.Designer.cs">
+      <DependentUpon>frmForgetPassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmForgetPassword.resx">
+      <DependentUpon>frmForgetPassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
