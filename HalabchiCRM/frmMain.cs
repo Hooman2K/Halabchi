@@ -16,6 +16,17 @@ namespace HalabchiCRM
         public frmMain()
         {
             InitializeComponent();
+
+            using (var db = new HalabchiDB())
+            {
+                var set = db.Settings.Where(u => u.ID == 1).FirstOrDefault();
+                switch (set.Theme)
+                {
+                    case "Black": styleManager1.ManagerStyle = eStyle.Office2010Black; break;
+                    case "Silver": styleManager1.ManagerStyle = eStyle.Office2010Silver; break;
+                    case "Blue": styleManager1.ManagerStyle = eStyle.Office2010Blue; break;
+                }
+            }
         }
     }
 }
