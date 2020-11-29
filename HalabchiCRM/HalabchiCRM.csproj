@@ -63,12 +63,6 @@
   <ItemGroup>
     <Compile Include="AESAlgorithm.cs" />
     <Compile Include="AppInfo.cs" />
-    <Compile Include="frmChangeTheme.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmChangeTheme.Designer.cs">
-      <DependentUpon>frmChangeTheme.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmForgetPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,9 +97,6 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmChangeTheme.resx">
-      <DependentUpon>frmChangeTheme.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmForgetPassword.resx">
       <DependentUpon>frmForgetPassword.cs</DependentUpon>
     </EmbeddedResource>

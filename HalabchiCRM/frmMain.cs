@@ -31,8 +31,7 @@ namespace HalabchiCRM
 
         private void buttonItem2_Click(object sender, EventArgs e)
         {
-            frmChangeTheme theme = new frmChangeTheme();
-            theme.ShowDialog();
+
         }
     }
 }

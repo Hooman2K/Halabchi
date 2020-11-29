@@ -31,4 +31,3 @@ C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\DevComponents.Do
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\DevComponents.DotNetBar2.xml
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmLogin.resources
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmForgetPassword.resources
-C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmChangeTheme.resources
