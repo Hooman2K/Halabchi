@@ -16,22 +16,34 @@ namespace HalabchiCRM
         public frmMain()
         {
             InitializeComponent();
-
-            using (var db = new HalabchiDB())
+            //using (var db = new HalabchiDB())
+            //{
+            //    var set = db.Settings.Where(u => u.ID == 1).FirstOrDefault();
+            //    switch (set.Theme)
+            //    {
+            //        case "مشکی": styleManager1.ManagerStyle = eStyle.Office2010Black; cmbxTheme.SelectedIndex = 2; break;
+            //        case "خاکستری": styleManager1.ManagerStyle = eStyle.Office2010Silver; cmbxTheme.SelectedIndex = 1; break;
+            //        case "آبی": styleManager1.ManagerStyle = eStyle.Office2010Blue; cmbxTheme.SelectedIndex = 0; break;
+            //    }
+            //}
+        }
+        private void ChangeTheme(string theme)
+        {
+            switch (theme)
             {
-                var set = db.Settings.Where(u => u.ID == 1).FirstOrDefault();
-                switch (set.Theme)
-                {
-                    case "Black": styleManager1.ManagerStyle = eStyle.Office2010Black; break;
-                    case "Silver": styleManager1.ManagerStyle = eStyle.Office2010Silver; break;
-                    case "Blue": styleManager1.ManagerStyle = eStyle.Office2010Blue; break;
-                }
+                case "مشکی": styleManager1.ManagerStyle = eStyle.Office2010Black; cmbxTheme.SelectedIndex = 2; break;
+                case "خاکستری": styleManager1.ManagerStyle = eStyle.Office2010Silver; cmbxTheme.SelectedIndex = 1; break;
+                case "آبی": styleManager1.ManagerStyle = eStyle.Office2010Blue; cmbxTheme.SelectedIndex = 0; break;
             }
         }
 
-        private void buttonItem2_Click(object sender, EventArgs e)
+        private void frmMain_Load(object sender, EventArgs e)
         {
-
+            using (var db = new HalabchiDB())
+            {
+                var set = db.Settings.Where(u => u.ID == 1).FirstOrDefault();
+                ChangeTheme(set.Theme);
+            }
         }
     }
 }
