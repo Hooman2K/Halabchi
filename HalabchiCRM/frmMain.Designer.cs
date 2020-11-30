@@ -53,6 +53,9 @@
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.cmbxTheme = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem1 = new DevComponents.Editors.ComboItem();
+            this.comboItem2 = new DevComponents.Editors.ComboItem();
+            this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.btnSaveTheme = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
@@ -69,10 +72,8 @@
             this.ribbonTabItem6 = new DevComponents.DotNetBar.RibbonTabItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
-            this.styleManager2 = new DevComponents.DotNetBar.StyleManager(this.components);
-            this.comboItem1 = new DevComponents.Editors.ComboItem();
-            this.comboItem2 = new DevComponents.Editors.ComboItem();
-            this.comboItem3 = new DevComponents.Editors.ComboItem();
+            this.lblWelCome = new DevComponents.DotNetBar.LabelX();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
@@ -122,9 +123,9 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel6);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel6);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -166,6 +167,7 @@
             // ribbonPanel1
             // 
             this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel1.Controls.Add(this.lblWelCome);
             this.ribbonPanel1.Controls.Add(this.buttonX3);
             this.ribbonPanel1.Controls.Add(this.buttonX2);
             this.ribbonPanel1.Controls.Add(this.buttonX1);
@@ -470,6 +472,18 @@
             this.cmbxTheme.TabIndex = 4;
             this.cmbxTheme.SelectedIndexChanged += new System.EventHandler(this.cmbxTheme_SelectedIndexChanged);
             // 
+            // comboItem1
+            // 
+            this.comboItem1.Text = "آبی";
+            // 
+            // comboItem2
+            // 
+            this.comboItem2.Text = "خاکستری";
+            // 
+            // comboItem3
+            // 
+            this.comboItem3.Text = "مشکی";
+            // 
             // btnSaveTheme
             // 
             this.btnSaveTheme.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -490,7 +504,7 @@
             this.ribbonPanel4.Location = new System.Drawing.Point(0, 25);
             this.ribbonPanel4.Name = "ribbonPanel4";
             this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel4.Size = new System.Drawing.Size(514, 283);
+            this.ribbonPanel4.Size = new System.Drawing.Size(514, 361);
             // 
             // 
             // 
@@ -513,7 +527,7 @@
             this.ribbonPanel6.Location = new System.Drawing.Point(0, 25);
             this.ribbonPanel6.Name = "ribbonPanel6";
             this.ribbonPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel6.Size = new System.Drawing.Size(514, 283);
+            this.ribbonPanel6.Size = new System.Drawing.Size(514, 361);
             // 
             // 
             // 
@@ -536,7 +550,7 @@
             this.ribbonPanel3.Location = new System.Drawing.Point(0, 25);
             this.ribbonPanel3.Name = "ribbonPanel3";
             this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel3.Size = new System.Drawing.Size(514, 283);
+            this.ribbonPanel3.Size = new System.Drawing.Size(514, 361);
             // 
             // 
             // 
@@ -562,7 +576,7 @@
             this.ribbonPanel2.Location = new System.Drawing.Point(0, 25);
             this.ribbonPanel2.Name = "ribbonPanel2";
             this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel2.Size = new System.Drawing.Size(514, 283);
+            this.ribbonPanel2.Size = new System.Drawing.Size(514, 361);
             // 
             // 
             // 
@@ -657,22 +671,26 @@
             // 
             this.qatCustomizeItem1.Name = "qatCustomizeItem1";
             // 
-            // styleManager2
+            // lblWelCome
             // 
-            this.styleManager2.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2010Blue;
-            this.styleManager2.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(163)))), ((int)(((byte)(26))))));
+            this.lblWelCome.BackColor = System.Drawing.Color.Transparent;
             // 
-            // comboItem1
             // 
-            this.comboItem1.Text = "آبی";
             // 
-            // comboItem2
+            this.lblWelCome.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblWelCome.Font = new System.Drawing.Font("IranNastaliq", 30.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblWelCome.Location = new System.Drawing.Point(18, 100);
+            this.lblWelCome.Name = "lblWelCome";
+            this.lblWelCome.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblWelCome.Size = new System.Drawing.Size(483, 207);
+            this.lblWelCome.TabIndex = 6;
+            this.lblWelCome.Text = "به شرکت صنایع فولاد حلب چی خوش آمدید";
+            this.lblWelCome.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
-            this.comboItem2.Text = "خاکستری";
+            // timer1
             // 
-            // comboItem3
-            // 
-            this.comboItem3.Text = "مشکی";
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmMain
             // 
@@ -718,7 +736,6 @@
         private DevComponents.DotNetBar.RibbonTabItem ribbonTabItem2;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
         private DevComponents.DotNetBar.QatCustomizeItem qatCustomizeItem1;
-        private DevComponents.DotNetBar.StyleManager styleManager2;
         private DevComponents.DotNetBar.ButtonX buttonX1;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel3;
         private DevComponents.DotNetBar.RibbonTabItem ribbonTabItem3;
@@ -750,5 +767,7 @@
         private DevComponents.Editors.ComboItem comboItem1;
         private DevComponents.Editors.ComboItem comboItem2;
         private DevComponents.Editors.ComboItem comboItem3;
+        private DevComponents.DotNetBar.LabelX lblWelCome;
+        private System.Windows.Forms.Timer timer1;
     }
 }

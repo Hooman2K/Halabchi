@@ -27,6 +27,7 @@ namespace HalabchiCRM
             //    }
             //}
         }
+        int _time=0;
         private void ChangeTheme(string theme)
         {
             switch (theme)
@@ -54,6 +55,17 @@ namespace HalabchiCRM
         private void cmbxTheme_SelectedIndexChanged(object sender, EventArgs e)
         {
             ChangeTheme(cmbxTheme.Text);
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (_time < 10)
+                _time++;
+            else
+            {
+                timer1.Enabled = false;
+                lblWelCome.Visible = false;
+            }
         }
     }
 }
