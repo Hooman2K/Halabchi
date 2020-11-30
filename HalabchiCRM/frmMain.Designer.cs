@@ -39,7 +39,6 @@
             this.lblWelCome = new DevComponents.DotNetBar.LabelX();
             this.btnSearchCostomer = new DevComponents.DotNetBar.ButtonX();
             this.btnAddCostomer = new DevComponents.DotNetBar.ButtonX();
-            this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.grbxRestore = new System.Windows.Forms.GroupBox();
@@ -58,28 +57,15 @@
             this.comboItem2 = new DevComponents.Editors.ComboItem();
             this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.btnSaveTheme = new DevComponents.DotNetBar.ButtonX();
-            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
-            this.ribbonTabItem2 = new DevComponents.DotNetBar.RibbonTabItem();
-            this.ribbonTabItem3 = new DevComponents.DotNetBar.RibbonTabItem();
-            this.ribbonTabItem4 = new DevComponents.DotNetBar.RibbonTabItem();
-            this.ribbonTabItem5 = new DevComponents.DotNetBar.RibbonTabItem();
-            this.ribbonTabItem6 = new DevComponents.DotNetBar.RibbonTabItem();
-            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
-            this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnSearchContract = new DevComponents.DotNetBar.ButtonX();
-            this.btnNewContract = new DevComponents.DotNetBar.ButtonX();
+            this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
-            this.comboItem5 = new DevComponents.Editors.ComboItem();
-            this.comboItem4 = new DevComponents.Editors.ComboItem();
-            this.comboItem6 = new DevComponents.Editors.ComboItem();
-            this.comboItem7 = new DevComponents.Editors.ComboItem();
-            this.comboItem8 = new DevComponents.Editors.ComboItem();
             this.btnEdit = new DevComponents.DotNetBar.ButtonX();
             this.cmbxSecurityQuestion = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem8 = new DevComponents.Editors.ComboItem();
+            this.comboItem7 = new DevComponents.Editors.ComboItem();
+            this.comboItem6 = new DevComponents.Editors.ComboItem();
+            this.comboItem4 = new DevComponents.Editors.ComboItem();
+            this.comboItem5 = new DevComponents.Editors.ComboItem();
             this.txtSecurityAnswer = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtEMail = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtMobile = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -97,14 +83,28 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
+            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
+            this.btnSearchContract = new DevComponents.DotNetBar.ButtonX();
+            this.btnNewContract = new DevComponents.DotNetBar.ButtonX();
+            this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
+            this.ribbonTabItem2 = new DevComponents.DotNetBar.RibbonTabItem();
+            this.ribbonTabItem3 = new DevComponents.DotNetBar.RibbonTabItem();
+            this.ribbonTabItem4 = new DevComponents.DotNetBar.RibbonTabItem();
+            this.ribbonTabItem6 = new DevComponents.DotNetBar.RibbonTabItem();
+            this.ribbonTabItem5 = new DevComponents.DotNetBar.RibbonTabItem();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
-            this.ribbonPanel6.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             this.grbxRestore.SuspendLayout();
             this.grbxBackup.SuspendLayout();
             this.groupPanel1.SuspendLayout();
+            this.ribbonPanel6.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -250,49 +250,6 @@
             this.btnAddCostomer.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnAddCostomer.TabIndex = 3;
             this.btnAddCostomer.Text = "ایجاد مشتری جدید";
-            // 
-            // ribbonPanel6
-            // 
-            this.ribbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel6.Controls.Add(this.btnCancel);
-            this.ribbonPanel6.Controls.Add(this.btnEdit);
-            this.ribbonPanel6.Controls.Add(this.cmbxSecurityQuestion);
-            this.ribbonPanel6.Controls.Add(this.txtSecurityAnswer);
-            this.ribbonPanel6.Controls.Add(this.txtEMail);
-            this.ribbonPanel6.Controls.Add(this.txtMobile);
-            this.ribbonPanel6.Controls.Add(this.txtLName);
-            this.ribbonPanel6.Controls.Add(this.txtFName);
-            this.ribbonPanel6.Controls.Add(this.txtRePassword);
-            this.ribbonPanel6.Controls.Add(this.txtPassword);
-            this.ribbonPanel6.Controls.Add(this.txtUserName);
-            this.ribbonPanel6.Controls.Add(this.labelX9);
-            this.ribbonPanel6.Controls.Add(this.labelX8);
-            this.ribbonPanel6.Controls.Add(this.labelX7);
-            this.ribbonPanel6.Controls.Add(this.labelX6);
-            this.ribbonPanel6.Controls.Add(this.labelX5);
-            this.ribbonPanel6.Controls.Add(this.labelX4);
-            this.ribbonPanel6.Controls.Add(this.labelX3);
-            this.ribbonPanel6.Controls.Add(this.labelX2);
-            this.ribbonPanel6.Controls.Add(this.labelX10);
-            this.ribbonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel6.Location = new System.Drawing.Point(0, 25);
-            this.ribbonPanel6.Name = "ribbonPanel6";
-            this.ribbonPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel6.Size = new System.Drawing.Size(514, 361);
-            // 
-            // 
-            // 
-            this.ribbonPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel6.TabIndex = 6;
-            this.ribbonPanel6.Visible = false;
             // 
             // ribbonPanel5
             // 
@@ -568,149 +525,48 @@
             this.btnSaveTheme.Text = "ذخیره";
             this.btnSaveTheme.Click += new System.EventHandler(this.btnSaveTheme_Click);
             // 
-            // ribbonPanel4
+            // ribbonPanel6
             // 
-            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel4.Location = new System.Drawing.Point(0, 25);
-            this.ribbonPanel4.Name = "ribbonPanel4";
-            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel4.Size = new System.Drawing.Size(514, 361);
-            // 
-            // 
-            // 
-            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel4.TabIndex = 4;
-            this.ribbonPanel4.Visible = false;
-            // 
-            // ribbonPanel3
-            // 
-            this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel3.Location = new System.Drawing.Point(0, 25);
-            this.ribbonPanel3.Name = "ribbonPanel3";
-            this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel3.Size = new System.Drawing.Size(514, 361);
+            this.ribbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel6.Controls.Add(this.btnCancel);
+            this.ribbonPanel6.Controls.Add(this.btnEdit);
+            this.ribbonPanel6.Controls.Add(this.cmbxSecurityQuestion);
+            this.ribbonPanel6.Controls.Add(this.txtSecurityAnswer);
+            this.ribbonPanel6.Controls.Add(this.txtEMail);
+            this.ribbonPanel6.Controls.Add(this.txtMobile);
+            this.ribbonPanel6.Controls.Add(this.txtLName);
+            this.ribbonPanel6.Controls.Add(this.txtFName);
+            this.ribbonPanel6.Controls.Add(this.txtRePassword);
+            this.ribbonPanel6.Controls.Add(this.txtPassword);
+            this.ribbonPanel6.Controls.Add(this.txtUserName);
+            this.ribbonPanel6.Controls.Add(this.labelX9);
+            this.ribbonPanel6.Controls.Add(this.labelX8);
+            this.ribbonPanel6.Controls.Add(this.labelX7);
+            this.ribbonPanel6.Controls.Add(this.labelX6);
+            this.ribbonPanel6.Controls.Add(this.labelX5);
+            this.ribbonPanel6.Controls.Add(this.labelX4);
+            this.ribbonPanel6.Controls.Add(this.labelX3);
+            this.ribbonPanel6.Controls.Add(this.labelX2);
+            this.ribbonPanel6.Controls.Add(this.labelX10);
+            this.ribbonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel6.Location = new System.Drawing.Point(0, 25);
+            this.ribbonPanel6.Name = "ribbonPanel6";
+            this.ribbonPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel6.Size = new System.Drawing.Size(514, 361);
             // 
             // 
             // 
-            this.ribbonPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.ribbonPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel3.TabIndex = 3;
-            this.ribbonPanel3.Visible = false;
-            // 
-            // ribbonPanel2
-            // 
-            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel2.Controls.Add(this.btnSearchContract);
-            this.ribbonPanel2.Controls.Add(this.btnNewContract);
-            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel2.Location = new System.Drawing.Point(0, 25);
-            this.ribbonPanel2.Name = "ribbonPanel2";
-            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel2.Size = new System.Drawing.Size(514, 361);
-            // 
-            // 
-            // 
-            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel2.TabIndex = 2;
-            this.ribbonPanel2.Visible = false;
-            // 
-            // ribbonTabItem1
-            // 
-            this.ribbonTabItem1.Checked = true;
-            this.ribbonTabItem1.Name = "ribbonTabItem1";
-            this.ribbonTabItem1.Panel = this.ribbonPanel1;
-            this.ribbonTabItem1.Text = "مشتریان";
-            // 
-            // ribbonTabItem2
-            // 
-            this.ribbonTabItem2.Name = "ribbonTabItem2";
-            this.ribbonTabItem2.Panel = this.ribbonPanel2;
-            this.ribbonTabItem2.Text = "قراردادها";
-            // 
-            // ribbonTabItem3
-            // 
-            this.ribbonTabItem3.Name = "ribbonTabItem3";
-            this.ribbonTabItem3.Panel = this.ribbonPanel3;
-            this.ribbonTabItem3.Text = "تولید";
-            // 
-            // ribbonTabItem4
-            // 
-            this.ribbonTabItem4.Name = "ribbonTabItem4";
-            this.ribbonTabItem4.Panel = this.ribbonPanel4;
-            this.ribbonTabItem4.Text = "گزارش گیری";
-            // 
-            // ribbonTabItem5
-            // 
-            this.ribbonTabItem5.Name = "ribbonTabItem5";
-            this.ribbonTabItem5.Panel = this.ribbonPanel5;
-            this.ribbonTabItem5.Text = "تنظیمات";
-            // 
-            // ribbonTabItem6
-            // 
-            this.ribbonTabItem6.Name = "ribbonTabItem6";
-            this.ribbonTabItem6.Panel = this.ribbonPanel6;
-            this.ribbonTabItem6.Text = "ویرایش مشخصات کاربری";
-            // 
-            // buttonItem1
-            // 
-            this.buttonItem1.Name = "buttonItem1";
-            this.buttonItem1.Text = "buttonItem1";
-            // 
-            // qatCustomizeItem1
-            // 
-            this.qatCustomizeItem1.Name = "qatCustomizeItem1";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnSearchContract
-            // 
-            this.btnSearchContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSearchContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSearchContract.Location = new System.Drawing.Point(290, 18);
-            this.btnSearchContract.Name = "btnSearchContract";
-            this.btnSearchContract.Size = new System.Drawing.Size(75, 32);
-            this.btnSearchContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSearchContract.TabIndex = 10;
-            this.btnSearchContract.Text = "جست و جو";
-            // 
-            // btnNewContract
-            // 
-            this.btnNewContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnNewContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnNewContract.Location = new System.Drawing.Point(371, 18);
-            this.btnNewContract.Name = "btnNewContract";
-            this.btnNewContract.Size = new System.Drawing.Size(130, 32);
-            this.btnNewContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnNewContract.TabIndex = 9;
-            this.btnNewContract.Text = "ایجاد قرارداد جدید";
+            this.ribbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel6.TabIndex = 6;
+            this.ribbonPanel6.Visible = false;
             // 
             // btnCancel
             // 
@@ -722,26 +578,6 @@
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnCancel.TabIndex = 30;
             this.btnCancel.Text = "لغو";
-            // 
-            // comboItem5
-            // 
-            this.comboItem5.Text = "شما در کدام شهر متولد شدید ؟";
-            // 
-            // comboItem4
-            // 
-            this.comboItem4.Text = "نام فیلم مورد علاقه شما چیست ؟";
-            // 
-            // comboItem6
-            // 
-            this.comboItem6.Text = "رشته ورزشی مورد علاقه شما چیست ؟";
-            // 
-            // comboItem7
-            // 
-            this.comboItem7.Text = "نام اتومبیل مورد علاقه شما چیست ؟";
-            // 
-            // comboItem8
-            // 
-            this.comboItem8.Text = "نام کتاب مورد علاقه شما چیست ؟";
             // 
             // btnEdit
             // 
@@ -773,6 +609,26 @@
             this.cmbxSecurityQuestion.Size = new System.Drawing.Size(249, 23);
             this.cmbxSecurityQuestion.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.cmbxSecurityQuestion.TabIndex = 25;
+            // 
+            // comboItem8
+            // 
+            this.comboItem8.Text = "نام کتاب مورد علاقه شما چیست ؟";
+            // 
+            // comboItem7
+            // 
+            this.comboItem7.Text = "نام اتومبیل مورد علاقه شما چیست ؟";
+            // 
+            // comboItem6
+            // 
+            this.comboItem6.Text = "رشته ورزشی مورد علاقه شما چیست ؟";
+            // 
+            // comboItem4
+            // 
+            this.comboItem4.Text = "نام فیلم مورد علاقه شما چیست ؟";
+            // 
+            // comboItem5
+            // 
+            this.comboItem5.Text = "شما در کدام شهر متولد شدید ؟";
             // 
             // txtSecurityAnswer
             // 
@@ -1021,6 +877,150 @@
             this.labelX10.TabIndex = 11;
             this.labelX10.Text = "نام کاربری : ";
             // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel4.Location = new System.Drawing.Point(0, 25);
+            this.ribbonPanel4.Name = "ribbonPanel4";
+            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel4.Size = new System.Drawing.Size(514, 361);
+            // 
+            // 
+            // 
+            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel4.TabIndex = 4;
+            this.ribbonPanel4.Visible = false;
+            // 
+            // ribbonPanel3
+            // 
+            this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel3.Location = new System.Drawing.Point(0, 25);
+            this.ribbonPanel3.Name = "ribbonPanel3";
+            this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel3.Size = new System.Drawing.Size(514, 361);
+            // 
+            // 
+            // 
+            this.ribbonPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel3.TabIndex = 3;
+            this.ribbonPanel3.Visible = false;
+            // 
+            // ribbonPanel2
+            // 
+            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel2.Controls.Add(this.btnSearchContract);
+            this.ribbonPanel2.Controls.Add(this.btnNewContract);
+            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel2.Location = new System.Drawing.Point(0, 25);
+            this.ribbonPanel2.Name = "ribbonPanel2";
+            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel2.Size = new System.Drawing.Size(514, 361);
+            // 
+            // 
+            // 
+            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel2.TabIndex = 2;
+            this.ribbonPanel2.Visible = false;
+            // 
+            // btnSearchContract
+            // 
+            this.btnSearchContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSearchContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSearchContract.Location = new System.Drawing.Point(290, 18);
+            this.btnSearchContract.Name = "btnSearchContract";
+            this.btnSearchContract.Size = new System.Drawing.Size(75, 32);
+            this.btnSearchContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSearchContract.TabIndex = 10;
+            this.btnSearchContract.Text = "جست و جو";
+            // 
+            // btnNewContract
+            // 
+            this.btnNewContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnNewContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnNewContract.Location = new System.Drawing.Point(371, 18);
+            this.btnNewContract.Name = "btnNewContract";
+            this.btnNewContract.Size = new System.Drawing.Size(130, 32);
+            this.btnNewContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnNewContract.TabIndex = 9;
+            this.btnNewContract.Text = "ایجاد قرارداد جدید";
+            // 
+            // ribbonTabItem1
+            // 
+            this.ribbonTabItem1.Checked = true;
+            this.ribbonTabItem1.Name = "ribbonTabItem1";
+            this.ribbonTabItem1.Panel = this.ribbonPanel1;
+            this.ribbonTabItem1.Text = "مشتریان";
+            // 
+            // ribbonTabItem2
+            // 
+            this.ribbonTabItem2.Name = "ribbonTabItem2";
+            this.ribbonTabItem2.Panel = this.ribbonPanel2;
+            this.ribbonTabItem2.Text = "قراردادها";
+            // 
+            // ribbonTabItem3
+            // 
+            this.ribbonTabItem3.Name = "ribbonTabItem3";
+            this.ribbonTabItem3.Panel = this.ribbonPanel3;
+            this.ribbonTabItem3.Text = "تولید";
+            // 
+            // ribbonTabItem4
+            // 
+            this.ribbonTabItem4.Name = "ribbonTabItem4";
+            this.ribbonTabItem4.Panel = this.ribbonPanel4;
+            this.ribbonTabItem4.Text = "گزارش گیری";
+            // 
+            // ribbonTabItem6
+            // 
+            this.ribbonTabItem6.Name = "ribbonTabItem6";
+            this.ribbonTabItem6.Panel = this.ribbonPanel6;
+            this.ribbonTabItem6.Text = "ویرایش مشخصات کاربری";
+            // 
+            // ribbonTabItem5
+            // 
+            this.ribbonTabItem5.Name = "ribbonTabItem5";
+            this.ribbonTabItem5.Panel = this.ribbonPanel5;
+            this.ribbonTabItem5.Text = "تنظیمات";
+            // 
+            // buttonItem1
+            // 
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.Text = "buttonItem1";
+            // 
+            // qatCustomizeItem1
+            // 
+            this.qatCustomizeItem1.Name = "qatCustomizeItem1";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1041,13 +1041,13 @@
             this.ribbonControl1.ResumeLayout(false);
             this.ribbonControl1.PerformLayout();
             this.ribbonPanel1.ResumeLayout(false);
-            this.ribbonPanel6.ResumeLayout(false);
-            this.ribbonPanel6.PerformLayout();
             this.ribbonPanel5.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             this.grbxRestore.ResumeLayout(false);
             this.grbxBackup.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
+            this.ribbonPanel6.ResumeLayout(false);
+            this.ribbonPanel6.PerformLayout();
             this.ribbonPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
