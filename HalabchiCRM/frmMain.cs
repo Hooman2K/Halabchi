@@ -45,5 +45,15 @@ namespace HalabchiCRM
                 ChangeTheme(set.Theme);
             }
         }
+
+        private void btnSaveTheme_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbxTheme_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeTheme(cmbxTheme.Text);
+        }
     }
 }
