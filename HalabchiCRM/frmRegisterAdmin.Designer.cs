@@ -337,9 +337,9 @@
             // 
             this.btnRegister.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnRegister.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnRegister.Location = new System.Drawing.Point(115, 273);
+            this.btnRegister.Location = new System.Drawing.Point(139, 273);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(95, 23);
+            this.btnRegister.Size = new System.Drawing.Size(122, 23);
             this.btnRegister.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnRegister.TabIndex = 9;
             this.btnRegister.Text = "ثبت نام";
@@ -350,7 +350,7 @@
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnCancel.Location = new System.Drawing.Point(12, 273);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(95, 23);
+            this.btnCancel.Size = new System.Drawing.Size(122, 23);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "لغو";

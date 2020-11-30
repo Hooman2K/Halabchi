@@ -36,9 +36,10 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.lblWelCome = new DevComponents.DotNetBar.LabelX();
+            this.btnSearchCostomer = new DevComponents.DotNetBar.ButtonX();
+            this.btnAddCostomer = new DevComponents.DotNetBar.ButtonX();
+            this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.grbxRestore = new System.Windows.Forms.GroupBox();
@@ -58,12 +59,8 @@
             this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.btnSaveTheme = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
-            this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX5 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX6 = new DevComponents.DotNetBar.ButtonX();
             this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem2 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem3 = new DevComponents.DotNetBar.RibbonTabItem();
@@ -72,10 +69,37 @@
             this.ribbonTabItem6 = new DevComponents.DotNetBar.RibbonTabItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.qatCustomizeItem1 = new DevComponents.DotNetBar.QatCustomizeItem();
-            this.lblWelCome = new DevComponents.DotNetBar.LabelX();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnSearchContract = new DevComponents.DotNetBar.ButtonX();
+            this.btnNewContract = new DevComponents.DotNetBar.ButtonX();
+            this.btnCancel = new DevComponents.DotNetBar.ButtonX();
+            this.comboItem5 = new DevComponents.Editors.ComboItem();
+            this.comboItem4 = new DevComponents.Editors.ComboItem();
+            this.comboItem6 = new DevComponents.Editors.ComboItem();
+            this.comboItem7 = new DevComponents.Editors.ComboItem();
+            this.comboItem8 = new DevComponents.Editors.ComboItem();
+            this.btnEdit = new DevComponents.DotNetBar.ButtonX();
+            this.cmbxSecurityQuestion = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.txtSecurityAnswer = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtEMail = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtMobile = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtLName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtFName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtRePassword = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtUserName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX9 = new DevComponents.DotNetBar.LabelX();
+            this.labelX8 = new DevComponents.DotNetBar.LabelX();
+            this.labelX7 = new DevComponents.DotNetBar.LabelX();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
+            this.ribbonPanel6.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             this.grbxRestore.SuspendLayout();
@@ -123,8 +147,8 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel6);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel6);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
@@ -134,8 +158,8 @@
             this.ribbonTabItem2,
             this.ribbonTabItem3,
             this.ribbonTabItem4,
-            this.ribbonTabItem5,
-            this.ribbonTabItem6});
+            this.ribbonTabItem6,
+            this.ribbonTabItem5});
             this.ribbonControl1.KeyTipsFont = new System.Drawing.Font("Tahoma", 7F);
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
             this.ribbonControl1.Name = "ribbonControl1";
@@ -168,9 +192,8 @@
             // 
             this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonPanel1.Controls.Add(this.lblWelCome);
-            this.ribbonPanel1.Controls.Add(this.buttonX3);
-            this.ribbonPanel1.Controls.Add(this.buttonX2);
-            this.ribbonPanel1.Controls.Add(this.buttonX1);
+            this.ribbonPanel1.Controls.Add(this.btnSearchCostomer);
+            this.ribbonPanel1.Controls.Add(this.btnAddCostomer);
             this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ribbonPanel1.Location = new System.Drawing.Point(0, 25);
             this.ribbonPanel1.Name = "ribbonPanel1";
@@ -190,38 +213,86 @@
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
             // 
-            // buttonX3
+            // lblWelCome
             // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX3.Location = new System.Drawing.Point(236, 15);
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(75, 23);
-            this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX3.TabIndex = 5;
-            this.buttonX3.Text = "buttonX3";
+            this.lblWelCome.BackColor = System.Drawing.Color.Transparent;
             // 
-            // buttonX2
             // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Location = new System.Drawing.Point(331, 15);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(75, 23);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 4;
-            this.buttonX2.Text = "buttonX2";
             // 
-            // buttonX1
+            this.lblWelCome.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblWelCome.Font = new System.Drawing.Font("IranNastaliq", 30.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.lblWelCome.Location = new System.Drawing.Point(18, 100);
+            this.lblWelCome.Name = "lblWelCome";
+            this.lblWelCome.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblWelCome.Size = new System.Drawing.Size(483, 207);
+            this.lblWelCome.TabIndex = 6;
+            this.lblWelCome.Text = "به شرکت صنایع فولاد حلب چی خوش آمدید";
+            this.lblWelCome.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(426, 15);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(75, 23);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 3;
-            this.buttonX1.Text = "buttonX1";
+            // btnSearchCostomer
+            // 
+            this.btnSearchCostomer.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSearchCostomer.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSearchCostomer.Location = new System.Drawing.Point(290, 18);
+            this.btnSearchCostomer.Name = "btnSearchCostomer";
+            this.btnSearchCostomer.Size = new System.Drawing.Size(75, 32);
+            this.btnSearchCostomer.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSearchCostomer.TabIndex = 4;
+            this.btnSearchCostomer.Text = "جست و جو";
+            // 
+            // btnAddCostomer
+            // 
+            this.btnAddCostomer.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddCostomer.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddCostomer.Location = new System.Drawing.Point(371, 18);
+            this.btnAddCostomer.Name = "btnAddCostomer";
+            this.btnAddCostomer.Size = new System.Drawing.Size(130, 32);
+            this.btnAddCostomer.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddCostomer.TabIndex = 3;
+            this.btnAddCostomer.Text = "ایجاد مشتری جدید";
+            // 
+            // ribbonPanel6
+            // 
+            this.ribbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel6.Controls.Add(this.btnCancel);
+            this.ribbonPanel6.Controls.Add(this.btnEdit);
+            this.ribbonPanel6.Controls.Add(this.cmbxSecurityQuestion);
+            this.ribbonPanel6.Controls.Add(this.txtSecurityAnswer);
+            this.ribbonPanel6.Controls.Add(this.txtEMail);
+            this.ribbonPanel6.Controls.Add(this.txtMobile);
+            this.ribbonPanel6.Controls.Add(this.txtLName);
+            this.ribbonPanel6.Controls.Add(this.txtFName);
+            this.ribbonPanel6.Controls.Add(this.txtRePassword);
+            this.ribbonPanel6.Controls.Add(this.txtPassword);
+            this.ribbonPanel6.Controls.Add(this.txtUserName);
+            this.ribbonPanel6.Controls.Add(this.labelX9);
+            this.ribbonPanel6.Controls.Add(this.labelX8);
+            this.ribbonPanel6.Controls.Add(this.labelX7);
+            this.ribbonPanel6.Controls.Add(this.labelX6);
+            this.ribbonPanel6.Controls.Add(this.labelX5);
+            this.ribbonPanel6.Controls.Add(this.labelX4);
+            this.ribbonPanel6.Controls.Add(this.labelX3);
+            this.ribbonPanel6.Controls.Add(this.labelX2);
+            this.ribbonPanel6.Controls.Add(this.labelX10);
+            this.ribbonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel6.Location = new System.Drawing.Point(0, 25);
+            this.ribbonPanel6.Name = "ribbonPanel6";
+            this.ribbonPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel6.Size = new System.Drawing.Size(514, 361);
+            // 
+            // 
+            // 
+            this.ribbonPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel6.TabIndex = 6;
+            this.ribbonPanel6.Visible = false;
             // 
             // ribbonPanel5
             // 
@@ -520,29 +591,6 @@
             this.ribbonPanel4.TabIndex = 4;
             this.ribbonPanel4.Visible = false;
             // 
-            // ribbonPanel6
-            // 
-            this.ribbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel6.Location = new System.Drawing.Point(0, 25);
-            this.ribbonPanel6.Name = "ribbonPanel6";
-            this.ribbonPanel6.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel6.Size = new System.Drawing.Size(514, 361);
-            // 
-            // 
-            // 
-            this.ribbonPanel6.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel6.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel6.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel6.TabIndex = 6;
-            this.ribbonPanel6.Visible = false;
-            // 
             // ribbonPanel3
             // 
             this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -569,9 +617,8 @@
             // ribbonPanel2
             // 
             this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel2.Controls.Add(this.buttonX4);
-            this.ribbonPanel2.Controls.Add(this.buttonX5);
-            this.ribbonPanel2.Controls.Add(this.buttonX6);
+            this.ribbonPanel2.Controls.Add(this.btnSearchContract);
+            this.ribbonPanel2.Controls.Add(this.btnNewContract);
             this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ribbonPanel2.Location = new System.Drawing.Point(0, 25);
             this.ribbonPanel2.Name = "ribbonPanel2";
@@ -591,39 +638,6 @@
             this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel2.TabIndex = 2;
             this.ribbonPanel2.Visible = false;
-            // 
-            // buttonX4
-            // 
-            this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX4.Location = new System.Drawing.Point(236, 15);
-            this.buttonX4.Name = "buttonX4";
-            this.buttonX4.Size = new System.Drawing.Size(75, 23);
-            this.buttonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX4.TabIndex = 8;
-            this.buttonX4.Text = "buttonX4";
-            // 
-            // buttonX5
-            // 
-            this.buttonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX5.Location = new System.Drawing.Point(331, 15);
-            this.buttonX5.Name = "buttonX5";
-            this.buttonX5.Size = new System.Drawing.Size(75, 23);
-            this.buttonX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX5.TabIndex = 7;
-            this.buttonX5.Text = "buttonX5";
-            // 
-            // buttonX6
-            // 
-            this.buttonX6.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX6.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX6.Location = new System.Drawing.Point(426, 15);
-            this.buttonX6.Name = "buttonX6";
-            this.buttonX6.Size = new System.Drawing.Size(75, 23);
-            this.buttonX6.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX6.TabIndex = 6;
-            this.buttonX6.Text = "buttonX6";
             // 
             // ribbonTabItem1
             // 
@@ -660,7 +674,7 @@
             // 
             this.ribbonTabItem6.Name = "ribbonTabItem6";
             this.ribbonTabItem6.Panel = this.ribbonPanel6;
-            this.ribbonTabItem6.Text = "درباره";
+            this.ribbonTabItem6.Text = "ویرایش مشخصات کاربری";
             // 
             // buttonItem1
             // 
@@ -671,26 +685,341 @@
             // 
             this.qatCustomizeItem1.Name = "qatCustomizeItem1";
             // 
-            // lblWelCome
-            // 
-            this.lblWelCome.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.lblWelCome.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblWelCome.Font = new System.Drawing.Font("IranNastaliq", 30.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblWelCome.Location = new System.Drawing.Point(18, 100);
-            this.lblWelCome.Name = "lblWelCome";
-            this.lblWelCome.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblWelCome.Size = new System.Drawing.Size(483, 207);
-            this.lblWelCome.TabIndex = 6;
-            this.lblWelCome.Text = "به شرکت صنایع فولاد حلب چی خوش آمدید";
-            this.lblWelCome.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // btnSearchContract
+            // 
+            this.btnSearchContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSearchContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSearchContract.Location = new System.Drawing.Point(290, 18);
+            this.btnSearchContract.Name = "btnSearchContract";
+            this.btnSearchContract.Size = new System.Drawing.Size(75, 32);
+            this.btnSearchContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSearchContract.TabIndex = 10;
+            this.btnSearchContract.Text = "جست و جو";
+            // 
+            // btnNewContract
+            // 
+            this.btnNewContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnNewContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnNewContract.Location = new System.Drawing.Point(371, 18);
+            this.btnNewContract.Name = "btnNewContract";
+            this.btnNewContract.Size = new System.Drawing.Size(130, 32);
+            this.btnNewContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnNewContract.TabIndex = 9;
+            this.btnNewContract.Text = "ایجاد قرارداد جدید";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCancel.Location = new System.Drawing.Point(18, 282);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(122, 23);
+            this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnCancel.TabIndex = 30;
+            this.btnCancel.Text = "لغو";
+            // 
+            // comboItem5
+            // 
+            this.comboItem5.Text = "شما در کدام شهر متولد شدید ؟";
+            // 
+            // comboItem4
+            // 
+            this.comboItem4.Text = "نام فیلم مورد علاقه شما چیست ؟";
+            // 
+            // comboItem6
+            // 
+            this.comboItem6.Text = "رشته ورزشی مورد علاقه شما چیست ؟";
+            // 
+            // comboItem7
+            // 
+            this.comboItem7.Text = "نام اتومبیل مورد علاقه شما چیست ؟";
+            // 
+            // comboItem8
+            // 
+            this.comboItem8.Text = "نام کتاب مورد علاقه شما چیست ؟";
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnEdit.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnEdit.Location = new System.Drawing.Point(145, 282);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(122, 23);
+            this.btnEdit.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnEdit.TabIndex = 29;
+            this.btnEdit.Text = "ویرایش";
+            // 
+            // cmbxSecurityQuestion
+            // 
+            this.cmbxSecurityQuestion.DisplayMember = "Text";
+            this.cmbxSecurityQuestion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbxSecurityQuestion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxSecurityQuestion.FormattingEnabled = true;
+            this.cmbxSecurityQuestion.ItemHeight = 17;
+            this.cmbxSecurityQuestion.Items.AddRange(new object[] {
+            this.comboItem8,
+            this.comboItem7,
+            this.comboItem6,
+            this.comboItem4,
+            this.comboItem5});
+            this.cmbxSecurityQuestion.Location = new System.Drawing.Point(18, 224);
+            this.cmbxSecurityQuestion.Name = "cmbxSecurityQuestion";
+            this.cmbxSecurityQuestion.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbxSecurityQuestion.Size = new System.Drawing.Size(249, 23);
+            this.cmbxSecurityQuestion.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbxSecurityQuestion.TabIndex = 25;
+            // 
+            // txtSecurityAnswer
+            // 
+            // 
+            // 
+            // 
+            this.txtSecurityAnswer.Border.Class = "TextBoxBorder";
+            this.txtSecurityAnswer.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtSecurityAnswer.Location = new System.Drawing.Point(18, 253);
+            this.txtSecurityAnswer.MaxLength = 50;
+            this.txtSecurityAnswer.Name = "txtSecurityAnswer";
+            this.txtSecurityAnswer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtSecurityAnswer.Size = new System.Drawing.Size(249, 23);
+            this.txtSecurityAnswer.TabIndex = 28;
+            // 
+            // txtEMail
+            // 
+            // 
+            // 
+            // 
+            this.txtEMail.Border.Class = "TextBoxBorder";
+            this.txtEMail.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtEMail.Location = new System.Drawing.Point(18, 195);
+            this.txtEMail.MaxLength = 50;
+            this.txtEMail.Name = "txtEMail";
+            this.txtEMail.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtEMail.Size = new System.Drawing.Size(249, 23);
+            this.txtEMail.TabIndex = 23;
+            // 
+            // txtMobile
+            // 
+            // 
+            // 
+            // 
+            this.txtMobile.Border.Class = "TextBoxBorder";
+            this.txtMobile.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtMobile.Location = new System.Drawing.Point(18, 166);
+            this.txtMobile.MaxLength = 11;
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtMobile.Size = new System.Drawing.Size(249, 23);
+            this.txtMobile.TabIndex = 21;
+            // 
+            // txtLName
+            // 
+            // 
+            // 
+            // 
+            this.txtLName.Border.Class = "TextBoxBorder";
+            this.txtLName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtLName.Location = new System.Drawing.Point(18, 137);
+            this.txtLName.MaxLength = 50;
+            this.txtLName.Name = "txtLName";
+            this.txtLName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtLName.Size = new System.Drawing.Size(249, 23);
+            this.txtLName.TabIndex = 19;
+            // 
+            // txtFName
+            // 
+            // 
+            // 
+            // 
+            this.txtFName.Border.Class = "TextBoxBorder";
+            this.txtFName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtFName.Location = new System.Drawing.Point(18, 108);
+            this.txtFName.MaxLength = 50;
+            this.txtFName.Name = "txtFName";
+            this.txtFName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtFName.Size = new System.Drawing.Size(249, 23);
+            this.txtFName.TabIndex = 17;
+            // 
+            // txtRePassword
+            // 
+            // 
+            // 
+            // 
+            this.txtRePassword.Border.Class = "TextBoxBorder";
+            this.txtRePassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtRePassword.Location = new System.Drawing.Point(18, 79);
+            this.txtRePassword.MaxLength = 20;
+            this.txtRePassword.Name = "txtRePassword";
+            this.txtRePassword.Size = new System.Drawing.Size(249, 23);
+            this.txtRePassword.TabIndex = 15;
+            this.txtRePassword.UseSystemPasswordChar = true;
+            // 
+            // txtPassword
+            // 
+            // 
+            // 
+            // 
+            this.txtPassword.Border.Class = "TextBoxBorder";
+            this.txtPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPassword.Location = new System.Drawing.Point(18, 50);
+            this.txtPassword.MaxLength = 20;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(249, 23);
+            this.txtPassword.TabIndex = 14;
+            this.txtPassword.UseSystemPasswordChar = true;
+            // 
+            // txtUserName
+            // 
+            // 
+            // 
+            // 
+            this.txtUserName.Border.Class = "TextBoxBorder";
+            this.txtUserName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtUserName.Location = new System.Drawing.Point(18, 21);
+            this.txtUserName.MaxLength = 50;
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtUserName.Size = new System.Drawing.Size(249, 23);
+            this.txtUserName.TabIndex = 12;
+            // 
+            // labelX9
+            // 
+            this.labelX9.AutoSize = true;
+            this.labelX9.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX9.Location = new System.Drawing.Point(273, 79);
+            this.labelX9.Name = "labelX9";
+            this.labelX9.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX9.Size = new System.Drawing.Size(99, 18);
+            this.labelX9.TabIndex = 27;
+            this.labelX9.Text = "تایید کلمه عبور : ";
+            // 
+            // labelX8
+            // 
+            this.labelX8.AutoSize = true;
+            this.labelX8.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX8.Location = new System.Drawing.Point(273, 253);
+            this.labelX8.Name = "labelX8";
+            this.labelX8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX8.Size = new System.Drawing.Size(123, 18);
+            this.labelX8.TabIndex = 26;
+            this.labelX8.Text = "پاسخ سوال امنیتی : ";
+            // 
+            // labelX7
+            // 
+            this.labelX7.AutoSize = true;
+            this.labelX7.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX7.Location = new System.Drawing.Point(273, 223);
+            this.labelX7.Name = "labelX7";
+            this.labelX7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX7.Size = new System.Drawing.Size(90, 18);
+            this.labelX7.TabIndex = 24;
+            this.labelX7.Text = "سوال امنیتی : ";
+            // 
+            // labelX6
+            // 
+            this.labelX6.AutoSize = true;
+            this.labelX6.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX6.Location = new System.Drawing.Point(273, 195);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX6.Size = new System.Drawing.Size(48, 18);
+            this.labelX6.TabIndex = 22;
+            this.labelX6.Text = "ایمیل : ";
+            // 
+            // labelX5
+            // 
+            this.labelX5.AutoSize = true;
+            this.labelX5.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.Location = new System.Drawing.Point(273, 166);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX5.Size = new System.Drawing.Size(52, 18);
+            this.labelX5.TabIndex = 20;
+            this.labelX5.Text = "موبایل : ";
+            // 
+            // labelX4
+            // 
+            this.labelX4.AutoSize = true;
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Location = new System.Drawing.Point(273, 137);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX4.Size = new System.Drawing.Size(89, 18);
+            this.labelX4.TabIndex = 18;
+            this.labelX4.Text = "نام خانوادگی : ";
+            // 
+            // labelX3
+            // 
+            this.labelX3.AutoSize = true;
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Location = new System.Drawing.Point(273, 108);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX3.Size = new System.Drawing.Size(34, 18);
+            this.labelX3.TabIndex = 16;
+            this.labelX3.Text = "نام : ";
+            // 
+            // labelX2
+            // 
+            this.labelX2.AutoSize = true;
+            this.labelX2.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Location = new System.Drawing.Point(273, 50);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX2.Size = new System.Drawing.Size(72, 18);
+            this.labelX2.TabIndex = 13;
+            this.labelX2.Text = "کلمه عبور : ";
+            // 
+            // labelX10
+            // 
+            this.labelX10.AutoSize = true;
+            this.labelX10.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX10.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX10.Location = new System.Drawing.Point(273, 21);
+            this.labelX10.Name = "labelX10";
+            this.labelX10.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX10.Size = new System.Drawing.Size(74, 18);
+            this.labelX10.TabIndex = 11;
+            this.labelX10.Text = "نام کاربری : ";
             // 
             // frmMain
             // 
@@ -712,6 +1041,8 @@
             this.ribbonControl1.ResumeLayout(false);
             this.ribbonControl1.PerformLayout();
             this.ribbonPanel1.ResumeLayout(false);
+            this.ribbonPanel6.ResumeLayout(false);
+            this.ribbonPanel6.PerformLayout();
             this.ribbonPanel5.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             this.grbxRestore.ResumeLayout(false);
@@ -736,17 +1067,13 @@
         private DevComponents.DotNetBar.RibbonTabItem ribbonTabItem2;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
         private DevComponents.DotNetBar.QatCustomizeItem qatCustomizeItem1;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.ButtonX btnAddCostomer;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel3;
         private DevComponents.DotNetBar.RibbonTabItem ribbonTabItem3;
-        private DevComponents.DotNetBar.ButtonX buttonX3;
-        private DevComponents.DotNetBar.ButtonX buttonX2;
+        private DevComponents.DotNetBar.ButtonX btnSearchCostomer;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel5;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel6;
         private DevComponents.DotNetBar.RibbonPanel ribbonPanel4;
-        private DevComponents.DotNetBar.ButtonX buttonX4;
-        private DevComponents.DotNetBar.ButtonX buttonX5;
-        private DevComponents.DotNetBar.ButtonX buttonX6;
         private DevComponents.DotNetBar.RibbonTabItem ribbonTabItem4;
         private DevComponents.DotNetBar.RibbonTabItem ribbonTabItem5;
         private DevComponents.DotNetBar.RibbonTabItem ribbonTabItem6;
@@ -769,5 +1096,32 @@
         private DevComponents.Editors.ComboItem comboItem3;
         private DevComponents.DotNetBar.LabelX lblWelCome;
         private System.Windows.Forms.Timer timer1;
+        private DevComponents.DotNetBar.ButtonX btnSearchContract;
+        private DevComponents.DotNetBar.ButtonX btnNewContract;
+        private DevComponents.DotNetBar.ButtonX btnCancel;
+        private DevComponents.DotNetBar.ButtonX btnEdit;
+        private DevComponents.DotNetBar.Controls.ComboBoxEx cmbxSecurityQuestion;
+        private DevComponents.Editors.ComboItem comboItem8;
+        private DevComponents.Editors.ComboItem comboItem7;
+        private DevComponents.Editors.ComboItem comboItem6;
+        private DevComponents.Editors.ComboItem comboItem4;
+        private DevComponents.Editors.ComboItem comboItem5;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtSecurityAnswer;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtEMail;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMobile;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtLName;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtFName;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtRePassword;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPassword;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtUserName;
+        private DevComponents.DotNetBar.LabelX labelX9;
+        private DevComponents.DotNetBar.LabelX labelX8;
+        private DevComponents.DotNetBar.LabelX labelX7;
+        private DevComponents.DotNetBar.LabelX labelX6;
+        private DevComponents.DotNetBar.LabelX labelX5;
+        private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.LabelX labelX3;
+        private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.LabelX labelX10;
     }
 }
