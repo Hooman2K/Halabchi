@@ -53,14 +53,14 @@ namespace HalabchiCRM
                     {
                         User us = new HalabchiCRM.User()
                         {
-                            UserName = txtUserName.Text,
-                            Password = aes.EncryptText(txtPassword.Text, txtUserName.Text, txtMobile.Text),
+                            UserName = txtUserName.Text.ToLower(),
+                            Password = aes.EncryptText(txtPassword.Text, txtUserName.Text.ToLower(), txtMobile.Text),
                             FName = txtFName.Text,
                             LName = txtLName.Text,
                             Mobile = txtMobile.Text,
                             Email = txtEMail.Text,
                             SecurityQuestion = byte.Parse(cmbxSecurityQuestion.SelectedIndex.ToString()),
-                            SecurityQAnswer = aes.EncryptText(txtSecurityAnswer.Text, txtUserName.Text, txtMobile.Text),
+                            SecurityQAnswer = aes.EncryptText(txtSecurityAnswer.Text, txtUserName.Text.ToLower(), txtMobile.Text),
                             IsAdmin = true 
                         };
                         db.Users.Add(us);
