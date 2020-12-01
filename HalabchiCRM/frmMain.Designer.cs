@@ -147,8 +147,8 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel6);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
@@ -668,6 +668,7 @@
             this.txtMobile.Location = new System.Drawing.Point(18, 166);
             this.txtMobile.MaxLength = 11;
             this.txtMobile.Name = "txtMobile";
+            this.txtMobile.ReadOnly = true;
             this.txtMobile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtMobile.Size = new System.Drawing.Size(249, 23);
             this.txtMobile.TabIndex = 21;
@@ -738,6 +739,7 @@
             this.txtUserName.Location = new System.Drawing.Point(18, 21);
             this.txtUserName.MaxLength = 50;
             this.txtUserName.Name = "txtUserName";
+            this.txtUserName.ReadOnly = true;
             this.txtUserName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtUserName.Size = new System.Drawing.Size(249, 23);
             this.txtUserName.TabIndex = 12;

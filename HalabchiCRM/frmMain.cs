@@ -28,6 +28,7 @@ namespace HalabchiCRM
             //}
         }
         int _time=0;
+        AESAlgorithm aes = new AESAlgorithm();
         private void ChangeTheme(string theme)
         {
             switch (theme)
@@ -42,8 +43,20 @@ namespace HalabchiCRM
         {
             using (var db = new HalabchiDB())
             {
+                //لود کردن پوسته نرم افزار
                 var set = db.Settings.Where(u => u.ID == 1).FirstOrDefault();
                 ChangeTheme(set.Theme);
+
+                //لود کردن مشخصات کاربر جاری
+                var us = db.Users.Where(u => u.UserName == AppInfo.Username).FirstOrDefault();
+                txtUserName.Text = AppInfo.Username;
+                txtPassword.Text = aes.DecryptText(us.Password, AppInfo.Username, AppInfo.Mobile);
+                txtFName.Text = AppInfo.FName;
+                txtLName.Text = AppInfo.LName;
+                txtMobile.Text = AppInfo.Mobile;
+                txtEMail.Text = us.Email;
+                cmbxSecurityQuestion.SelectedIndex = us.SecurityQuestion;
+                txtSecurityAnswer.Text = aes.DecryptText(us.SecurityQAnswer, AppInfo.Username, AppInfo.Mobile);
             }
         }
 
