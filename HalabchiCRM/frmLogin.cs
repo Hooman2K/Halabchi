@@ -17,5 +17,42 @@ namespace HalabchiCRM
         {
             InitializeComponent();
         }
+        AESAlgorithm aes = new AESAlgorithm();
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            if(txtUserName.Text !="" && txtPassword.Text != "")
+            {
+                using (var db = new HalabchiDB())
+                {
+                    var pas = db.Users.Where(u => u.UserName == txtUserName.Text).FirstOrDefault();
+                    string enPas = aes.EncryptText(txtPassword.Text, txtUserName.Text.ToLower(), pas.Mobile);
+
+                    bool exist = db.Users.Where(u => u.UserName == txtUserName.Text && u.Password == enPas).Any();
+
+                    if (exist)
+                    {
+                        frmMain main = new frmMain();
+
+                        AppInfo.Username = pas.UserName;
+                        AppInfo.Mobile = pas.Mobile;
+                        AppInfo.LName = pas.LName;
+                        AppInfo.FName = pas.FName;
+                        AppInfo.IsAdmin = pas.IsAdmin;
+
+                        main.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        FarsiMessageBox.MessageBox.Show("خطا", "نام کاربری یا کلمه عبور صحیح نیست", FarsiMessageBox.MessageBox.Buttons.OK,FarsiMessageBox.MessageBox.Icons.Warning );
+                    }
+                }
+            }
+            else
+            {
+                FarsiMessageBox.MessageBox.Show("خطا", "وارد کردن تمامی موارد الزامی است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+            }
+        }
     }
 }

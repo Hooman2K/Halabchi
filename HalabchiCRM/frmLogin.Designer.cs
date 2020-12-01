@@ -48,6 +48,7 @@
             this.txtPassword.Location = new System.Drawing.Point(3, 40);
             this.txtPassword.MaxLength = 20;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.Size = new System.Drawing.Size(249, 23);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
@@ -106,6 +107,7 @@
             this.btnEnter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnEnter.TabIndex = 2;
             this.btnEnter.Text = "ورود";
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // btnForgetPassword
             // 
