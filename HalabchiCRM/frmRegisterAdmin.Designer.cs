@@ -205,6 +205,7 @@
             this.txtPassword.Location = new System.Drawing.Point(12, 41);
             this.txtPassword.MaxLength = 20;
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.Size = new System.Drawing.Size(249, 23);
             this.txtPassword.TabIndex = 1;
             this.txtPassword.UseSystemPasswordChar = true;
@@ -219,6 +220,7 @@
             this.txtRePassword.Location = new System.Drawing.Point(12, 70);
             this.txtRePassword.MaxLength = 20;
             this.txtRePassword.Name = "txtRePassword";
+            this.txtRePassword.PasswordChar = '●';
             this.txtRePassword.Size = new System.Drawing.Size(249, 23);
             this.txtRePassword.TabIndex = 2;
             this.txtRePassword.UseSystemPasswordChar = true;
@@ -298,6 +300,7 @@
             this.cmbxSecurityQuestion.DisplayMember = "Text";
             this.cmbxSecurityQuestion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbxSecurityQuestion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxSecurityQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxSecurityQuestion.FormattingEnabled = true;
             this.cmbxSecurityQuestion.ItemHeight = 17;
             this.cmbxSecurityQuestion.Items.AddRange(new object[] {
@@ -355,6 +358,7 @@
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "لغو";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmRegisterAdmin
             // 
