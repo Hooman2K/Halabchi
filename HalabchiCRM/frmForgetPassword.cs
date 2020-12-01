@@ -17,5 +17,20 @@ namespace HalabchiCRM
         {
             InitializeComponent();
         }
+
+        private void btnInvest_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

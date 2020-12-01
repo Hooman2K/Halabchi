@@ -54,5 +54,11 @@ namespace HalabchiCRM
                 FarsiMessageBox.MessageBox.Show("خطا", "وارد کردن تمامی موارد الزامی است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
             }
         }
+
+        private void btnForgetPassword_Click(object sender, EventArgs e)
+        {
+            frmForgetPassword forgetPas = new frmForgetPassword();
+            forgetPas.ShowDialog();
+        }
     }
 }

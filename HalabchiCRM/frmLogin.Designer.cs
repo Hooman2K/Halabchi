@@ -119,6 +119,7 @@
             this.btnForgetPassword.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnForgetPassword.TabIndex = 3;
             this.btnForgetPassword.Text = "کلمه عبور را فراموش کردم";
+            this.btnForgetPassword.Click += new System.EventHandler(this.btnForgetPassword_Click);
             // 
             // groupPanel1
             // 

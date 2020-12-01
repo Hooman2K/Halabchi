@@ -196,6 +196,7 @@
             this.btnInvest.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnInvest.TabIndex = 1;
             this.btnInvest.Text = "برسی";
+            this.btnInvest.Click += new System.EventHandler(this.btnInvest_Click);
             // 
             // txtPassword
             // 
@@ -235,6 +236,7 @@
             this.btnEnter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnEnter.TabIndex = 6;
             this.btnEnter.Text = "ثبت";
+            this.btnEnter.Click += new System.EventHandler(this.btnEnter_Click);
             // 
             // btnClear
             // 
@@ -246,6 +248,7 @@
             this.btnClear.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnClear.TabIndex = 2;
             this.btnClear.Text = "لغو";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // frmForgetPassword
             // 
