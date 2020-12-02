@@ -35,11 +35,9 @@
             this.comboItem4 = new DevComponents.Editors.ComboItem();
             this.comboItem5 = new DevComponents.Editors.ComboItem();
             this.txtSecurityAnswer = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtMobile = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtUserName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.btnInvest = new DevComponents.DotNetBar.ButtonX();
             this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -61,7 +59,7 @@
             this.comboItem3,
             this.comboItem4,
             this.comboItem5});
-            this.cmbxSecurityQuestion.Location = new System.Drawing.Point(12, 99);
+            this.cmbxSecurityQuestion.Location = new System.Drawing.Point(12, 70);
             this.cmbxSecurityQuestion.Name = "cmbxSecurityQuestion";
             this.cmbxSecurityQuestion.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxSecurityQuestion.Size = new System.Drawing.Size(249, 23);
@@ -95,26 +93,12 @@
             // 
             this.txtSecurityAnswer.Border.Class = "TextBoxBorder";
             this.txtSecurityAnswer.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtSecurityAnswer.Location = new System.Drawing.Point(12, 128);
+            this.txtSecurityAnswer.Location = new System.Drawing.Point(12, 99);
             this.txtSecurityAnswer.MaxLength = 50;
             this.txtSecurityAnswer.Name = "txtSecurityAnswer";
             this.txtSecurityAnswer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtSecurityAnswer.Size = new System.Drawing.Size(249, 23);
             this.txtSecurityAnswer.TabIndex = 5;
-            // 
-            // txtMobile
-            // 
-            // 
-            // 
-            // 
-            this.txtMobile.Border.Class = "TextBoxBorder";
-            this.txtMobile.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtMobile.Location = new System.Drawing.Point(12, 70);
-            this.txtMobile.MaxLength = 11;
-            this.txtMobile.Name = "txtMobile";
-            this.txtMobile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtMobile.Size = new System.Drawing.Size(249, 23);
-            this.txtMobile.TabIndex = 3;
             // 
             // txtUserName
             // 
@@ -137,7 +121,7 @@
             // 
             // 
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX8.Location = new System.Drawing.Point(267, 128);
+            this.labelX8.Location = new System.Drawing.Point(267, 99);
             this.labelX8.Name = "labelX8";
             this.labelX8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX8.Size = new System.Drawing.Size(123, 18);
@@ -151,26 +135,12 @@
             // 
             // 
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.Location = new System.Drawing.Point(267, 99);
+            this.labelX7.Location = new System.Drawing.Point(267, 70);
             this.labelX7.Name = "labelX7";
             this.labelX7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX7.Size = new System.Drawing.Size(90, 18);
             this.labelX7.TabIndex = 13;
             this.labelX7.Text = "سوال امنیتی : ";
-            // 
-            // labelX5
-            // 
-            this.labelX5.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(267, 70);
-            this.labelX5.Name = "labelX5";
-            this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX5.Size = new System.Drawing.Size(52, 18);
-            this.labelX5.TabIndex = 11;
-            this.labelX5.Text = "موبایل : ";
             // 
             // labelX1
             // 
@@ -205,7 +175,7 @@
             // 
             this.txtPassword.Border.Class = "TextBoxBorder";
             this.txtPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPassword.Location = new System.Drawing.Point(12, 186);
+            this.txtPassword.Location = new System.Drawing.Point(12, 157);
             this.txtPassword.MaxLength = 20;
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.ReadOnly = true;
@@ -219,7 +189,7 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(267, 186);
+            this.labelX2.Location = new System.Drawing.Point(267, 157);
             this.labelX2.Name = "labelX2";
             this.labelX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX2.Size = new System.Drawing.Size(72, 18);
@@ -230,7 +200,7 @@
             // 
             this.btnEnter.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnEnter.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnEnter.Location = new System.Drawing.Point(12, 157);
+            this.btnEnter.Location = new System.Drawing.Point(12, 128);
             this.btnEnter.Name = "btnEnter";
             this.btnEnter.Size = new System.Drawing.Size(249, 23);
             this.btnEnter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -254,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 225);
+            this.ClientSize = new System.Drawing.Size(399, 185);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnEnter);
             this.Controls.Add(this.txtPassword);
@@ -262,11 +232,9 @@
             this.Controls.Add(this.btnInvest);
             this.Controls.Add(this.cmbxSecurityQuestion);
             this.Controls.Add(this.txtSecurityAnswer);
-            this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.labelX8);
             this.Controls.Add(this.labelX7);
-            this.Controls.Add(this.labelX5);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
@@ -275,6 +243,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.Name = "frmForgetPassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "رمز عبور را فراموش کردم";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -290,11 +259,9 @@
         private DevComponents.Editors.ComboItem comboItem4;
         private DevComponents.Editors.ComboItem comboItem5;
         private DevComponents.DotNetBar.Controls.TextBoxX txtSecurityAnswer;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtMobile;
         private DevComponents.DotNetBar.Controls.TextBoxX txtUserName;
         private DevComponents.DotNetBar.LabelX labelX8;
         private DevComponents.DotNetBar.LabelX labelX7;
-        private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.ButtonX btnInvest;
         private DevComponents.DotNetBar.Controls.TextBoxX txtPassword;
