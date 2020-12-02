@@ -28,30 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtUserName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.btnEnter = new DevComponents.DotNetBar.ButtonX();
             this.btnForgetPassword = new DevComponents.DotNetBar.ButtonX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.chbxShowPass = new System.Windows.Forms.CheckBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             this.groupPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // txtPassword
-            // 
-            // 
-            // 
-            // 
-            this.txtPassword.Border.Class = "TextBoxBorder";
-            this.txtPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPassword.Location = new System.Drawing.Point(3, 40);
-            this.txtPassword.MaxLength = 20;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '●';
-            this.txtPassword.Size = new System.Drawing.Size(249, 23);
-            this.txtPassword.TabIndex = 1;
-            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtUserName
             // 
@@ -125,11 +111,12 @@
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.txtPassword);
+            this.groupPanel1.Controls.Add(this.chbxShowPass);
             this.groupPanel1.Controls.Add(this.btnForgetPassword);
             this.groupPanel1.Controls.Add(this.labelX1);
             this.groupPanel1.Controls.Add(this.btnEnter);
             this.groupPanel1.Controls.Add(this.labelX2);
-            this.groupPanel1.Controls.Add(this.txtPassword);
             this.groupPanel1.Controls.Add(this.txtUserName);
             this.groupPanel1.Location = new System.Drawing.Point(12, 12);
             this.groupPanel1.Name = "groupPanel1";
@@ -165,11 +152,32 @@
             this.groupPanel1.TabIndex = 12;
             this.groupPanel1.Text = "ورود به نرم افزار";
             // 
+            // chbxShowPass
+            // 
+            this.chbxShowPass.AutoSize = true;
+            this.chbxShowPass.BackColor = System.Drawing.Color.Transparent;
+            this.chbxShowPass.Location = new System.Drawing.Point(258, 69);
+            this.chbxShowPass.Name = "chbxShowPass";
+            this.chbxShowPass.Size = new System.Drawing.Size(85, 20);
+            this.chbxShowPass.TabIndex = 4;
+            this.chbxShowPass.Text = "نمایش رمز";
+            this.chbxShowPass.UseVisualStyleBackColor = false;
+            this.chbxShowPass.CheckedChanged += new System.EventHandler(this.chbxShowPass_CheckedChanged);
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(3, 39);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(249, 23);
+            this.txtPassword.TabIndex = 1;
+            this.txtPassword.UseSystemPasswordChar = true;
+            // 
             // frmLogin
             // 
+            this.AcceptButton = this.btnEnter;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(378, 163);
+            this.ClientSize = new System.Drawing.Size(378, 153);
             this.Controls.Add(this.groupPanel1);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
@@ -187,13 +195,13 @@
         }
 
         #endregion
-
-        private DevComponents.DotNetBar.Controls.TextBoxX txtPassword;
         private DevComponents.DotNetBar.Controls.TextBoxX txtUserName;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.ButtonX btnEnter;
         private DevComponents.DotNetBar.ButtonX btnForgetPassword;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
+        private System.Windows.Forms.CheckBox chbxShowPass;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }

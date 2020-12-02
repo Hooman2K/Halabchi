@@ -31,11 +31,25 @@ namespace HalabchiCRM
         AESAlgorithm aes = new AESAlgorithm();
         private void ChangeTheme(string theme)
         {
-            switch (theme)
+            try
             {
-                case "مشکی": styleManager1.ManagerStyle = eStyle.Office2010Black; cmbxTheme.SelectedIndex = 2; break;
-                case "خاکستری": styleManager1.ManagerStyle = eStyle.Office2010Silver; cmbxTheme.SelectedIndex = 1; break;
-                case "آبی": styleManager1.ManagerStyle = eStyle.Office2010Blue; cmbxTheme.SelectedIndex = 0; break;
+                switch (theme)
+                {
+                    case "آبی": styleManager1.ManagerStyle = eStyle.Office2010Blue; cmbxTheme.SelectedIndex = 0; break;
+                    case "خاکستری": styleManager1.ManagerStyle = eStyle.Office2010Silver; cmbxTheme.SelectedIndex = 1; break;
+                    case "مشکی": styleManager1.ManagerStyle = eStyle.Office2010Black; cmbxTheme.SelectedIndex = 2; break;
+                }
+            }
+            catch
+            {
+                return;
+            }
+        }
+        private void LoadCustomer()
+        {
+            using (var db = new HalabchiDB())
+            {
+                dgvCustomer.DataSource = db.Customers.ToList();
             }
         }
 
@@ -57,6 +71,12 @@ namespace HalabchiCRM
                 txtEMail.Text = us.Email;
                 cmbxSecurityQuestion.SelectedIndex = us.SecurityQuestion;
                 txtSecurityAnswer.Text = aes.DecryptText(us.SecurityQAnswer, AppInfo.Username, AppInfo.Mobile);
+
+                //مخفی کردن لیست مشتری ها در ابتدا
+                dgvCustomer.Visible = false;
+
+                //لود کردن لیست مشتری ها
+                LoadCustomer();
             }
         }
 
@@ -78,7 +98,13 @@ namespace HalabchiCRM
             {
                 timer1.Enabled = false;
                 lblWelCome.Visible = false;
+                dgvCustomer.Visible = true;
             }
+        }
+
+        private void btnEditCostomer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

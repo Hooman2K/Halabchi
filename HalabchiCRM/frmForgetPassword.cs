@@ -34,14 +34,17 @@ namespace HalabchiCRM
                         _pass = aes.DecryptText(us.Password, txtUserName.Text.ToLower(), us.Mobile);
                         _answerQuastion = aes.DecryptText(us.SecurityQAnswer, txtUserName.Text.ToLower(), us.Mobile);
                         cmbxSecurityQuestion.SelectedIndex = us.SecurityQuestion;
+                        txtSecurityAnswer.SelectAll();
+                        txtSecurityAnswer.Focus();
                     }
                     else
                     {
+                        txtUserName.BackColor = Color.Red;
+                        FarsiMessageBox.MessageBox.Show("اخطار", "نام کاربری وارد شده صحیح نمی باشد ", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
                         txtUserName.SelectAll();
                         txtUserName.ResetText();
                         txtUserName.Focus();
-                        txtUserName.BackColor = Color.Red;
-                        FarsiMessageBox.MessageBox.Show("اخطار", "نام کاربری وارد شده صحیح نمی باشد ", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                        txtUserName.BackColor = Color.White;
                     }
                 }
             }
@@ -55,11 +58,14 @@ namespace HalabchiCRM
         private void btnEnter_Click(object sender, EventArgs e)
         {
             if (txtSecurityAnswer.Text == _answerQuastion)
-            {
                 txtPassword.Text = _pass;
-            }
             else
+            {
                 FarsiMessageBox.MessageBox.Show("اخطار", "پاسخ سوال امنیتی صحیح نمی باشد ", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                txtSecurityAnswer.ResetText();
+                txtSecurityAnswer.SelectAll();
+                txtSecurityAnswer.Focus();
+            }
         }
     }
 }
