@@ -76,7 +76,7 @@ namespace HalabchiCRM
         public string Tell { get; set; }
         [MaxLength(11)]
         public string Fax { get; set; }
-        [MaxLength(1000)]
+        [MaxLength(100)]
         public string Email { get; set; }
         [MaxLength(100)]
         public string WebSite { get; set; }

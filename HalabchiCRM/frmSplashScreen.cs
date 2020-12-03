@@ -24,7 +24,7 @@ namespace HalabchiCRM
                 {
                     case "مشکی": styleManager1.ManagerStyle = eStyle.Office2010Black; break;
                     case "خاکستری": styleManager1.ManagerStyle = eStyle.Office2010Silver; break;
-                    case "آبی": styleManager1.ManagerStyle = eStyle.Office2010Blue; break;
+                    case "آبی": styleManager1.ManagerStyle = eStyle.Office2007Blue; break;
                 }
             }
         }

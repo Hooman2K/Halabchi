@@ -35,7 +35,7 @@ namespace HalabchiCRM
             {
                 switch (theme)
                 {
-                    case "آبی": styleManager1.ManagerStyle = eStyle.Office2010Blue; cmbxTheme.SelectedIndex = 0; break;
+                    case "آبی": styleManager1.ManagerStyle = eStyle.Office2007Blue; cmbxTheme.SelectedIndex = 0; break;
                     case "خاکستری": styleManager1.ManagerStyle = eStyle.Office2010Silver; cmbxTheme.SelectedIndex = 1; break;
                     case "مشکی": styleManager1.ManagerStyle = eStyle.Office2010Black; cmbxTheme.SelectedIndex = 2; break;
                 }
@@ -105,6 +105,12 @@ namespace HalabchiCRM
         private void btnEditCostomer_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAddCostomer_Click(object sender, EventArgs e)
+        {
+            frmCustomer customer = new frmCustomer();
+            customer.ShowDialog();
         }
     }
 }

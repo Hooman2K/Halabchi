@@ -300,7 +300,6 @@
             this.cmbxSecurityQuestion.DisplayMember = "Text";
             this.cmbxSecurityQuestion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbxSecurityQuestion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxSecurityQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxSecurityQuestion.FormattingEnabled = true;
             this.cmbxSecurityQuestion.ItemHeight = 17;
             this.cmbxSecurityQuestion.Items.AddRange(new object[] {
