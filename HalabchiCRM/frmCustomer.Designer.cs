@@ -371,7 +371,9 @@
             // 
             // errorProvider1
             // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
+            this.errorProvider1.RightToLeft = true;
             // 
             // labelX10
             // 
@@ -518,6 +520,7 @@
             this.Name = "frmCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "مشتریان";
+            this.Load += new System.EventHandler(this.frmCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -528,32 +531,32 @@
 
         private DevComponents.DotNetBar.ButtonX btnRegister;
         private DevComponents.DotNetBar.LabelX labelX1;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtCusromerID;
         private DevComponents.DotNetBar.LabelX labelX2;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtPostCode;
         private DevComponents.DotNetBar.LabelX labelX3;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtEconomyCode;
         private DevComponents.DotNetBar.LabelX labelX4;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtFactoryName;
         private DevComponents.DotNetBar.LabelX labelX5;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtMobile;
         private DevComponents.DotNetBar.LabelX labelX6;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtManagerName;
         private DevComponents.DotNetBar.LabelX labelX7;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtFax;
         private DevComponents.DotNetBar.LabelX labelX8;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtTell;
         private DevComponents.DotNetBar.LabelX labelX9;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtBrand;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtAddress;
         private DevComponents.DotNetBar.LabelX labelX12;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private DevComponents.DotNetBar.LabelX labelX10;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtOther;
         private DevComponents.DotNetBar.LabelX labelX11;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtWebSite;
         private DevComponents.DotNetBar.LabelX labelX13;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtEmail;
         private DevComponents.DotNetBar.ButtonX btnClear;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtCusromerID;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPostCode;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtEconomyCode;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtFactoryName;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMobile;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtManagerName;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtFax;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTell;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtBrand;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtAddress;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtOther;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtWebSite;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtEmail;
     }
 }
