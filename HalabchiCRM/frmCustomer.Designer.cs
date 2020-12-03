@@ -132,6 +132,7 @@
             this.txtPostCode.Size = new System.Drawing.Size(155, 23);
             this.txtPostCode.TabIndex = 1;
             this.txtPostCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPostCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JustNumber);
             // 
             // labelX3
             // 
@@ -162,6 +163,7 @@
             this.txtEconomyCode.Size = new System.Drawing.Size(155, 23);
             this.txtEconomyCode.TabIndex = 2;
             this.txtEconomyCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEconomyCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JustNumber);
             // 
             // labelX4
             // 
@@ -221,6 +223,7 @@
             this.txtMobile.Size = new System.Drawing.Size(155, 23);
             this.txtMobile.TabIndex = 4;
             this.txtMobile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMobile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JustNumber);
             // 
             // labelX6
             // 
@@ -280,6 +283,7 @@
             this.txtFax.Size = new System.Drawing.Size(155, 23);
             this.txtFax.TabIndex = 8;
             this.txtFax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtFax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JustNumber);
             // 
             // labelX8
             // 
@@ -310,6 +314,7 @@
             this.txtTell.Size = new System.Drawing.Size(155, 23);
             this.txtTell.TabIndex = 7;
             this.txtTell.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTell.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JustNumber);
             // 
             // labelX9
             // 
@@ -520,7 +525,6 @@
             this.Name = "frmCustomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "مشتریان";
-            this.Load += new System.EventHandler(this.frmCustomer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

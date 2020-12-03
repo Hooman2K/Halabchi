@@ -17,6 +17,7 @@ namespace HalabchiCRM
         {
             InitializeComponent();
         }
+
         public bool _isNew = true;
         public int _id;
 
@@ -24,6 +25,12 @@ namespace HalabchiCRM
         {
             txtAddress.Text = txtBrand.Text = txtCusromerID.Text = txtEconomyCode.Text = txtEmail.Text = txtFactoryName.Text = txtFax.Text = txtManagerName.Text = txtMobile.Text = txtOther.Text = txtPostCode.Text = txtTell.Text = txtWebSite.Text = null;
             txtCusromerID.Focus();
+        }
+
+        private void JustNumber(object sender,KeyPressEventArgs e)
+        {
+            if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
+                e.Handled = true;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
@@ -74,19 +81,19 @@ namespace HalabchiCRM
                     {
                         Customer cus = new Customer()
                         {
-                            Address = txtAddress.Text,
-                            Brand = txtBrand.Text,
                             CustomerID = txtCusromerID.Text,
+                            PostCode = txtPostCode.Text,
                             EconomyCode = txtEconomyCode.Text,
-                            Email = txtEmail.Text,
-                            FactoryName = txtFactoryName.Text,
-                            Fax = txtFax.Text,
                             ManagerName = txtManagerName.Text,
                             Mobile = txtMobile.Text,
-                            Other = txtOther.Text,
-                            PostCode = txtPostCode.Text,
+                            FactoryName = txtFactoryName.Text,
+                            Brand = txtBrand.Text,
                             Tell = txtTell.Text,
-                            WebSite = txtWebSite.Text
+                            Fax = txtFax.Text,
+                            Email = txtEmail.Text,
+                            WebSite = txtWebSite.Text,
+                            Other = txtOther.Text,
+                            Address = txtAddress.Text
                         };
                         db.Customers.Add(cus);
                         db.SaveChanges();
@@ -108,11 +115,6 @@ namespace HalabchiCRM
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clear();
-        }
-
-        private void frmCustomer_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
