@@ -27,7 +27,7 @@ namespace HalabchiCRM
             txtCusromerID.Focus();
         }
 
-        private void JustNumber(object sender,KeyPressEventArgs e)
+        public void JustNumber(object sender,KeyPressEventArgs e)
         {
             if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
                 e.Handled = true;

@@ -17,7 +17,7 @@ namespace HalabchiCRM
         {
             InitializeComponent();
         }
-
+        frmCustomer cu = new frmCustomer();
         public string _userName = "";
         public bool _isNew = true;
 
@@ -74,6 +74,11 @@ namespace HalabchiCRM
                     }
                 }
             }
+        }
+
+        private void txtMobile_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            cu.JustNumber(sender,e);
         }
     }
 }

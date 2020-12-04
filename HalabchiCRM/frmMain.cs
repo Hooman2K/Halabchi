@@ -30,8 +30,6 @@ namespace HalabchiCRM
             public Int64 estimated_completion_time { get; set; }
         }
 
-
-
         AESAlgorithm aes = new AESAlgorithm();
         private void ChangeTheme(string theme)
         {
@@ -334,6 +332,12 @@ order by start_time desc");
                     _isBackup = false;
                 }
             }
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            LoadCustomer();
+            LoadUser();
         }
     }
 }

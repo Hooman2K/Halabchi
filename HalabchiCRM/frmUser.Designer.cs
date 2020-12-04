@@ -57,6 +57,7 @@
             this.txtMobile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtMobile.Size = new System.Drawing.Size(249, 23);
             this.txtMobile.TabIndex = 19;
+            this.txtMobile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMobile_KeyPress);
             // 
             // txtLName
             // 
