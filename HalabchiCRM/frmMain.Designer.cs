@@ -41,7 +41,8 @@
             this.lblFullName = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
-            this.ribbonPanel7 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
+            this.contextMenuBar1 = new DevComponents.DotNetBar.ContextMenuBar();
             this.dgvUser = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,14 +53,10 @@
             this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column23 = new DevComponents.DotNetBar.Controls.DataGridViewCheckBoxXColumn();
-            this.btnSearchUser = new DevComponents.DotNetBar.ButtonX();
-            this.btnNewUser = new DevComponents.DotNetBar.ButtonX();
-            this.ribbonPanel1 = new DevComponents.DotNetBar.RibbonPanel();
-            this.contextMenuBar1 = new DevComponents.DotNetBar.ContextMenuBar();
-            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
-            this.btnEditCustomer = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             this.btnEditUser = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnEditCustomer = new DevComponents.DotNetBar.ButtonItem();
             this.dgvCustomer = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +75,9 @@
             this.lblWelCome = new DevComponents.DotNetBar.LabelX();
             this.btnSearchCostomer = new DevComponents.DotNetBar.ButtonX();
             this.btnAddCostomer = new DevComponents.DotNetBar.ButtonX();
+            this.ribbonPanel7 = new DevComponents.DotNetBar.RibbonPanel();
+            this.btnSearchUser = new DevComponents.DotNetBar.ButtonX();
+            this.btnNewUser = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.grbxEditUser = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.labelX17 = new DevComponents.DotNetBar.LabelX();
@@ -142,11 +142,11 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.statusStrip1.SuspendLayout();
             this.ribbonControl1.SuspendLayout();
-            this.ribbonPanel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.ribbonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
+            this.ribbonPanel7.SuspendLayout();
             this.ribbonPanel6.SuspendLayout();
             this.grbxEditUser.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
@@ -214,12 +214,12 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel7);
             this.ribbonControl1.Controls.Add(this.ribbonPanel6);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel5);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.ribbonTabItem1,
@@ -257,31 +257,49 @@
             this.ribbonControl1.TabGroupHeight = 14;
             this.ribbonControl1.TabIndex = 2;
             // 
-            // ribbonPanel7
+            // ribbonPanel1
             // 
-            this.ribbonPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel7.Controls.Add(this.dgvUser);
-            this.ribbonPanel7.Controls.Add(this.btnSearchUser);
-            this.ribbonPanel7.Controls.Add(this.btnNewUser);
-            this.ribbonPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel7.Location = new System.Drawing.Point(0, 26);
-            this.ribbonPanel7.Name = "ribbonPanel7";
-            this.ribbonPanel7.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel7.Size = new System.Drawing.Size(514, 360);
-            // 
-            // 
-            // 
-            this.ribbonPanel7.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel1.Controls.Add(this.contextMenuBar1);
+            this.ribbonPanel1.Controls.Add(this.dgvCustomer);
+            this.ribbonPanel1.Controls.Add(this.lblWelCome);
+            this.ribbonPanel1.Controls.Add(this.btnSearchCostomer);
+            this.ribbonPanel1.Controls.Add(this.btnAddCostomer);
+            this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel1.Location = new System.Drawing.Point(0, 26);
+            this.ribbonPanel1.Name = "ribbonPanel1";
+            this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel1.Size = new System.Drawing.Size(514, 360);
             // 
             // 
             // 
-            this.ribbonPanel7.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             // 
             // 
             // 
-            this.ribbonPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel7.TabIndex = 7;
-            this.ribbonPanel7.Visible = false;
+            this.ribbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel1.TabIndex = 1;
+            // 
+            // contextMenuBar1
+            // 
+            this.contextMenuBar1.AntiAlias = true;
+            this.contextMenuBar1.DockSide = DevComponents.DotNetBar.eDockSide.Document;
+            this.contextMenuBar1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.contextMenuBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem2,
+            this.buttonItem3});
+            this.contextMenuBar1.Location = new System.Drawing.Point(12, 3);
+            this.contextMenuBar1.Name = "contextMenuBar1";
+            this.contextMenuBar1.Size = new System.Drawing.Size(75, 47);
+            this.contextMenuBar1.Stretch = true;
+            this.contextMenuBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.contextMenuBar1.TabIndex = 3;
+            this.contextMenuBar1.TabStop = false;
+            this.contextMenuBar1.Text = "contextMenuBar1";
             // 
             // dgvUser
             // 
@@ -384,72 +402,18 @@
             this.Column23.ReadOnly = true;
             this.Column23.Visible = false;
             // 
-            // btnSearchUser
+            // buttonItem3
             // 
-            this.btnSearchUser.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSearchUser.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSearchUser.Location = new System.Drawing.Point(290, 18);
-            this.btnSearchUser.Name = "btnSearchUser";
-            this.btnSearchUser.Size = new System.Drawing.Size(75, 32);
-            this.btnSearchUser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSearchUser.TabIndex = 6;
-            this.btnSearchUser.Text = "جست و جو";
+            this.buttonItem3.AutoExpandOnClick = true;
+            this.buttonItem3.Name = "buttonItem3";
+            this.buttonItem3.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnEditUser});
+            this.buttonItem3.Text = "buttonItem3";
             // 
-            // btnNewUser
+            // btnEditUser
             // 
-            this.btnNewUser.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnNewUser.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnNewUser.Location = new System.Drawing.Point(371, 18);
-            this.btnNewUser.Name = "btnNewUser";
-            this.btnNewUser.Size = new System.Drawing.Size(130, 32);
-            this.btnNewUser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnNewUser.TabIndex = 5;
-            this.btnNewUser.Text = "ایجاد کاربر جدید";
-            this.btnNewUser.Click += new System.EventHandler(this.btnNewUser_Click);
-            // 
-            // ribbonPanel1
-            // 
-            this.ribbonPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel1.Controls.Add(this.contextMenuBar1);
-            this.ribbonPanel1.Controls.Add(this.dgvCustomer);
-            this.ribbonPanel1.Controls.Add(this.lblWelCome);
-            this.ribbonPanel1.Controls.Add(this.btnSearchCostomer);
-            this.ribbonPanel1.Controls.Add(this.btnAddCostomer);
-            this.ribbonPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel1.Location = new System.Drawing.Point(0, 26);
-            this.ribbonPanel1.Name = "ribbonPanel1";
-            this.ribbonPanel1.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel1.Size = new System.Drawing.Size(514, 360);
-            // 
-            // 
-            // 
-            this.ribbonPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel1.TabIndex = 1;
-            // 
-            // contextMenuBar1
-            // 
-            this.contextMenuBar1.AntiAlias = true;
-            this.contextMenuBar1.DockSide = DevComponents.DotNetBar.eDockSide.Document;
-            this.contextMenuBar1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.contextMenuBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem2,
-            this.buttonItem3});
-            this.contextMenuBar1.Location = new System.Drawing.Point(12, 3);
-            this.contextMenuBar1.Name = "contextMenuBar1";
-            this.contextMenuBar1.Size = new System.Drawing.Size(75, 47);
-            this.contextMenuBar1.Stretch = true;
-            this.contextMenuBar1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.contextMenuBar1.TabIndex = 3;
-            this.contextMenuBar1.TabStop = false;
-            this.contextMenuBar1.Text = "contextMenuBar1";
+            this.btnEditUser.Name = "btnEditUser";
+            this.btnEditUser.Text = "ویرایش";
             // 
             // buttonItem2
             // 
@@ -463,19 +427,6 @@
             // 
             this.btnEditCustomer.Name = "btnEditCustomer";
             this.btnEditCustomer.Text = "ویرایش";
-            // 
-            // buttonItem3
-            // 
-            this.buttonItem3.AutoExpandOnClick = true;
-            this.buttonItem3.Name = "buttonItem3";
-            this.buttonItem3.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnEditUser});
-            this.buttonItem3.Text = "buttonItem3";
-            // 
-            // btnEditUser
-            // 
-            this.btnEditUser.Name = "btnEditUser";
-            this.btnEditUser.Text = "ویرایش";
             // 
             // dgvCustomer
             // 
@@ -675,6 +626,55 @@
             this.btnAddCostomer.TabIndex = 3;
             this.btnAddCostomer.Text = "ایجاد مشتری جدید";
             this.btnAddCostomer.Click += new System.EventHandler(this.btnAddCostomer_Click);
+            // 
+            // ribbonPanel7
+            // 
+            this.ribbonPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel7.Controls.Add(this.dgvUser);
+            this.ribbonPanel7.Controls.Add(this.btnSearchUser);
+            this.ribbonPanel7.Controls.Add(this.btnNewUser);
+            this.ribbonPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel7.Location = new System.Drawing.Point(0, 26);
+            this.ribbonPanel7.Name = "ribbonPanel7";
+            this.ribbonPanel7.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel7.Size = new System.Drawing.Size(514, 360);
+            // 
+            // 
+            // 
+            this.ribbonPanel7.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel7.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel7.TabIndex = 7;
+            this.ribbonPanel7.Visible = false;
+            // 
+            // btnSearchUser
+            // 
+            this.btnSearchUser.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSearchUser.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSearchUser.Location = new System.Drawing.Point(290, 18);
+            this.btnSearchUser.Name = "btnSearchUser";
+            this.btnSearchUser.Size = new System.Drawing.Size(75, 32);
+            this.btnSearchUser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSearchUser.TabIndex = 6;
+            this.btnSearchUser.Text = "جست و جو";
+            // 
+            // btnNewUser
+            // 
+            this.btnNewUser.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnNewUser.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnNewUser.Location = new System.Drawing.Point(371, 18);
+            this.btnNewUser.Name = "btnNewUser";
+            this.btnNewUser.Size = new System.Drawing.Size(130, 32);
+            this.btnNewUser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnNewUser.TabIndex = 5;
+            this.btnNewUser.Text = "ایجاد کاربر جدید";
+            this.btnNewUser.Click += new System.EventHandler(this.btnNewUser_Click);
             // 
             // ribbonPanel6
             // 
@@ -1383,10 +1383,10 @@
             // 
             this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel4.Location = new System.Drawing.Point(0, 25);
+            this.ribbonPanel4.Location = new System.Drawing.Point(0, 26);
             this.ribbonPanel4.Name = "ribbonPanel4";
             this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel4.Size = new System.Drawing.Size(514, 361);
+            this.ribbonPanel4.Size = new System.Drawing.Size(514, 360);
             // 
             // 
             // 
@@ -1501,11 +1501,11 @@
             this.statusStrip1.PerformLayout();
             this.ribbonControl1.ResumeLayout(false);
             this.ribbonControl1.PerformLayout();
-            this.ribbonPanel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             this.ribbonPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
+            this.ribbonPanel7.ResumeLayout(false);
             this.ribbonPanel6.ResumeLayout(false);
             this.grbxEditUser.ResumeLayout(false);
             this.grbxEditUser.PerformLayout();

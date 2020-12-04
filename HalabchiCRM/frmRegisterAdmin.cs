@@ -80,5 +80,11 @@ namespace HalabchiCRM
         {
             this.Close();
         }
+
+        private void txtMobile_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AppInfo app = new AppInfo();
+            app.JustNumber(sender, e);
+        }
     }
 }
