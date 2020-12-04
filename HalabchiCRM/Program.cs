@@ -16,7 +16,7 @@ namespace HalabchiCRM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCustomer());
+            Application.Run(new AppContext());
         }
     }
 
@@ -27,6 +27,8 @@ namespace HalabchiCRM
             Application.Idle += new EventHandler(Application_Idle);
             frmSplashScreen splash = new frmSplashScreen();
             splash.Show();
+            //frmLogin login = new frmLogin();
+            //login.Show();
         }
         void Application_Idle(object sender, EventArgs e)
         {
