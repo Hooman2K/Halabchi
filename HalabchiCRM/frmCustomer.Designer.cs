@@ -550,18 +550,18 @@
         private DevComponents.DotNetBar.LabelX labelX11;
         private DevComponents.DotNetBar.LabelX labelX13;
         private DevComponents.DotNetBar.ButtonX btnClear;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtCusromerID;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtPostCode;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtEconomyCode;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtFactoryName;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtMobile;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtManagerName;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtFax;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtTell;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtBrand;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtAddress;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtOther;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtWebSite;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtEmail;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtCusromerID;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtPostCode;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtEconomyCode;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtFactoryName;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtMobile;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtManagerName;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtFax;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtTell;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtBrand;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtAddress;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtOther;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtWebSite;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtEmail;
     }
 }

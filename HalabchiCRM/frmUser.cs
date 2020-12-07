@@ -86,18 +86,27 @@ namespace HalabchiCRM
             }
             else
             {
-                using (var db = new HalabchiDB())
+                if (txtPassword.Text != txtRePassword.Text)
                 {
-                    var us = db.Users.Where(u => u.UserName == _userName).FirstOrDefault();
-                    us.Password = aes.EncryptText(txtPassword.Text, txtUserName.Text.ToLower(), txtMobile.Text);
-                    us.FName = txtFName.Text;
-                    us.LName = txtLName.Text;
+                    FarsiMessageBox.MessageBox.Show("اخطار", "کلمه عبور و تکرار آن برابر نیست", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                    txtPassword.Focus();
+                    return;
+                }
+                else
+                {
+                    using (var db = new HalabchiDB())
+                    {
+                        var us = db.Users.Where(u => u.UserName == _userName).FirstOrDefault();
+                        us.Password = aes.EncryptText(txtPassword.Text, txtUserName.Text.ToLower(), txtMobile.Text);
+                        us.FName = txtFName.Text;
+                        us.LName = txtLName.Text;
 
-                    db.SaveChanges();
-                    FarsiMessageBox.MessageBox.Show("موفقیت", "کاربر با موفقیت ویرایش شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
-                    _isNew = true;
-                    Clear();
-                    this.Close();
+                        db.SaveChanges();
+                        FarsiMessageBox.MessageBox.Show("موفقیت", "کاربر با موفقیت ویرایش شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                        _isNew = true;
+                        Clear();
+                        this.Close();
+                    }
                 }
             }
         }

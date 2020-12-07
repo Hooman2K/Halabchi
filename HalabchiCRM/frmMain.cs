@@ -382,9 +382,52 @@ order by start_time desc");
             lblTime.Text = dt.ToString("hh:mm:ss tt");
         }
 
-        private void dgvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvCustomer_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            frmCustomer fc = new frmCustomer();
+            fc._isNew = false;
+            fc._id = int.Parse(dgvCustomer.CurrentRow.Cells[0].Value.ToString());
 
+            fc.txtCusromerID.Text = dgvCustomer.CurrentRow.Cells[1].Value.ToString();
+            fc.txtPostCode.Text = dgvCustomer.CurrentRow.Cells[2].Value.ToString();
+            fc.txtEconomyCode.Text = dgvCustomer.CurrentRow.Cells[3].Value.ToString();
+            fc.txtManagerName.Text = dgvCustomer.CurrentRow.Cells[4].Value.ToString();
+            fc.txtMobile.Text = dgvCustomer.CurrentRow.Cells[5].Value.ToString();
+            fc.txtFactoryName.Text = dgvCustomer.CurrentRow.Cells[6].Value.ToString();
+            fc.txtBrand.Text = dgvCustomer.CurrentRow.Cells[7].Value.ToString();
+            fc.txtTell.Text = dgvCustomer.CurrentRow.Cells[8].Value.ToString();
+            fc.txtFax.Text = dgvCustomer.CurrentRow.Cells[9].Value.ToString();
+            fc.txtEmail.Text = dgvCustomer.CurrentRow.Cells[10].Value.ToString();
+            fc.txtWebSite.Text = dgvCustomer.CurrentRow.Cells[11].Value.ToString();
+            fc.txtOther.Text = dgvCustomer.CurrentRow.Cells[12].Value.ToString();
+            fc.txtAddress.Text = dgvCustomer.CurrentRow.Cells[13].Value.ToString();
+            fc.ShowDialog();
+            LoadCustomer();
+        }
+
+        private void btnEditCustomer_Click(object sender, EventArgs e)
+        {
+            dgvCustomer_CellContentDoubleClick(null, null);
+        }
+
+        private void dgvUser_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmUser us = new frmUser();
+            us._isNew = false;
+            us._userName = dgvUser.CurrentRow.Cells[0].Value.ToString();
+
+            us.txtUserName.Text = dgvUser.CurrentRow.Cells[0].Value.ToString();
+            us.txtPassword.Text = aes.DecryptText(dgvUser.CurrentRow.Cells[1].Value.ToString(), us._userName, dgvUser.CurrentRow.Cells[4].Value.ToString());
+            us.txtFName.Text = dgvUser.CurrentRow.Cells[2].Value.ToString();
+            us.txtLName.Text = dgvUser.CurrentRow.Cells[3].Value.ToString();
+            us.txtMobile.Text = dgvUser.CurrentRow.Cells[4].Value.ToString();
+            us.ShowDialog();
+            LoadUser();
+        }
+
+        private void btnEditUser_Click(object sender, EventArgs e)
+        {
+            dgvUser_CellContentDoubleClick(null, null);
         }
     }
 }

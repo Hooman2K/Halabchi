@@ -31,8 +31,6 @@
             this.txtMobile = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtLName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtFName = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtRePassword = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtUserName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX9 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
@@ -42,6 +40,8 @@
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.btnRegister = new DevComponents.DotNetBar.ButtonX();
+            this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtRePassword = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.SuspendLayout();
             // 
             // txtMobile
@@ -56,7 +56,7 @@
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtMobile.Size = new System.Drawing.Size(249, 23);
-            this.txtMobile.TabIndex = 19;
+            this.txtMobile.TabIndex = 6;
             this.txtMobile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtMobile_KeyPress);
             // 
             // txtLName
@@ -71,7 +71,7 @@
             this.txtLName.Name = "txtLName";
             this.txtLName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtLName.Size = new System.Drawing.Size(249, 23);
-            this.txtLName.TabIndex = 17;
+            this.txtLName.TabIndex = 5;
             // 
             // txtFName
             // 
@@ -85,35 +85,7 @@
             this.txtFName.Name = "txtFName";
             this.txtFName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtFName.Size = new System.Drawing.Size(249, 23);
-            this.txtFName.TabIndex = 15;
-            // 
-            // txtRePassword
-            // 
-            // 
-            // 
-            // 
-            this.txtRePassword.Border.Class = "TextBoxBorder";
-            this.txtRePassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtRePassword.Location = new System.Drawing.Point(12, 70);
-            this.txtRePassword.MaxLength = 20;
-            this.txtRePassword.Name = "txtRePassword";
-            this.txtRePassword.PasswordChar = '●';
-            this.txtRePassword.Size = new System.Drawing.Size(249, 23);
-            this.txtRePassword.TabIndex = 13;
-            // 
-            // txtPassword
-            // 
-            // 
-            // 
-            // 
-            this.txtPassword.Border.Class = "TextBoxBorder";
-            this.txtPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPassword.Location = new System.Drawing.Point(12, 41);
-            this.txtPassword.MaxLength = 20;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '●';
-            this.txtPassword.Size = new System.Drawing.Size(249, 23);
-            this.txtPassword.TabIndex = 11;
+            this.txtFName.TabIndex = 4;
             // 
             // txtUserName
             // 
@@ -127,7 +99,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtUserName.Size = new System.Drawing.Size(249, 23);
-            this.txtUserName.TabIndex = 9;
+            this.txtUserName.TabIndex = 1;
             // 
             // labelX9
             // 
@@ -221,7 +193,7 @@
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(122, 23);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnCancel.TabIndex = 22;
+            this.btnCancel.TabIndex = 8;
             this.btnCancel.Text = "لغو";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -233,22 +205,50 @@
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(122, 23);
             this.btnRegister.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnRegister.TabIndex = 21;
+            this.btnRegister.TabIndex = 7;
             this.btnRegister.Text = "ثبت";
             this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // txtPassword
+            // 
+            // 
+            // 
+            // 
+            this.txtPassword.Border.Class = "TextBoxBorder";
+            this.txtPassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPassword.Location = new System.Drawing.Point(12, 40);
+            this.txtPassword.MaxLength = 50;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtPassword.Size = new System.Drawing.Size(249, 23);
+            this.txtPassword.TabIndex = 2;
+            // 
+            // txtRePassword
+            // 
+            // 
+            // 
+            // 
+            this.txtRePassword.Border.Class = "TextBoxBorder";
+            this.txtRePassword.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtRePassword.Location = new System.Drawing.Point(12, 69);
+            this.txtRePassword.MaxLength = 50;
+            this.txtRePassword.Name = "txtRePassword";
+            this.txtRePassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtRePassword.Size = new System.Drawing.Size(249, 23);
+            this.txtRePassword.TabIndex = 3;
             // 
             // frmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(366, 219);
+            this.Controls.Add(this.txtRePassword);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.txtLName);
             this.Controls.Add(this.txtFName);
-            this.Controls.Add(this.txtRePassword);
-            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.labelX9);
             this.Controls.Add(this.labelX5);
@@ -280,11 +280,11 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.ButtonX btnCancel;
         private DevComponents.DotNetBar.ButtonX btnRegister;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtMobile;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtLName;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtFName;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtRePassword;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtPassword;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtUserName;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtMobile;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtLName;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtFName;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtUserName;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtPassword;
+        public DevComponents.DotNetBar.Controls.TextBoxX txtRePassword;
     }
 }

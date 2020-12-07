@@ -196,11 +196,11 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel7);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel6);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel7);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -265,7 +265,6 @@
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
-            this.ribbonPanel1.Visible = true;
             // 
             // contextMenuBar1
             // 
@@ -283,7 +282,6 @@
             this.contextMenuBar1.TabIndex = 3;
             this.contextMenuBar1.TabStop = false;
             this.contextMenuBar1.Text = "contextMenuBar1";
-            this.contextMenuBar1.WrapItemsDock = true;
             // 
             // buttonItem2
             // 
@@ -297,6 +295,7 @@
             // 
             this.btnEditCustomer.Name = "btnEditCustomer";
             this.btnEditCustomer.Text = "ویرایش";
+            this.btnEditCustomer.Click += new System.EventHandler(this.btnEditCustomer_Click);
             // 
             // buttonItem3
             // 
@@ -310,6 +309,7 @@
             // 
             this.btnEditUser.Name = "btnEditUser";
             this.btnEditUser.Text = "ویرایش";
+            this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
             // 
             // dgvUser
             // 
@@ -341,6 +341,7 @@
             this.dgvUser.ReadOnly = true;
             this.dgvUser.Size = new System.Drawing.Size(605, 298);
             this.dgvUser.TabIndex = 7;
+            this.dgvUser.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUser_CellContentDoubleClick);
             // 
             // Column15
             // 
@@ -466,7 +467,7 @@
             this.dgvCustomer.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCustomer.Size = new System.Drawing.Size(605, 299);
             this.dgvCustomer.TabIndex = 7;
-            this.dgvCustomer.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellContentClick);
+            this.dgvCustomer.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellContentDoubleClick);
             // 
             // Column1
             // 
@@ -795,6 +796,7 @@
             this.labelX17.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX17.Location = new System.Drawing.Point(415, 47);
             this.labelX17.Name = "labelX17";
+            this.labelX17.Size = new System.Drawing.Size(72, 18);
             this.labelX17.TabIndex = 63;
             this.labelX17.Text = "کلمه عبور : ";
             // 
@@ -808,6 +810,7 @@
             this.labelX16.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX16.Location = new System.Drawing.Point(415, 76);
             this.labelX16.Name = "labelX16";
+            this.labelX16.Size = new System.Drawing.Size(34, 18);
             this.labelX16.TabIndex = 62;
             this.labelX16.Text = "نام : ";
             // 
@@ -821,6 +824,7 @@
             this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX15.Location = new System.Drawing.Point(415, 105);
             this.labelX15.Name = "labelX15";
+            this.labelX15.Size = new System.Drawing.Size(89, 18);
             this.labelX15.TabIndex = 61;
             this.labelX15.Text = "نام خانوادگی : ";
             // 
@@ -834,6 +838,7 @@
             this.labelX14.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX14.Location = new System.Drawing.Point(415, 134);
             this.labelX14.Name = "labelX14";
+            this.labelX14.Size = new System.Drawing.Size(52, 18);
             this.labelX14.TabIndex = 60;
             this.labelX14.Text = "موبایل : ";
             // 
@@ -847,6 +852,7 @@
             this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX13.Location = new System.Drawing.Point(415, 163);
             this.labelX13.Name = "labelX13";
+            this.labelX13.Size = new System.Drawing.Size(110, 18);
             this.labelX13.TabIndex = 59;
             this.labelX13.Text = "پست الکترونیکی : ";
             // 
@@ -860,6 +866,7 @@
             this.labelX12.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX12.Location = new System.Drawing.Point(415, 191);
             this.labelX12.Name = "labelX12";
+            this.labelX12.Size = new System.Drawing.Size(90, 18);
             this.labelX12.TabIndex = 58;
             this.labelX12.Text = "سوال امنیتی : ";
             // 
@@ -873,6 +880,7 @@
             this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX11.Location = new System.Drawing.Point(415, 221);
             this.labelX11.Name = "labelX11";
+            this.labelX11.Size = new System.Drawing.Size(123, 18);
             this.labelX11.TabIndex = 57;
             this.labelX11.Text = "پاسخ سوال امنیتی : ";
             // 
@@ -886,6 +894,7 @@
             this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX9.Location = new System.Drawing.Point(415, 18);
             this.labelX9.Name = "labelX9";
+            this.labelX9.Size = new System.Drawing.Size(74, 18);
             this.labelX9.TabIndex = 56;
             this.labelX9.Text = "نام کاربری : ";
             // 
@@ -905,7 +914,6 @@
             this.cmbxSecurityQuestion.DisplayMember = "Text";
             this.cmbxSecurityQuestion.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbxSecurityQuestion.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxSecurityQuestion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxSecurityQuestion.FormattingEnabled = true;
             this.cmbxSecurityQuestion.ItemHeight = 17;
             this.cmbxSecurityQuestion.Items.AddRange(new object[] {
@@ -1342,7 +1350,6 @@
             // 
             this.cmbxTheme.DisplayMember = "Text";
             this.cmbxTheme.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbxTheme.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbxTheme.FormattingEnabled = true;
             this.cmbxTheme.ItemHeight = 17;
             this.cmbxTheme.Items.AddRange(new object[] {
