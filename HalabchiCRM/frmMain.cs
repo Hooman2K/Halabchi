@@ -22,6 +22,7 @@ namespace HalabchiCRM
         bool _isBackup = false;
         string _timeLength = string.Empty;
         int _time=0;
+        DateTime dt;
 
         public class BackupLength
         {
@@ -61,9 +62,44 @@ namespace HalabchiCRM
                 dgvUser.DataSource = db.Users.ToList();
             }
         }
+        private void DayOfWeek()
+        {
+            if (lblDay.Text == "Saturday")
+                lblDay.Text = "شنبه";
+
+            else if (lblDay.Text == "Sunday")
+                lblDay.Text = "یک شنبه";
+
+            else if (lblDay.Text == "Monday")
+                lblDay.Text = "دو شنبه";
+
+            else if (lblDay.Text == "Tuesday")
+                lblDay.Text = "سه شنبه";
+
+            else if (lblDay.Text == "Wednesday")
+                lblDay.Text = "چهار شنبه";
+
+            else if (lblDate.Text == "Thursday")
+                lblDay.Text = "پنج شنبه";
+
+            else if (lblDay.Text == "Friday")
+            {
+                lblDay.Text = "جمعه";
+                lblDay.ForeColor = Color.Red;
+            }
+        }
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            dt = DateTime.Now;
+            lblTime.Text = dt.ToString("hh:mm:ss tt");
+            lblDate.Text = dt.Year + "/" + dt.Month + "/" + dt.Day;
+            System.Globalization.PersianCalendar PC = new System.Globalization.PersianCalendar();
+            dt = DateTime.Parse(lblDate.Text);
+            lblDate.Text = PC.GetYear(dt).ToString("0000") + "/" + PC.GetMonth(dt).ToString("00") + "/" + PC.GetDayOfMonth(dt).ToString("00");
+            lblDay.Text = dt.DayOfWeek.ToString();
+            DayOfWeek();
+
             if (!File.Exists(Path.GetTempPath() + "\\" + "BackupLength.txt"))
             {
                 using (FileStream s = File.Open(Path.GetTempPath() + "\\" + "BackupLength.txt", FileMode.CreateNew))
@@ -342,8 +378,8 @@ order by start_time desc");
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-            LoadCustomer();
-            LoadUser();
+            dt = DateTime.Now;
+            lblTime.Text = dt.ToString("hh:mm:ss tt");
         }
     }
 }
