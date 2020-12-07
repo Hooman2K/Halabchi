@@ -265,6 +265,7 @@
             this.Name = "frmUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "کاربران";
+            this.Load += new System.EventHandler(this.frmUser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -128,7 +128,6 @@ namespace HalabchiCRM
                     FarsiMessageBox.MessageBox.Show("موفقیت", "مشتری با موفقیت ویرایش شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
                     _isNew = true;
                     Clear();
-                    txtCusromerID.Enabled = true;
                     this.Close();
                 }
             }
@@ -137,6 +136,11 @@ namespace HalabchiCRM
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clear();
+        }
+
+        private void frmCustomer_Load(object sender, EventArgs e)
+        {
+            txtCusromerID.Enabled = _isNew;
         }
     }
 }

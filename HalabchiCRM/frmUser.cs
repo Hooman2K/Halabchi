@@ -97,8 +97,6 @@ namespace HalabchiCRM
                     FarsiMessageBox.MessageBox.Show("موفقیت", "کاربر با موفقیت ویرایش شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
                     _isNew = true;
                     Clear();
-                    txtUserName.Enabled = true;
-                    txtMobile.Enabled = true;
                     this.Close();
                 }
             }
@@ -110,5 +108,10 @@ namespace HalabchiCRM
             app.JustNumber(sender, e);
         }
 
+        private void frmUser_Load(object sender, EventArgs e)
+        {
+            txtUserName.Enabled = _isNew;
+            txtMobile.Enabled = _isNew;
+        }
     }
 }
