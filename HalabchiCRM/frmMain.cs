@@ -381,5 +381,10 @@ order by start_time desc");
             dt = DateTime.Now;
             lblTime.Text = dt.ToString("hh:mm:ss tt");
         }
+
+        private void dgvCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -108,7 +108,29 @@ namespace HalabchiCRM
             }
             else
             {
+                using (var db = new HalabchiDB())
+                {
+                    var cus = db.Customers.Where(u => u.ID == _id).FirstOrDefault();
+                    cus.PostCode = txtPostCode.Text;
+                    cus.EconomyCode = txtEconomyCode.Text;
+                    cus.ManagerName = txtManagerName.Text;
+                    cus.Mobile = txtMobile.Text;
+                    cus.FactoryName = txtFactoryName.Text;
+                    cus.Brand = txtBrand.Text;
+                    cus.Tell = txtTell.Text;
+                    cus.Fax = txtFax.Text;
+                    cus.Email = txtEmail.Text;
+                    cus.WebSite = txtWebSite.Text;
+                    cus.Other = txtOther.Text;
+                    cus.Address = txtAddress.Text;
 
+                    db.SaveChanges();
+                    FarsiMessageBox.MessageBox.Show("موفقیت", "مشتری با موفقیت ویرایش شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                    _isNew = true;
+                    Clear();
+                    txtCusromerID.Enabled = true;
+                    this.Close();
+                }
             }
         }
 

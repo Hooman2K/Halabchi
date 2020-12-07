@@ -21,6 +21,12 @@ namespace HalabchiCRM
         public string _userName = "";
         public bool _isNew = true;
 
+        private void Clear()
+        {
+            txtUserName.Text = txtPassword.Text = txtRePassword.Text = txtFName.Text = txtLName.Text = txtMobile.Text = null;
+            txtUserName.Focus();
+        }
+
         AESAlgorithm aes = new AESAlgorithm();
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -29,49 +35,71 @@ namespace HalabchiCRM
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            int count = 0;
-            foreach (Control c in this.Controls)
+            if (_isNew)
             {
-                if (c is TextBox)
+                int count = 0;
+                foreach (Control c in this.Controls)
                 {
-                    TextBox txt = c as TextBox;
-                    if (string.IsNullOrEmpty(txt.Text))
-                        count++;
+                    if (c is TextBox)
+                    {
+                        TextBox txt = c as TextBox;
+                        if (string.IsNullOrEmpty(txt.Text))
+                            count++;
+                    }
                 }
-            }
-            if (count > 0)
-            {
-                FarsiMessageBox.MessageBox.Show("اخطار", "وارد کردن تمام مقادیر الزامی است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
-                return;
-            }
-            else
-            {
-                if (txtPassword.Text != txtRePassword.Text)
+                if (count > 0)
                 {
-                    FarsiMessageBox.MessageBox.Show("اخطار", "کلمه عبور و تکرار آن برابر نیست", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                    FarsiMessageBox.MessageBox.Show("اخطار", "وارد کردن تمام مقادیر الزامی است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
                     return;
                 }
                 else
                 {
-                    using (var db = new HalabchiDB())
+                    if (txtPassword.Text != txtRePassword.Text)
                     {
-                        User us = new User()
-                        {
-                            UserName = txtUserName.Text.ToLower(),
-                            Password = aes.EncryptText(txtPassword.Text, txtUserName.Text.ToLower(), txtMobile.Text),
-                            FName = txtFName.Text,
-                            LName = txtLName.Text,
-                            Mobile = txtMobile.Text,
-                            SecurityQAnswer = aes.EncryptText("null", txtUserName.Text.ToLower(), txtMobile.Text),
-                            IsAdmin = false
-                        };
-                        db.Users.Add(us);
-                        db.SaveChanges();
-                        FarsiMessageBox.MessageBox.Show("موفقیت", "کاربر جدید با موفقیت ثبت شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
-                        frmMain main = new frmMain();
-                        main.LoadUser();
-                        this.Close();
+                        FarsiMessageBox.MessageBox.Show("اخطار", "کلمه عبور و تکرار آن برابر نیست", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                        return;
                     }
+                    else
+                    {
+                        using (var db = new HalabchiDB())
+                        {
+                            User us = new User()
+                            {
+                                UserName = txtUserName.Text.ToLower(),
+                                Password = aes.EncryptText(txtPassword.Text, txtUserName.Text.ToLower(), txtMobile.Text),
+                                FName = txtFName.Text,
+                                LName = txtLName.Text,
+                                Mobile = txtMobile.Text,
+                                SecurityQAnswer = aes.EncryptText("null", txtUserName.Text.ToLower(), txtMobile.Text),
+                                IsAdmin = false
+                            };
+                            db.Users.Add(us);
+                            db.SaveChanges();
+                            FarsiMessageBox.MessageBox.Show("موفقیت", "کاربر جدید با موفقیت ثبت شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                            Clear();
+                            frmMain main = new frmMain();
+                            main.LoadUser();
+                            this.Close();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                using (var db = new HalabchiDB())
+                {
+                    var us = db.Users.Where(u => u.UserName == _userName).FirstOrDefault();
+                    us.Password = aes.EncryptText(txtPassword.Text, txtUserName.Text.ToLower(), txtMobile.Text);
+                    us.FName = txtFName.Text;
+                    us.LName = txtLName.Text;
+
+                    db.SaveChanges();
+                    FarsiMessageBox.MessageBox.Show("موفقیت", "کاربر با موفقیت ویرایش شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                    _isNew = true;
+                    Clear();
+                    txtUserName.Enabled = true;
+                    txtMobile.Enabled = true;
+                    this.Close();
                 }
             }
         }
@@ -81,5 +109,6 @@ namespace HalabchiCRM
             AppInfo app = new AppInfo();
             app.JustNumber(sender, e);
         }
+
     }
 }

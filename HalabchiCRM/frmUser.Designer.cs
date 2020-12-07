@@ -277,13 +277,13 @@
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX1;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtMobile;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtLName;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtFName;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtRePassword;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtPassword;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtUserName;
         private DevComponents.DotNetBar.ButtonX btnCancel;
         private DevComponents.DotNetBar.ButtonX btnRegister;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMobile;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtLName;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtFName;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtRePassword;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPassword;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtUserName;
     }
 }
