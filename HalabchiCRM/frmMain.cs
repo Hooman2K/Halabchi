@@ -142,13 +142,19 @@ namespace HalabchiCRM
         private void btnAddCostomer_Click(object sender, EventArgs e)
         {
             frmCustomer customer = new frmCustomer();
+            this.Hide();
             customer.ShowDialog();
+            this.Show();
+            LoadCustomer();
         }
 
         private void btnNewUser_Click(object sender, EventArgs e)
         {
             frmUser users = new frmUser();
+            this.Hide();
             users.ShowDialog();
+            this.Show();
+            LoadUser();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
