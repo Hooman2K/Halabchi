@@ -429,5 +429,11 @@ order by start_time desc");
         {
             dgvUser_CellContentDoubleClick(null, null);
         }
+
+        private void btnSearchCostomer_Click(object sender, EventArgs e)
+        {
+            frmSearchCustomer searchCustomer = new frmSearchCustomer();
+            searchCustomer.ShowDialog();
+        }
     }
 }
