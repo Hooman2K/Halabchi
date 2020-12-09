@@ -533,8 +533,6 @@
         }
 
         #endregion
-
-        private DevComponents.DotNetBar.ButtonX btnRegister;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX3;
@@ -549,7 +547,6 @@
         private DevComponents.DotNetBar.LabelX labelX10;
         private DevComponents.DotNetBar.LabelX labelX11;
         private DevComponents.DotNetBar.LabelX labelX13;
-        private DevComponents.DotNetBar.ButtonX btnClear;
         public DevComponents.DotNetBar.Controls.TextBoxX txtCusromerID;
         public DevComponents.DotNetBar.Controls.TextBoxX txtPostCode;
         public DevComponents.DotNetBar.Controls.TextBoxX txtEconomyCode;
@@ -563,5 +560,7 @@
         public DevComponents.DotNetBar.Controls.TextBoxX txtOther;
         public DevComponents.DotNetBar.Controls.TextBoxX txtWebSite;
         public DevComponents.DotNetBar.Controls.TextBoxX txtEmail;
+        public DevComponents.DotNetBar.ButtonX btnRegister;
+        public DevComponents.DotNetBar.ButtonX btnClear;
     }
 }

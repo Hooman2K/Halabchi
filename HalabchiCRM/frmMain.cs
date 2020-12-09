@@ -132,6 +132,8 @@ namespace HalabchiCRM
 
                 //مخفی کردن لیست مشتری ها در ابتدا
                 dgvCustomer.Visible = false;
+                btnAddCostomer.Visible = false;
+                btnSearchCostomer.Visible = false;
 
                 //لود کردن لیست مشتری ها
                 LoadCustomer();
@@ -167,6 +169,8 @@ namespace HalabchiCRM
                 timer1.Enabled = false;
                 lblWelCome.Visible = false;
                 dgvCustomer.Visible = true;
+                btnAddCostomer.Visible = true;
+                btnSearchCostomer.Visible = true;
             }
         }
 

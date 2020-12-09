@@ -28,22 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvCustomer = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.labelX8 = new DevComponents.DotNetBar.LabelX();
-            this.txtTell = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX9 = new DevComponents.DotNetBar.LabelX();
-            this.txtBrand = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.txtFactoryName = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
-            this.txtMobile = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.txtManagerName = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.txtCusromerID = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,6 +46,18 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelX8 = new DevComponents.DotNetBar.LabelX();
+            this.txtTell = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX9 = new DevComponents.DotNetBar.LabelX();
+            this.txtBrand = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.txtFactoryName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.txtMobile = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
+            this.txtManagerName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.txtCusromerID = new DevComponents.DotNetBar.Controls.TextBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,14 +65,14 @@
             // 
             this.dgvCustomer.AllowUserToAddRows = false;
             this.dgvCustomer.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -89,30 +89,140 @@
             this.Column12,
             this.Column13,
             this.Column14});
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCustomer.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCustomer.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCustomer.EnableHeadersVisualStyles = false;
             this.dgvCustomer.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvCustomer.Location = new System.Drawing.Point(12, 71);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.ReadOnly = true;
             this.dgvCustomer.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCustomer.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCustomer.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCustomer.Size = new System.Drawing.Size(763, 350);
             this.dgvCustomer.TabIndex = 7;
+            this.dgvCustomer.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellContentDoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "ID";
+            this.Column1.HeaderText = "شماره";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "CustomerID";
+            this.Column2.HeaderText = "شماره مشتری";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 120;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "PostCode";
+            this.Column3.HeaderText = "کد پستی";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "EconomyCode";
+            this.Column4.HeaderText = "کد اقتصاری";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "ManagerName";
+            this.Column5.HeaderText = "نام مدیر عامل";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 140;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Mobile";
+            this.Column6.HeaderText = "شماره موبایل";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 130;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "FactoryName";
+            this.Column7.HeaderText = "نام کارخانه";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Brand";
+            this.Column8.HeaderText = "برند";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "Tell";
+            this.Column9.HeaderText = "تلفن";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "Fax";
+            this.Column10.HeaderText = "فکس";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            this.Column10.Visible = false;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "Email";
+            this.Column11.HeaderText = "پست الکترونیکی";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            this.Column11.Visible = false;
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "WebSite";
+            this.Column12.HeaderText = "تار نما";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            this.Column12.Visible = false;
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "Other";
+            this.Column13.HeaderText = "سایر توضیحات";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            this.Column13.Visible = false;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "Address";
+            this.Column14.HeaderText = "آدرس";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            this.Column14.Visible = false;
             // 
             // labelX8
             // 
@@ -298,115 +408,6 @@
             this.txtCusromerID.TabIndex = 1;
             this.txtCusromerID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtCusromerID.TextChanged += new System.EventHandler(this.txtCusromerID_TextChanged);
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "ID";
-            this.Column1.HeaderText = "شماره";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "CustomerID";
-            this.Column2.HeaderText = "شماره مشتری";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 120;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "PostCode";
-            this.Column3.HeaderText = "کد پستی";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Visible = false;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "EconomyCode";
-            this.Column4.HeaderText = "کد اقتصاری";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Visible = false;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "ManagerName";
-            this.Column5.HeaderText = "نام مدیر عامل";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 140;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Mobile";
-            this.Column6.HeaderText = "شماره موبایل";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 130;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "FactoryName";
-            this.Column7.HeaderText = "نام کارخانه";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Brand";
-            this.Column8.HeaderText = "برند";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "Tell";
-            this.Column9.HeaderText = "تلفن";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "Fax";
-            this.Column10.HeaderText = "فکس";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            this.Column10.Visible = false;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "Email";
-            this.Column11.HeaderText = "پست الکترونیکی";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            this.Column11.Visible = false;
-            // 
-            // Column12
-            // 
-            this.Column12.DataPropertyName = "WebSite";
-            this.Column12.HeaderText = "تار نما";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            this.Column12.Visible = false;
-            // 
-            // Column13
-            // 
-            this.Column13.DataPropertyName = "Other";
-            this.Column13.HeaderText = "سایر توضیحات";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            this.Column13.Visible = false;
-            // 
-            // Column14
-            // 
-            this.Column14.DataPropertyName = "Address";
-            this.Column14.HeaderText = "آدرس";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            this.Column14.Visible = false;
             // 
             // frmSearchCustomer
             // 

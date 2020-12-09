@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
@@ -72,14 +72,6 @@
             this.lblWelCome = new DevComponents.DotNetBar.LabelX();
             this.btnSearchCostomer = new DevComponents.DotNetBar.ButtonX();
             this.btnAddCostomer = new DevComponents.DotNetBar.ButtonX();
-            this.ribbonPanel7 = new DevComponents.DotNetBar.RibbonPanel();
-            this.btnSearchUser = new DevComponents.DotNetBar.ButtonX();
-            this.btnNewUser = new DevComponents.DotNetBar.ButtonX();
-            this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
-            this.btnSearchContract = new DevComponents.DotNetBar.ButtonX();
-            this.btnNewContract = new DevComponents.DotNetBar.ButtonX();
-            this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
-            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.grbxEditUser = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.labelX17 = new DevComponents.DotNetBar.LabelX();
@@ -104,6 +96,13 @@
             this.txtFName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtUserName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.ribbonPanel7 = new DevComponents.DotNetBar.RibbonPanel();
+            this.btnNewUser = new DevComponents.DotNetBar.ButtonX();
+            this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
+            this.btnSearchContract = new DevComponents.DotNetBar.ButtonX();
+            this.btnNewContract = new DevComponents.DotNetBar.ButtonX();
+            this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
+            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.grbxRestore = new System.Windows.Forms.GroupBox();
@@ -154,10 +153,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
-            this.ribbonPanel7.SuspendLayout();
-            this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel6.SuspendLayout();
             this.grbxEditUser.SuspendLayout();
+            this.ribbonPanel7.SuspendLayout();
+            this.ribbonPanel2.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             this.grbxRestore.SuspendLayout();
@@ -196,11 +195,11 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel6);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel7);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel6);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel7);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -418,14 +417,14 @@
             // 
             this.dgvCustomer.AllowUserToAddRows = false;
             this.dgvCustomer.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -614,148 +613,6 @@
             this.btnAddCostomer.TabIndex = 3;
             this.btnAddCostomer.Text = "ایجاد مشتری جدید";
             this.btnAddCostomer.Click += new System.EventHandler(this.btnAddCostomer_Click);
-            // 
-            // ribbonPanel7
-            // 
-            this.ribbonPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel7.Controls.Add(this.dgvUser);
-            this.ribbonPanel7.Controls.Add(this.btnSearchUser);
-            this.ribbonPanel7.Controls.Add(this.btnNewUser);
-            this.ribbonPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel7.Location = new System.Drawing.Point(0, 26);
-            this.ribbonPanel7.Name = "ribbonPanel7";
-            this.ribbonPanel7.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel7.Size = new System.Drawing.Size(629, 360);
-            // 
-            // 
-            // 
-            this.ribbonPanel7.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel7.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel7.TabIndex = 7;
-            this.ribbonPanel7.Visible = false;
-            // 
-            // btnSearchUser
-            // 
-            this.btnSearchUser.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSearchUser.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSearchUser.Location = new System.Drawing.Point(406, 18);
-            this.btnSearchUser.Name = "btnSearchUser";
-            this.btnSearchUser.Size = new System.Drawing.Size(75, 32);
-            this.btnSearchUser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSearchUser.TabIndex = 6;
-            this.btnSearchUser.Text = "جست و جو";
-            // 
-            // btnNewUser
-            // 
-            this.btnNewUser.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnNewUser.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnNewUser.Location = new System.Drawing.Point(487, 18);
-            this.btnNewUser.Name = "btnNewUser";
-            this.btnNewUser.Size = new System.Drawing.Size(130, 32);
-            this.btnNewUser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnNewUser.TabIndex = 5;
-            this.btnNewUser.Text = "ایجاد کاربر جدید";
-            this.btnNewUser.Click += new System.EventHandler(this.btnNewUser_Click);
-            // 
-            // ribbonPanel2
-            // 
-            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel2.Controls.Add(this.btnSearchContract);
-            this.ribbonPanel2.Controls.Add(this.btnNewContract);
-            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel2.Location = new System.Drawing.Point(0, 26);
-            this.ribbonPanel2.Name = "ribbonPanel2";
-            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel2.Size = new System.Drawing.Size(629, 360);
-            // 
-            // 
-            // 
-            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel2.TabIndex = 2;
-            this.ribbonPanel2.Visible = false;
-            // 
-            // btnSearchContract
-            // 
-            this.btnSearchContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSearchContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSearchContract.Location = new System.Drawing.Point(405, 18);
-            this.btnSearchContract.Name = "btnSearchContract";
-            this.btnSearchContract.Size = new System.Drawing.Size(75, 32);
-            this.btnSearchContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSearchContract.TabIndex = 10;
-            this.btnSearchContract.Text = "جست و جو";
-            // 
-            // btnNewContract
-            // 
-            this.btnNewContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnNewContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnNewContract.Location = new System.Drawing.Point(486, 18);
-            this.btnNewContract.Name = "btnNewContract";
-            this.btnNewContract.Size = new System.Drawing.Size(130, 32);
-            this.btnNewContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnNewContract.TabIndex = 9;
-            this.btnNewContract.Text = "ایجاد قرارداد جدید";
-            // 
-            // ribbonPanel3
-            // 
-            this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel3.Location = new System.Drawing.Point(0, 26);
-            this.ribbonPanel3.Name = "ribbonPanel3";
-            this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel3.Size = new System.Drawing.Size(629, 360);
-            // 
-            // 
-            // 
-            this.ribbonPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel3.TabIndex = 3;
-            this.ribbonPanel3.Visible = false;
-            // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel4.Location = new System.Drawing.Point(0, 26);
-            this.ribbonPanel4.Name = "ribbonPanel4";
-            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel4.Size = new System.Drawing.Size(629, 360);
-            // 
-            // 
-            // 
-            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel4.TabIndex = 4;
-            this.ribbonPanel4.Visible = false;
             // 
             // ribbonPanel6
             // 
@@ -1097,6 +954,136 @@
             this.txtUserName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtUserName.Size = new System.Drawing.Size(249, 23);
             this.txtUserName.TabIndex = 47;
+            // 
+            // ribbonPanel7
+            // 
+            this.ribbonPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel7.Controls.Add(this.dgvUser);
+            this.ribbonPanel7.Controls.Add(this.btnNewUser);
+            this.ribbonPanel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel7.Location = new System.Drawing.Point(0, 26);
+            this.ribbonPanel7.Name = "ribbonPanel7";
+            this.ribbonPanel7.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel7.Size = new System.Drawing.Size(629, 360);
+            // 
+            // 
+            // 
+            this.ribbonPanel7.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel7.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel7.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel7.TabIndex = 7;
+            this.ribbonPanel7.Visible = false;
+            // 
+            // btnNewUser
+            // 
+            this.btnNewUser.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnNewUser.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnNewUser.Location = new System.Drawing.Point(487, 18);
+            this.btnNewUser.Name = "btnNewUser";
+            this.btnNewUser.Size = new System.Drawing.Size(130, 32);
+            this.btnNewUser.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnNewUser.TabIndex = 5;
+            this.btnNewUser.Text = "ایجاد کاربر جدید";
+            this.btnNewUser.Click += new System.EventHandler(this.btnNewUser_Click);
+            // 
+            // ribbonPanel2
+            // 
+            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel2.Controls.Add(this.btnSearchContract);
+            this.ribbonPanel2.Controls.Add(this.btnNewContract);
+            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel2.Location = new System.Drawing.Point(0, 26);
+            this.ribbonPanel2.Name = "ribbonPanel2";
+            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel2.Size = new System.Drawing.Size(629, 360);
+            // 
+            // 
+            // 
+            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel2.TabIndex = 2;
+            this.ribbonPanel2.Visible = false;
+            // 
+            // btnSearchContract
+            // 
+            this.btnSearchContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSearchContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSearchContract.Location = new System.Drawing.Point(405, 18);
+            this.btnSearchContract.Name = "btnSearchContract";
+            this.btnSearchContract.Size = new System.Drawing.Size(75, 32);
+            this.btnSearchContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSearchContract.TabIndex = 10;
+            this.btnSearchContract.Text = "جست و جو";
+            // 
+            // btnNewContract
+            // 
+            this.btnNewContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnNewContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnNewContract.Location = new System.Drawing.Point(486, 18);
+            this.btnNewContract.Name = "btnNewContract";
+            this.btnNewContract.Size = new System.Drawing.Size(130, 32);
+            this.btnNewContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnNewContract.TabIndex = 9;
+            this.btnNewContract.Text = "ایجاد قرارداد جدید";
+            // 
+            // ribbonPanel3
+            // 
+            this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel3.Location = new System.Drawing.Point(0, 26);
+            this.ribbonPanel3.Name = "ribbonPanel3";
+            this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel3.Size = new System.Drawing.Size(629, 360);
+            // 
+            // 
+            // 
+            this.ribbonPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel3.TabIndex = 3;
+            this.ribbonPanel3.Visible = false;
+            // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel4.Location = new System.Drawing.Point(0, 26);
+            this.ribbonPanel4.Name = "ribbonPanel4";
+            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel4.Size = new System.Drawing.Size(629, 360);
+            // 
+            // 
+            // 
+            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel4.TabIndex = 4;
+            this.ribbonPanel4.Visible = false;
             // 
             // ribbonPanel5
             // 
@@ -1591,11 +1578,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
-            this.ribbonPanel7.ResumeLayout(false);
-            this.ribbonPanel2.ResumeLayout(false);
             this.ribbonPanel6.ResumeLayout(false);
             this.grbxEditUser.ResumeLayout(false);
             this.grbxEditUser.PerformLayout();
+            this.ribbonPanel7.ResumeLayout(false);
+            this.ribbonPanel2.ResumeLayout(false);
             this.ribbonPanel5.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             this.grbxRestore.ResumeLayout(false);
@@ -1672,7 +1659,6 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem2;
         private DevComponents.DotNetBar.ButtonItem btnEditCustomer;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvUser;
-        private DevComponents.DotNetBar.ButtonX btnSearchUser;
         private DevComponents.DotNetBar.ButtonX btnNewUser;
         private DevComponents.DotNetBar.ButtonItem buttonItem3;
         private DevComponents.DotNetBar.ButtonItem btnEditUser;
