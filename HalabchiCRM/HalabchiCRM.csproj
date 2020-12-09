@@ -63,10 +63,6 @@
   <ItemGroup>
     <Compile Include="AESAlgorithm.cs" />
     <Compile Include="AppInfo.cs" />
-    <Compile Include="frmContract.cs" />
-    <Compile Include="frmContract.Designer.cs">
-      <DependentUpon>frmContract.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,9 +115,6 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmContract.resx">
-      <DependentUpon>frmContract.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>

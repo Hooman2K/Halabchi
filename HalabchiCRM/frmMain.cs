@@ -452,9 +452,7 @@ order by start_time desc");
 
         private void btnNewContract_Click(object sender, EventArgs e)
         {
-            frmContract fc = new frmContract();
-            fc.ShowDialog();
-            LoadContract();
+
         }
     }
 }
