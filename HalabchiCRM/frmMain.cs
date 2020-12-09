@@ -62,6 +62,13 @@ namespace HalabchiCRM
                 dgvUser.DataSource = db.Users.ToList();
             }
         }
+        public void LoadContract()
+        {
+            using (var db = new HalabchiDB())
+            {
+                dgvContract.DataSource = db.Contracts.ToList();
+            }
+        }
         private void DayOfWeek()
         {
             if (lblDay.Text == "Saturday")
@@ -141,6 +148,9 @@ namespace HalabchiCRM
                 //لود کردن لیست کاربران
                 LoadUser();
                 ribbonTabItem7.Enabled = AppInfo.IsAdmin;
+
+                //لود کردن قرارداد ها
+                LoadContract();
             }
         }
 
@@ -438,6 +448,13 @@ order by start_time desc");
         {
             frmSearchCustomer searchCustomer = new frmSearchCustomer();
             searchCustomer.ShowDialog();
+        }
+
+        private void btnNewContract_Click(object sender, EventArgs e)
+        {
+            frmContract fc = new frmContract();
+            fc.ShowDialog();
+            LoadContract();
         }
     }
 }

@@ -27,6 +27,7 @@ namespace HalabchiCRM
         public virtual DbSet<User> Users { get; set; }
         public virtual DbSet<Setting> Settings { get; set; }
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Contract> Contracts { get; set; }
     }
 
     public class User
@@ -84,5 +85,17 @@ namespace HalabchiCRM
         public string Other { get; set; }
         public string Address { get; set; }
 
+    }
+    public class Contract
+    {
+        public int ID { get; set; }
+        [MaxLength(10)]
+        public string ContractID { get; set; }
+        [MaxLength(10)]
+        public string CustomerID { get; set; }
+        [MaxLength(10)]
+        public string ContractDate { get; set; }
+        [MaxLength(100)]
+        public string ContractTitle { get; set; }
     }
 }

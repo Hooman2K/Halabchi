@@ -34,17 +34,18 @@
             this.lblStatus = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("IranNastaliq", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.label1.Location = new System.Drawing.Point(125, 14);
+            this.label1.Location = new System.Drawing.Point(20, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(196, 87);
+            this.label1.Size = new System.Drawing.Size(406, 87);
             this.label1.TabIndex = 0;
-            this.label1.Text = "صنایع فولاد حلب چی";
+            this.label1.Text = "نرم افزار مدیریت مشتریان صنایع فولاد حلب چی";
             // 
             // timer1
             // 
@@ -76,11 +77,24 @@
             this.styleManager1.ManagerStyle = DevComponents.DotNetBar.eStyle.Office2007Blue;
             this.styleManager1.MetroColorParameters = new DevComponents.DotNetBar.Metro.ColorTables.MetroColorGeneratorParameters(System.Drawing.Color.White, System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(163)))), ((int)(((byte)(26))))));
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Iranian Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(12, 195);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 26);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "نسخه 1";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmSplashScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 199);
+            this.ClientSize = new System.Drawing.Size(450, 225);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.label1);
@@ -106,5 +120,6 @@
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.ProgressBar progressBar1;
         private DevComponents.DotNetBar.StyleManager styleManager1;
+        private System.Windows.Forms.Label label2;
     }
 }
