@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtContractID = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnSetProduct = new DevComponents.DotNetBar.ButtonX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
@@ -39,7 +39,7 @@
             this.txtContractTitle = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.txtContractDate = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.lblInfo = new DevComponents.DotNetBar.LabelX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.txtProductID = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
@@ -59,7 +59,7 @@
             this.txtContractID.Name = "txtContractID";
             this.txtContractID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtContractID.Size = new System.Drawing.Size(143, 23);
-            this.txtContractID.TabIndex = 0;
+            this.txtContractID.TabIndex = 1;
             this.txtContractID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnSetProduct
@@ -70,7 +70,7 @@
             this.btnSetProduct.Name = "btnSetProduct";
             this.btnSetProduct.Size = new System.Drawing.Size(75, 23);
             this.btnSetProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSetProduct.TabIndex = 1;
+            this.btnSetProduct.TabIndex = 7;
             this.btnSetProduct.Text = "اضافه کردن";
             // 
             // labelX1
@@ -90,19 +90,19 @@
             // dgvProduct
             // 
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvProduct.Location = new System.Drawing.Point(12, 175);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.Size = new System.Drawing.Size(484, 168);
-            this.dgvProduct.TabIndex = 3;
+            this.dgvProduct.TabIndex = 8;
             // 
             // labelX2
             // 
@@ -130,7 +130,8 @@
             this.txtFactoryName.Name = "txtFactoryName";
             this.txtFactoryName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtFactoryName.Size = new System.Drawing.Size(143, 23);
-            this.txtFactoryName.TabIndex = 1;
+            this.txtFactoryName.TabIndex = 2;
+            this.txtFactoryName.Leave += new System.EventHandler(this.txtFactoryName_Leave);
             // 
             // labelX3
             // 
@@ -158,7 +159,7 @@
             this.txtContractTitle.Name = "txtContractTitle";
             this.txtContractTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtContractTitle.Size = new System.Drawing.Size(143, 23);
-            this.txtContractTitle.TabIndex = 3;
+            this.txtContractTitle.TabIndex = 4;
             // 
             // labelX4
             // 
@@ -186,23 +187,23 @@
             this.txtContractDate.Name = "txtContractDate";
             this.txtContractDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtContractDate.Size = new System.Drawing.Size(143, 23);
-            this.txtContractDate.TabIndex = 2;
+            this.txtContractDate.TabIndex = 3;
             this.txtContractDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtContractDate.WatermarkText = "__/__/____";
             // 
-            // labelX5
+            // lblInfo
             // 
             // 
             // 
             // 
-            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(12, 70);
-            this.labelX5.Name = "labelX5";
-            this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX5.Size = new System.Drawing.Size(484, 71);
-            this.labelX5.TabIndex = 10;
-            this.labelX5.Text = "مشخصات مشتری";
-            this.labelX5.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.lblInfo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblInfo.Location = new System.Drawing.Point(12, 70);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblInfo.Size = new System.Drawing.Size(484, 71);
+            this.lblInfo.TabIndex = 9;
+            this.lblInfo.Text = "مشخصات مشتری";
+            this.lblInfo.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // labelX6
             // 
@@ -230,7 +231,7 @@
             this.txtProductID.Name = "txtProductID";
             this.txtProductID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtProductID.Size = new System.Drawing.Size(143, 23);
-            this.txtProductID.TabIndex = 11;
+            this.txtProductID.TabIndex = 5;
             this.txtProductID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // labelX7
@@ -259,7 +260,7 @@
             this.txtProductUnit.Name = "txtProductUnit";
             this.txtProductUnit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtProductUnit.Size = new System.Drawing.Size(143, 23);
-            this.txtProductUnit.TabIndex = 13;
+            this.txtProductUnit.TabIndex = 6;
             this.txtProductUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmContract
@@ -271,7 +272,7 @@
             this.Controls.Add(this.txtProductUnit);
             this.Controls.Add(this.labelX6);
             this.Controls.Add(this.txtProductID);
-            this.Controls.Add(this.labelX5);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.labelX3);
             this.Controls.Add(this.txtContractTitle);
             this.Controls.Add(this.labelX4);
@@ -310,7 +311,7 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtContractTitle;
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.Controls.TextBoxX txtContractDate;
-        private DevComponents.DotNetBar.LabelX labelX5;
+        private DevComponents.DotNetBar.LabelX lblInfo;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.Controls.TextBoxX txtProductID;
         private DevComponents.DotNetBar.LabelX labelX7;

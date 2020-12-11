@@ -22,9 +22,31 @@ namespace HalabchiCRM
         {
             using (var db = new HalabchiDB())
             {
-                var cu = db.Customers.FirstOrDefault();
-                txtFactoryName.AutoCompleteCustomSource.Add(cu.FactoryName);
+                var cu = from n in db.Customers select n.FactoryName;
+                AutoCompleteStringCollection auto = new AutoCompleteStringCollection();
+                auto.AddRange(cu.ToArray());
                 txtFactoryName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                txtFactoryName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                txtFactoryName.AutoCompleteCustomSource = auto;
+            }
+        }
+
+        private void txtFactoryName_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtFactoryName.Text != "")
+                {
+                    using (var db = new HalabchiDB())
+                    {
+                        var info = db.Customers.Where(u => u.FactoryName == txtFactoryName.Text).FirstOrDefault();
+                        lblInfo.Text = "شرکت : " + info.FactoryName + Environment.NewLine + "شماره مشتری : " + info.CustomerID + Environment.NewLine + "نام مدیر عامل : " + info.ManagerName;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
             }
         }
     }
