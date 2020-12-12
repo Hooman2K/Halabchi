@@ -456,5 +456,13 @@ order by start_time desc");
             fc.ShowDialog();
             LoadContract();
         }
+
+        private void btnProduct_Click(object sender, EventArgs e)
+        {
+            frmProduct product = new frmProduct();
+            this.Hide();
+            product.ShowDialog();
+            this.Show();
+        }
     }
 }

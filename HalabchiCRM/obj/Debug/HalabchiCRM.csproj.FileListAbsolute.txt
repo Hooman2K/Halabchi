@@ -55,3 +55,4 @@ C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmU
 C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmUser.resources
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmSearchCustomer.resources
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmContract.resources
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmProduct.resources
