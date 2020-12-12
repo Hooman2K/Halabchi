@@ -23,11 +23,20 @@ namespace HalabchiCRM
             using (var db = new HalabchiDB())
             {
                 var cu = from n in db.Customers select n.FactoryName;
-                AutoCompleteStringCollection auto = new AutoCompleteStringCollection();
-                auto.AddRange(cu.ToArray());
+                var pu = from m in db.Products select m.ProductName;
+
+                AutoCompleteStringCollection autoCu = new AutoCompleteStringCollection();
+                AutoCompleteStringCollection autoPu = new AutoCompleteStringCollection();
+
+                autoCu.AddRange(cu.ToArray());
                 txtFactoryName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
                 txtFactoryName.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                txtFactoryName.AutoCompleteCustomSource = auto;
+                txtFactoryName.AutoCompleteCustomSource = autoCu;
+
+                autoPu.AddRange(pu.ToArray());
+                txtProductName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                txtProductName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                txtProductName.AutoCompleteCustomSource = autoPu;
             }
         }
 
@@ -41,6 +50,25 @@ namespace HalabchiCRM
                     {
                         var info = db.Customers.Where(u => u.FactoryName == txtFactoryName.Text).FirstOrDefault();
                         lblInfo.Text = "شرکت : " + info.FactoryName + Environment.NewLine + "شماره مشتری : " + info.CustomerID + Environment.NewLine + "نام مدیر عامل : " + info.ManagerName;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void txtProductName_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtProductName.Text != "")
+                {
+                    using (var db = new HalabchiDB())
+                    {
+                        var info = db.Products.Where(u => u.ProductName == txtProductName.Text).FirstOrDefault();
+                        lblProductCode.Text = "کد کالا : " + info.ProductCode;
                     }
                 }
             }

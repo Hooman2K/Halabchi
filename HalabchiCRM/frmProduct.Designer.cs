@@ -142,6 +142,7 @@
             // 
             // frmProduct
             // 
+            this.AcceptButton = this.brnAddProduct;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 81);

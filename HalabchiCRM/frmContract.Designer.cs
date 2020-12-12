@@ -40,10 +40,11 @@
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.txtContractDate = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.lblInfo = new DevComponents.DotNetBar.LabelX();
-            this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.txtProductID = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lblProductCode = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.txtProductUnit = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.txtProductName = new DevComponents.DotNetBar.Controls.TextBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -205,34 +206,19 @@
             this.lblInfo.Text = "مشخصات مشتری";
             this.lblInfo.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
-            // labelX6
+            // lblProductCode
             // 
-            this.labelX6.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(441, 147);
-            this.labelX6.Name = "labelX6";
-            this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX6.Size = new System.Drawing.Size(55, 18);
-            this.labelX6.TabIndex = 12;
-            this.labelX6.Text = "کد کالا : ";
-            // 
-            // txtProductID
+            this.lblProductCode.AutoSize = true;
             // 
             // 
             // 
-            // 
-            this.txtProductID.Border.Class = "TextBoxBorder";
-            this.txtProductID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtProductID.Location = new System.Drawing.Point(292, 146);
-            this.txtProductID.MaxLength = 10;
-            this.txtProductID.Name = "txtProductID";
-            this.txtProductID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtProductID.Size = new System.Drawing.Size(143, 23);
-            this.txtProductID.TabIndex = 5;
-            this.txtProductID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.lblProductCode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblProductCode.Location = new System.Drawing.Point(248, 147);
+            this.lblProductCode.Name = "lblProductCode";
+            this.lblProductCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblProductCode.Size = new System.Drawing.Size(55, 18);
+            this.lblProductCode.TabIndex = 12;
+            this.lblProductCode.Text = "کد کالا : ";
             // 
             // labelX7
             // 
@@ -241,7 +227,7 @@
             // 
             // 
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.Location = new System.Drawing.Point(239, 147);
+            this.labelX7.Location = new System.Drawing.Point(180, 147);
             this.labelX7.Name = "labelX7";
             this.labelX7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX7.Size = new System.Drawing.Size(47, 18);
@@ -259,19 +245,50 @@
             this.txtProductUnit.MaxLength = 10;
             this.txtProductUnit.Name = "txtProductUnit";
             this.txtProductUnit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtProductUnit.Size = new System.Drawing.Size(143, 23);
+            this.txtProductUnit.Size = new System.Drawing.Size(84, 23);
             this.txtProductUnit.TabIndex = 6;
             this.txtProductUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelX5
+            // 
+            this.labelX5.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.Location = new System.Drawing.Point(418, 147);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX5.Size = new System.Drawing.Size(78, 18);
+            this.labelX5.TabIndex = 16;
+            this.labelX5.Text = "نام محصول : ";
+            // 
+            // txtProductName
+            // 
+            // 
+            // 
+            // 
+            this.txtProductName.Border.Class = "TextBoxBorder";
+            this.txtProductName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtProductName.Location = new System.Drawing.Point(309, 145);
+            this.txtProductName.MaxLength = 10;
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtProductName.Size = new System.Drawing.Size(104, 23);
+            this.txtProductName.TabIndex = 5;
+            this.txtProductName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtProductName.Leave += new System.EventHandler(this.txtProductName_Leave);
             // 
             // frmContract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 353);
+            this.Controls.Add(this.labelX5);
+            this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.labelX7);
             this.Controls.Add(this.txtProductUnit);
-            this.Controls.Add(this.labelX6);
-            this.Controls.Add(this.txtProductID);
+            this.Controls.Add(this.lblProductCode);
             this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.labelX3);
             this.Controls.Add(this.txtContractTitle);
@@ -312,9 +329,10 @@
         private DevComponents.DotNetBar.LabelX labelX4;
         private DevComponents.DotNetBar.Controls.TextBoxX txtContractDate;
         private DevComponents.DotNetBar.LabelX lblInfo;
-        private DevComponents.DotNetBar.LabelX labelX6;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtProductID;
+        private DevComponents.DotNetBar.LabelX lblProductCode;
         private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.DotNetBar.Controls.TextBoxX txtProductUnit;
+        private DevComponents.DotNetBar.LabelX labelX5;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtProductName;
     }
 }
