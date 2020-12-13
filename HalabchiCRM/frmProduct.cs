@@ -52,19 +52,19 @@ namespace HalabchiCRM
                             };
                             db.Products.Add(pr);
                             db.SaveChanges();
-                            FarsiMessageBox.MessageBox.Show("محصول جدید با موفقیت اضافه شد", "موفقیت", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                            FarsiMessageBox.MessageBox.Show("موفقیت", "محصول جدید با موفقیت اضافه شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
                             Clear();
                         }
                         else
                         {
-                            FarsiMessageBox.MessageBox.Show("کد محصول تکراری است", "خطا", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                            FarsiMessageBox.MessageBox.Show("خطا", "کد محصول تکراری است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
                             Clear();
                         }
                     }
                 }
                 else
                 {
-                    FarsiMessageBox.MessageBox.Show("وارد کردن کد محصول و نام محصول اجباری است", "خطا", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                    FarsiMessageBox.MessageBox.Show("خطا", "وارد کردن کد محصول و نام محصول اجباری است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
                     txtProductCode.SelectAll();
                     txtProductCode.Focus();
                 }

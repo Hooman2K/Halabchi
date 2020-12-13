@@ -208,15 +208,14 @@
             // 
             // lblProductCode
             // 
-            this.lblProductCode.AutoSize = true;
             // 
             // 
             // 
             this.lblProductCode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblProductCode.Location = new System.Drawing.Point(248, 147);
+            this.lblProductCode.Location = new System.Drawing.Point(233, 147);
             this.lblProductCode.Name = "lblProductCode";
             this.lblProductCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblProductCode.Size = new System.Drawing.Size(55, 18);
+            this.lblProductCode.Size = new System.Drawing.Size(70, 18);
             this.lblProductCode.TabIndex = 12;
             this.lblProductCode.Text = "کد کالا : ";
             // 
