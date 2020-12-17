@@ -17,7 +17,15 @@ namespace HalabchiCRM
         {
             InitializeComponent();
         }
-
+        public class TypeOf
+        {
+            //کلاس جهت مقدار دهی دیتا گرید
+            public string CustomerID { get; set; }
+            public string ContractID { get; set; }
+            public string ProductCode { get; set; }
+            public string ProductName { get; set; }
+            public float ProductUnit { get; set; }
+        }
         private void frmContract_Load(object sender, EventArgs e)
         {
             using (var db = new HalabchiDB())
@@ -75,6 +83,27 @@ namespace HalabchiCRM
             catch (Exception ex)
             {
 
+            }
+        }
+
+        private void btnSetProduct_Click(object sender, EventArgs e)
+        {
+            using (var db = new HalabchiDB())
+            {
+                var product = db.Products.Where(u => u.ProductName == txtProductName.Text).FirstOrDefault();
+                var info = db.Customers.Where(u => u.FactoryName == txtFactoryName.Text).FirstOrDefault();
+                if (product != null)
+                {
+                    var data = new TypeOf
+                    {
+                        ContractID = txtContractID.Text,
+                        CustomerID = info.CustomerID,
+                        ProductCode = product.ProductCode,
+                        ProductName = product.ProductName,
+                        ProductUnit = float.Parse(txtProductUnit.Text)
+                    };
+                    dgvProduct.Rows.Add(data.ContractID, data.CustomerID, data.ProductCode, data.ProductName, data.ProductUnit);
+                }
             }
         }
     }
