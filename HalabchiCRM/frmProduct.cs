@@ -22,7 +22,6 @@ namespace HalabchiCRM
         private void Clear()
         {
             txtProductName.Text = txtProductCode.Text = "";
-            txtProductUnit.Text = "0";
             txtProductCode.SelectAll();
             txtProductCode.Focus();
         }
@@ -48,7 +47,6 @@ namespace HalabchiCRM
                             {
                                 ProductCode = txtProductCode.Text,
                                 ProductName = txtProductName.Text,
-                                ProductUnit = float.Parse(txtProductUnit.Text)
                             };
                             db.Products.Add(pr);
                             db.SaveChanges();

@@ -29,11 +29,14 @@ namespace HalabchiCRM
         public virtual DbSet<Customer> Customers { get; set; }
         public virtual DbSet<Contract> Contracts { get; set; }
         public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Type> Types { get; set; }
+        public virtual DbSet<Storage> Storages { get; set; }
+        public virtual DbSet<StorageType> StorageTypes { get; set; }
     }
 
     public class User
     {
-        [Key,MaxLength(50)]
+        [Key, MaxLength(50)]
         public string UserName { get; set; }
         [MaxLength(50)]
         public string Password { get; set; }
@@ -106,6 +109,37 @@ namespace HalabchiCRM
         public string ProductCode { get; set; }
         [MaxLength(50)]
         public string ProductName { get; set; }
+    }
+    public class Type
+    {
+        public int ID { get; set; }
+        [MaxLength(10)]
+        public string CustomerID { get; set; }
+        [MaxLength(10)]
+        public string ContractID { get; set; }
+        [MaxLength(10)]
+        public string ProductCode { get; set; }
+        [MaxLength(50)]
+        public string ProductName { get; set; }
         public float ProductUnit { get; set; }
+    }
+    public class Storage
+    {
+        public int ID { get; set; }
+        [MaxLength(100)]
+        public string StorageName { get; set; }
+    }
+    public class StorageType
+    {
+        public int ID { get; set; }
+        [MaxLength(100)]
+        public string StorageName { get; set; }
+        [MaxLength(10)]
+        public string ProductCode { get; set; }
+        [MaxLength(50)]
+        public string ProductName { get; set; }
+        public float ProductUnit { get; set; }
+        [MaxLength(10)]
+        public string ProductType { get; set; }
     }
 }

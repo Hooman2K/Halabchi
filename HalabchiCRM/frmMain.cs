@@ -464,5 +464,13 @@ order by start_time desc");
             product.ShowDialog();
             this.Show();
         }
+
+        private void btnStorage_Click(object sender, EventArgs e)
+        {
+            frmStorage stor = new frmStorage();
+            this.Hide();
+            stor.ShowDialog();
+            this.Show();
+        }
     }
 }

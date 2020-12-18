@@ -33,15 +33,13 @@
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txtProductName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.txtProductUnit = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.SuspendLayout();
             // 
             // brnAddProduct
             // 
             this.brnAddProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.brnAddProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.brnAddProduct.Location = new System.Drawing.Point(28, 49);
+            this.brnAddProduct.Location = new System.Drawing.Point(12, 46);
             this.brnAddProduct.Name = "brnAddProduct";
             this.brnAddProduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.brnAddProduct.Size = new System.Drawing.Size(116, 23);
@@ -57,7 +55,7 @@
             // 
             this.txtProductCode.Border.Class = "TextBoxBorder";
             this.txtProductCode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtProductCode.Location = new System.Drawing.Point(524, 11);
+            this.txtProductCode.Location = new System.Drawing.Point(302, 9);
             this.txtProductCode.MaxLength = 10;
             this.txtProductCode.Name = "txtProductCode";
             this.txtProductCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -72,7 +70,7 @@
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(654, 12);
+            this.labelX1.Location = new System.Drawing.Point(432, 10);
             this.labelX1.Name = "labelX1";
             this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX1.Size = new System.Drawing.Size(76, 18);
@@ -86,7 +84,7 @@
             // 
             this.txtProductName.Border.Class = "TextBoxBorder";
             this.txtProductName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtProductName.Location = new System.Drawing.Point(234, 11);
+            this.txtProductName.Location = new System.Drawing.Point(12, 9);
             this.txtProductName.MaxLength = 50;
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -101,53 +99,19 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(440, 12);
+            this.labelX2.Location = new System.Drawing.Point(218, 10);
             this.labelX2.Name = "labelX2";
             this.labelX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX2.Size = new System.Drawing.Size(78, 18);
             this.labelX2.TabIndex = 3;
             this.labelX2.Text = "نام محصول : ";
             // 
-            // txtProductUnit
-            // 
-            // 
-            // 
-            // 
-            this.txtProductUnit.Border.Class = "TextBoxBorder";
-            this.txtProductUnit.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtProductUnit.Location = new System.Drawing.Point(28, 10);
-            this.txtProductUnit.MaxLength = 50;
-            this.txtProductUnit.Name = "txtProductUnit";
-            this.txtProductUnit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtProductUnit.Size = new System.Drawing.Size(116, 23);
-            this.txtProductUnit.TabIndex = 2;
-            this.txtProductUnit.Text = "0";
-            this.txtProductUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtProductUnit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProductUnit_KeyPress);
-            // 
-            // labelX3
-            // 
-            this.labelX3.AutoSize = true;
-            this.labelX3.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(150, 11);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX3.Size = new System.Drawing.Size(76, 18);
-            this.labelX3.TabIndex = 5;
-            this.labelX3.Text = "مقدار اولیه : ";
-            // 
             // frmProduct
             // 
             this.AcceptButton = this.brnAddProduct;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(742, 81);
-            this.Controls.Add(this.txtProductUnit);
-            this.Controls.Add(this.labelX3);
+            this.ClientSize = new System.Drawing.Size(512, 81);
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.txtProductCode);
@@ -174,7 +138,5 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.TextBoxX txtProductName;
         private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtProductUnit;
-        private DevComponents.DotNetBar.LabelX labelX3;
     }
 }
