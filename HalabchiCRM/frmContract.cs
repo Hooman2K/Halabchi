@@ -214,5 +214,22 @@ namespace HalabchiCRM
             AppInfo app = new AppInfo();
             app.JustNumber(sender, e);
         }
+
+        private void buttonItem2_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = FarsiMessageBox.MessageBox.Show("هشدار", "آیا مایل به حذف این سطر میباشید؟", FarsiMessageBox.MessageBox.Buttons.YesNo, FarsiMessageBox.MessageBox.Icons.Question);
+            if (dr == DialogResult.Yes)
+            {
+                try
+                {
+                    int index = dgvProduct.CurrentCell.RowIndex;
+                    dgvProduct.Rows.RemoveAt(index);
+                }
+                catch (Exception ex)
+                {
+                    FarsiMessageBox.MessageBox.Show("اخطار", "سطری انتخاب نشده است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                }
+            }
+        }
     }
 }
