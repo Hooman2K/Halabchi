@@ -28,11 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.brnAddProduct = new DevComponents.DotNetBar.ButtonX();
             this.txtProductCode = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txtProductName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.dgvProduct = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // brnAddProduct
@@ -106,12 +112,62 @@
             this.labelX2.TabIndex = 3;
             this.labelX2.Text = "نام محصول : ";
             // 
+            // dgvProduct
+            // 
+            this.dgvProduct.AllowUserToAddRows = false;
+            this.dgvProduct.AllowUserToDeleteRows = false;
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgvProduct.Location = new System.Drawing.Point(12, 75);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.ReadOnly = true;
+            this.dgvProduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dgvProduct.Size = new System.Drawing.Size(496, 204);
+            this.dgvProduct.TabIndex = 4;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "ID";
+            this.Column1.HeaderText = "شماره";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 70;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "ProductCode";
+            this.Column2.HeaderText = "کد محصول";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 150;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "ProductName";
+            this.Column3.HeaderText = "نام محصول";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 200;
+            // 
             // frmProduct
             // 
             this.AcceptButton = this.brnAddProduct;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 81);
+            this.ClientSize = new System.Drawing.Size(512, 291);
+            this.Controls.Add(this.dgvProduct);
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.txtProductCode);
@@ -126,6 +182,8 @@
             this.Name = "frmProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "محصول";
+            this.Load += new System.EventHandler(this.frmProduct_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,5 +196,9 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.TextBoxX txtProductName;
         private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

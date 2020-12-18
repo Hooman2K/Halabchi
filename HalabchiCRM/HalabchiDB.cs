@@ -97,6 +97,8 @@ namespace HalabchiCRM
         public string ContractID { get; set; }
         [MaxLength(10)]
         public string CustomerID { get; set; }
+        [MaxLength(50)]
+        public string FactoryName { get; set; }
         [MaxLength(10)]
         public string ContractDate { get; set; }
         [MaxLength(100)]
@@ -117,11 +119,14 @@ namespace HalabchiCRM
         public string CustomerID { get; set; }
         [MaxLength(10)]
         public string ContractID { get; set; }
+        [MaxLength(50)]
+        public string FactoryName { get; set; }
         [MaxLength(10)]
         public string ProductCode { get; set; }
         [MaxLength(50)]
         public string ProductName { get; set; }
-        public float ProductUnit { get; set; }
+        [MaxLength(20)]
+        public string ProductUnit { get; set; }
     }
     public class Storage
     {
@@ -138,7 +143,8 @@ namespace HalabchiCRM
         public string ProductCode { get; set; }
         [MaxLength(50)]
         public string ProductName { get; set; }
-        public float ProductUnit { get; set; }
+        [MaxLength(20)]
+        public string ProductUnit { get; set; }
         [MaxLength(10)]
         public string ProductType { get; set; }
     }

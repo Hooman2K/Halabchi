@@ -25,6 +25,13 @@ namespace HalabchiCRM
             txtProductCode.SelectAll();
             txtProductCode.Focus();
         }
+        private void LoadProduct()
+        {
+            using (var db = new HalabchiDB())
+            {
+                dgvProduct.DataSource = db.Products.ToList();
+            }
+        }
 
         private void txtProductUnit_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -51,6 +58,7 @@ namespace HalabchiCRM
                             db.Products.Add(pr);
                             db.SaveChanges();
                             FarsiMessageBox.MessageBox.Show("موفقیت", "محصول جدید با موفقیت اضافه شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                            LoadProduct();
                             Clear();
                         }
                         else
@@ -71,6 +79,11 @@ namespace HalabchiCRM
             {
                 //کد های ویرایش
             }
+        }
+
+        private void frmProduct_Load(object sender, EventArgs e)
+        {
+            LoadProduct();
         }
     }
 }

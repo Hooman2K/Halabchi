@@ -28,127 +28,115 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.txtContractID = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.btnSetProduct = new DevComponents.DotNetBar.ButtonX();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.dgvProduct = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.labelX2 = new DevComponents.DotNetBar.LabelX();
-            this.txtFactoryName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.btnRegister = new DevComponents.DotNetBar.ButtonX();
+            this.btnConfirm = new DevComponents.DotNetBar.ButtonX();
+            this.btnCancel = new DevComponents.DotNetBar.ButtonX();
+            this.grbxContractInfo = new System.Windows.Forms.GroupBox();
+            this.txtContractDate = new System.Windows.Forms.MaskedTextBox();
+            this.lblInfo = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.txtContractTitle = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.txtContractDate = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.lblInfo = new DevComponents.DotNetBar.LabelX();
-            this.lblProductCode = new DevComponents.DotNetBar.LabelX();
-            this.labelX7 = new DevComponents.DotNetBar.LabelX();
-            this.txtProductUnit = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX2 = new DevComponents.DotNetBar.LabelX();
+            this.txtFactoryName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.txtContractID = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.grbxType = new System.Windows.Forms.GroupBox();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.txtProductName = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.labelX7 = new DevComponents.DotNetBar.LabelX();
+            this.txtProductUnit = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.lblProductCode = new DevComponents.DotNetBar.LabelX();
+            this.dgvProduct = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.btnSetProduct = new DevComponents.DotNetBar.ButtonX();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grbxContractInfo.SuspendLayout();
+            this.grbxType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtContractID
+            // btnRegister
+            // 
+            this.btnRegister.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnRegister.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnRegister.Location = new System.Drawing.Point(90, 199);
+            this.btnRegister.Name = "btnRegister";
+            this.btnRegister.Size = new System.Drawing.Size(424, 23);
+            this.btnRegister.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnRegister.TabIndex = 4;
+            this.btnRegister.Text = "ثبت موقت";
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnConfirm.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnConfirm.Location = new System.Drawing.Point(12, 467);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(502, 23);
+            this.btnConfirm.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnConfirm.TabIndex = 8;
+            this.btnConfirm.Text = "ثبت نهایی";
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCancel.Location = new System.Drawing.Point(12, 199);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnCancel.TabIndex = 19;
+            this.btnCancel.Text = "لغو";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // grbxContractInfo
+            // 
+            this.grbxContractInfo.BackColor = System.Drawing.Color.Transparent;
+            this.grbxContractInfo.Controls.Add(this.txtContractDate);
+            this.grbxContractInfo.Controls.Add(this.lblInfo);
+            this.grbxContractInfo.Controls.Add(this.labelX3);
+            this.grbxContractInfo.Controls.Add(this.txtContractTitle);
+            this.grbxContractInfo.Controls.Add(this.labelX4);
+            this.grbxContractInfo.Controls.Add(this.labelX2);
+            this.grbxContractInfo.Controls.Add(this.txtFactoryName);
+            this.grbxContractInfo.Controls.Add(this.labelX1);
+            this.grbxContractInfo.Controls.Add(this.txtContractID);
+            this.grbxContractInfo.Location = new System.Drawing.Point(12, 12);
+            this.grbxContractInfo.Name = "grbxContractInfo";
+            this.grbxContractInfo.Size = new System.Drawing.Size(502, 179);
+            this.grbxContractInfo.TabIndex = 0;
+            this.grbxContractInfo.TabStop = false;
+            // 
+            // txtContractDate
+            // 
+            this.txtContractDate.Location = new System.Drawing.Point(249, 50);
+            this.txtContractDate.Mask = "0000/00/00";
+            this.txtContractDate.Name = "txtContractDate";
+            this.txtContractDate.Size = new System.Drawing.Size(143, 23);
+            this.txtContractDate.TabIndex = 12;
+            this.txtContractDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblInfo
             // 
             // 
             // 
             // 
-            this.txtContractID.Border.Class = "TextBoxBorder";
-            this.txtContractID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtContractID.Location = new System.Drawing.Point(255, 12);
-            this.txtContractID.MaxLength = 10;
-            this.txtContractID.Name = "txtContractID";
-            this.txtContractID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtContractID.Size = new System.Drawing.Size(143, 23);
-            this.txtContractID.TabIndex = 1;
-            this.txtContractID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnSetProduct
-            // 
-            this.btnSetProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSetProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSetProduct.Location = new System.Drawing.Point(12, 147);
-            this.btnSetProduct.Name = "btnSetProduct";
-            this.btnSetProduct.Size = new System.Drawing.Size(75, 23);
-            this.btnSetProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSetProduct.TabIndex = 7;
-            this.btnSetProduct.Text = "اضافه کردن";
-            this.btnSetProduct.Click += new System.EventHandler(this.btnSetProduct_Click);
-            // 
-            // labelX1
-            // 
-            this.labelX1.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(404, 13);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX1.Size = new System.Drawing.Size(92, 18);
-            this.labelX1.TabIndex = 2;
-            this.labelX1.Text = "شماره قرارداد : ";
-            // 
-            // dgvProduct
-            // 
-            this.dgvProduct.AllowUserToAddRows = false;
-            this.dgvProduct.AllowUserToDeleteRows = false;
-            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvProduct.Location = new System.Drawing.Point(12, 175);
-            this.dgvProduct.Name = "dgvProduct";
-            this.dgvProduct.ReadOnly = true;
-            this.dgvProduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dgvProduct.Size = new System.Drawing.Size(484, 168);
-            this.dgvProduct.TabIndex = 8;
-            // 
-            // labelX2
-            // 
-            this.labelX2.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(161, 13);
-            this.labelX2.Name = "labelX2";
-            this.labelX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX2.Size = new System.Drawing.Size(77, 18);
-            this.labelX2.TabIndex = 5;
-            this.labelX2.Text = "نام کارخانه : ";
-            // 
-            // txtFactoryName
-            // 
-            // 
-            // 
-            // 
-            this.txtFactoryName.Border.Class = "TextBoxBorder";
-            this.txtFactoryName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtFactoryName.Location = new System.Drawing.Point(12, 12);
-            this.txtFactoryName.MaxLength = 50;
-            this.txtFactoryName.Name = "txtFactoryName";
-            this.txtFactoryName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtFactoryName.Size = new System.Drawing.Size(143, 23);
-            this.txtFactoryName.TabIndex = 2;
-            this.txtFactoryName.Leave += new System.EventHandler(this.txtFactoryName_Leave);
+            this.lblInfo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblInfo.Location = new System.Drawing.Point(6, 80);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblInfo.Size = new System.Drawing.Size(484, 71);
+            this.lblInfo.TabIndex = 17;
+            this.lblInfo.Text = "مشخصات مشتری";
+            this.lblInfo.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // labelX3
             // 
@@ -157,11 +145,11 @@
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(161, 42);
+            this.labelX3.Location = new System.Drawing.Point(155, 52);
             this.labelX3.Name = "labelX3";
             this.labelX3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX3.Size = new System.Drawing.Size(87, 18);
-            this.labelX3.TabIndex = 9;
+            this.labelX3.TabIndex = 18;
             this.labelX3.Text = "عنوان قرارداد : ";
             // 
             // txtContractTitle
@@ -171,12 +159,12 @@
             // 
             this.txtContractTitle.Border.Class = "TextBoxBorder";
             this.txtContractTitle.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtContractTitle.Location = new System.Drawing.Point(12, 41);
+            this.txtContractTitle.Location = new System.Drawing.Point(6, 51);
             this.txtContractTitle.MaxLength = 100;
             this.txtContractTitle.Name = "txtContractTitle";
             this.txtContractTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtContractTitle.Size = new System.Drawing.Size(143, 23);
-            this.txtContractTitle.TabIndex = 4;
+            this.txtContractTitle.TabIndex = 14;
             // 
             // labelX4
             // 
@@ -185,84 +173,87 @@
             // 
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(404, 42);
+            this.labelX4.Location = new System.Drawing.Point(398, 52);
             this.labelX4.Name = "labelX4";
             this.labelX4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX4.Size = new System.Drawing.Size(82, 18);
-            this.labelX4.TabIndex = 7;
+            this.labelX4.TabIndex = 16;
             this.labelX4.Text = "تاریخ قرارداد : ";
             // 
-            // txtContractDate
+            // labelX2
+            // 
+            this.labelX2.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX2.Location = new System.Drawing.Point(155, 23);
+            this.labelX2.Name = "labelX2";
+            this.labelX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX2.Size = new System.Drawing.Size(77, 18);
+            this.labelX2.TabIndex = 15;
+            this.labelX2.Text = "نام کارخانه : ";
+            // 
+            // txtFactoryName
             // 
             // 
             // 
             // 
-            this.txtContractDate.Border.Class = "TextBoxBorder";
-            this.txtContractDate.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtContractDate.Location = new System.Drawing.Point(255, 41);
-            this.txtContractDate.MaxLength = 11;
-            this.txtContractDate.Name = "txtContractDate";
-            this.txtContractDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtContractDate.Size = new System.Drawing.Size(143, 23);
-            this.txtContractDate.TabIndex = 3;
-            this.txtContractDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtContractDate.WatermarkText = "__/__/____";
+            this.txtFactoryName.Border.Class = "TextBoxBorder";
+            this.txtFactoryName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtFactoryName.Location = new System.Drawing.Point(6, 22);
+            this.txtFactoryName.MaxLength = 50;
+            this.txtFactoryName.Name = "txtFactoryName";
+            this.txtFactoryName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtFactoryName.Size = new System.Drawing.Size(143, 23);
+            this.txtFactoryName.TabIndex = 11;
+            this.txtFactoryName.Leave += new System.EventHandler(this.txtFactoryName_Leave);
             // 
-            // lblInfo
+            // labelX1
             // 
-            // 
-            // 
-            // 
-            this.lblInfo.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblInfo.Location = new System.Drawing.Point(12, 70);
-            this.lblInfo.Name = "lblInfo";
-            this.lblInfo.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblInfo.Size = new System.Drawing.Size(484, 71);
-            this.lblInfo.TabIndex = 9;
-            this.lblInfo.Text = "مشخصات مشتری";
-            this.lblInfo.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // lblProductCode
+            this.labelX1.AutoSize = true;
             // 
             // 
             // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(398, 23);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX1.Size = new System.Drawing.Size(92, 18);
+            this.labelX1.TabIndex = 13;
+            this.labelX1.Text = "شماره قرارداد : ";
             // 
-            this.lblProductCode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblProductCode.Location = new System.Drawing.Point(233, 147);
-            this.lblProductCode.Name = "lblProductCode";
-            this.lblProductCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblProductCode.Size = new System.Drawing.Size(70, 18);
-            this.lblProductCode.TabIndex = 12;
-            this.lblProductCode.Text = "کد کالا : ";
-            // 
-            // labelX7
-            // 
-            this.labelX7.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.Location = new System.Drawing.Point(180, 147);
-            this.labelX7.Name = "labelX7";
-            this.labelX7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX7.Size = new System.Drawing.Size(47, 18);
-            this.labelX7.TabIndex = 14;
-            this.labelX7.Text = "مقدار : ";
-            // 
-            // txtProductUnit
+            // txtContractID
             // 
             // 
             // 
             // 
-            this.txtProductUnit.Border.Class = "TextBoxBorder";
-            this.txtProductUnit.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtProductUnit.Location = new System.Drawing.Point(90, 146);
-            this.txtProductUnit.MaxLength = 10;
-            this.txtProductUnit.Name = "txtProductUnit";
-            this.txtProductUnit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtProductUnit.Size = new System.Drawing.Size(84, 23);
-            this.txtProductUnit.TabIndex = 6;
-            this.txtProductUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtContractID.Border.Class = "TextBoxBorder";
+            this.txtContractID.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtContractID.Location = new System.Drawing.Point(249, 22);
+            this.txtContractID.MaxLength = 10;
+            this.txtContractID.Name = "txtContractID";
+            this.txtContractID.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtContractID.Size = new System.Drawing.Size(143, 23);
+            this.txtContractID.TabIndex = 10;
+            this.txtContractID.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // grbxType
+            // 
+            this.grbxType.BackColor = System.Drawing.Color.Transparent;
+            this.grbxType.Controls.Add(this.labelX5);
+            this.grbxType.Controls.Add(this.txtProductName);
+            this.grbxType.Controls.Add(this.labelX7);
+            this.grbxType.Controls.Add(this.txtProductUnit);
+            this.grbxType.Controls.Add(this.lblProductCode);
+            this.grbxType.Controls.Add(this.dgvProduct);
+            this.grbxType.Controls.Add(this.btnSetProduct);
+            this.grbxType.Location = new System.Drawing.Point(12, 224);
+            this.grbxType.Name = "grbxType";
+            this.grbxType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.grbxType.Size = new System.Drawing.Size(502, 237);
+            this.grbxType.TabIndex = 1;
+            this.grbxType.TabStop = false;
             // 
             // labelX5
             // 
@@ -271,11 +262,11 @@
             // 
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(418, 147);
+            this.labelX5.Location = new System.Drawing.Point(415, 26);
             this.labelX5.Name = "labelX5";
             this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX5.Size = new System.Drawing.Size(78, 18);
-            this.labelX5.TabIndex = 16;
+            this.labelX5.TabIndex = 23;
             this.labelX5.Text = "نام محصول : ";
             // 
             // txtProductName
@@ -285,14 +276,97 @@
             // 
             this.txtProductName.Border.Class = "TextBoxBorder";
             this.txtProductName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtProductName.Location = new System.Drawing.Point(309, 145);
+            this.txtProductName.Location = new System.Drawing.Point(306, 24);
             this.txtProductName.MaxLength = 10;
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtProductName.Size = new System.Drawing.Size(104, 23);
-            this.txtProductName.TabIndex = 5;
+            this.txtProductName.TabIndex = 17;
             this.txtProductName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtProductName.Leave += new System.EventHandler(this.txtProductName_Leave);
+            // 
+            // labelX7
+            // 
+            this.labelX7.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX7.Location = new System.Drawing.Point(177, 26);
+            this.labelX7.Name = "labelX7";
+            this.labelX7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX7.Size = new System.Drawing.Size(47, 18);
+            this.labelX7.TabIndex = 22;
+            this.labelX7.Text = "مقدار : ";
+            // 
+            // txtProductUnit
+            // 
+            // 
+            // 
+            // 
+            this.txtProductUnit.Border.Class = "TextBoxBorder";
+            this.txtProductUnit.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtProductUnit.Location = new System.Drawing.Point(87, 25);
+            this.txtProductUnit.MaxLength = 20;
+            this.txtProductUnit.Name = "txtProductUnit";
+            this.txtProductUnit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtProductUnit.Size = new System.Drawing.Size(84, 23);
+            this.txtProductUnit.TabIndex = 18;
+            this.txtProductUnit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtProductUnit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProductUnit_KeyPress);
+            // 
+            // lblProductCode
+            // 
+            // 
+            // 
+            // 
+            this.lblProductCode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblProductCode.Location = new System.Drawing.Point(230, 26);
+            this.lblProductCode.Name = "lblProductCode";
+            this.lblProductCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblProductCode.Size = new System.Drawing.Size(70, 18);
+            this.lblProductCode.TabIndex = 21;
+            this.lblProductCode.Text = "کد کالا : ";
+            // 
+            // dgvProduct
+            // 
+            this.dgvProduct.AllowUserToAddRows = false;
+            this.dgvProduct.AllowUserToDeleteRows = false;
+            this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column6,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgvProduct.Location = new System.Drawing.Point(9, 54);
+            this.dgvProduct.Name = "dgvProduct";
+            this.dgvProduct.ReadOnly = true;
+            this.dgvProduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dgvProduct.Size = new System.Drawing.Size(484, 168);
+            this.dgvProduct.TabIndex = 20;
+            // 
+            // btnSetProduct
+            // 
+            this.btnSetProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSetProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSetProduct.Location = new System.Drawing.Point(9, 26);
+            this.btnSetProduct.Name = "btnSetProduct";
+            this.btnSetProduct.Size = new System.Drawing.Size(75, 23);
+            this.btnSetProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSetProduct.TabIndex = 19;
+            this.btnSetProduct.Text = "اضافه کردن";
+            this.btnSetProduct.Click += new System.EventHandler(this.btnSetProduct_Click);
             // 
             // Column1
             // 
@@ -309,6 +383,14 @@
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             this.Column2.Visible = false;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "FactoryName";
+            this.Column6.HeaderText = "نام کارخانه";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Visible = false;
             // 
             // Column3
             // 
@@ -336,23 +418,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 353);
-            this.Controls.Add(this.labelX5);
-            this.Controls.Add(this.txtProductName);
-            this.Controls.Add(this.labelX7);
-            this.Controls.Add(this.txtProductUnit);
-            this.Controls.Add(this.lblProductCode);
-            this.Controls.Add(this.lblInfo);
-            this.Controls.Add(this.labelX3);
-            this.Controls.Add(this.txtContractTitle);
-            this.Controls.Add(this.labelX4);
-            this.Controls.Add(this.txtContractDate);
-            this.Controls.Add(this.labelX2);
-            this.Controls.Add(this.txtFactoryName);
-            this.Controls.Add(this.dgvProduct);
-            this.Controls.Add(this.labelX1);
-            this.Controls.Add(this.btnSetProduct);
-            this.Controls.Add(this.txtContractID);
+            this.ClientSize = new System.Drawing.Size(523, 491);
+            this.Controls.Add(this.grbxType);
+            this.Controls.Add(this.grbxContractInfo);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.btnRegister);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -363,32 +434,41 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "قرارداد ها";
             this.Load += new System.EventHandler(this.frmContract_Load);
+            this.grbxContractInfo.ResumeLayout(false);
+            this.grbxContractInfo.PerformLayout();
+            this.grbxType.ResumeLayout(false);
+            this.grbxType.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private DevComponents.DotNetBar.Controls.TextBoxX txtContractID;
-        private DevComponents.DotNetBar.ButtonX btnSetProduct;
-        private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.DataGridViewX dgvProduct;
-        private DevComponents.DotNetBar.LabelX labelX2;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtFactoryName;
+        private DevComponents.DotNetBar.ButtonX btnRegister;
+        private DevComponents.DotNetBar.ButtonX btnConfirm;
+        private DevComponents.DotNetBar.ButtonX btnCancel;
+        private System.Windows.Forms.GroupBox grbxContractInfo;
+        private DevComponents.DotNetBar.LabelX lblInfo;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.Controls.TextBoxX txtContractTitle;
         private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtContractDate;
-        private DevComponents.DotNetBar.LabelX lblInfo;
-        private DevComponents.DotNetBar.LabelX lblProductCode;
-        private DevComponents.DotNetBar.LabelX labelX7;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtProductUnit;
+        private DevComponents.DotNetBar.LabelX labelX2;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtFactoryName;
+        private DevComponents.DotNetBar.LabelX labelX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtContractID;
+        private System.Windows.Forms.GroupBox grbxType;
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.Controls.TextBoxX txtProductName;
+        private DevComponents.DotNetBar.LabelX labelX7;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtProductUnit;
+        private DevComponents.DotNetBar.LabelX lblProductCode;
+        private DevComponents.DotNetBar.Controls.DataGridViewX dgvProduct;
+        private DevComponents.DotNetBar.ButtonX btnSetProduct;
+        private System.Windows.Forms.MaskedTextBox txtContractDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;

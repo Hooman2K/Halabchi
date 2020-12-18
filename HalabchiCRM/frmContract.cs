@@ -17,16 +17,19 @@ namespace HalabchiCRM
         {
             InitializeComponent();
         }
+        string _customerID = "";
+        string _factoryName = "";
         public class TypeOf
         {
             //کلاس جهت مقدار دهی دیتا گرید
             public string CustomerID { get; set; }
             public string ContractID { get; set; }
+            public string FactoryName { get; set; }
             public string ProductCode { get; set; }
             public string ProductName { get; set; }
-            public float ProductUnit { get; set; }
+            public string ProductUnit { get; set; }
         }
-        private void frmContract_Load(object sender, EventArgs e)
+        private void AutoComplit()
         {
             using (var db = new HalabchiDB())
             {
@@ -47,6 +50,12 @@ namespace HalabchiCRM
                 txtProductName.AutoCompleteCustomSource = autoPu;
             }
         }
+        private void frmContract_Load(object sender, EventArgs e)
+        {
+            AutoComplit();
+            grbxType.Enabled = false;
+            btnConfirm.Enabled = false;
+        }
 
         private void txtFactoryName_Leave(object sender, EventArgs e)
         {
@@ -58,12 +67,16 @@ namespace HalabchiCRM
                     {
                         var info = db.Customers.Where(u => u.FactoryName == txtFactoryName.Text).FirstOrDefault();
                         lblInfo.Text = "شرکت : " + info.FactoryName + Environment.NewLine + "شماره مشتری : " + info.CustomerID + Environment.NewLine + "نام مدیر عامل : " + info.ManagerName;
+                        _customerID = info.CustomerID;
+                        _factoryName = info.FactoryName;
                     }
                 }
+                else
+                    lblInfo.Text = "مشخصات مشتری";
             }
             catch (Exception ex)
             {
-
+                lblInfo.Text = "شرکتی با نام فوق یافت نشد";
             }
         }
 
@@ -98,13 +111,108 @@ namespace HalabchiCRM
                     {
                         ContractID = txtContractID.Text,
                         CustomerID = info.CustomerID,
+                        FactoryName = info.FactoryName,
                         ProductCode = product.ProductCode,
                         ProductName = product.ProductName,
-                        ProductUnit = float.Parse(txtProductUnit.Text)
+                        ProductUnit = txtProductUnit.Text
                     };
-                    dgvProduct.Rows.Add(data.ContractID, data.CustomerID, data.ProductCode, data.ProductName, data.ProductUnit);
+                    dgvProduct.Rows.Add(data.ContractID, data.CustomerID, data.FactoryName, data.ProductCode, data.ProductName, data.ProductUnit);
+                    txtProductName.Text = txtProductUnit.Text = "";
+                    txtProductName.SelectAll();
+                    txtProductName.Focus();
                 }
             }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            if (txtContractID.Text != "" && txtFactoryName.Text != "" && txtContractDate.Text != "" && txtContractTitle.Text != "")
+            {
+                using (var db = new HalabchiDB())
+                {
+                    bool exist = db.Contracts.Where(u => u.ContractID == txtContractID.Text).Any();
+                    if (!exist)
+                    {
+                        grbxContractInfo.Enabled = false;
+                        btnRegister.Enabled = false;
+                        grbxType.Enabled = true;
+                        btnConfirm.Enabled = true;
+                        txtProductName.SelectAll();
+                        txtProductName.Focus();
+                    }
+                    else
+                        FarsiMessageBox.MessageBox.Show("اخطار", "شماره قرارداد تکراری است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                }
+            }
+            else
+            {
+                FarsiMessageBox.MessageBox.Show("اخطار", "وارد کردن تمامی مشخصات الزامی است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                txtContractID.SelectAll();
+                txtContractID.Focus();
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            grbxContractInfo.Enabled = true;
+            btnRegister.Enabled = true;
+            grbxType.Enabled = false;
+            btnConfirm.Enabled = false;
+            dgvProduct.Rows.Clear();
+            txtContractID.Text = txtFactoryName.Text = txtContractDate.Text = txtContractTitle.Text = "";
+            txtProductName.Text = txtProductUnit.Text = "";
+            lblProductCode.Text = "کد کالا : ";
+            lblInfo.Text = "مشخصات مشتری";
+            txtContractID.SelectAll();
+            txtContractID.Focus();
+        }
+
+        List<Type> list = new List<Type>();
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = FarsiMessageBox.MessageBox.Show("تایید نهایی", "در صورت ثبت نهایی قرارداد غیر قابل ویرایش میشود" + Environment.NewLine + "آیا از ادامه کار اطمینان دارید؟", FarsiMessageBox.MessageBox.Buttons.YesNo, FarsiMessageBox.MessageBox.Icons.Question);
+            if (dr == DialogResult.Yes)
+            {
+                using (var db = new HalabchiDB())
+                {
+                    Contract contract = new Contract()
+                    {
+                        ContractID = txtContractID.Text,
+                        CustomerID = _customerID,
+                        FactoryName = _factoryName,
+                        ContractDate = txtContractDate.Text,
+                        ContractTitle = txtContractTitle.Text
+                    };
+                    db.Contracts.Add(contract);
+                    db.SaveChanges();
+
+                    list.Clear();
+
+                    for (int i = 0; i < dgvProduct.Rows.Count; i++)
+                    {
+                        list.Add(new Type
+                        {
+                            ContractID = dgvProduct.Rows[i].Cells[0].Value.ToString(),
+                            CustomerID = dgvProduct.Rows[i].Cells[1].Value.ToString(),
+                            FactoryName = dgvProduct.Rows[i].Cells[2].Value.ToString(),
+                            ProductCode = dgvProduct.Rows[i].Cells[3].Value.ToString(),
+                            ProductName = dgvProduct.Rows[i].Cells[4].Value.ToString(),
+                            ProductUnit = dgvProduct.Rows[i].Cells[5].Value.ToString()
+                        });
+                    }
+                    db.Types.AddRange(list);
+                    db.SaveChanges();
+                    FarsiMessageBox.MessageBox.Show("موفقیت", "قرارداد فوق با موفقیت ذخیره شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                    btnCancel_Click(null, null);
+                    _factoryName = _customerID = "";
+                }
+            }
+        }
+
+        private void txtProductUnit_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AppInfo app = new AppInfo();
+            app.JustNumber(sender, e);
         }
     }
 }
