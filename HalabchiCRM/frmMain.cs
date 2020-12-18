@@ -472,5 +472,21 @@ order by start_time desc");
             stor.ShowDialog();
             this.Show();
         }
+
+        private void btnEdit_Click_1(object sender, EventArgs e)
+        {
+            using (var db = new HalabchiDB())
+            {
+                var user = db.Users.Where(u => u.UserName == AppInfo.Username).FirstOrDefault();
+                user.Password = aes.EncryptText(txtPassword.Text, txtUserName.Text, txtMobile.Text);
+                user.FName = txtFName.Text;
+                user.LName = txtLName.Text;
+                user.Email = txtEMail.Text;
+                user.SecurityQuestion = byte.Parse(cmbxSecurityQuestion.SelectedIndex.ToString());
+                user.SecurityQAnswer = aes.EncryptText(txtSecurityAnswer.Text, txtUserName.Text, txtMobile.Text);
+                db.SaveChanges();
+                FarsiMessageBox.MessageBox.Show("موفقیت", "اطلاعات شما با موفقیت ویرایش شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+            }
+        }
     }
 }
