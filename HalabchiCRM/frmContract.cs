@@ -118,6 +118,7 @@ namespace HalabchiCRM
                     };
                     dgvProduct.Rows.Add(data.ContractID, data.CustomerID, data.FactoryName, data.ProductCode, data.ProductName, data.ProductUnit);
                     txtProductName.Text = txtProductUnit.Text = "";
+                    lblProductCode.Text = "کد کالا : ---";
                     txtProductName.SelectAll();
                     txtProductName.Focus();
                 }
@@ -161,7 +162,7 @@ namespace HalabchiCRM
             dgvProduct.Rows.Clear();
             txtContractID.Text = txtFactoryName.Text = txtContractDate.Text = txtContractTitle.Text = "";
             txtProductName.Text = txtProductUnit.Text = "";
-            lblProductCode.Text = "کد کالا : ";
+            lblProductCode.Text = "کد کالا : ---";
             lblInfo.Text = "مشخصات مشتری";
             txtContractID.SelectAll();
             txtContractID.Focus();
@@ -217,19 +218,20 @@ namespace HalabchiCRM
 
         private void buttonItem2_Click(object sender, EventArgs e)
         {
-            DialogResult dr = FarsiMessageBox.MessageBox.Show("هشدار", "آیا مایل به حذف این سطر میباشید؟", FarsiMessageBox.MessageBox.Buttons.YesNo, FarsiMessageBox.MessageBox.Icons.Question);
-            if (dr == DialogResult.Yes)
+            try
             {
-                try
+                int index = dgvProduct.CurrentCell.RowIndex;
+                DialogResult dr = FarsiMessageBox.MessageBox.Show("هشدار", "آیا مایل به حذف این سطر میباشید؟", FarsiMessageBox.MessageBox.Buttons.YesNo, FarsiMessageBox.MessageBox.Icons.Question);
+                if (dr == DialogResult.Yes)
                 {
-                    int index = dgvProduct.CurrentCell.RowIndex;
                     dgvProduct.Rows.RemoveAt(index);
                 }
-                catch (Exception ex)
-                {
-                    FarsiMessageBox.MessageBox.Show("اخطار", "سطری انتخاب نشده است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
-                }
             }
+            catch (Exception)
+            {
+                FarsiMessageBox.MessageBox.Show("اخطار", "سطری انتخاب نشده است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+            }
+
         }
     }
 }
