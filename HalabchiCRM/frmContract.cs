@@ -74,7 +74,7 @@ namespace HalabchiCRM
                 else
                     lblInfo.Text = "مشخصات مشتری";
             }
-            catch (Exception ex)
+            catch
             {
                 lblInfo.Text = "شرکتی با نام فوق یافت نشد";
             }
@@ -93,7 +93,7 @@ namespace HalabchiCRM
                     }
                 }
             }
-            catch (Exception ex)
+            catch
             {
 
             }
