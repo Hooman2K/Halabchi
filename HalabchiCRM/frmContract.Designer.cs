@@ -59,6 +59,8 @@
             this.contextMenuBar1 = new DevComponents.DotNetBar.ContextMenuBar();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
+            this.cmbxSelectStorage = new System.Windows.Forms.ComboBox();
             this.grbxContractInfo.SuspendLayout();
             this.grbxType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
@@ -81,7 +83,7 @@
             // 
             this.btnConfirm.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnConfirm.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnConfirm.Location = new System.Drawing.Point(12, 467);
+            this.btnConfirm.Location = new System.Drawing.Point(12, 486);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(502, 23);
             this.btnConfirm.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -245,6 +247,8 @@
             // grbxType
             // 
             this.grbxType.BackColor = System.Drawing.Color.Transparent;
+            this.grbxType.Controls.Add(this.cmbxSelectStorage);
+            this.grbxType.Controls.Add(this.labelX6);
             this.grbxType.Controls.Add(this.labelX5);
             this.grbxType.Controls.Add(this.txtProductName);
             this.grbxType.Controls.Add(this.labelX7);
@@ -255,7 +259,7 @@
             this.grbxType.Location = new System.Drawing.Point(12, 224);
             this.grbxType.Name = "grbxType";
             this.grbxType.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.grbxType.Size = new System.Drawing.Size(502, 237);
+            this.grbxType.Size = new System.Drawing.Size(502, 256);
             this.grbxType.TabIndex = 1;
             this.grbxType.TabStop = false;
             // 
@@ -266,7 +270,7 @@
             // 
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(415, 26);
+            this.labelX5.Location = new System.Drawing.Point(418, 54);
             this.labelX5.Name = "labelX5";
             this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX5.Size = new System.Drawing.Size(78, 18);
@@ -280,7 +284,7 @@
             // 
             this.txtProductName.Border.Class = "TextBoxBorder";
             this.txtProductName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtProductName.Location = new System.Drawing.Point(306, 24);
+            this.txtProductName.Location = new System.Drawing.Point(309, 52);
             this.txtProductName.MaxLength = 10;
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -296,7 +300,7 @@
             // 
             // 
             this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX7.Location = new System.Drawing.Point(177, 26);
+            this.labelX7.Location = new System.Drawing.Point(180, 54);
             this.labelX7.Name = "labelX7";
             this.labelX7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX7.Size = new System.Drawing.Size(47, 18);
@@ -310,7 +314,7 @@
             // 
             this.txtProductUnit.Border.Class = "TextBoxBorder";
             this.txtProductUnit.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtProductUnit.Location = new System.Drawing.Point(87, 25);
+            this.txtProductUnit.Location = new System.Drawing.Point(90, 53);
             this.txtProductUnit.MaxLength = 20;
             this.txtProductUnit.Name = "txtProductUnit";
             this.txtProductUnit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -325,7 +329,7 @@
             // 
             // 
             this.lblProductCode.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblProductCode.Location = new System.Drawing.Point(230, 26);
+            this.lblProductCode.Location = new System.Drawing.Point(233, 54);
             this.lblProductCode.Name = "lblProductCode";
             this.lblProductCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblProductCode.Size = new System.Drawing.Size(70, 18);
@@ -354,7 +358,7 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvProduct.Location = new System.Drawing.Point(9, 54);
+            this.dgvProduct.Location = new System.Drawing.Point(12, 82);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -412,7 +416,7 @@
             // 
             this.btnSetProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSetProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSetProduct.Location = new System.Drawing.Point(9, 26);
+            this.btnSetProduct.Location = new System.Drawing.Point(12, 54);
             this.btnSetProduct.Name = "btnSetProduct";
             this.btnSetProduct.Size = new System.Drawing.Size(75, 23);
             this.btnSetProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -449,11 +453,35 @@
             this.buttonItem2.Text = "خذف از جدول";
             this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
             // 
+            // labelX6
+            // 
+            this.labelX6.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX6.Location = new System.Drawing.Point(418, 20);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX6.Size = new System.Drawing.Size(78, 18);
+            this.labelX6.TabIndex = 24;
+            this.labelX6.Text = "انتخاب انبار : ";
+            // 
+            // cmbxSelectStorage
+            // 
+            this.cmbxSelectStorage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxSelectStorage.FormattingEnabled = true;
+            this.cmbxSelectStorage.Location = new System.Drawing.Point(12, 20);
+            this.cmbxSelectStorage.Name = "cmbxSelectStorage";
+            this.cmbxSelectStorage.Size = new System.Drawing.Size(401, 24);
+            this.cmbxSelectStorage.TabIndex = 25;
+            this.cmbxSelectStorage.SelectedIndexChanged += new System.EventHandler(this.cmbxSelectStorage_SelectedIndexChanged);
+            // 
             // frmContract
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(523, 491);
+            this.ClientSize = new System.Drawing.Size(523, 521);
             this.Controls.Add(this.contextMenuBar1);
             this.Controls.Add(this.grbxType);
             this.Controls.Add(this.grbxContractInfo);
@@ -469,6 +497,7 @@
             this.Name = "frmContract";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "قرارداد ها";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmContract_FormClosing);
             this.Load += new System.EventHandler(this.frmContract_Load);
             this.grbxContractInfo.ResumeLayout(false);
             this.grbxContractInfo.PerformLayout();
@@ -512,5 +541,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.ComboBox cmbxSelectStorage;
+        private DevComponents.DotNetBar.LabelX labelX6;
     }
 }

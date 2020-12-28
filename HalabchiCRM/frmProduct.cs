@@ -29,7 +29,7 @@ namespace HalabchiCRM
         {
             using (var db = new HalabchiDB())
             {
-                dgvProduct.DataSource = db.Products.ToList();
+                //dgvProduct.DataSource = db.Products.ToList();
             }
         }
 
@@ -47,25 +47,25 @@ namespace HalabchiCRM
                 {
                     using (var db = new HalabchiDB())
                     {
-                        bool exist = db.Products.Where(u => u.ProductCode == txtProductCode.Text).Any();
-                        if (!exist)
-                        {
-                            Product pr = new Product()
-                            {
-                                ProductCode = txtProductCode.Text,
-                                ProductName = txtProductName.Text,
-                            };
-                            db.Products.Add(pr);
-                            db.SaveChanges();
-                            FarsiMessageBox.MessageBox.Show("موفقیت", "محصول جدید با موفقیت اضافه شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
-                            LoadProduct();
-                            Clear();
-                        }
-                        else
-                        {
-                            FarsiMessageBox.MessageBox.Show("خطا", "کد محصول تکراری است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
-                            Clear();
-                        }
+                        //bool exist = db.Products.Where(u => u.ProductCode == txtProductCode.Text).Any();
+                        //if (!exist)
+                        //{
+                        //    Product pr = new Product()
+                        //    {
+                        //        ProductCode = txtProductCode.Text,
+                        //        ProductName = txtProductName.Text,
+                        //    };
+                        //    db.Products.Add(pr);
+                        //    db.SaveChanges();
+                        //    FarsiMessageBox.MessageBox.Show("موفقیت", "محصول جدید با موفقیت اضافه شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                        //    LoadProduct();
+                        //    Clear();
+                        //}
+                        //else
+                        //{
+                        //    FarsiMessageBox.MessageBox.Show("خطا", "کد محصول تکراری است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                        //    Clear();
+                        //}
                     }
                 }
                 else
