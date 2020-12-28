@@ -25,11 +25,21 @@ namespace HalabchiCRM
             txtProductCode.SelectAll();
             txtProductCode.Focus();
         }
-        private void LoadProduct()
+        private void LoadStoage()
         {
             using (var db = new HalabchiDB())
             {
-                //dgvProduct.DataSource = db.Products.ToList();
+                var item = from i in db.Storages select i.StorageName;
+                cmbxSelectStorage.DataSource = item.ToList();
+                if (item != null)
+                    cmbxSelectStorage.SelectedIndex = 0;
+            }
+        }
+        private void LoadProduct(string storage)
+        {
+            using (var db = new HalabchiDB())
+            {
+                dgvProduct.DataSource = db.StorageTypes.Where(u => u.StorageName == storage).ToList();
             }
         }
 
@@ -41,7 +51,7 @@ namespace HalabchiCRM
 
         private void brnAddProduct_Click(object sender, EventArgs e)
         {
-            if(_isNew)
+            if (_isNew)
             {
                 if (txtProductCode.Text != "" && txtProductName.Text != "")
                 {
@@ -83,7 +93,14 @@ namespace HalabchiCRM
 
         private void frmProduct_Load(object sender, EventArgs e)
         {
-            LoadProduct();
+            LoadStoage();
+            LoadProduct(cmbxSelectStorage.Text);
+            cmbxUnit.SelectedIndex = 0;
+        }
+
+        private void cmbxSelectStorage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadProduct(cmbxSelectStorage.Text);
         }
     }
 }

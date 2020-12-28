@@ -35,9 +35,16 @@
             this.txtProductName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.dgvProduct = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.cmbxSelectStorage = new System.Windows.Forms.ComboBox();
+            this.cmbxUnit = new System.Windows.Forms.ComboBox();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,12 +52,12 @@
             // 
             this.brnAddProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.brnAddProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.brnAddProduct.Location = new System.Drawing.Point(12, 46);
+            this.brnAddProduct.Location = new System.Drawing.Point(12, 38);
             this.brnAddProduct.Name = "brnAddProduct";
             this.brnAddProduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.brnAddProduct.Size = new System.Drawing.Size(116, 23);
             this.brnAddProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.brnAddProduct.TabIndex = 3;
+            this.brnAddProduct.TabIndex = 4;
             this.brnAddProduct.Text = "اضافه کردن";
             this.brnAddProduct.Click += new System.EventHandler(this.brnAddProduct_Click);
             // 
@@ -120,7 +127,10 @@
             this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -130,12 +140,69 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvProduct.Location = new System.Drawing.Point(12, 75);
+            this.dgvProduct.Location = new System.Drawing.Point(12, 68);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dgvProduct.Size = new System.Drawing.Size(496, 204);
-            this.dgvProduct.TabIndex = 4;
+            this.dgvProduct.Size = new System.Drawing.Size(496, 211);
+            this.dgvProduct.TabIndex = 5;
+            // 
+            // labelX3
+            // 
+            this.labelX3.AutoSize = true;
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Location = new System.Drawing.Point(432, 38);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX3.Size = new System.Drawing.Size(78, 18);
+            this.labelX3.TabIndex = 5;
+            this.labelX3.Text = "انتخاب انبار : ";
+            // 
+            // cmbxSelectStorage
+            // 
+            this.cmbxSelectStorage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxSelectStorage.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cmbxSelectStorage.FormattingEnabled = true;
+            this.cmbxSelectStorage.Location = new System.Drawing.Point(267, 37);
+            this.cmbxSelectStorage.Name = "cmbxSelectStorage";
+            this.cmbxSelectStorage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbxSelectStorage.Size = new System.Drawing.Size(159, 24);
+            this.cmbxSelectStorage.TabIndex = 2;
+            this.cmbxSelectStorage.SelectedIndexChanged += new System.EventHandler(this.cmbxSelectStorage_SelectedIndexChanged);
+            // 
+            // cmbxUnit
+            // 
+            this.cmbxUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxUnit.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cmbxUnit.FormattingEnabled = true;
+            this.cmbxUnit.Items.AddRange(new object[] {
+            "کیلوگر",
+            "عدد",
+            "لیتر"});
+            this.cmbxUnit.Location = new System.Drawing.Point(133, 38);
+            this.cmbxUnit.Name = "cmbxUnit";
+            this.cmbxUnit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbxUnit.Size = new System.Drawing.Size(79, 24);
+            this.cmbxUnit.TabIndex = 3;
+            // 
+            // labelX4
+            // 
+            this.labelX4.AutoSize = true;
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Location = new System.Drawing.Point(218, 40);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX4.Size = new System.Drawing.Size(43, 18);
+            this.labelX4.TabIndex = 7;
+            this.labelX4.Text = "واحد : ";
             // 
             // Column1
             // 
@@ -143,23 +210,46 @@
             this.Column1.HeaderText = "شماره";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
-            this.Column1.Width = 70;
+            this.Column1.Visible = false;
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "ProductCode";
-            this.Column2.HeaderText = "کد محصول";
+            this.Column2.DataPropertyName = "StorageName";
+            this.Column2.HeaderText = "نام انبار";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 150;
+            this.Column2.Visible = false;
             // 
             // Column3
             // 
-            this.Column3.DataPropertyName = "ProductName";
-            this.Column3.HeaderText = "نام محصول";
+            this.Column3.DataPropertyName = "ProductCode";
+            this.Column3.HeaderText = "کد محصول";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 200;
+            this.Column3.Width = 120;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "ProductName";
+            this.Column4.HeaderText = "نام محصول";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "ProductUnit";
+            this.Column5.HeaderText = "تعداد اولیه";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Visible = false;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "ProductType";
+            this.Column6.HeaderText = "نوع واحد";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // frmProduct
             // 
@@ -167,6 +257,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 291);
+            this.Controls.Add(this.cmbxUnit);
+            this.Controls.Add(this.labelX4);
+            this.Controls.Add(this.cmbxSelectStorage);
+            this.Controls.Add(this.labelX3);
             this.Controls.Add(this.dgvProduct);
             this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.labelX2);
@@ -200,5 +294,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private DevComponents.DotNetBar.LabelX labelX3;
+        private System.Windows.Forms.ComboBox cmbxSelectStorage;
+        private System.Windows.Forms.ComboBox cmbxUnit;
+        private DevComponents.DotNetBar.LabelX labelX4;
     }
 }
