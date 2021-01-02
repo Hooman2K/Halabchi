@@ -488,5 +488,13 @@ order by start_time desc");
                 FarsiMessageBox.MessageBox.Show("موفقیت", "اطلاعات شما با موفقیت ویرایش شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
             }
         }
+
+        private void btnPipeLine_Click(object sender, EventArgs e)
+        {
+            frmPipeLine pipeline = new frmPipeLine();
+            this.Hide();
+            pipeline.ShowDialog();
+            this.Show();
+        }
     }
 }
