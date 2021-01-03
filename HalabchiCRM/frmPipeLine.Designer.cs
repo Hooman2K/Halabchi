@@ -49,6 +49,7 @@
             this.btnRegister.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnRegister.TabIndex = 1;
             this.btnRegister.Text = "ثبت";
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // txtPipeLineName
             // 
@@ -101,6 +102,7 @@
             this.dgvPipeLine.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvPipeLine.Size = new System.Drawing.Size(319, 150);
             this.dgvPipeLine.TabIndex = 2;
+            this.dgvPipeLine.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPipeLine_CellContentDoubleClick);
             // 
             // Column1
             // 
