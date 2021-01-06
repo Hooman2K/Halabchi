@@ -35,16 +35,16 @@
             this.txtProductName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.dgvProduct = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.cmbxSelectStorage = new System.Windows.Forms.ComboBox();
-            this.cmbxUnit = new System.Windows.Forms.ComboBox();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.cmbxSelectStorage = new System.Windows.Forms.ComboBox();
+            this.cmbxUnit = new System.Windows.Forms.ComboBox();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,6 +52,7 @@
             // 
             this.brnAddProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.brnAddProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.brnAddProduct.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.brnAddProduct.Location = new System.Drawing.Point(12, 38);
             this.brnAddProduct.Name = "brnAddProduct";
             this.brnAddProduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -74,6 +75,7 @@
             this.txtProductCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtProductCode.Size = new System.Drawing.Size(124, 23);
             this.txtProductCode.TabIndex = 0;
+            this.txtProductCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProductCode_KeyDown);
             // 
             // labelX1
             // 
@@ -103,6 +105,7 @@
             this.txtProductName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtProductName.Size = new System.Drawing.Size(200, 23);
             this.txtProductName.TabIndex = 1;
+            this.txtProductName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProductCode_KeyDown);
             // 
             // labelX2
             // 
@@ -146,6 +149,54 @@
             this.dgvProduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvProduct.Size = new System.Drawing.Size(496, 211);
             this.dgvProduct.TabIndex = 5;
+            this.dgvProduct.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentDoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "ID";
+            this.Column1.HeaderText = "شماره";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "StorageName";
+            this.Column2.HeaderText = "نام انبار";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "ProductCode";
+            this.Column3.HeaderText = "کد محصول";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 120;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "ProductName";
+            this.Column4.HeaderText = "نام محصول";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "ProductUnit";
+            this.Column5.HeaderText = "تعداد اولیه";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Visible = false;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "ProductType";
+            this.Column6.HeaderText = "نوع واحد";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
             // 
             // labelX3
             // 
@@ -203,53 +254,6 @@
             this.labelX4.Size = new System.Drawing.Size(43, 18);
             this.labelX4.TabIndex = 7;
             this.labelX4.Text = "واحد : ";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "ID";
-            this.Column1.HeaderText = "شماره";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "StorageName";
-            this.Column2.HeaderText = "نام انبار";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "ProductCode";
-            this.Column3.HeaderText = "کد محصول";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 120;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "ProductName";
-            this.Column4.HeaderText = "نام محصول";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "ProductUnit";
-            this.Column5.HeaderText = "تعداد اولیه";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Visible = false;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "ProductType";
-            this.Column6.HeaderText = "نوع واحد";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
             // 
             // frmProduct
             // 

@@ -152,6 +152,7 @@ namespace HalabchiCRM
                 //لود کردن قرارداد ها
                 LoadContract();
             }
+            grbxAdminTool.Enabled = AppInfo.IsAdmin;
         }
 
         private void btnSaveTheme_Click(object sender, EventArgs e)

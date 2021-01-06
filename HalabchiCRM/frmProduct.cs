@@ -24,6 +24,7 @@ namespace HalabchiCRM
             txtProductName.Text = txtProductCode.Text = "";
             txtProductCode.SelectAll();
             txtProductCode.Focus();
+            _isNew = true;
         }
         private void LoadStoage()
         {
@@ -57,25 +58,28 @@ namespace HalabchiCRM
                 {
                     using (var db = new HalabchiDB())
                     {
-                        //bool exist = db.Products.Where(u => u.ProductCode == txtProductCode.Text).Any();
-                        //if (!exist)
-                        //{
-                        //    Product pr = new Product()
-                        //    {
-                        //        ProductCode = txtProductCode.Text,
-                        //        ProductName = txtProductName.Text,
-                        //    };
-                        //    db.Products.Add(pr);
-                        //    db.SaveChanges();
-                        //    FarsiMessageBox.MessageBox.Show("موفقیت", "محصول جدید با موفقیت اضافه شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
-                        //    LoadProduct();
-                        //    Clear();
-                        //}
-                        //else
-                        //{
-                        //    FarsiMessageBox.MessageBox.Show("خطا", "کد محصول تکراری است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
-                        //    Clear();
-                        //}
+                        bool exist = db.StorageTypes.Where(u => u.ProductCode == txtProductCode.Text).Any();
+                        if (!exist)
+                        {
+                            StorageType st = new StorageType()
+                            {
+                                StorageName = cmbxSelectStorage.Text,
+                                ProductCode = txtProductCode.Text,
+                                ProductName = txtProductName.Text,
+                                ProductUnit = "0",
+                                ProductType = cmbxUnit.Text
+                            };
+                            db.StorageTypes.Add(st);
+                            db.SaveChanges();
+                            FarsiMessageBox.MessageBox.Show("موفقیت", "محصول جدید با موفقیت اضافه شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                            LoadProduct(cmbxSelectStorage.Text);
+                            Clear();
+                        }
+                        else
+                        {
+                            FarsiMessageBox.MessageBox.Show("خطا", "کد محصول تکراری است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                            Clear();
+                        }
                     }
                 }
                 else
@@ -87,7 +91,19 @@ namespace HalabchiCRM
             }
             else
             {
-                //کد های ویرایش
+                using (var db = new HalabchiDB())
+                {
+                    var product = db.StorageTypes.Where(u => u.ID == _id).FirstOrDefault();
+                    product.StorageName = cmbxSelectStorage.Text;
+                    product.ProductCode = txtProductCode.Text;
+                    product.ProductName = txtProductName.Text;
+                    product.ProductType = cmbxUnit.Text;
+                    db.SaveChanges();
+                    FarsiMessageBox.MessageBox.Show("موفقیت", "محصول با موفقیت ویرایش شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                    LoadProduct(cmbxSelectStorage.Text);
+                    Clear();
+                    _isNew = true;
+                }
             }
         }
 
@@ -101,6 +117,27 @@ namespace HalabchiCRM
         private void cmbxSelectStorage_SelectedIndexChanged(object sender, EventArgs e)
         {
             LoadProduct(cmbxSelectStorage.Text);
+        }
+
+        private void dgvProduct_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            _isNew = false;
+            _id = int.Parse(dgvProduct.CurrentRow.Cells[0].Value.ToString());
+
+            txtProductCode.Text = dgvProduct.CurrentRow.Cells[2].Value.ToString();
+            txtProductName.Text = dgvProduct.CurrentRow.Cells[3].Value.ToString();
+            cmbxSelectStorage.Text = dgvProduct.CurrentRow.Cells[1].Value.ToString();
+            cmbxUnit.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
+        }
+        private void Cancel(object sender,KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+                Clear();
+        }
+
+        private void txtProductCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            Cancel(sender, e);
         }
     }
 }
