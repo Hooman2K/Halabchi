@@ -26,7 +26,7 @@ namespace HalabchiCRM
             txtProductCode.Focus();
             _isNew = true;
         }
-        private void LoadStoage()
+        private void LoadStorage()
         {
             using (var db = new HalabchiDB())
             {
@@ -72,8 +72,8 @@ namespace HalabchiCRM
                             db.StorageTypes.Add(st);
                             db.SaveChanges();
                             FarsiMessageBox.MessageBox.Show("موفقیت", "محصول جدید با موفقیت اضافه شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
-                            LoadProduct(cmbxSelectStorage.Text);
                             Clear();
+                            LoadProduct(cmbxSelectStorage.Text);
                         }
                         else
                         {
@@ -109,7 +109,7 @@ namespace HalabchiCRM
 
         private void frmProduct_Load(object sender, EventArgs e)
         {
-            LoadStoage();
+            LoadStorage();
             LoadProduct(cmbxSelectStorage.Text);
             cmbxUnit.SelectedIndex = 0;
         }
@@ -121,6 +121,7 @@ namespace HalabchiCRM
 
         private void dgvProduct_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            brnAddProduct.Text = "ویرایش";
             _isNew = false;
             _id = int.Parse(dgvProduct.CurrentRow.Cells[0].Value.ToString());
 
@@ -132,7 +133,10 @@ namespace HalabchiCRM
         private void Cancel(object sender,KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
+            {
+                brnAddProduct.Text = "اضافه کردن";
                 Clear();
+            }
         }
 
         private void txtProductCode_KeyDown(object sender, KeyEventArgs e)
