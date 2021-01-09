@@ -461,9 +461,10 @@ order by start_time desc");
         private void btnProduct_Click(object sender, EventArgs e)
         {
             frmProduct product = new frmProduct();
-            this.Hide();
-            product.ShowDialog();
-            this.Show();
+            //this.Hide();
+            product.Show();
+            //this.Show();
+
         }
 
         private void btnStorage_Click(object sender, EventArgs e)
