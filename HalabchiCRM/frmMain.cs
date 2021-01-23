@@ -461,9 +461,9 @@ order by start_time desc");
         private void btnProduct_Click(object sender, EventArgs e)
         {
             frmProduct product = new frmProduct();
-            //this.Hide();
-            product.Show();
-            //this.Show();
+            this.Hide();
+            product.ShowDialog();
+            this.Show();
 
         }
 
@@ -496,6 +496,14 @@ order by start_time desc");
             frmPipeLine pipeline = new frmPipeLine();
             this.Hide();
             pipeline.ShowDialog();
+            this.Show();
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            frmAddProduct addProduct = new frmAddProduct();
+            this.Hide();
+            addProduct.ShowDialog();
             this.Show();
         }
     }

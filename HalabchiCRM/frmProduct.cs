@@ -52,6 +52,48 @@ namespace HalabchiCRM
 
         private void brnAddProduct_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void frmProduct_Load(object sender, EventArgs e)
+        {
+            LoadStorage();
+            LoadProduct(cmbxSelectStorage.Text);
+            cmbxUnit.SelectedIndex = 0;
+        }
+
+        private void cmbxSelectStorage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LoadProduct(cmbxSelectStorage.Text);
+        }
+
+        private void dgvProduct_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnAddProduct.Text = "ویرایش";
+            _isNew = false;
+            _id = int.Parse(dgvProduct.CurrentRow.Cells[0].Value.ToString());
+
+            txtProductCode.Text = dgvProduct.CurrentRow.Cells[2].Value.ToString();
+            txtProductName.Text = dgvProduct.CurrentRow.Cells[3].Value.ToString();
+            cmbxSelectStorage.Text = dgvProduct.CurrentRow.Cells[1].Value.ToString();
+            cmbxUnit.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
+        }
+        private void Cancel(object sender,KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                btnAddProduct.Text = "اضافه کردن";
+                Clear();
+            }
+        }
+
+        private void txtProductCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            Cancel(sender, e);
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
             if (_isNew)
             {
                 if (txtProductCode.Text != "" && txtProductName.Text != "")
@@ -105,43 +147,6 @@ namespace HalabchiCRM
                     _isNew = true;
                 }
             }
-        }
-
-        private void frmProduct_Load(object sender, EventArgs e)
-        {
-            LoadStorage();
-            LoadProduct(cmbxSelectStorage.Text);
-            cmbxUnit.SelectedIndex = 0;
-        }
-
-        private void cmbxSelectStorage_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            LoadProduct(cmbxSelectStorage.Text);
-        }
-
-        private void dgvProduct_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            brnAddProduct.Text = "ویرایش";
-            _isNew = false;
-            _id = int.Parse(dgvProduct.CurrentRow.Cells[0].Value.ToString());
-
-            txtProductCode.Text = dgvProduct.CurrentRow.Cells[2].Value.ToString();
-            txtProductName.Text = dgvProduct.CurrentRow.Cells[3].Value.ToString();
-            cmbxSelectStorage.Text = dgvProduct.CurrentRow.Cells[1].Value.ToString();
-            cmbxUnit.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
-        }
-        private void Cancel(object sender,KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Escape)
-            {
-                brnAddProduct.Text = "اضافه کردن";
-                Clear();
-            }
-        }
-
-        private void txtProductCode_KeyDown(object sender, KeyEventArgs e)
-        {
-            Cancel(sender, e);
         }
     }
 }

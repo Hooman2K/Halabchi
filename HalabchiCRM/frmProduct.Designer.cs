@@ -28,8 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.brnAddProduct = new DevComponents.DotNetBar.ButtonX();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtProductCode = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txtProductName = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -45,22 +44,9 @@
             this.cmbxSelectStorage = new System.Windows.Forms.ComboBox();
             this.cmbxUnit = new System.Windows.Forms.ComboBox();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.btnAddProduct = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
-            // 
-            // brnAddProduct
-            // 
-            this.brnAddProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.brnAddProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.brnAddProduct.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.brnAddProduct.Location = new System.Drawing.Point(12, 38);
-            this.brnAddProduct.Name = "brnAddProduct";
-            this.brnAddProduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.brnAddProduct.Size = new System.Drawing.Size(116, 23);
-            this.brnAddProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.brnAddProduct.TabIndex = 4;
-            this.brnAddProduct.Text = "اضافه کردن";
-            this.brnAddProduct.Click += new System.EventHandler(this.brnAddProduct_Click);
             // 
             // txtProductCode
             // 
@@ -134,14 +120,14 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvProduct.Location = new System.Drawing.Point(12, 68);
             this.dgvProduct.Name = "dgvProduct";
@@ -255,12 +241,25 @@
             this.labelX4.TabIndex = 7;
             this.labelX4.Text = "واحد : ";
             // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddProduct.Location = new System.Drawing.Point(11, 38);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(116, 23);
+            this.btnAddProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddProduct.TabIndex = 4;
+            this.btnAddProduct.Text = "اضافه کردن";
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            // 
             // frmProduct
             // 
-            this.AcceptButton = this.brnAddProduct;
+            this.AcceptButton = this.btnAddProduct;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 291);
+            this.ClientSize = new System.Drawing.Size(512, 284);
+            this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.cmbxUnit);
             this.Controls.Add(this.labelX4);
             this.Controls.Add(this.cmbxSelectStorage);
@@ -270,7 +269,6 @@
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.txtProductCode);
             this.Controls.Add(this.labelX1);
-            this.Controls.Add(this.brnAddProduct);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -288,8 +286,6 @@
         }
 
         #endregion
-
-        private DevComponents.DotNetBar.ButtonX brnAddProduct;
         private DevComponents.DotNetBar.Controls.TextBoxX txtProductCode;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.TextBoxX txtProductName;
@@ -305,5 +301,6 @@
         private System.Windows.Forms.ComboBox cmbxSelectStorage;
         private System.Windows.Forms.ComboBox cmbxUnit;
         private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.ButtonX btnAddProduct;
     }
 }
