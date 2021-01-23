@@ -22,6 +22,7 @@ namespace HalabchiCRM
         private void Clear()
         {
             txtProductName.Text = txtProductCode.Text = "";
+            cmbxUnit.SelectedIndex = 0;
             txtProductCode.SelectAll();
             txtProductCode.Focus();
             _isNew = true;
@@ -143,6 +144,7 @@ namespace HalabchiCRM
                     db.SaveChanges();
                     FarsiMessageBox.MessageBox.Show("موفقیت", "محصول با موفقیت ویرایش شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
                     LoadProduct(cmbxSelectStorage.Text);
+                    btnAddProduct.Text = "اضافه کردن";
                     Clear();
                     _isNew = true;
                 }
