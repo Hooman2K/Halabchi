@@ -45,12 +45,6 @@ namespace HalabchiCRM
             }
         }
 
-        private void txtProductUnit_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            AppInfo info = new AppInfo();
-            info.JustNumber(sender, e);
-        }
-
         private void frmProduct_Load(object sender, EventArgs e)
         {
             LoadStorage();
