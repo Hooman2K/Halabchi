@@ -51,11 +51,6 @@ namespace HalabchiCRM
             info.JustNumber(sender, e);
         }
 
-        private void brnAddProduct_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmProduct_Load(object sender, EventArgs e)
         {
             LoadStorage();
