@@ -20,7 +20,7 @@ namespace HalabchiCRM
         private void button1_Click(object sender, EventArgs e)
         {
             Formula form = new Formula();
-            label1.Text = form.Hefdah(int.Parse(textBox1.Text)).ToString();
+            label1.Text = form.Hefdah885(int.Parse(textBox1.Text)).ToString() + " " + "Kg";
         }
     }
 }
