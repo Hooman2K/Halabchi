@@ -49,6 +49,7 @@
             this.btnAddProduct = new DevComponents.DotNetBar.ButtonX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.lblLastCount = new DevComponents.DotNetBar.LabelX();
+            this.labelX7 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -314,12 +315,28 @@
             this.lblLastCount.Text = "-----";
             this.lblLastCount.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
+            // labelX7
+            // 
+            // 
+            // 
+            // 
+            this.labelX7.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX7.Font = new System.Drawing.Font("Iranian Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.labelX7.ForeColor = System.Drawing.Color.Red;
+            this.labelX7.Location = new System.Drawing.Point(12, 317);
+            this.labelX7.Name = "labelX7";
+            this.labelX7.Size = new System.Drawing.Size(496, 57);
+            this.labelX7.TabIndex = 22;
+            this.labelX7.Text = "! توجه !\r\nمقدار جدید وارد شده با مقدار انبار جمع میشود";
+            this.labelX7.TextAlignment = System.Drawing.StringAlignment.Center;
+            // 
             // frmAddProduct
             // 
             this.AcceptButton = this.btnAddProduct;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 321);
+            this.ClientSize = new System.Drawing.Size(516, 377);
+            this.Controls.Add(this.labelX7);
             this.Controls.Add(this.lblLastCount);
             this.Controls.Add(this.labelX6);
             this.Controls.Add(this.btnAddProduct);
@@ -372,5 +389,6 @@
         private DevComponents.DotNetBar.ButtonX btnAddProduct;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.LabelX lblLastCount;
+        private DevComponents.DotNetBar.LabelX labelX7;
     }
 }
