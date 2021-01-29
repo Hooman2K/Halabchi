@@ -80,7 +80,6 @@
             this.dgvProduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvProduct.Size = new System.Drawing.Size(496, 211);
             this.dgvProduct.TabIndex = 6;
-            this.dgvProduct.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentDoubleClick);
             // 
             // Column1
             // 
@@ -140,7 +139,7 @@
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtProductName.Size = new System.Drawing.Size(200, 23);
-            this.txtProductName.TabIndex = 1;
+            this.txtProductName.TabIndex = 0;
             // 
             // labelX2
             // 
@@ -167,10 +166,10 @@
             this.txtProductCode.Location = new System.Drawing.Point(302, 12);
             this.txtProductCode.MaxLength = 10;
             this.txtProductCode.Name = "txtProductCode";
+            this.txtProductCode.ReadOnly = true;
             this.txtProductCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtProductCode.Size = new System.Drawing.Size(124, 23);
-            this.txtProductCode.TabIndex = 0;
-            this.txtProductCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProductCode_KeyDown);
+            this.txtProductCode.TabIndex = 5;
             // 
             // labelX1
             // 
@@ -200,7 +199,7 @@
             this.cmbxUnit.Name = "cmbxUnit";
             this.cmbxUnit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxUnit.Size = new System.Drawing.Size(79, 24);
-            this.cmbxUnit.TabIndex = 3;
+            this.cmbxUnit.TabIndex = 2;
             // 
             // labelX4
             // 
@@ -226,8 +225,7 @@
             this.cmbxSelectStorage.Name = "cmbxSelectStorage";
             this.cmbxSelectStorage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxSelectStorage.Size = new System.Drawing.Size(124, 24);
-            this.cmbxSelectStorage.TabIndex = 2;
-            this.cmbxSelectStorage.SelectedIndexChanged += new System.EventHandler(this.cmbxSelectStorage_SelectedIndexChanged);
+            this.cmbxSelectStorage.TabIndex = 1;
             // 
             // labelX3
             // 
@@ -256,7 +254,7 @@
             this.txtProductCount.Name = "txtProductCount";
             this.txtProductCount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtProductCount.Size = new System.Drawing.Size(124, 23);
-            this.txtProductCount.TabIndex = 4;
+            this.txtProductCount.TabIndex = 3;
             // 
             // labelX5
             // 
@@ -281,9 +279,8 @@
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(235, 23);
             this.btnAddProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddProduct.TabIndex = 5;
+            this.btnAddProduct.TabIndex = 4;
             this.btnAddProduct.Text = "اضافه کردن";
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // labelX6
             // 
@@ -360,7 +357,6 @@
             this.Name = "frmAddProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "اضافه کردن کالا";
-            this.Load += new System.EventHandler(this.frmAddProduct_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
