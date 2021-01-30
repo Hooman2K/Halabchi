@@ -139,7 +139,7 @@
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtProductName.Size = new System.Drawing.Size(200, 23);
-            this.txtProductName.TabIndex = 0;
+            this.txtProductName.TabIndex = 1;
             // 
             // labelX2
             // 
@@ -166,10 +166,9 @@
             this.txtProductCode.Location = new System.Drawing.Point(302, 12);
             this.txtProductCode.MaxLength = 10;
             this.txtProductCode.Name = "txtProductCode";
-            this.txtProductCode.ReadOnly = true;
             this.txtProductCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtProductCode.Size = new System.Drawing.Size(124, 23);
-            this.txtProductCode.TabIndex = 5;
+            this.txtProductCode.TabIndex = 0;
             // 
             // labelX1
             // 
@@ -199,7 +198,7 @@
             this.cmbxUnit.Name = "cmbxUnit";
             this.cmbxUnit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxUnit.Size = new System.Drawing.Size(79, 24);
-            this.cmbxUnit.TabIndex = 2;
+            this.cmbxUnit.TabIndex = 3;
             // 
             // labelX4
             // 
@@ -225,7 +224,7 @@
             this.cmbxSelectStorage.Name = "cmbxSelectStorage";
             this.cmbxSelectStorage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxSelectStorage.Size = new System.Drawing.Size(124, 24);
-            this.cmbxSelectStorage.TabIndex = 1;
+            this.cmbxSelectStorage.TabIndex = 2;
             // 
             // labelX3
             // 
@@ -254,7 +253,7 @@
             this.txtProductCount.Name = "txtProductCount";
             this.txtProductCount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtProductCount.Size = new System.Drawing.Size(124, 23);
-            this.txtProductCount.TabIndex = 3;
+            this.txtProductCount.TabIndex = 4;
             // 
             // labelX5
             // 
@@ -279,7 +278,7 @@
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(235, 23);
             this.btnAddProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddProduct.TabIndex = 4;
+            this.btnAddProduct.TabIndex = 5;
             this.btnAddProduct.Text = "اضافه کردن";
             // 
             // labelX6

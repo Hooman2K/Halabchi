@@ -19,8 +19,12 @@ namespace HalabchiCRM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Formula form = new Formula();
-            label1.Text = form.Hefdah885030(int.Parse(textBox1.Text)).ToString() + " " + "Kg";
+
+            //عدد تایع 885*700*030 برابر 1040 است
+            //Formula form = new Formula();
+            //label1.Text = form.Hefdah885030(int.Parse(textBox1.Text)).ToString() + " " + "Kg";
+
+            label1.Text = ((double.Parse(textBox1.Text) * 1040) / 1000).ToString() + " " + "Kg";
         }
     }
 }
