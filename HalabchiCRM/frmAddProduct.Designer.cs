@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProduct = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,9 +48,9 @@
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.btnAddProduct = new DevComponents.DotNetBar.ButtonX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.lblLastCount = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.btnCancell = new DevComponents.DotNetBar.ButtonX();
+            this.txtLastCount = new DevComponents.DotNetBar.Controls.TextBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,21 +66,21 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvProduct.Location = new System.Drawing.Point(12, 100);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvProduct.Size = new System.Drawing.Size(496, 211);
-            this.dgvProduct.TabIndex = 7;
+            this.dgvProduct.TabIndex = 8;
             this.dgvProduct.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentDoubleClick);
             // 
             // Column1
@@ -259,7 +259,7 @@
             this.txtProductCount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtProductCount.Size = new System.Drawing.Size(124, 23);
             this.txtProductCount.TabIndex = 4;
-            this.txtProductCount.TextChanged += new System.EventHandler(this.txtProductCount_TextChanged);
+            this.txtProductCount.Leave += new System.EventHandler(this.txtProductCount_Leave);
             // 
             // labelX5
             // 
@@ -284,7 +284,7 @@
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(143, 23);
             this.btnAddProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddProduct.TabIndex = 5;
+            this.btnAddProduct.TabIndex = 6;
             this.btnAddProduct.Text = "اضافه کردن";
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
@@ -296,27 +296,12 @@
             // 
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(84, 42);
+            this.labelX6.Location = new System.Drawing.Point(123, 43);
             this.labelX6.Name = "labelX6";
             this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX6.Size = new System.Drawing.Size(71, 18);
+            this.labelX6.Size = new System.Drawing.Size(39, 18);
             this.labelX6.TabIndex = 20;
-            this.labelX6.Text = "مقدار انبار : ";
-            // 
-            // lblLastCount
-            // 
-            this.lblLastCount.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.lblLastCount.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblLastCount.Location = new System.Drawing.Point(12, 42);
-            this.lblLastCount.Name = "lblLastCount";
-            this.lblLastCount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblLastCount.Size = new System.Drawing.Size(66, 18);
-            this.lblLastCount.TabIndex = 21;
-            this.lblLastCount.Text = "-----";
-            this.lblLastCount.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.labelX6.Text = "انبار : ";
             // 
             // labelX7
             // 
@@ -341,9 +326,24 @@
             this.btnCancell.Name = "btnCancell";
             this.btnCancell.Size = new System.Drawing.Size(86, 23);
             this.btnCancell.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnCancell.TabIndex = 6;
+            this.btnCancell.TabIndex = 7;
             this.btnCancell.Text = "لغو";
             this.btnCancell.Click += new System.EventHandler(this.btnCancell_Click);
+            // 
+            // txtLastCount
+            // 
+            // 
+            // 
+            // 
+            this.txtLastCount.Border.Class = "TextBoxBorder";
+            this.txtLastCount.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtLastCount.Location = new System.Drawing.Point(12, 41);
+            this.txtLastCount.MaxLength = 20;
+            this.txtLastCount.Name = "txtLastCount";
+            this.txtLastCount.ReadOnly = true;
+            this.txtLastCount.Size = new System.Drawing.Size(116, 23);
+            this.txtLastCount.TabIndex = 5;
+            this.txtLastCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmAddProduct
             // 
@@ -351,9 +351,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(516, 377);
+            this.Controls.Add(this.txtLastCount);
             this.Controls.Add(this.btnCancell);
             this.Controls.Add(this.labelX7);
-            this.Controls.Add(this.lblLastCount);
             this.Controls.Add(this.labelX6);
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.txtProductCount);
@@ -404,8 +404,8 @@
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.ButtonX btnAddProduct;
         private DevComponents.DotNetBar.LabelX labelX6;
-        private DevComponents.DotNetBar.LabelX lblLastCount;
         private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.DotNetBar.ButtonX btnCancell;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtLastCount;
     }
 }

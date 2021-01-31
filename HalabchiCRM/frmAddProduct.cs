@@ -117,7 +117,7 @@ namespace HalabchiCRM
             txtProductCode.Enabled = txtProductName.Enabled = false;
             _id = int.Parse(dgvProduct.CurrentRow.Cells[0].Value.ToString());
             cmbxUnit.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
-            lblLastCount.Text = dgvProduct.CurrentRow.Cells[4].Value.ToString();
+            txtLastCount.Text = dgvProduct.CurrentRow.Cells[4].Value.ToString();
 
             cmbxSelectStorage.Enabled = false;
             cmbxUnit.Enabled = false;
@@ -137,14 +137,12 @@ namespace HalabchiCRM
 
         }
 
-        private void txtProductCount_TextChanged(object sender, EventArgs e)
+        private void txtProductCount_Leave(object sender, EventArgs e)
         {
-            double lastCount = double.Parse(lblLastCount.Text);
+            double lastCount = double.Parse(txtLastCount.Text);
             double count = double.Parse(txtProductCount.Text);
 
-            lblLastCount.Text = (lastCount + count).ToString();
-
-            if(lblLastCount .)
+            txtLastCount.Text = (lastCount + count).ToString();
         }
     }
 }
