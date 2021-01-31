@@ -21,7 +21,7 @@ namespace HalabchiCRM
         bool _itemSelect = false;
         int _id;
 
-        HalabchiDB db = new HalabchiDB();
+
         private void Clear()
         {
             txtProductName.Text = txtProductCode.Text = txtProductCount.Text = txtLastCount.Text = "";
@@ -56,6 +56,8 @@ namespace HalabchiCRM
         }
         private void FillData(string storage)
         {
+            HalabchiDB db = new HalabchiDB();
+
             db.StorageTypes.Load();
             dgvProduct.DataSource = db.StorageTypes.Local.Where(u => u.StorageName == storage).ToList();
 
@@ -149,6 +151,7 @@ namespace HalabchiCRM
                     LoadProduct(cmbxSelectStorage.Text);
                     cmbxUnit.SelectedIndex = 0;
                     AutoComplit(cmbxSelectStorage.Text);
+                    FillData(cmbxSelectStorage.Text);
                 }
             }
         }
@@ -166,6 +169,9 @@ namespace HalabchiCRM
                 double count = double.Parse(txtProductCount.Text);
 
                 txtLastCount.Text = (lastCount + count).ToString();
+
+                count = 0;
+                lastCount = 0;
             }
         }
 
