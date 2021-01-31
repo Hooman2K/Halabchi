@@ -24,11 +24,16 @@ namespace HalabchiCRM
         HalabchiDB db = new HalabchiDB();
         private void Clear()
         {
-            txtProductName.Text = txtProductCode.Text = txtProductCount.Text = "";
+            txtProductName.Text = txtProductCode.Text = txtProductCount.Text = txtLastCount.Text = "";
             cmbxUnit.SelectedIndex = 0;
-            txtProductName.SelectAll();
-            txtProductName.Focus();
             _itemSelect = false;
+            btnAddProduct.Enabled = false;
+            cmbxSelectStorage.Enabled = true;
+            cmbxUnit.Enabled = true;
+            dgvProduct.Enabled = true;
+            txtProductCode.Enabled = txtProductName.Enabled = true;
+            txtProductCode.SelectAll();
+            txtProductCode.Focus();
         }
 
         private void LoadStorage()
@@ -116,6 +121,8 @@ namespace HalabchiCRM
             _itemSelect = true;
             txtProductCode.Enabled = txtProductName.Enabled = false;
             _id = int.Parse(dgvProduct.CurrentRow.Cells[0].Value.ToString());
+            txtProductCode.Text = dgvProduct.CurrentRow.Cells[2].Value.ToString();
+            txtProductName.Text = dgvProduct.CurrentRow.Cells[3].Value.ToString();
             cmbxUnit.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
             txtLastCount.Text = dgvProduct.CurrentRow.Cells[4].Value.ToString();
 
@@ -129,20 +136,43 @@ namespace HalabchiCRM
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
+            if (_itemSelect == true)
+            {
+                using (var db = new HalabchiDB())
+                {
+                    var pro = db.StorageTypes.Where(u => u.ID == _id).FirstOrDefault();
+                    pro.ProductUnit = txtLastCount.Text;
 
+                    db.SaveChanges();
+                    FarsiMessageBox.MessageBox.Show("موفقیت", "مقدار محصول با موفقیت اضافه شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                    Clear();
+                    LoadProduct(cmbxSelectStorage.Text);
+                    cmbxUnit.SelectedIndex = 0;
+                    AutoComplit(cmbxSelectStorage.Text);
+                }
+            }
         }
 
         private void btnCancell_Click(object sender, EventArgs e)
         {
-
+            Clear();
         }
 
         private void txtProductCount_Leave(object sender, EventArgs e)
         {
-            double lastCount = double.Parse(txtLastCount.Text);
-            double count = double.Parse(txtProductCount.Text);
+            if (txtProductCount.Text != "")
+            {
+                double lastCount = double.Parse(txtLastCount.Text);
+                double count = double.Parse(txtProductCount.Text);
 
-            txtLastCount.Text = (lastCount + count).ToString();
+                txtLastCount.Text = (lastCount + count).ToString();
+            }
+        }
+
+        private void txtProductCount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AppInfo pro = new AppInfo();
+            pro.JustNumber(sender, e);
         }
     }
 }
