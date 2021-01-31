@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using System.Data.Entity;
 
 namespace HalabchiCRM
 {
@@ -19,6 +20,8 @@ namespace HalabchiCRM
         }
         bool _itemSelect = false;
         int _id;
+
+        HalabchiDB db = new HalabchiDB();
         private void Clear()
         {
             txtProductName.Text = txtProductCode.Text = txtProductCount.Text = "";
@@ -38,9 +41,73 @@ namespace HalabchiCRM
                     cmbxSelectStorage.SelectedIndex = 0;
             }
         }
-        private void Search(string ProductName)
-        {
 
+        private void LoadProduct(string storage)
+        {
+            using (var db = new HalabchiDB())
+            {
+                dgvProduct.DataSource = db.StorageTypes.Where(u => u.StorageName == storage).ToList();
+            }
+        }
+        private void FillData(string storage)
+        {
+            db.StorageTypes.Load();
+            dgvProduct.DataSource = db.StorageTypes.Local.Where(u => u.StorageName == storage).ToList();
+
+            var item = db.StorageTypes.AsQueryable();
+
+            if (!string.IsNullOrEmpty(txtProductCode.Text))
+                item = item.Where(u => u.ProductCode.Contains(txtProductCode.Text) && u.StorageName == storage);
+            if (!string.IsNullOrEmpty(txtProductName.Text))
+                item = item.Where(u => u.ProductName.Contains(txtProductName.Text) && u.StorageName == storage);
+            else
+                item = item.Where(u => u.StorageName == storage);
+
+            dgvProduct.DataSource = item.ToList();
+        }
+
+        private void AutoComplit(string storage)
+        {
+            using (var db = new HalabchiDB())
+            {
+                var code = from cd in db.StorageTypes where cd.StorageName == storage select cd.ProductCode;
+                var name = from na in db.StorageTypes where na.StorageName == storage select na.ProductName;
+
+                AutoCompleteStringCollection autoCode = new AutoCompleteStringCollection();
+                AutoCompleteStringCollection autoName = new AutoCompleteStringCollection();
+
+                autoCode.AddRange(code.ToArray());
+                txtProductCode.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                txtProductCode.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                txtProductCode.AutoCompleteCustomSource = autoCode;
+
+                autoName.AddRange(name.ToArray());
+                txtProductName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                txtProductName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                txtProductName.AutoCompleteCustomSource = autoName;
+            }
+        }
+
+        private void frmAddProduct_Load(object sender, EventArgs e)
+        {
+            LoadStorage();
+            LoadProduct(cmbxSelectStorage.Text);
+            cmbxUnit.SelectedIndex = 0;
+            AutoComplit(cmbxSelectStorage.Text);
+        }
+
+        private void cmbxSelectStorage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtProductCode.Text = txtProductName.Text = "";
+            txtProductCode.SelectAll();
+            txtProductCode.Focus();
+            LoadProduct(cmbxSelectStorage.Text);
+            AutoComplit(cmbxSelectStorage.Text);
+        }
+
+        private void txtProductCode_TextChanged(object sender, EventArgs e)
+        {
+            FillData(cmbxSelectStorage.Text);
         }
     }
 }
