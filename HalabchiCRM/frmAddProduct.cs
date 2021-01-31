@@ -136,5 +136,15 @@ namespace HalabchiCRM
         {
 
         }
+
+        private void txtProductCount_TextChanged(object sender, EventArgs e)
+        {
+            double lastCount = double.Parse(lblLastCount.Text);
+            double count = double.Parse(txtProductCount.Text);
+
+            lblLastCount.Text = (lastCount + count).ToString();
+
+            if(lblLastCount .)
+        }
     }
 }
