@@ -94,7 +94,7 @@ namespace HalabchiCRM
             LoadProduct(cmbxSelectStorage.Text);
             cmbxUnit.SelectedIndex = 0;
             AutoComplit(cmbxSelectStorage.Text);
-            btnAddProduct.Enabled = _itemSelect;
+            btnAddProduct.Enabled = false;
         }
 
         private void cmbxSelectStorage_SelectedIndexChanged(object sender, EventArgs e)
@@ -116,7 +116,25 @@ namespace HalabchiCRM
             _itemSelect = true;
             txtProductCode.Enabled = txtProductName.Enabled = false;
             _id = int.Parse(dgvProduct.CurrentRow.Cells[0].Value.ToString());
+            cmbxUnit.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
             lblLastCount.Text = dgvProduct.CurrentRow.Cells[4].Value.ToString();
+
+            cmbxSelectStorage.Enabled = false;
+            cmbxUnit.Enabled = false;
+
+            btnAddProduct.Enabled = true;
+
+            dgvProduct.Enabled = false;
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancell_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
