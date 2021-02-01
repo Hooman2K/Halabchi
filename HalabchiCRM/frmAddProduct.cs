@@ -18,9 +18,9 @@ namespace HalabchiCRM
         {
             InitializeComponent();
         }
+
         bool _itemSelect = false;
         int _id;
-
 
         private void Clear()
         {
@@ -31,6 +31,7 @@ namespace HalabchiCRM
             cmbxSelectStorage.Enabled = true;
             cmbxUnit.Enabled = true;
             dgvProduct.Enabled = true;
+            txtProductCount.Enabled = false;
             txtProductCode.Enabled = txtProductName.Enabled = true;
             txtProductCode.SelectAll();
             txtProductCode.Focus();
@@ -102,6 +103,7 @@ namespace HalabchiCRM
             cmbxUnit.SelectedIndex = 0;
             AutoComplit(cmbxSelectStorage.Text);
             btnAddProduct.Enabled = false;
+            txtProductCount.Enabled = false;
         }
 
         private void cmbxSelectStorage_SelectedIndexChanged(object sender, EventArgs e)
@@ -131,6 +133,10 @@ namespace HalabchiCRM
             cmbxSelectStorage.Enabled = false;
             cmbxUnit.Enabled = false;
 
+            txtProductCount.Enabled = true;
+            txtProductCount.SelectAll();
+            txtProductCount.Focus();
+
             btnAddProduct.Enabled = true;
 
             dgvProduct.Enabled = false;
@@ -138,7 +144,7 @@ namespace HalabchiCRM
 
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
-            if (_itemSelect == true)
+            if (_itemSelect == true && txtProductCount.Text != "")
             {
                 using (var db = new HalabchiDB())
                 {
@@ -153,6 +159,11 @@ namespace HalabchiCRM
                     AutoComplit(cmbxSelectStorage.Text);
                     FillData(cmbxSelectStorage.Text);
                 }
+            }
+            else
+            {
+                FarsiMessageBox.MessageBox.Show("اخطار", "مقدار جدید محصول وارد نشده است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                Clear();
             }
         }
 

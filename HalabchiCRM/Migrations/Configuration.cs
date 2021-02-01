@@ -25,6 +25,15 @@
                 context.Settings.Add(set);
                 base.Seed(context);
             }
+            if (!context.PipeLines.Any())
+            {
+                PipeLine pipe = new PipeLine()
+                {
+                    PipeLineName = "بدون خط تولید"
+                };
+                context.PipeLines.Add(pipe);
+                base.Seed(context);
+            }
         }
     }
 }

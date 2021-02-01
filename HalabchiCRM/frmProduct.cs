@@ -99,7 +99,8 @@ namespace HalabchiCRM
                                 ProductCode = txtProductCode.Text,
                                 ProductName = txtProductName.Text,
                                 ProductUnit = "0",
-                                ProductType = cmbxUnit.Text
+                                ProductType = cmbxUnit.Text,
+                                PipeLineName = "بدون خط تولید"
                             };
                             db.StorageTypes.Add(st);
                             db.SaveChanges();

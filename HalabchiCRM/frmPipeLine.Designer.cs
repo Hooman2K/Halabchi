@@ -139,6 +139,7 @@
             this.Name = "frmPipeLine";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "خط تولید";
+            this.Load += new System.EventHandler(this.frmPipeLine_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPipeLine)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

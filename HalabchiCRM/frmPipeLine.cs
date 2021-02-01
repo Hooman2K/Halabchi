@@ -81,5 +81,10 @@ namespace HalabchiCRM
             _id = int.Parse(dgvPipeLine.CurrentRow.Cells[0].Value.ToString());
             txtPipeLineName.Text = dgvPipeLine.CurrentRow.Cells[1].Value.ToString();
         }
+
+        private void frmPipeLine_Load(object sender, EventArgs e)
+        {
+            LoadPipLine();
+        }
     }
 }
