@@ -209,6 +209,7 @@ namespace HalabchiCRM
                 lastCount = 0;
 
                 lblHalab.Text = ((double.Parse(txtProductCount.Text) * Formula(cmbxThickness.Text)) / 1000).ToString() + " " + "کیلوگرم";
+                //lblLak.Text=(do)
             }
             else
             {

@@ -74,6 +74,7 @@
             this.btnSearchCostomer = new DevComponents.DotNetBar.ButtonX();
             this.btnAddCostomer = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
+            this.btnProduction = new DevComponents.DotNetBar.ButtonX();
             this.grbxAdminTool = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.btnAddProduct = new DevComponents.DotNetBar.ButtonX();
             this.btnStorage = new DevComponents.DotNetBar.ButtonX();
@@ -161,7 +162,6 @@
             this.lblTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel7 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.btnProduction = new DevComponents.DotNetBar.ButtonX();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).BeginInit();
@@ -212,11 +212,11 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel6);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel7);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -655,6 +655,18 @@
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 3;
             this.ribbonPanel3.Visible = false;
+            // 
+            // btnProduction
+            // 
+            this.btnProduction.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnProduction.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnProduction.Location = new System.Drawing.Point(492, 167);
+            this.btnProduction.Name = "btnProduction";
+            this.btnProduction.Size = new System.Drawing.Size(103, 23);
+            this.btnProduction.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnProduction.TabIndex = 4;
+            this.btnProduction.Text = "تولید کالا";
+            this.btnProduction.Click += new System.EventHandler(this.btnProduction_Click);
             // 
             // grbxAdminTool
             // 
@@ -1742,18 +1754,6 @@
             this.statusStrip1.Size = new System.Drawing.Size(629, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
-            // 
-            // btnProduction
-            // 
-            this.btnProduction.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnProduction.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnProduction.Location = new System.Drawing.Point(492, 167);
-            this.btnProduction.Name = "btnProduction";
-            this.btnProduction.Size = new System.Drawing.Size(103, 23);
-            this.btnProduction.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnProduction.TabIndex = 4;
-            this.btnProduction.Text = "تولید کالا";
-            this.btnProduction.Click += new System.EventHandler(this.btnProduction_Click);
             // 
             // frmMain
             // 
