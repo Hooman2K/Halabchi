@@ -506,5 +506,13 @@ order by start_time desc");
             addProduct.ShowDialog();
             this.Show();
         }
+
+        private void btnProduction_Click(object sender, EventArgs e)
+        {
+            frmProduction production = new frmProduction();
+            this.Hide();
+            production.ShowDialog();
+            this.Show();
+        }
     }
 }

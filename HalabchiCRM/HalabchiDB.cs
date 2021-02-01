@@ -139,6 +139,8 @@ namespace HalabchiCRM
         public string ProductUnit { get; set; }
         [MaxLength(10)]
         public string ProductType { get; set; }
+        [MaxLength(100)]
+        public string PipeLineName { get; set; }
     }
     public class PipeLine
     {

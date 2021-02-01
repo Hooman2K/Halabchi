@@ -7,10 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DevComponents.DotNetBar;
+using System.Data.Entity;
 
 namespace HalabchiCRM
 {
-    public partial class frmProduction : Form
+    public partial class frmProduction : Office2007Form
     {
         public frmProduction()
         {
@@ -24,7 +26,7 @@ namespace HalabchiCRM
             //Formula form = new Formula();
             //label1.Text = form.Hefdah885030(int.Parse(textBox1.Text)).ToString() + " " + "Kg";
 
-            label1.Text = ((double.Parse(textBox1.Text) * 1040) / 1000).ToString() + " " + "Kg";
+            //label1.Text = ((double.Parse(textBox1.Text) * 1040) / 1000).ToString() + " " + "Kg";
         }
     }
 }
