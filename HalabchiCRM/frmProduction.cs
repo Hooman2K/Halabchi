@@ -21,6 +21,7 @@ namespace HalabchiCRM
 
         bool _itemSelect = false;
         int _id;
+        int thicknes;
 
         private void Clear()
         {
@@ -112,7 +113,14 @@ namespace HalabchiCRM
             }
         }
 
-
+        private int Formula(string thickness)
+        {
+            switch (thickness)
+            {
+                case "030": thicknes = 1040; break;
+            }
+            return thicknes;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -200,7 +208,11 @@ namespace HalabchiCRM
                 count = 0;
                 lastCount = 0;
 
-                lblHalab.Text = ((double.Parse(txtProductCount.Text) * 1040) / 1000).ToString() + " " + "کیلوگرم";
+                lblHalab.Text = ((double.Parse(txtProductCount.Text) * Formula(cmbxThickness.Text)) / 1000).ToString() + " " + "کیلوگرم";
+            }
+            else
+            {
+                lblHalab.Text = "0";
             }
         }
 
