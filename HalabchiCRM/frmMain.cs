@@ -514,5 +514,13 @@ order by start_time desc");
             production.ShowDialog();
             this.Show();
         }
+
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+            frmProductionFormula pf = new frmProductionFormula();
+            this.Hide();
+            pf.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -32,6 +32,8 @@ namespace HalabchiCRM
         public virtual DbSet<Storage> Storages { get; set; }
         public virtual DbSet<StorageType> StorageTypes { get; set; }
         public virtual DbSet<PipeLine> PipeLines { get; set; }
+        public virtual DbSet<ProductionFormulaName> ProductionFormulaNames { get; set; }
+        public virtual DbSet<ProductionFormulaType> ProductionFormulaTypes { get; set; }
     }
 
     public class User
@@ -147,5 +149,22 @@ namespace HalabchiCRM
         public int ID { get; set; }
         [MaxLength(100)]
         public string PipeLineName { get; set; }
+    }
+    public class ProductionFormulaName
+    {
+        public int ID { get; set; }
+        [MaxLength(50)]
+        public string FormulaName { get; set; }
+    }
+    public class ProductionFormulaType
+    {
+        public int ID { get; set; }
+        public int FormulaID { get; set; }
+        [MaxLength(50)]
+        public string ProductName { get; set; }
+        [MaxLength(50)]
+        public string MaterialName { get; set; }
+        [MaxLength(20)]
+        public string ProductUnitPerOne { get; set; }
     }
 }

@@ -73,6 +73,25 @@
             this.lblWelCome = new DevComponents.DotNetBar.LabelX();
             this.btnSearchCostomer = new DevComponents.DotNetBar.ButtonX();
             this.btnAddCostomer = new DevComponents.DotNetBar.ButtonX();
+            this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
+            this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.grbxRestore = new System.Windows.Forms.GroupBox();
+            this.lblTimeLength = new DevComponents.DotNetBar.LabelX();
+            this.txtSelectBackupFile = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnStartRestore = new DevComponents.DotNetBar.ButtonX();
+            this.btnBrowsRestore = new DevComponents.DotNetBar.ButtonX();
+            this.grbxBackup = new System.Windows.Forms.GroupBox();
+            this.btnStartBackUp = new DevComponents.DotNetBar.ButtonX();
+            this.progressBar1 = new DevComponents.DotNetBar.Controls.ProgressBarX();
+            this.txtPath = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.btnBrowsBackUp = new DevComponents.DotNetBar.ButtonX();
+            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
+            this.cmbxTheme = new DevComponents.DotNetBar.Controls.ComboBoxEx();
+            this.comboItem1 = new DevComponents.Editors.ComboItem();
+            this.comboItem2 = new DevComponents.Editors.ComboItem();
+            this.comboItem3 = new DevComponents.Editors.ComboItem();
+            this.btnSaveTheme = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
             this.btnProduction = new DevComponents.DotNetBar.ButtonX();
             this.grbxAdminTool = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -115,25 +134,6 @@
             this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtUserName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnEdit = new DevComponents.DotNetBar.ButtonX();
-            this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
-            this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.grbxRestore = new System.Windows.Forms.GroupBox();
-            this.lblTimeLength = new DevComponents.DotNetBar.LabelX();
-            this.txtSelectBackupFile = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.btnStartRestore = new DevComponents.DotNetBar.ButtonX();
-            this.btnBrowsRestore = new DevComponents.DotNetBar.ButtonX();
-            this.grbxBackup = new System.Windows.Forms.GroupBox();
-            this.btnStartBackUp = new DevComponents.DotNetBar.ButtonX();
-            this.progressBar1 = new DevComponents.DotNetBar.Controls.ProgressBarX();
-            this.txtPath = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.btnBrowsBackUp = new DevComponents.DotNetBar.ButtonX();
-            this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.cmbxTheme = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.comboItem1 = new DevComponents.Editors.ComboItem();
-            this.comboItem2 = new DevComponents.Editors.ComboItem();
-            this.comboItem3 = new DevComponents.Editors.ComboItem();
-            this.btnSaveTheme = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel7 = new DevComponents.DotNetBar.RibbonPanel();
             this.btnNewUser = new DevComponents.DotNetBar.ButtonX();
             this.ribbonTabItem1 = new DevComponents.DotNetBar.RibbonTabItem();
@@ -162,22 +162,23 @@
             this.lblTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel7 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
+            this.ribbonPanel5.SuspendLayout();
+            this.groupPanel2.SuspendLayout();
+            this.grbxRestore.SuspendLayout();
+            this.grbxBackup.SuspendLayout();
+            this.groupPanel1.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
             this.grbxAdminTool.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContract)).BeginInit();
             this.ribbonPanel6.SuspendLayout();
             this.grbxEditUser.SuspendLayout();
-            this.ribbonPanel5.SuspendLayout();
-            this.groupPanel2.SuspendLayout();
-            this.grbxRestore.SuspendLayout();
-            this.grbxBackup.SuspendLayout();
-            this.groupPanel1.SuspendLayout();
             this.ribbonPanel7.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -211,9 +212,9 @@
             // 
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel6);
@@ -281,6 +282,7 @@
             // 
             this.ribbonPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel1.TabIndex = 1;
+            this.ribbonPanel1.Visible = false;
             // 
             // contextMenuBar1
             // 
@@ -631,6 +633,298 @@
             this.btnAddCostomer.Text = "ایجاد مشتری جدید";
             this.btnAddCostomer.Click += new System.EventHandler(this.btnAddCostomer_Click);
             // 
+            // ribbonPanel5
+            // 
+            this.ribbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel5.Controls.Add(this.groupPanel2);
+            this.ribbonPanel5.Controls.Add(this.groupPanel1);
+            this.ribbonPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel5.Location = new System.Drawing.Point(0, 26);
+            this.ribbonPanel5.Name = "ribbonPanel5";
+            this.ribbonPanel5.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel5.Size = new System.Drawing.Size(629, 360);
+            // 
+            // 
+            // 
+            this.ribbonPanel5.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel5.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel5.TabIndex = 5;
+            this.ribbonPanel5.Visible = false;
+            // 
+            // groupPanel2
+            // 
+            this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel2.Controls.Add(this.grbxRestore);
+            this.groupPanel2.Controls.Add(this.grbxBackup);
+            this.groupPanel2.Location = new System.Drawing.Point(12, 100);
+            this.groupPanel2.Name = "groupPanel2";
+            this.groupPanel2.Size = new System.Drawing.Size(602, 255);
+            // 
+            // 
+            // 
+            this.groupPanel2.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanel2.Style.BackColorGradientAngle = 90;
+            this.groupPanel2.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel2.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel2.Style.BorderBottomWidth = 1;
+            this.groupPanel2.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel2.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel2.Style.BorderLeftWidth = 1;
+            this.groupPanel2.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel2.Style.BorderRightWidth = 1;
+            this.groupPanel2.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel2.Style.BorderTopWidth = 1;
+            this.groupPanel2.Style.CornerDiameter = 4;
+            this.groupPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel2.TabIndex = 3;
+            this.groupPanel2.Text = "پشتیبانی و بازیابی";
+            // 
+            // grbxRestore
+            // 
+            this.grbxRestore.BackColor = System.Drawing.Color.Transparent;
+            this.grbxRestore.Controls.Add(this.lblTimeLength);
+            this.grbxRestore.Controls.Add(this.txtSelectBackupFile);
+            this.grbxRestore.Controls.Add(this.btnStartRestore);
+            this.grbxRestore.Controls.Add(this.btnBrowsRestore);
+            this.grbxRestore.Location = new System.Drawing.Point(3, 141);
+            this.grbxRestore.Name = "grbxRestore";
+            this.grbxRestore.Size = new System.Drawing.Size(590, 87);
+            this.grbxRestore.TabIndex = 1;
+            this.grbxRestore.TabStop = false;
+            this.grbxRestore.Text = "بازیابی";
+            // 
+            // lblTimeLength
+            // 
+            // 
+            // 
+            // 
+            this.lblTimeLength.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblTimeLength.Location = new System.Drawing.Point(6, 51);
+            this.lblTimeLength.Name = "lblTimeLength";
+            this.lblTimeLength.Size = new System.Drawing.Size(362, 23);
+            this.lblTimeLength.TabIndex = 4;
+            this.lblTimeLength.Text = "-----";
+            this.lblTimeLength.Visible = false;
+            // 
+            // txtSelectBackupFile
+            // 
+            // 
+            // 
+            // 
+            this.txtSelectBackupFile.Border.Class = "TextBoxBorder";
+            this.txtSelectBackupFile.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtSelectBackupFile.Location = new System.Drawing.Point(6, 22);
+            this.txtSelectBackupFile.Name = "txtSelectBackupFile";
+            this.txtSelectBackupFile.ReadOnly = true;
+            this.txtSelectBackupFile.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtSelectBackupFile.Size = new System.Drawing.Size(497, 23);
+            this.txtSelectBackupFile.TabIndex = 1;
+            // 
+            // btnStartRestore
+            // 
+            this.btnStartRestore.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnStartRestore.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnStartRestore.Location = new System.Drawing.Point(374, 51);
+            this.btnStartRestore.Name = "btnStartRestore";
+            this.btnStartRestore.Size = new System.Drawing.Size(129, 23);
+            this.btnStartRestore.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnStartRestore.TabIndex = 3;
+            this.btnStartRestore.Text = "شروع بازیابی";
+            this.btnStartRestore.Click += new System.EventHandler(this.btnStartRestore_Click);
+            // 
+            // btnBrowsRestore
+            // 
+            this.btnBrowsRestore.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnBrowsRestore.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnBrowsRestore.Location = new System.Drawing.Point(509, 22);
+            this.btnBrowsRestore.Name = "btnBrowsRestore";
+            this.btnBrowsRestore.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowsRestore.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnBrowsRestore.TabIndex = 2;
+            this.btnBrowsRestore.Text = ".....";
+            this.btnBrowsRestore.Click += new System.EventHandler(this.btnBrowsRestore_Click);
+            // 
+            // grbxBackup
+            // 
+            this.grbxBackup.BackColor = System.Drawing.Color.Transparent;
+            this.grbxBackup.Controls.Add(this.btnStartBackUp);
+            this.grbxBackup.Controls.Add(this.progressBar1);
+            this.grbxBackup.Controls.Add(this.txtPath);
+            this.grbxBackup.Controls.Add(this.btnBrowsBackUp);
+            this.grbxBackup.Location = new System.Drawing.Point(3, 3);
+            this.grbxBackup.Name = "grbxBackup";
+            this.grbxBackup.Size = new System.Drawing.Size(590, 132);
+            this.grbxBackup.TabIndex = 0;
+            this.grbxBackup.TabStop = false;
+            this.grbxBackup.Text = "پشتیبانی";
+            // 
+            // btnStartBackUp
+            // 
+            this.btnStartBackUp.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnStartBackUp.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnStartBackUp.Location = new System.Drawing.Point(374, 89);
+            this.btnStartBackUp.Name = "btnStartBackUp";
+            this.btnStartBackUp.Size = new System.Drawing.Size(129, 23);
+            this.btnStartBackUp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnStartBackUp.TabIndex = 2;
+            this.btnStartBackUp.Text = "شروع پشتیبان گیری";
+            this.btnStartBackUp.Click += new System.EventHandler(this.btnStartBackUp_Click);
+            // 
+            // progressBar1
+            // 
+            // 
+            // 
+            // 
+            this.progressBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.progressBar1.Location = new System.Drawing.Point(6, 60);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(497, 23);
+            this.progressBar1.TabIndex = 1;
+            this.progressBar1.Text = "progressBarX1";
+            // 
+            // txtPath
+            // 
+            // 
+            // 
+            // 
+            this.txtPath.Border.Class = "TextBoxBorder";
+            this.txtPath.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.txtPath.Location = new System.Drawing.Point(6, 31);
+            this.txtPath.Name = "txtPath";
+            this.txtPath.ReadOnly = true;
+            this.txtPath.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtPath.Size = new System.Drawing.Size(497, 23);
+            this.txtPath.TabIndex = 0;
+            // 
+            // btnBrowsBackUp
+            // 
+            this.btnBrowsBackUp.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnBrowsBackUp.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnBrowsBackUp.Location = new System.Drawing.Point(509, 31);
+            this.btnBrowsBackUp.Name = "btnBrowsBackUp";
+            this.btnBrowsBackUp.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowsBackUp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnBrowsBackUp.TabIndex = 0;
+            this.btnBrowsBackUp.Text = ".....";
+            this.btnBrowsBackUp.Click += new System.EventHandler(this.btnBrowsBackUp_Click);
+            // 
+            // groupPanel1
+            // 
+            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
+            this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.groupPanel1.Controls.Add(this.labelX1);
+            this.groupPanel1.Controls.Add(this.cmbxTheme);
+            this.groupPanel1.Controls.Add(this.btnSaveTheme);
+            this.groupPanel1.Location = new System.Drawing.Point(12, 18);
+            this.groupPanel1.Name = "groupPanel1";
+            this.groupPanel1.Size = new System.Drawing.Size(602, 76);
+            // 
+            // 
+            // 
+            this.groupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.groupPanel1.Style.BackColorGradientAngle = 90;
+            this.groupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.groupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel1.Style.BorderBottomWidth = 1;
+            this.groupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.groupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel1.Style.BorderLeftWidth = 1;
+            this.groupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel1.Style.BorderRightWidth = 1;
+            this.groupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.groupPanel1.Style.BorderTopWidth = 1;
+            this.groupPanel1.Style.CornerDiameter = 4;
+            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.groupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.groupPanel1.TabIndex = 2;
+            this.groupPanel1.Text = "پوسته نرم افزار";
+            // 
+            // labelX1
+            // 
+            this.labelX1.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(383, 13);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX1.Size = new System.Drawing.Size(75, 23);
+            this.labelX1.TabIndex = 5;
+            this.labelX1.Text = "تغییر پوسته : ";
+            // 
+            // cmbxTheme
+            // 
+            this.cmbxTheme.DisplayMember = "Text";
+            this.cmbxTheme.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbxTheme.FormattingEnabled = true;
+            this.cmbxTheme.ItemHeight = 17;
+            this.cmbxTheme.Items.AddRange(new object[] {
+            this.comboItem1,
+            this.comboItem2,
+            this.comboItem3});
+            this.cmbxTheme.Location = new System.Drawing.Point(215, 13);
+            this.cmbxTheme.Name = "cmbxTheme";
+            this.cmbxTheme.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbxTheme.Size = new System.Drawing.Size(162, 23);
+            this.cmbxTheme.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cmbxTheme.TabIndex = 4;
+            this.cmbxTheme.SelectedIndexChanged += new System.EventHandler(this.cmbxTheme_SelectedIndexChanged);
+            // 
+            // comboItem1
+            // 
+            this.comboItem1.Text = "آبی";
+            // 
+            // comboItem2
+            // 
+            this.comboItem2.Text = "خاکستری";
+            // 
+            // comboItem3
+            // 
+            this.comboItem3.Text = "مشکی";
+            // 
+            // btnSaveTheme
+            // 
+            this.btnSaveTheme.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSaveTheme.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSaveTheme.Location = new System.Drawing.Point(122, 13);
+            this.btnSaveTheme.Name = "btnSaveTheme";
+            this.btnSaveTheme.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnSaveTheme.Size = new System.Drawing.Size(75, 23);
+            this.btnSaveTheme.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSaveTheme.TabIndex = 3;
+            this.btnSaveTheme.Text = "ذخیره";
+            this.btnSaveTheme.Click += new System.EventHandler(this.btnSaveTheme_Click);
+            // 
             // ribbonPanel3
             // 
             this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -654,7 +948,6 @@
             // 
             this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonPanel3.TabIndex = 3;
-            this.ribbonPanel3.Visible = false;
             // 
             // btnProduction
             // 
@@ -672,6 +965,7 @@
             // 
             this.grbxAdminTool.CanvasColor = System.Drawing.SystemColors.Control;
             this.grbxAdminTool.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.grbxAdminTool.Controls.Add(this.buttonX1);
             this.grbxAdminTool.Controls.Add(this.btnAddProduct);
             this.grbxAdminTool.Controls.Add(this.btnStorage);
             this.grbxAdminTool.Controls.Add(this.btnPipeLine);
@@ -1248,298 +1542,6 @@
             this.btnEdit.Text = "ویرایش";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
             // 
-            // ribbonPanel5
-            // 
-            this.ribbonPanel5.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel5.Controls.Add(this.groupPanel2);
-            this.ribbonPanel5.Controls.Add(this.groupPanel1);
-            this.ribbonPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel5.Location = new System.Drawing.Point(0, 26);
-            this.ribbonPanel5.Name = "ribbonPanel5";
-            this.ribbonPanel5.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel5.Size = new System.Drawing.Size(629, 360);
-            // 
-            // 
-            // 
-            this.ribbonPanel5.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel5.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel5.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel5.TabIndex = 5;
-            this.ribbonPanel5.Visible = false;
-            // 
-            // groupPanel2
-            // 
-            this.groupPanel2.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel2.Controls.Add(this.grbxRestore);
-            this.groupPanel2.Controls.Add(this.grbxBackup);
-            this.groupPanel2.Location = new System.Drawing.Point(12, 100);
-            this.groupPanel2.Name = "groupPanel2";
-            this.groupPanel2.Size = new System.Drawing.Size(602, 255);
-            // 
-            // 
-            // 
-            this.groupPanel2.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel2.Style.BackColorGradientAngle = 90;
-            this.groupPanel2.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel2.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel2.Style.BorderBottomWidth = 1;
-            this.groupPanel2.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel2.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel2.Style.BorderLeftWidth = 1;
-            this.groupPanel2.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel2.Style.BorderRightWidth = 1;
-            this.groupPanel2.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel2.Style.BorderTopWidth = 1;
-            this.groupPanel2.Style.CornerDiameter = 4;
-            this.groupPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel2.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel2.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel2.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel2.TabIndex = 3;
-            this.groupPanel2.Text = "پشتیبانی و بازیابی";
-            // 
-            // grbxRestore
-            // 
-            this.grbxRestore.BackColor = System.Drawing.Color.Transparent;
-            this.grbxRestore.Controls.Add(this.lblTimeLength);
-            this.grbxRestore.Controls.Add(this.txtSelectBackupFile);
-            this.grbxRestore.Controls.Add(this.btnStartRestore);
-            this.grbxRestore.Controls.Add(this.btnBrowsRestore);
-            this.grbxRestore.Location = new System.Drawing.Point(3, 141);
-            this.grbxRestore.Name = "grbxRestore";
-            this.grbxRestore.Size = new System.Drawing.Size(590, 87);
-            this.grbxRestore.TabIndex = 1;
-            this.grbxRestore.TabStop = false;
-            this.grbxRestore.Text = "بازیابی";
-            // 
-            // lblTimeLength
-            // 
-            // 
-            // 
-            // 
-            this.lblTimeLength.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblTimeLength.Location = new System.Drawing.Point(6, 51);
-            this.lblTimeLength.Name = "lblTimeLength";
-            this.lblTimeLength.Size = new System.Drawing.Size(362, 23);
-            this.lblTimeLength.TabIndex = 4;
-            this.lblTimeLength.Text = "-----";
-            this.lblTimeLength.Visible = false;
-            // 
-            // txtSelectBackupFile
-            // 
-            // 
-            // 
-            // 
-            this.txtSelectBackupFile.Border.Class = "TextBoxBorder";
-            this.txtSelectBackupFile.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtSelectBackupFile.Location = new System.Drawing.Point(6, 22);
-            this.txtSelectBackupFile.Name = "txtSelectBackupFile";
-            this.txtSelectBackupFile.ReadOnly = true;
-            this.txtSelectBackupFile.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtSelectBackupFile.Size = new System.Drawing.Size(497, 23);
-            this.txtSelectBackupFile.TabIndex = 1;
-            // 
-            // btnStartRestore
-            // 
-            this.btnStartRestore.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnStartRestore.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnStartRestore.Location = new System.Drawing.Point(374, 51);
-            this.btnStartRestore.Name = "btnStartRestore";
-            this.btnStartRestore.Size = new System.Drawing.Size(129, 23);
-            this.btnStartRestore.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnStartRestore.TabIndex = 3;
-            this.btnStartRestore.Text = "شروع بازیابی";
-            this.btnStartRestore.Click += new System.EventHandler(this.btnStartRestore_Click);
-            // 
-            // btnBrowsRestore
-            // 
-            this.btnBrowsRestore.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnBrowsRestore.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnBrowsRestore.Location = new System.Drawing.Point(509, 22);
-            this.btnBrowsRestore.Name = "btnBrowsRestore";
-            this.btnBrowsRestore.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowsRestore.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnBrowsRestore.TabIndex = 2;
-            this.btnBrowsRestore.Text = ".....";
-            this.btnBrowsRestore.Click += new System.EventHandler(this.btnBrowsRestore_Click);
-            // 
-            // grbxBackup
-            // 
-            this.grbxBackup.BackColor = System.Drawing.Color.Transparent;
-            this.grbxBackup.Controls.Add(this.btnStartBackUp);
-            this.grbxBackup.Controls.Add(this.progressBar1);
-            this.grbxBackup.Controls.Add(this.txtPath);
-            this.grbxBackup.Controls.Add(this.btnBrowsBackUp);
-            this.grbxBackup.Location = new System.Drawing.Point(3, 3);
-            this.grbxBackup.Name = "grbxBackup";
-            this.grbxBackup.Size = new System.Drawing.Size(590, 132);
-            this.grbxBackup.TabIndex = 0;
-            this.grbxBackup.TabStop = false;
-            this.grbxBackup.Text = "پشتیبانی";
-            // 
-            // btnStartBackUp
-            // 
-            this.btnStartBackUp.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnStartBackUp.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnStartBackUp.Location = new System.Drawing.Point(374, 89);
-            this.btnStartBackUp.Name = "btnStartBackUp";
-            this.btnStartBackUp.Size = new System.Drawing.Size(129, 23);
-            this.btnStartBackUp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnStartBackUp.TabIndex = 2;
-            this.btnStartBackUp.Text = "شروع پشتیبان گیری";
-            this.btnStartBackUp.Click += new System.EventHandler(this.btnStartBackUp_Click);
-            // 
-            // progressBar1
-            // 
-            // 
-            // 
-            // 
-            this.progressBar1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.progressBar1.Location = new System.Drawing.Point(6, 60);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(497, 23);
-            this.progressBar1.TabIndex = 1;
-            this.progressBar1.Text = "progressBarX1";
-            // 
-            // txtPath
-            // 
-            // 
-            // 
-            // 
-            this.txtPath.Border.Class = "TextBoxBorder";
-            this.txtPath.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtPath.Location = new System.Drawing.Point(6, 31);
-            this.txtPath.Name = "txtPath";
-            this.txtPath.ReadOnly = true;
-            this.txtPath.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtPath.Size = new System.Drawing.Size(497, 23);
-            this.txtPath.TabIndex = 0;
-            // 
-            // btnBrowsBackUp
-            // 
-            this.btnBrowsBackUp.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnBrowsBackUp.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnBrowsBackUp.Location = new System.Drawing.Point(509, 31);
-            this.btnBrowsBackUp.Name = "btnBrowsBackUp";
-            this.btnBrowsBackUp.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowsBackUp.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnBrowsBackUp.TabIndex = 0;
-            this.btnBrowsBackUp.Text = ".....";
-            this.btnBrowsBackUp.Click += new System.EventHandler(this.btnBrowsBackUp_Click);
-            // 
-            // groupPanel1
-            // 
-            this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
-            this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.labelX1);
-            this.groupPanel1.Controls.Add(this.cmbxTheme);
-            this.groupPanel1.Controls.Add(this.btnSaveTheme);
-            this.groupPanel1.Location = new System.Drawing.Point(12, 18);
-            this.groupPanel1.Name = "groupPanel1";
-            this.groupPanel1.Size = new System.Drawing.Size(602, 76);
-            // 
-            // 
-            // 
-            this.groupPanel1.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.groupPanel1.Style.BackColorGradientAngle = 90;
-            this.groupPanel1.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.groupPanel1.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderBottomWidth = 1;
-            this.groupPanel1.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.groupPanel1.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderLeftWidth = 1;
-            this.groupPanel1.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderRightWidth = 1;
-            this.groupPanel1.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.groupPanel1.Style.BorderTopWidth = 1;
-            this.groupPanel1.Style.CornerDiameter = 4;
-            this.groupPanel1.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.groupPanel1.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.groupPanel1.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.groupPanel1.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.groupPanel1.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.groupPanel1.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.groupPanel1.TabIndex = 2;
-            this.groupPanel1.Text = "پوسته نرم افزار";
-            // 
-            // labelX1
-            // 
-            this.labelX1.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(383, 13);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX1.Size = new System.Drawing.Size(75, 23);
-            this.labelX1.TabIndex = 5;
-            this.labelX1.Text = "تغییر پوسته : ";
-            // 
-            // cmbxTheme
-            // 
-            this.cmbxTheme.DisplayMember = "Text";
-            this.cmbxTheme.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbxTheme.FormattingEnabled = true;
-            this.cmbxTheme.ItemHeight = 17;
-            this.cmbxTheme.Items.AddRange(new object[] {
-            this.comboItem1,
-            this.comboItem2,
-            this.comboItem3});
-            this.cmbxTheme.Location = new System.Drawing.Point(215, 13);
-            this.cmbxTheme.Name = "cmbxTheme";
-            this.cmbxTheme.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbxTheme.Size = new System.Drawing.Size(162, 23);
-            this.cmbxTheme.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.cmbxTheme.TabIndex = 4;
-            this.cmbxTheme.SelectedIndexChanged += new System.EventHandler(this.cmbxTheme_SelectedIndexChanged);
-            // 
-            // comboItem1
-            // 
-            this.comboItem1.Text = "آبی";
-            // 
-            // comboItem2
-            // 
-            this.comboItem2.Text = "خاکستری";
-            // 
-            // comboItem3
-            // 
-            this.comboItem3.Text = "مشکی";
-            // 
-            // btnSaveTheme
-            // 
-            this.btnSaveTheme.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSaveTheme.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSaveTheme.Location = new System.Drawing.Point(122, 13);
-            this.btnSaveTheme.Name = "btnSaveTheme";
-            this.btnSaveTheme.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnSaveTheme.Size = new System.Drawing.Size(75, 23);
-            this.btnSaveTheme.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSaveTheme.TabIndex = 3;
-            this.btnSaveTheme.Text = "ذخیره";
-            this.btnSaveTheme.Click += new System.EventHandler(this.btnSaveTheme_Click);
-            // 
             // ribbonPanel7
             // 
             this.ribbonPanel7.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1579,7 +1581,6 @@
             // 
             // ribbonTabItem1
             // 
-            this.ribbonTabItem1.Checked = true;
             this.ribbonTabItem1.Name = "ribbonTabItem1";
             this.ribbonTabItem1.Panel = this.ribbonPanel1;
             this.ribbonTabItem1.Text = "مشتریان";
@@ -1592,6 +1593,7 @@
             // 
             // ribbonTabItem3
             // 
+            this.ribbonTabItem3.Checked = true;
             this.ribbonTabItem3.Name = "ribbonTabItem3";
             this.ribbonTabItem3.Panel = this.ribbonPanel3;
             this.ribbonTabItem3.Text = "تولید";
@@ -1755,6 +1757,18 @@
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(339, 35);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(103, 23);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 4;
+            this.buttonX1.Text = "فرمول ساخت";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1778,6 +1792,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
+            this.ribbonPanel5.ResumeLayout(false);
+            this.groupPanel2.ResumeLayout(false);
+            this.grbxRestore.ResumeLayout(false);
+            this.grbxBackup.ResumeLayout(false);
+            this.groupPanel1.ResumeLayout(false);
             this.ribbonPanel3.ResumeLayout(false);
             this.grbxAdminTool.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);
@@ -1785,11 +1804,6 @@
             this.ribbonPanel6.ResumeLayout(false);
             this.grbxEditUser.ResumeLayout(false);
             this.grbxEditUser.PerformLayout();
-            this.ribbonPanel5.ResumeLayout(false);
-            this.groupPanel2.ResumeLayout(false);
-            this.grbxRestore.ResumeLayout(false);
-            this.grbxBackup.ResumeLayout(false);
-            this.groupPanel1.ResumeLayout(false);
             this.ribbonPanel7.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -1927,5 +1941,6 @@
         private DevComponents.DotNetBar.Controls.GroupPanel grbxAdminTool;
         private DevComponents.DotNetBar.ButtonX btnAddProduct;
         private DevComponents.DotNetBar.ButtonX btnProduction;
+        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }

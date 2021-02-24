@@ -67,3 +67,4 @@ C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmA
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmProduction.resources
 C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmAddProduct.resources
 C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmProduction.resources
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmProductionFormula.resources

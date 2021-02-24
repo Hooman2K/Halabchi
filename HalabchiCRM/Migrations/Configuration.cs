@@ -34,6 +34,15 @@
                 context.PipeLines.Add(pipe);
                 base.Seed(context);
             }
+            if(!context.Storages.Any())
+            {
+                Storage storage = new Storage()
+                {
+                    StorageName = "مواد اولیه"
+                };
+                context.Storages.Add(storage);
+                base.Seed(context);
+            }
         }
     }
 }
