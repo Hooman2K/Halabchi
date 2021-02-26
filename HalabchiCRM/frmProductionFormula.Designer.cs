@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAdd = new DevComponents.DotNetBar.ButtonX();
             this.dgvFormula = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvProductionFormula = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.cmbxSelectStorage = new System.Windows.Forms.ComboBox();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
@@ -46,11 +51,8 @@
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.txtFormulaName = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddFormula = new DevComponents.DotNetBar.ButtonX();
+            this.labelX8 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormula)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductionFormula)).BeginInit();
             this.SuspendLayout();
@@ -65,7 +67,7 @@
             this.btnAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnAdd.Size = new System.Drawing.Size(124, 28);
             this.btnAdd.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAdd.TabIndex = 5;
+            this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "اضافه کردن";
             // 
             // dgvFormula
@@ -77,40 +79,70 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvFormula.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvFormula.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFormula.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvFormula.Location = new System.Drawing.Point(12, 148);
             this.dgvFormula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvFormula.Name = "dgvFormula";
             this.dgvFormula.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvFormula.Size = new System.Drawing.Size(406, 141);
-            this.dgvFormula.TabIndex = 7;
+            this.dgvFormula.TabIndex = 8;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "شماره";
+            this.Column1.Name = "Column1";
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "شماره فرمول";
+            this.Column2.Name = "Column2";
+            this.Column2.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "نام محصول";
+            this.Column3.Name = "Column3";
+            this.Column3.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "مواد اولیه";
+            this.Column4.Name = "Column4";
+            this.Column4.Width = 200;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "مقدار مورد نیاز";
+            this.Column5.Name = "Column5";
+            this.Column5.Width = 140;
             // 
             // dgvProductionFormula
             // 
             this.dgvProductionFormula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProductionFormula.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProductionFormula.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvProductionFormula.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvProductionFormula.Location = new System.Drawing.Point(12, 313);
             this.dgvProductionFormula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvProductionFormula.Name = "dgvProductionFormula";
             this.dgvProductionFormula.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvProductionFormula.Size = new System.Drawing.Size(406, 131);
-            this.dgvProductionFormula.TabIndex = 8;
+            this.dgvProductionFormula.TabIndex = 9;
             // 
             // cmbxSelectStorage
             // 
@@ -121,7 +153,7 @@
             this.cmbxSelectStorage.Name = "cmbxSelectStorage";
             this.cmbxSelectStorage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxSelectStorage.Size = new System.Drawing.Size(140, 24);
-            this.cmbxSelectStorage.TabIndex = 1;
+            this.cmbxSelectStorage.TabIndex = 2;
             // 
             // labelX1
             // 
@@ -164,7 +196,7 @@
             this.txtMaterialName.Name = "txtMaterialName";
             this.txtMaterialName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtMaterialName.Size = new System.Drawing.Size(195, 23);
-            this.txtMaterialName.TabIndex = 3;
+            this.txtMaterialName.TabIndex = 4;
             // 
             // labelX5
             // 
@@ -192,7 +224,7 @@
             this.txtProductUnitPerOne.Name = "txtProductUnitPerOne";
             this.txtProductUnitPerOne.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtProductUnitPerOne.Size = new System.Drawing.Size(124, 23);
-            this.txtProductUnitPerOne.TabIndex = 4;
+            this.txtProductUnitPerOne.TabIndex = 5;
             // 
             // labelX3
             // 
@@ -232,7 +264,7 @@
             this.btnSave.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnSave.Size = new System.Drawing.Size(124, 28);
             this.btnSave.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSave.TabIndex = 6;
+            this.btnSave.TabIndex = 7;
             this.btnSave.Text = "ذخیره";
             // 
             // txtProductName
@@ -248,7 +280,7 @@
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtProductName.Size = new System.Drawing.Size(168, 23);
-            this.txtProductName.TabIndex = 2;
+            this.txtProductName.TabIndex = 3;
             // 
             // labelX2
             // 
@@ -284,49 +316,49 @@
             // 
             this.txtFormulaName.Border.Class = "TextBoxBorder";
             this.txtFormulaName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtFormulaName.Location = new System.Drawing.Point(12, 13);
+            this.txtFormulaName.Location = new System.Drawing.Point(142, 13);
             this.txtFormulaName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFormulaName.MaxLength = 50;
             this.txtFormulaName.Name = "txtFormulaName";
             this.txtFormulaName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtFormulaName.Size = new System.Drawing.Size(406, 23);
+            this.txtFormulaName.Size = new System.Drawing.Size(276, 23);
             this.txtFormulaName.TabIndex = 0;
             // 
-            // Column1
+            // btnAddFormula
             // 
-            this.Column1.HeaderText = "شماره";
-            this.Column1.Name = "Column1";
-            this.Column1.Visible = false;
+            this.btnAddFormula.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddFormula.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddFormula.Location = new System.Drawing.Point(12, 11);
+            this.btnAddFormula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnAddFormula.Name = "btnAddFormula";
+            this.btnAddFormula.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnAddFormula.Size = new System.Drawing.Size(124, 28);
+            this.btnAddFormula.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddFormula.TabIndex = 1;
+            this.btnAddFormula.Text = "اضافه کردن";
             // 
-            // Column2
+            // labelX8
             // 
-            this.Column2.HeaderText = "شماره فرمول";
-            this.Column2.Name = "Column2";
-            this.Column2.Visible = false;
             // 
-            // Column3
             // 
-            this.Column3.HeaderText = "نام محصول";
-            this.Column3.Name = "Column3";
-            this.Column3.Visible = false;
             // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "مواد اولیه";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "مقدار مورد نیاز";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 140;
+            this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX8.ForeColor = System.Drawing.Color.Red;
+            this.labelX8.Location = new System.Drawing.Point(142, 107);
+            this.labelX8.Name = "labelX8";
+            this.labelX8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX8.Size = new System.Drawing.Size(366, 28);
+            this.labelX8.TabIndex = 17;
+            this.labelX8.Text = "توجه : مقدار مورد نیاز برای ساخت 1 واحد و به گرم میباشد!!";
+            this.labelX8.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // frmProductionFormula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 493);
+            this.Controls.Add(this.labelX8);
+            this.Controls.Add(this.btnAddFormula);
             this.Controls.Add(this.labelX7);
             this.Controls.Add(this.txtFormulaName);
             this.Controls.Add(this.btnSave);
@@ -381,5 +413,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private DevComponents.DotNetBar.ButtonX btnAddFormula;
+        private DevComponents.DotNetBar.LabelX labelX8;
     }
 }
