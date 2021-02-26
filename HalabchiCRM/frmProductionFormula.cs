@@ -17,5 +17,190 @@ namespace HalabchiCRM
         {
             InitializeComponent();
         }
+        bool _isNew = true;
+        int _id;
+        private void LoadStorage()
+        {
+            using (var db = new HalabchiDB())
+            {
+                var item = from i in db.Storages select i.StorageName;
+                cmbxSelectStorage.DataSource = item.ToList();
+                if (item != null)
+                    cmbxSelectStorage.SelectedIndex = 0;
+            }
+        }
+        private void Clear()
+        {
+            txtFormulaName.Enabled = true;
+            txtFormulaName.Text = txtMaterialName.Text = txtProductName.Text = txtProductUnitPerOne.Text = "";
+            dgvFormula.Rows.Clear();
+            _isNew = true;
+            txtFormulaName.SelectAll();
+            txtFormulaName.Focus();
+        }
+
+        private void AutoComplit(string storage)
+        {
+            using (var db = new HalabchiDB())
+            {
+                var name = from na in db.StorageTypes where na.StorageName == storage select na.ProductName;
+
+                AutoCompleteStringCollection autoName = new AutoCompleteStringCollection();
+
+                autoName.AddRange(name.ToArray());
+                txtProductName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                txtProductName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                txtProductName.AutoCompleteCustomSource = autoName;
+            }
+        }
+        private void AutoComplitMaterial()
+        {
+            using (var db = new HalabchiDB())
+            {
+                var materialName = from na in db.StorageTypes where na.StorageName == "مواد اولیه" select na.ProductName;
+
+                AutoCompleteStringCollection autoMaterialName = new AutoCompleteStringCollection();
+
+                autoMaterialName.AddRange(materialName.ToArray());
+                txtMaterialName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                txtMaterialName.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                txtMaterialName.AutoCompleteCustomSource = autoMaterialName;
+            }
+        }
+
+        private void LoadFormula()
+        {
+            using (var db = new HalabchiDB())
+            {
+                dgvProductionFormula.DataSource = db.ProductionFormulaNames.ToList();
+            }
+        }
+
+        public class TypeOf
+        {
+            public int FormulaID { get; set; }
+            public string ProductName { get; set; }
+            public string MaterialName { get; set; }
+            public string ProductUnitPerOne { get; set; }
+        }
+
+        private void txtProductUnitPerOne_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AppInfo info = new AppInfo();
+            info.JustNumber(sender, e);
+        }
+
+        private void btnAddFormula_Click(object sender, EventArgs e)
+        {
+            if (_isNew)
+            {
+                if (txtFormulaName.Text != "")
+                {
+                    using (var db = new HalabchiDB())
+                    {
+                        bool exist = db.ProductionFormulaNames.Where(u => u.FormulaName == txtFormulaName.Text).Any();
+                        if (exist)
+                        {
+                            FarsiMessageBox.MessageBox.Show("اخطار", "نام فرمول تکراری است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                            txtFormulaName.SelectAll();
+                            txtFormulaName.Focus();
+                            return;
+                        }
+                        else
+                        {
+                            ProductionFormulaName fname = new ProductionFormulaName()
+                            {
+                                FormulaName = txtFormulaName.Text
+                            };
+                            db.ProductionFormulaNames.Add(fname);
+                            db.SaveChanges();
+                            FarsiMessageBox.MessageBox.Show("موفقیت", "نام فرمولبا موفقیت ثبت شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                            txtFormulaName.Enabled = false;
+                            LoadFormula();
+                        }
+                    }
+                }
+            }
+            else
+            {
+                //کدهای آپدیت
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            using (var db = new HalabchiDB())
+            {
+                if (txtFormulaName.Text != "" && txtProductName.Text != "" && txtMaterialName.Text != "" && txtProductUnitPerOne.Text != "")
+                {
+                    var id = db.ProductionFormulaNames.Where(u => u.FormulaName == txtFormulaName.Text).FirstOrDefault();
+                    var data = new TypeOf
+                    {
+                        FormulaID = id.ID,
+                        ProductName = txtProductName.Text,
+                        MaterialName = txtMaterialName.Text,
+                        ProductUnitPerOne = txtProductUnitPerOne.Text
+                    };
+                    dgvFormula.Rows.Add(data.FormulaID, data.ProductName, data.MaterialName, data.ProductUnitPerOne);
+                    txtMaterialName.Text = txtProductUnitPerOne.Text = "";
+                    txtMaterialName.SelectAll();
+                    txtMaterialName.Focus();
+                }
+            }
+        }
+        List<ProductionFormulaType> list = new List<ProductionFormulaType>();
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            using (var db = new HalabchiDB())
+            {
+                list.Clear();
+                for (int i = 0; i < dgvProductionFormula.Rows.Count; i++)
+                {
+                    list.Add(new ProductionFormulaType
+                    {
+                        FormulaID = int.Parse(dgvFormula.Rows[i].Cells[0].Value.ToString()),
+                        ProductName = dgvFormula.Rows[i].Cells[1].Value.ToString(),
+                        MaterialName = dgvFormula.Rows[i].Cells[2].Value.ToString(),
+                        ProductUnitPerOne = dgvFormula.Rows[i].Cells[3].Value.ToString()
+                    });
+                }
+                db.ProductionFormulaTypes.AddRange(list);
+                db.SaveChanges();
+                FarsiMessageBox.MessageBox.Show("موفقیت", "فرمول ساخت با موفقیت ثبت شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                Clear();
+            }
+        }
+
+        private void frmProductionFormula_Load(object sender, EventArgs e)
+        {
+            LoadStorage();
+            LoadFormula();
+            AutoComplit(cmbxSelectStorage.Text);
+            AutoComplitMaterial();
+        }
+
+        private void cmbxSelectStorage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            AutoComplit(cmbxSelectStorage.Text);
+        }
+
+        private void dgvProductionFormula_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            using (var db = new HalabchiDB())
+            {
+                //_isNew = false;
+                //_id = int.Parse(dgvProductionFormula.CurrentRow.Cells[0].Value.ToString());
+                //txtFormulaName.Text = dgvProductionFormula.CurrentRow.Cells[1].Value.ToString();
+                //var data = db.ProductionFormulaTypes.Where(u => u.FormulaID == _id).ToList();
+                //dgvFormula.DataSource = data;
+                //txtProductName.Text = dgvFormula.CurrentRow.Cells[2].Value.ToString();
+            }
+            
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
     }
 }
