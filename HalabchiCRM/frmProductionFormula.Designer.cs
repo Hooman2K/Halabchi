@@ -42,20 +42,19 @@
             this.cmbxSelectStorage = new System.Windows.Forms.ComboBox();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.txtMaterialName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.txtProductUnitPerOne = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.btnSave = new DevComponents.DotNetBar.ButtonX();
-            this.txtProductName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.txtFormulaName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnAddFormula = new DevComponents.DotNetBar.ButtonX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbxProductName = new System.Windows.Forms.ComboBox();
+            this.cmbxMaterial = new System.Windows.Forms.ComboBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -92,7 +91,6 @@
             this.dgvFormula.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvFormula.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFormula.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column7,
             this.Column1,
             this.Column2,
             this.Column3,
@@ -221,21 +219,6 @@
             this.labelX4.TabIndex = 11;
             this.labelX4.Text = "مواد اولیه : ";
             // 
-            // txtMaterialName
-            // 
-            // 
-            // 
-            // 
-            this.txtMaterialName.Border.Class = "TextBoxBorder";
-            this.txtMaterialName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtMaterialName.Location = new System.Drawing.Point(223, 76);
-            this.txtMaterialName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtMaterialName.MaxLength = 50;
-            this.txtMaterialName.Name = "txtMaterialName";
-            this.txtMaterialName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtMaterialName.Size = new System.Drawing.Size(195, 23);
-            this.txtMaterialName.TabIndex = 4;
-            // 
             // labelX5
             // 
             // 
@@ -306,21 +289,6 @@
             this.btnSave.TabIndex = 7;
             this.btnSave.Text = "ذخیره";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // txtProductName
-            // 
-            // 
-            // 
-            // 
-            this.txtProductName.Border.Class = "TextBoxBorder";
-            this.txtProductName.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtProductName.Location = new System.Drawing.Point(12, 45);
-            this.txtProductName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtProductName.MaxLength = 50;
-            this.txtProductName.Name = "txtProductName";
-            this.txtProductName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtProductName.Size = new System.Drawing.Size(168, 23);
-            this.txtProductName.TabIndex = 3;
             // 
             // labelX2
             // 
@@ -407,13 +375,27 @@
             this.btnCancel.Text = "لغو";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // Column7
+            // cmbxProductName
             // 
-            this.Column7.DataPropertyName = "ID";
-            this.Column7.HeaderText = "شماره";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Visible = false;
+            this.cmbxProductName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxProductName.FormattingEnabled = true;
+            this.cmbxProductName.Location = new System.Drawing.Point(12, 44);
+            this.cmbxProductName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbxProductName.Name = "cmbxProductName";
+            this.cmbxProductName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbxProductName.Size = new System.Drawing.Size(168, 24);
+            this.cmbxProductName.TabIndex = 19;
+            // 
+            // cmbxMaterial
+            // 
+            this.cmbxMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxMaterial.FormattingEnabled = true;
+            this.cmbxMaterial.Location = new System.Drawing.Point(223, 75);
+            this.cmbxMaterial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbxMaterial.Name = "cmbxMaterial";
+            this.cmbxMaterial.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbxMaterial.Size = new System.Drawing.Size(195, 24);
+            this.cmbxMaterial.TabIndex = 20;
             // 
             // Column1
             // 
@@ -452,6 +434,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(508, 493);
+            this.Controls.Add(this.cmbxMaterial);
+            this.Controls.Add(this.cmbxProductName);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.labelX8);
             this.Controls.Add(this.btnAddFormula);
@@ -461,13 +445,11 @@
             this.Controls.Add(this.labelX6);
             this.Controls.Add(this.labelX3);
             this.Controls.Add(this.labelX4);
-            this.Controls.Add(this.txtMaterialName);
             this.Controls.Add(this.labelX5);
             this.Controls.Add(this.txtProductUnitPerOne);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.cmbxSelectStorage);
-            this.Controls.Add(this.txtProductName);
             this.Controls.Add(this.dgvProductionFormula);
             this.Controls.Add(this.dgvFormula);
             this.Controls.Add(this.btnAdd);
@@ -495,13 +477,11 @@
         private System.Windows.Forms.ComboBox cmbxSelectStorage;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX4;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtMaterialName;
         private DevComponents.DotNetBar.LabelX labelX5;
         private DevComponents.DotNetBar.Controls.TextBoxX txtProductUnitPerOne;
         private DevComponents.DotNetBar.LabelX labelX3;
         private DevComponents.DotNetBar.LabelX labelX6;
         private DevComponents.DotNetBar.ButtonX btnSave;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtProductName;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX7;
         private DevComponents.DotNetBar.Controls.TextBoxX txtFormulaName;
@@ -510,7 +490,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private DevComponents.DotNetBar.ButtonX btnCancel;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.ComboBox cmbxProductName;
+        private System.Windows.Forms.ComboBox cmbxMaterial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;

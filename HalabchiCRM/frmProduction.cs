@@ -26,20 +26,31 @@ namespace HalabchiCRM
         private void Clear()
         {
             txtProductName.Text = txtProductCode.Text = txtProductCount.Text = txtLastCount.Text = "";
+            lblHalab.Text = "-----";
             cmbxUnit.SelectedIndex = 0;
-            cmbxThickness.SelectedIndex = 0;
-            lblHalab.Text = lblLak.Text = "0";
+            cmbxFormula.SelectedIndex = 0;
             _itemSelect = false;
             btnAddProduct.Enabled = false;
             cmbxSelectStorage.Enabled = true;
             cmbxUnit.Enabled = true;
             dgvProduct.Enabled = true;
-            cmbxThickness.Enabled = false;
+            cmbxFormula.Enabled = false;
             cmbxPipeLine.Enabled = false;
             txtProductCount.Enabled = false;
             txtProductCode.Enabled = txtProductName.Enabled = true;
             txtProductCode.SelectAll();
             txtProductCode.Focus();
+        }
+
+        private void LoadFormula()
+        {
+            using (var db = new HalabchiDB())
+            {
+                var item = from i in db.ProductionFormulaNames select i.FormulaName;
+                cmbxFormula.DataSource = item.ToList();
+                if (item != null)
+                    cmbxFormula.SelectedIndex = 0;
+            }
         }
 
         private void LoadStorage()
@@ -134,14 +145,15 @@ namespace HalabchiCRM
 
         private void frmProduction_Load(object sender, EventArgs e)
         {
+            LoadFormula();
             LoadStorage();
             LoadPipeLine();
             LoadProduct(cmbxSelectStorage.Text);
             cmbxUnit.SelectedIndex = 0;
-            cmbxThickness.SelectedIndex = 0;
+            cmbxFormula.SelectedIndex = 0;
             AutoComplit(cmbxSelectStorage.Text);
             btnAddProduct.Enabled = false;
-            cmbxThickness.Enabled = false;
+            cmbxFormula.Enabled = false;
             cmbxPipeLine.Enabled = false;
             txtProductCount.Enabled = false;
         }
@@ -164,17 +176,17 @@ namespace HalabchiCRM
         {
             _itemSelect = true;
             txtProductCode.Enabled = txtProductName.Enabled = false;
-            cmbxThickness.Enabled = true;
+            cmbxFormula.Enabled = true;
             _id = int.Parse(dgvProduct.CurrentRow.Cells[0].Value.ToString());
             txtProductCode.Text = dgvProduct.CurrentRow.Cells[2].Value.ToString();
             txtProductName.Text = dgvProduct.CurrentRow.Cells[3].Value.ToString();
             txtLastCount.Text = dgvProduct.CurrentRow.Cells[4].Value.ToString();
             cmbxUnit.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
-            cmbxThickness.Text = dgvProduct.CurrentRow.Cells[6].Value.ToString();
+            cmbxFormula.Text = dgvProduct.CurrentRow.Cells[6].Value.ToString();
 
             cmbxSelectStorage.Enabled = false;
             cmbxUnit.Enabled = false;
-            cmbxThickness.Enabled = true;
+            cmbxFormula.Enabled = true;
             cmbxPipeLine.Enabled = true;
 
             txtProductCount.Enabled = true;
@@ -207,9 +219,18 @@ namespace HalabchiCRM
 
                 count = 0;
                 lastCount = 0;
+                lblHalab.Text = "";
 
-                lblHalab.Text = ((double.Parse(txtProductCount.Text) * Formula(cmbxThickness.Text)) / 1000).ToString() + " " + "کیلوگرم";
-                //lblLak.Text=(do)
+                using (var db = new HalabchiDB())
+                {
+                    var id = db.ProductionFormulaNames.Where(u => u.FormulaName == cmbxFormula.Text).FirstOrDefault();
+
+                    var item = db.ProductionFormulaTypes.Where(u => u.FormulaID == id.ID);
+                    foreach (var i in item)
+                    {
+                        lblHalab.Text += i.MaterialName + " : " + (double.Parse(i.ProductUnitPerOne)*double.Parse(txtLastCount.Text)/1000) + Environment.NewLine;
+                    }
+                }
             }
             else
             {

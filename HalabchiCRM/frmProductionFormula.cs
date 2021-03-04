@@ -29,43 +29,34 @@ namespace HalabchiCRM
                     cmbxSelectStorage.SelectedIndex = 0;
             }
         }
+        private void LoadProduct(string storage)
+        {
+            using (var db = new HalabchiDB())
+            {
+                var item = from i in db.StorageTypes where i.StorageName == storage select i.ProductName;
+                cmbxProductName.DataSource = item.ToList();
+                if (item != null)
+                    cmbxProductName.SelectedIndex = 0;
+            }
+        }
+        private void LoadMaterial()
+        {
+            using (var db = new HalabchiDB())
+            {
+                var item = from i in db.StorageTypes where i.StorageName == "مواد اولیه" select i.ProductName;
+                cmbxMaterial.DataSource = item.ToList();
+                if (item != null)
+                    cmbxMaterial.SelectedIndex = 0;
+            }
+        }
         private void Clear()
         {
             txtFormulaName.Enabled = true;
-            txtFormulaName.Text = txtMaterialName.Text = txtProductName.Text = txtProductUnitPerOne.Text = "";
+            txtFormulaName.Text = "";
             dgvFormula.Rows.Clear();
             _isNew = true;
             txtFormulaName.SelectAll();
             txtFormulaName.Focus();
-        }
-
-        private void AutoComplit(string storage)
-        {
-            using (var db = new HalabchiDB())
-            {
-                var name = from na in db.StorageTypes where na.StorageName == storage select na.ProductName;
-
-                AutoCompleteStringCollection autoName = new AutoCompleteStringCollection();
-
-                autoName.AddRange(name.ToArray());
-                txtProductName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                txtProductName.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                txtProductName.AutoCompleteCustomSource = autoName;
-            }
-        }
-        private void AutoComplitMaterial()
-        {
-            using (var db = new HalabchiDB())
-            {
-                var materialName = from na in db.StorageTypes where na.StorageName == "مواد اولیه" select na.ProductName;
-
-                AutoCompleteStringCollection autoMaterialName = new AutoCompleteStringCollection();
-
-                autoMaterialName.AddRange(materialName.ToArray());
-                txtMaterialName.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
-                txtMaterialName.AutoCompleteSource = AutoCompleteSource.CustomSource;
-                txtMaterialName.AutoCompleteCustomSource = autoMaterialName;
-            }
         }
 
         private void LoadFormula()
@@ -131,20 +122,18 @@ namespace HalabchiCRM
         {
             using (var db = new HalabchiDB())
             {
-                if (txtFormulaName.Text != "" && txtProductName.Text != "" && txtMaterialName.Text != "" && txtProductUnitPerOne.Text != "")
+                if (txtFormulaName.Text != "" && txtProductUnitPerOne.Text != "")
                 {
                     var id = db.ProductionFormulaNames.Where(u => u.FormulaName == txtFormulaName.Text).FirstOrDefault();
                     var data = new TypeOf
                     {
                         FormulaID = id.ID,
-                        ProductName = txtProductName.Text,
-                        MaterialName = txtMaterialName.Text,
+                        ProductName = cmbxProductName.Text,
+                        MaterialName = cmbxMaterial.Text,
                         ProductUnitPerOne = txtProductUnitPerOne.Text
                     };
                     dgvFormula.Rows.Add(data.FormulaID, data.ProductName, data.MaterialName, data.ProductUnitPerOne);
-                    txtMaterialName.Text = txtProductUnitPerOne.Text = "";
-                    txtMaterialName.SelectAll();
-                    txtMaterialName.Focus();
+                    txtProductUnitPerOne.Text = "";
                 }
             }
         }
@@ -175,13 +164,13 @@ namespace HalabchiCRM
         {
             LoadStorage();
             LoadFormula();
-            AutoComplit(cmbxSelectStorage.Text);
-            AutoComplitMaterial();
+            LoadMaterial();
+            LoadProduct(cmbxSelectStorage.Text);
         }
 
         private void cmbxSelectStorage_SelectedIndexChanged(object sender, EventArgs e)
         {
-            AutoComplit(cmbxSelectStorage.Text);
+            LoadProduct(cmbxSelectStorage.Text);
         }
 
         private void dgvProductionFormula_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
@@ -195,7 +184,7 @@ namespace HalabchiCRM
                 //dgvFormula.DataSource = data;
                 //txtProductName.Text = dgvFormula.CurrentRow.Cells[2].Value.ToString();
             }
-            
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

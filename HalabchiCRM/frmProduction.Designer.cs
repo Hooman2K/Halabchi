@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtLastCount = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
             this.labelX6 = new DevComponents.DotNetBar.LabelX();
@@ -54,17 +54,13 @@
             this.txtProductName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.groupPanel1 = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.lblLak = new DevComponents.DotNetBar.LabelX();
-            this.labelX11 = new DevComponents.DotNetBar.LabelX();
             this.lblHalab = new DevComponents.DotNetBar.LabelX();
-            this.labelX9 = new DevComponents.DotNetBar.LabelX();
             this.labelX8 = new DevComponents.DotNetBar.LabelX();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.cmbxPipeLine = new System.Windows.Forms.ComboBox();
-            this.cmbxThickness = new System.Windows.Forms.ComboBox();
+            this.cmbxFormula = new System.Windows.Forms.ComboBox();
             this.labelX12 = new DevComponents.DotNetBar.LabelX();
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
-            this.labelX13 = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.groupPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -161,14 +157,14 @@
             // 
             this.dgvProduct.AllowUserToAddRows = false;
             this.dgvProduct.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -178,28 +174,28 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProduct.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProduct.EnableHeadersVisualStyles = false;
             this.dgvProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvProduct.Location = new System.Drawing.Point(12, 136);
             this.dgvProduct.Name = "dgvProduct";
             this.dgvProduct.ReadOnly = true;
             this.dgvProduct.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProduct.Size = new System.Drawing.Size(496, 211);
             this.dgvProduct.TabIndex = 10;
             this.dgvProduct.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentDoubleClick);
@@ -378,11 +374,7 @@
             // 
             this.groupPanel1.CanvasColor = System.Drawing.SystemColors.Control;
             this.groupPanel1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.groupPanel1.Controls.Add(this.labelX13);
-            this.groupPanel1.Controls.Add(this.lblLak);
-            this.groupPanel1.Controls.Add(this.labelX11);
             this.groupPanel1.Controls.Add(this.lblHalab);
-            this.groupPanel1.Controls.Add(this.labelX9);
             this.groupPanel1.Controls.Add(this.labelX8);
             this.groupPanel1.Location = new System.Drawing.Point(12, 417);
             this.groupPanel1.Name = "groupPanel1";
@@ -419,36 +411,6 @@
             this.groupPanel1.TabIndex = 39;
             this.groupPanel1.Text = "اطلاعات تولید";
             // 
-            // lblLak
-            // 
-            this.lblLak.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.lblLak.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblLak.Font = new System.Drawing.Font("Iranian Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblLak.Location = new System.Drawing.Point(287, 61);
-            this.lblLak.Name = "lblLak";
-            this.lblLak.Size = new System.Drawing.Size(124, 18);
-            this.lblLak.TabIndex = 4;
-            this.lblLak.Text = "0";
-            this.lblLak.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX11
-            // 
-            this.labelX11.AutoSize = true;
-            this.labelX11.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX11.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX11.Font = new System.Drawing.Font("Iranian Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelX11.Location = new System.Drawing.Point(411, 61);
-            this.labelX11.Name = "labelX11";
-            this.labelX11.Size = new System.Drawing.Size(42, 18);
-            this.labelX11.TabIndex = 3;
-            this.labelX11.Text = "لاک : ";
-            // 
             // lblHalab
             // 
             this.lblHalab.BackColor = System.Drawing.Color.Transparent;
@@ -457,27 +419,13 @@
             // 
             this.lblHalab.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblHalab.Font = new System.Drawing.Font("Iranian Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.lblHalab.Location = new System.Drawing.Point(287, 37);
+            this.lblHalab.Location = new System.Drawing.Point(3, 27);
             this.lblHalab.Name = "lblHalab";
-            this.lblHalab.Size = new System.Drawing.Size(124, 18);
+            this.lblHalab.Size = new System.Drawing.Size(484, 108);
             this.lblHalab.TabIndex = 2;
-            this.lblHalab.Text = "0";
+            this.lblHalab.Text = "-----";
             this.lblHalab.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // labelX9
-            // 
-            this.labelX9.AutoSize = true;
-            this.labelX9.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX9.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX9.Font = new System.Drawing.Font("Iranian Sans", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelX9.Location = new System.Drawing.Point(411, 37);
-            this.labelX9.Name = "labelX9";
-            this.labelX9.Size = new System.Drawing.Size(76, 18);
-            this.labelX9.TabIndex = 1;
-            this.labelX9.Text = "ورق حلب : ";
+            this.lblHalab.TextLineAlignment = System.Drawing.StringAlignment.Near;
             // 
             // labelX8
             // 
@@ -523,18 +471,16 @@
             this.cmbxPipeLine.Size = new System.Drawing.Size(173, 24);
             this.cmbxPipeLine.TabIndex = 4;
             // 
-            // cmbxThickness
+            // cmbxFormula
             // 
-            this.cmbxThickness.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxThickness.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.cmbxThickness.FormattingEnabled = true;
-            this.cmbxThickness.Items.AddRange(new object[] {
-            "030"});
-            this.cmbxThickness.Location = new System.Drawing.Point(12, 71);
-            this.cmbxThickness.Name = "cmbxThickness";
-            this.cmbxThickness.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbxThickness.Size = new System.Drawing.Size(173, 24);
-            this.cmbxThickness.TabIndex = 5;
+            this.cmbxFormula.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxFormula.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cmbxFormula.FormattingEnabled = true;
+            this.cmbxFormula.Location = new System.Drawing.Point(12, 71);
+            this.cmbxFormula.Name = "cmbxFormula";
+            this.cmbxFormula.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbxFormula.Size = new System.Drawing.Size(173, 24);
+            this.cmbxFormula.TabIndex = 5;
             // 
             // labelX12
             // 
@@ -546,9 +492,9 @@
             this.labelX12.Location = new System.Drawing.Point(189, 73);
             this.labelX12.Name = "labelX12";
             this.labelX12.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX12.Size = new System.Drawing.Size(61, 18);
+            this.labelX12.Size = new System.Drawing.Size(51, 18);
             this.labelX12.TabIndex = 43;
-            this.labelX12.Text = "ضخامت : ";
+            this.labelX12.Text = "فرمول : ";
             // 
             // btnCancel
             // 
@@ -562,22 +508,6 @@
             this.btnCancel.Text = "لغو";
             this.btnCancel.Click += new System.EventHandler(this.btnCancell_Click);
             // 
-            // labelX13
-            // 
-            this.labelX13.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX13.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX13.Font = new System.Drawing.Font("Iranian Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            this.labelX13.ForeColor = System.Drawing.Color.Red;
-            this.labelX13.Location = new System.Drawing.Point(-3, 95);
-            this.labelX13.Name = "labelX13";
-            this.labelX13.Size = new System.Drawing.Size(496, 41);
-            this.labelX13.TabIndex = 39;
-            this.labelX13.Text = "! توجه !\r\nمواد مصرفی بر اساس ضخامت سنجیده میشود";
-            this.labelX13.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
             // frmProduction
             // 
             this.AcceptButton = this.btnAddProduct;
@@ -586,7 +516,7 @@
             this.ClientSize = new System.Drawing.Size(524, 587);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.labelX12);
-            this.Controls.Add(this.cmbxThickness);
+            this.Controls.Add(this.cmbxFormula);
             this.Controls.Add(this.cmbxPipeLine);
             this.Controls.Add(this.labelX10);
             this.Controls.Add(this.groupPanel1);
@@ -641,14 +571,11 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtProductName;
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.Controls.GroupPanel groupPanel1;
-        private DevComponents.DotNetBar.LabelX lblLak;
-        private DevComponents.DotNetBar.LabelX labelX11;
         private DevComponents.DotNetBar.LabelX lblHalab;
-        private DevComponents.DotNetBar.LabelX labelX9;
         private DevComponents.DotNetBar.LabelX labelX8;
         private DevComponents.DotNetBar.LabelX labelX10;
         private System.Windows.Forms.ComboBox cmbxPipeLine;
-        private System.Windows.Forms.ComboBox cmbxThickness;
+        private System.Windows.Forms.ComboBox cmbxFormula;
         private DevComponents.DotNetBar.LabelX labelX12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -658,6 +585,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private DevComponents.DotNetBar.ButtonX btnCancel;
-        private DevComponents.DotNetBar.LabelX labelX13;
     }
 }
