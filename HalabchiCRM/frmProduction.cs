@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using System.Data.Entity;
+using EntityFramework.Utilities;
 
 namespace HalabchiCRM
 {
@@ -22,6 +23,7 @@ namespace HalabchiCRM
         bool _itemSelect = false;
         int _id;
         int thicknes;
+        int _error = 0;
 
         private void Clear()
         {
@@ -37,9 +39,11 @@ namespace HalabchiCRM
             cmbxFormula.Enabled = false;
             cmbxPipeLine.Enabled = false;
             txtProductCount.Enabled = false;
+            btnAdds.Enabled = false;
             txtProductCode.Enabled = txtProductName.Enabled = true;
             txtProductCode.SelectAll();
             txtProductCode.Focus();
+            _error = 0;
         }
 
         private void LoadFormula()
@@ -154,16 +158,6 @@ namespace HalabchiCRM
             return thicknes;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            //عدد تایع 885*700*030 برابر 1040 است
-            //Formula form = new Formula();
-            //label1.Text = form.Hefdah885030(int.Parse(textBox1.Text)).ToString() + " " + "Kg";
-
-            //label1.Text = ((double.Parse(textBox1.Text) * 1040) / 1000).ToString() + " " + "Kg";
-        }
-
         private void frmProduction_Load(object sender, EventArgs e)
         {
             LoadFormula();
@@ -177,6 +171,7 @@ namespace HalabchiCRM
             cmbxFormula.Enabled = false;
             cmbxPipeLine.Enabled = false;
             txtProductCount.Enabled = false;
+            btnAdds.Enabled = false;
         }
 
         private void cmbxSelectStorage_SelectedIndexChanged(object sender, EventArgs e)
@@ -203,7 +198,7 @@ namespace HalabchiCRM
             txtProductName.Text = dgvProduct.CurrentRow.Cells[3].Value.ToString();
             txtLastCount.Text = dgvProduct.CurrentRow.Cells[4].Value.ToString();
             cmbxUnit.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
-            cmbxFormula.Text = dgvProduct.CurrentRow.Cells[6].Value.ToString();
+            cmbxPipeLine.Text = dgvProduct.CurrentRow.Cells[6].Value.ToString();
 
             cmbxSelectStorage.Enabled = false;
             cmbxUnit.Enabled = false;
@@ -215,13 +210,72 @@ namespace HalabchiCRM
             txtProductCount.Focus();
 
             btnAddProduct.Enabled = true;
+            btnAdds.Enabled = true;
 
             dgvProduct.Enabled = false;
         }
-
+        List<StorageType> list = new List<StorageType>();
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
+            using (var db = new HalabchiDB())
+            {
+                list.Clear();
+                double mat1 = 0;
+                double mat2 = 0;
+                double result = 0;
 
+                var id = db.ProductionFormulaNames.Where(u => u.FormulaName == cmbxFormula.Text).FirstOrDefault();
+
+                var item = db.ProductionFormulaTypes.Where(u => u.FormulaID == id.ID);
+
+                foreach (var i in item)
+                {
+                    var mat = db.StorageTypes.Where(u => u.ProductName == i.MaterialName).FirstOrDefault();
+
+                    mat1 = (double.Parse(i.ProductUnitPerOne) * double.Parse(txtProductCount.Text) / 1000);
+                    mat2 = double.Parse(mat.ProductUnit);
+
+                    if (mat2 < mat1)
+                    {
+                        FarsiMessageBox.MessageBox.Show("اخطار", "مقدار مواد اولیه انبار از سفارش شما کمتر است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                        _error++;
+                        break;
+                    }
+                    else
+                    {
+                        result = mat2 - mat1;
+
+                        list.Add(new StorageType
+                        {
+                            ID = mat.ID,
+                            //StorageName = mat.StorageName,
+                            //ProductCode = mat.ProductCode,
+                            ProductName = mat.ProductName,
+                            ProductUnit = result.ToString(),
+                            //ProductType = mat.ProductType,
+                            //PipeLineName = mat.PipeLineName
+                        });
+                        mat1 = 0;
+                        mat2 = 0;
+                        result = 0;
+                    }
+                }
+                if (_error > 0)
+                {
+                    Clear();
+                }
+                else
+                {
+                    EFBatchOperation.For(db, db.StorageTypes).UpdateAll(list, u => u.ColumnsToUpdate(z => z.ProductUnit));
+                    var pro = db.StorageTypes.Where(u => u.ProductName == txtProductName.Text).FirstOrDefault();
+                    pro.ProductUnit = txtLastCount.Text;
+                    pro.PipeLineName = cmbxPipeLine.Text;
+                    db.SaveChanges();
+                    FarsiMessageBox.MessageBox.Show("موفقیت", "کالای مورد نظر با موفقیت ساخته و ثبت شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                    Clear();
+                }
+
+            }
         }
 
         private void btnCancell_Click(object sender, EventArgs e)
@@ -231,15 +285,10 @@ namespace HalabchiCRM
 
         private void txtProductCount_Leave(object sender, EventArgs e)
         {
+            double mat1 = 0;
+
             if (txtProductCount.Text != "")
             {
-                double lastCount = double.Parse(txtLastCount.Text);
-                double count = double.Parse(txtProductCount.Text);
-
-                txtLastCount.Text = (lastCount + count).ToString();
-
-                count = 0;
-                lastCount = 0;
                 lblHalab.Text = "";
 
                 using (var db = new HalabchiDB())
@@ -249,7 +298,8 @@ namespace HalabchiCRM
                     var item = db.ProductionFormulaTypes.Where(u => u.FormulaID == id.ID);
                     foreach (var i in item)
                     {
-                        lblHalab.Text += i.MaterialName + " : " + (double.Parse(i.ProductUnitPerOne) * double.Parse(txtLastCount.Text) / 1000) + Environment.NewLine;
+                        mat1 = (double.Parse(i.ProductUnitPerOne) * double.Parse(txtProductCount.Text) / 1000);
+                        lblHalab.Text += i.MaterialName + " : " + mat1 + Environment.NewLine;
                     }
                 }
             }
@@ -263,6 +313,43 @@ namespace HalabchiCRM
         {
             AppInfo pro = new AppInfo();
             pro.JustNumber(sender, e);
+        }
+
+        private void cmbxFormula_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (txtProductCount.Text != "")
+            {
+                double mat1 = 0;
+
+                lblHalab.Text = "";
+
+                using (var db = new HalabchiDB())
+                {
+                    var id = db.ProductionFormulaNames.Where(u => u.FormulaName == cmbxFormula.Text).FirstOrDefault();
+
+                    var item = db.ProductionFormulaTypes.Where(u => u.FormulaID == id.ID);
+                    foreach (var i in item)
+                    {
+                        mat1 = (double.Parse(i.ProductUnitPerOne) * double.Parse(txtProductCount.Text) / 1000);
+                        lblHalab.Text += i.MaterialName + " : " + mat1 + Environment.NewLine;
+                    }
+                }
+            }
+            else
+            {
+                lblHalab.Text = "-----";
+            }
+        }
+
+        private void btnAdds_Click(object sender, EventArgs e)
+        {
+            double lastCount = double.Parse(txtLastCount.Text);
+            double count = double.Parse(txtProductCount.Text);
+
+            txtLastCount.Text = (lastCount + count).ToString();
+
+            count = 0;
+            lastCount = 0;
         }
     }
 }

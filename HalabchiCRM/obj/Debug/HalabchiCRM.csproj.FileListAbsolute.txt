@@ -68,3 +68,6 @@ C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmP
 C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmAddProduct.resources
 C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmProduction.resources
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmProductionFormula.resources
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.BulkInsert.dll
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.MappingAPI.dll
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.Utilities.dll
