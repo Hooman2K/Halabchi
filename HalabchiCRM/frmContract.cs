@@ -58,8 +58,15 @@ namespace HalabchiCRM
             {
                 var item = from i in db.Storages select i.StorageName;
                 cmbxSelectStorage.DataSource = item.ToList();
-                if (item != null)
-                    cmbxSelectStorage.SelectedIndex = 0;
+                try
+                {
+                    if (item != null)
+                        cmbxSelectStorage.SelectedIndex = 0;
+                }
+                catch (Exception)
+                {
+                    return;
+                }
             }
         }
         private void frmContract_Load(object sender, EventArgs e)
@@ -107,7 +114,7 @@ namespace HalabchiCRM
             }
             catch
             {
-
+                return;
             }
         }
 

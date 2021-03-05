@@ -35,8 +35,15 @@ namespace HalabchiCRM
             {
                 var item = from i in db.StorageTypes where i.StorageName == storage select i.ProductName;
                 cmbxProductName.DataSource = item.ToList();
-                if (item != null)
-                    cmbxProductName.SelectedIndex = 0;
+                try
+                {
+                    if (item != null)
+                        cmbxProductName.SelectedIndex = 0;
+                }
+                catch
+                {
+                    return;
+                }
             }
         }
         private void LoadMaterial()
@@ -45,8 +52,15 @@ namespace HalabchiCRM
             {
                 var item = from i in db.StorageTypes where i.StorageName == "مواد اولیه" select i.ProductName;
                 cmbxMaterial.DataSource = item.ToList();
-                if (item != null)
-                    cmbxMaterial.SelectedIndex = 0;
+                try
+                {
+                    if (item != null)
+                        cmbxMaterial.SelectedIndex = 0;
+                }
+                catch (Exception)
+                {
+                    return;
+                }
             }
         }
         private void Clear()

@@ -48,8 +48,15 @@ namespace HalabchiCRM
             {
                 var item = from i in db.ProductionFormulaNames select i.FormulaName;
                 cmbxFormula.DataSource = item.ToList();
-                if (item != null)
-                    cmbxFormula.SelectedIndex = 0;
+                try
+                {
+                    if (item != null)
+                        cmbxFormula.SelectedIndex = 0;
+                }
+                catch (Exception)
+                {
+                    return;
+                }
             }
         }
 
@@ -59,8 +66,15 @@ namespace HalabchiCRM
             {
                 var item = from i in db.Storages select i.StorageName;
                 cmbxSelectStorage.DataSource = item.ToList();
-                if (item != null)
-                    cmbxSelectStorage.SelectedIndex = 0;
+                try
+                {
+                    if (item != null)
+                        cmbxSelectStorage.SelectedIndex = 0;
+                }
+                catch (Exception)
+                {
+                    return;
+                }
             }
         }
 
@@ -70,8 +84,15 @@ namespace HalabchiCRM
             {
                 var item = from i in db.PipeLines select i.PipeLineName;
                 cmbxPipeLine.DataSource = item.ToList();
-                if (item != null)
-                    cmbxPipeLine.SelectedIndex = 0;
+                try
+                {
+                    if (item != null)
+                        cmbxPipeLine.SelectedIndex = 0;
+                }
+                catch (Exception)
+                {
+                    return;
+                }
             }
         }
 
@@ -228,13 +249,13 @@ namespace HalabchiCRM
                     var item = db.ProductionFormulaTypes.Where(u => u.FormulaID == id.ID);
                     foreach (var i in item)
                     {
-                        lblHalab.Text += i.MaterialName + " : " + (double.Parse(i.ProductUnitPerOne)*double.Parse(txtLastCount.Text)/1000) + Environment.NewLine;
+                        lblHalab.Text += i.MaterialName + " : " + (double.Parse(i.ProductUnitPerOne) * double.Parse(txtLastCount.Text) / 1000) + Environment.NewLine;
                     }
                 }
             }
             else
             {
-                lblHalab.Text = "0";
+                lblHalab.Text = "-----";
             }
         }
 
