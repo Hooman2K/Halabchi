@@ -36,6 +36,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAdd = new DevComponents.DotNetBar.ButtonX();
             this.dgvFormula = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvProductionFormula = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -55,19 +59,17 @@
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.cmbxProductName = new System.Windows.Forms.ComboBox();
             this.cmbxMaterial = new System.Windows.Forms.ComboBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.grbxProductionFormula = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormula)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductionFormula)).BeginInit();
+            this.grbxProductionFormula.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
             this.btnAdd.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnAdd.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAdd.Location = new System.Drawing.Point(12, 107);
+            this.btnAdd.Location = new System.Drawing.Point(6, 86);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -105,7 +107,7 @@
             this.dgvFormula.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvFormula.EnableHeadersVisualStyles = false;
             this.dgvFormula.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvFormula.Location = new System.Drawing.Point(12, 148);
+            this.dgvFormula.Location = new System.Drawing.Point(6, 127);
             this.dgvFormula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvFormula.Name = "dgvFormula";
             this.dgvFormula.ReadOnly = true;
@@ -120,6 +122,38 @@
             this.dgvFormula.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvFormula.Size = new System.Drawing.Size(406, 141);
             this.dgvFormula.TabIndex = 8;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "FormulaID";
+            this.Column1.HeaderText = "شماره فرمول";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "ProductName";
+            this.Column2.HeaderText = "نام محصول";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "MaterialName";
+            this.Column3.HeaderText = "مواد اولیه";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 200;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "ProductUnitPerOne";
+            this.Column4.HeaderText = "مقدار مورد نیاز";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 140;
             // 
             // dgvProductionFormula
             // 
@@ -147,7 +181,7 @@
             this.dgvProductionFormula.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvProductionFormula.EnableHeadersVisualStyles = false;
             this.dgvProductionFormula.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvProductionFormula.Location = new System.Drawing.Point(12, 313);
+            this.dgvProductionFormula.Location = new System.Drawing.Point(6, 292);
             this.dgvProductionFormula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvProductionFormula.Name = "dgvProductionFormula";
             this.dgvProductionFormula.ReadOnly = true;
@@ -183,7 +217,7 @@
             // 
             this.cmbxSelectStorage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxSelectStorage.FormattingEnabled = true;
-            this.cmbxSelectStorage.Location = new System.Drawing.Point(278, 44);
+            this.cmbxSelectStorage.Location = new System.Drawing.Point(272, 23);
             this.cmbxSelectStorage.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbxSelectStorage.Name = "cmbxSelectStorage";
             this.cmbxSelectStorage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -198,7 +232,7 @@
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(424, 46);
+            this.labelX1.Location = new System.Drawing.Point(418, 25);
             this.labelX1.Name = "labelX1";
             this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX1.Size = new System.Drawing.Size(78, 18);
@@ -212,7 +246,7 @@
             // 
             // 
             this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(424, 77);
+            this.labelX4.Location = new System.Drawing.Point(418, 56);
             this.labelX4.Name = "labelX4";
             this.labelX4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX4.Size = new System.Drawing.Size(69, 18);
@@ -225,7 +259,7 @@
             // 
             // 
             this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX5.Location = new System.Drawing.Point(142, 75);
+            this.labelX5.Location = new System.Drawing.Point(136, 54);
             this.labelX5.Name = "labelX5";
             this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX5.Size = new System.Drawing.Size(75, 23);
@@ -239,7 +273,7 @@
             // 
             this.txtProductUnitPerOne.Border.Class = "TextBoxBorder";
             this.txtProductUnitPerOne.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtProductUnitPerOne.Location = new System.Drawing.Point(12, 76);
+            this.txtProductUnitPerOne.Location = new System.Drawing.Point(6, 55);
             this.txtProductUnitPerOne.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtProductUnitPerOne.MaxLength = 20;
             this.txtProductUnitPerOne.Name = "txtProductUnitPerOne";
@@ -255,7 +289,7 @@
             // 
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(424, 204);
+            this.labelX3.Location = new System.Drawing.Point(418, 183);
             this.labelX3.Name = "labelX3";
             this.labelX3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX3.Size = new System.Drawing.Size(84, 18);
@@ -268,7 +302,7 @@
             // 
             // 
             this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(424, 337);
+            this.labelX6.Location = new System.Drawing.Point(418, 316);
             this.labelX6.Name = "labelX6";
             this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX6.Size = new System.Drawing.Size(75, 78);
@@ -280,7 +314,7 @@
             // 
             this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSave.Location = new System.Drawing.Point(12, 452);
+            this.btnSave.Location = new System.Drawing.Point(6, 431);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -296,7 +330,7 @@
             // 
             // 
             this.labelX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX2.Location = new System.Drawing.Point(186, 44);
+            this.labelX2.Location = new System.Drawing.Point(180, 23);
             this.labelX2.Name = "labelX2";
             this.labelX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX2.Size = new System.Drawing.Size(75, 23);
@@ -353,7 +387,7 @@
             // 
             this.labelX8.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX8.ForeColor = System.Drawing.Color.Red;
-            this.labelX8.Location = new System.Drawing.Point(142, 107);
+            this.labelX8.Location = new System.Drawing.Point(136, 86);
             this.labelX8.Name = "labelX8";
             this.labelX8.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX8.Size = new System.Drawing.Size(366, 28);
@@ -365,7 +399,7 @@
             // 
             this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCancel.Location = new System.Drawing.Point(151, 452);
+            this.btnCancel.Location = new System.Drawing.Point(145, 431);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -379,7 +413,7 @@
             // 
             this.cmbxProductName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxProductName.FormattingEnabled = true;
-            this.cmbxProductName.Location = new System.Drawing.Point(12, 44);
+            this.cmbxProductName.Location = new System.Drawing.Point(6, 23);
             this.cmbxProductName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbxProductName.Name = "cmbxProductName";
             this.cmbxProductName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -390,69 +424,46 @@
             // 
             this.cmbxMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxMaterial.FormattingEnabled = true;
-            this.cmbxMaterial.Location = new System.Drawing.Point(223, 75);
+            this.cmbxMaterial.Location = new System.Drawing.Point(217, 54);
             this.cmbxMaterial.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cmbxMaterial.Name = "cmbxMaterial";
             this.cmbxMaterial.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxMaterial.Size = new System.Drawing.Size(195, 24);
             this.cmbxMaterial.TabIndex = 20;
             // 
-            // Column1
+            // grbxProductionFormula
             // 
-            this.Column1.DataPropertyName = "FormulaID";
-            this.Column1.HeaderText = "شماره فرمول";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "ProductName";
-            this.Column2.HeaderText = "نام محصول";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "MaterialName";
-            this.Column3.HeaderText = "مواد اولیه";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 200;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "ProductUnitPerOne";
-            this.Column4.HeaderText = "مقدار مورد نیاز";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 140;
+            this.grbxProductionFormula.Controls.Add(this.cmbxProductName);
+            this.grbxProductionFormula.Controls.Add(this.cmbxMaterial);
+            this.grbxProductionFormula.Controls.Add(this.btnAdd);
+            this.grbxProductionFormula.Controls.Add(this.dgvFormula);
+            this.grbxProductionFormula.Controls.Add(this.btnCancel);
+            this.grbxProductionFormula.Controls.Add(this.dgvProductionFormula);
+            this.grbxProductionFormula.Controls.Add(this.labelX8);
+            this.grbxProductionFormula.Controls.Add(this.cmbxSelectStorage);
+            this.grbxProductionFormula.Controls.Add(this.labelX1);
+            this.grbxProductionFormula.Controls.Add(this.labelX2);
+            this.grbxProductionFormula.Controls.Add(this.txtProductUnitPerOne);
+            this.grbxProductionFormula.Controls.Add(this.btnSave);
+            this.grbxProductionFormula.Controls.Add(this.labelX5);
+            this.grbxProductionFormula.Controls.Add(this.labelX6);
+            this.grbxProductionFormula.Controls.Add(this.labelX4);
+            this.grbxProductionFormula.Controls.Add(this.labelX3);
+            this.grbxProductionFormula.Location = new System.Drawing.Point(12, 46);
+            this.grbxProductionFormula.Name = "grbxProductionFormula";
+            this.grbxProductionFormula.Size = new System.Drawing.Size(515, 480);
+            this.grbxProductionFormula.TabIndex = 21;
+            this.grbxProductionFormula.TabStop = false;
             // 
             // frmProductionFormula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 493);
-            this.Controls.Add(this.cmbxMaterial);
-            this.Controls.Add(this.cmbxProductName);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.labelX8);
+            this.ClientSize = new System.Drawing.Size(534, 528);
+            this.Controls.Add(this.grbxProductionFormula);
             this.Controls.Add(this.btnAddFormula);
             this.Controls.Add(this.labelX7);
             this.Controls.Add(this.txtFormulaName);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.labelX6);
-            this.Controls.Add(this.labelX3);
-            this.Controls.Add(this.labelX4);
-            this.Controls.Add(this.labelX5);
-            this.Controls.Add(this.txtProductUnitPerOne);
-            this.Controls.Add(this.labelX2);
-            this.Controls.Add(this.labelX1);
-            this.Controls.Add(this.cmbxSelectStorage);
-            this.Controls.Add(this.dgvProductionFormula);
-            this.Controls.Add(this.dgvFormula);
-            this.Controls.Add(this.btnAdd);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
             this.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -465,6 +476,8 @@
             this.Load += new System.EventHandler(this.frmProductionFormula_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFormula)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductionFormula)).EndInit();
+            this.grbxProductionFormula.ResumeLayout(false);
+            this.grbxProductionFormula.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -496,5 +509,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.GroupBox grbxProductionFormula;
     }
 }

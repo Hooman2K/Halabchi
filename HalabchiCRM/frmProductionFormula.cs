@@ -71,6 +71,7 @@ namespace HalabchiCRM
             _isNew = true;
             txtFormulaName.SelectAll();
             txtFormulaName.Focus();
+            grbxProductionFormula.Enabled = false;
         }
 
         private void LoadFormula()
@@ -121,6 +122,7 @@ namespace HalabchiCRM
                             db.SaveChanges();
                             FarsiMessageBox.MessageBox.Show("موفقیت", "نام فرمولبا موفقیت ثبت شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
                             txtFormulaName.Enabled = false;
+                            grbxProductionFormula.Enabled = true;
                             LoadFormula();
                         }
                     }
@@ -157,7 +159,7 @@ namespace HalabchiCRM
             using (var db = new HalabchiDB())
             {
                 list.Clear();
-                for (int i = 0; i < dgvProductionFormula.Rows.Count; i++)
+                for (int i = 0; i < dgvFormula.Rows.Count; i++)
                 {
                     list.Add(new ProductionFormulaType
                     {
@@ -180,6 +182,7 @@ namespace HalabchiCRM
             LoadFormula();
             LoadMaterial();
             LoadProduct(cmbxSelectStorage.Text);
+            grbxProductionFormula.Enabled = false;
         }
 
         private void cmbxSelectStorage_SelectedIndexChanged(object sender, EventArgs e)
