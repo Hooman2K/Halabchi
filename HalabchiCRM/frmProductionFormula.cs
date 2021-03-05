@@ -120,7 +120,7 @@ namespace HalabchiCRM
                             };
                             db.ProductionFormulaNames.Add(fname);
                             db.SaveChanges();
-                            FarsiMessageBox.MessageBox.Show("موفقیت", "نام فرمولبا موفقیت ثبت شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                            FarsiMessageBox.MessageBox.Show("موفقیت", "نام فرمول با موفقیت ثبت شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
                             txtFormulaName.Enabled = false;
                             grbxProductionFormula.Enabled = true;
                             LoadFormula();
