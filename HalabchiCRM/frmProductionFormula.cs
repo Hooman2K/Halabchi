@@ -92,13 +92,17 @@ namespace HalabchiCRM
 
         private void txtProductUnitPerOne_KeyPress(object sender, KeyPressEventArgs e)
         {
-            AppInfo info = new AppInfo();
-            info.JustNumber(sender, e);
-            //if (e.KeyChar == '.' && txtProductUnitPerOne.Length > 0 && !txtProductUnitPerOne.Contains("."))
-            //{
-            //    e.Handled = false;
-            //    return;
-            //}
+            char ch = e.KeyChar;
+
+            if (ch == 46 && txtProductUnitPerOne.Text.IndexOf('.') != -1)
+            {
+                e.Handled = true;
+                return;
+            }
+            if (!char.IsDigit(ch) && ch != 8 && ch != 46)
+            {
+                e.Handled = true;
+            }
         }
 
         private void btnAddFormula_Click(object sender, EventArgs e)

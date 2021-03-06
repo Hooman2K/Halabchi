@@ -20,5 +20,14 @@ namespace HalabchiCRM
             if (!(char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar)))
                 e.Handled = true;
         }
+
+        //public void JustFloatNumber(object sender,KeyPressEventArgs e)
+        //{
+        //    if (e.KeyChar == '.' && e.Length > 0 && !e.Contains("."))
+        //    {
+        //        e.Handled = false;
+        //        return;
+        //    }
+        //}
     }
 }
