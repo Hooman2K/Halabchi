@@ -94,6 +94,11 @@ namespace HalabchiCRM
         {
             AppInfo info = new AppInfo();
             info.JustNumber(sender, e);
+            //if (e.KeyChar == '.' && txtProductUnitPerOne.Length > 0 && !txtProductUnitPerOne.Contains("."))
+            //{
+            //    e.Handled = false;
+            //    return;
+            //}
         }
 
         private void btnAddFormula_Click(object sender, EventArgs e)
