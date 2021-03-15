@@ -35,6 +35,7 @@
             this.dgvPipeLine = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPipeLine)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,10 +43,10 @@
             // 
             this.btnRegister.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnRegister.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnRegister.Location = new System.Drawing.Point(0, 42);
+            this.btnRegister.Location = new System.Drawing.Point(77, 42);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnRegister.Size = new System.Drawing.Size(319, 23);
+            this.btnRegister.Size = new System.Drawing.Size(242, 23);
             this.btnRegister.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnRegister.TabIndex = 1;
             this.btnRegister.Text = "ثبت";
@@ -101,7 +102,7 @@
             this.dgvPipeLine.ReadOnly = true;
             this.dgvPipeLine.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvPipeLine.Size = new System.Drawing.Size(319, 150);
-            this.dgvPipeLine.TabIndex = 2;
+            this.dgvPipeLine.TabIndex = 3;
             this.dgvPipeLine.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPipeLine_CellContentDoubleClick);
             // 
             // Column1
@@ -120,12 +121,26 @@
             this.Column2.ReadOnly = true;
             this.Column2.Width = 200;
             // 
+            // btnCancel
+            // 
+            this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCancel.Location = new System.Drawing.Point(0, 42);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnCancel.Size = new System.Drawing.Size(68, 23);
+            this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnCancel.TabIndex = 2;
+            this.btnCancel.Text = "لغو";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // frmPipeLine
             // 
             this.AcceptButton = this.btnRegister;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(325, 226);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtPipeLineName);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.dgvPipeLine);
@@ -154,5 +169,6 @@
         private DevComponents.DotNetBar.Controls.TextBoxX txtPipeLineName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private DevComponents.DotNetBar.ButtonX btnCancel;
     }
 }

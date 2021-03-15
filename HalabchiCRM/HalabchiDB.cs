@@ -34,6 +34,10 @@ namespace HalabchiCRM
         public virtual DbSet<PipeLine> PipeLines { get; set; }
         public virtual DbSet<ProductionFormulaName> ProductionFormulaNames { get; set; }
         public virtual DbSet<ProductionFormulaType> ProductionFormulaTypes { get; set; }
+        public virtual DbSet<TolidHalabGhoti> TolidHalabGhotis { get; set; }
+        public virtual DbSet<TahvilAnabr> TahvilAnabrs { get; set; }
+        public virtual DbSet<ZayeatHalabGhoti> ZayeatHalabGhotis { get; set; }
+        public virtual DbSet<TolidZayeatChap> TolidZayeatChaps { get; set; }
     }
 
     public class User
@@ -166,5 +170,76 @@ namespace HalabchiCRM
         public string MaterialName { get; set; }
         [MaxLength(20)]
         public string ProductUnitPerOne { get; set; }
+    }
+    public class TolidHalabGhoti
+    {
+        public int Id { get; set; }
+        public int Year { get; set; }
+        public byte Month { get; set; }
+        public byte Day { get; set; }
+        [MaxLength(10)]
+        public string Date { get; set; }
+        [MaxLength(100)]
+        public string PipeLineName { get; set; }
+        public float MojodiAval { get; set; }
+        public float Tolid { get; set; }
+        public float JamKol { get; set; }
+        public float TahvilAnbar { get; set; }
+        public float MandeAkhar { get; set; }
+    }
+    public class TahvilAnabr
+    {
+        public int Id { get; set; }
+        public int Year { get; set; }
+        public byte Month { get; set; }
+        public byte Day { get; set; }
+        [MaxLength(10)]
+        public string Date { get; set; }
+        [MaxLength(100)]
+        public string PipeLineName { get; set; }
+        public float TahvilAnbar { get; set; }
+    }
+    public class ZayeatHalabGhoti
+    {
+        public int Id { get; set; }
+        public int Year { get; set; }
+        public byte Month { get; set; }
+        public byte Day { get; set; }
+        [MaxLength(10)]
+        public string Date { get; set; }
+        [MaxLength(100)]
+        public string PipeLineName { get; set; }
+        public float Gheychi { get; set; }
+        public float Josh { get; set; }
+        public float ChaharGosh { get; set; }
+        public float Neyker { get; set; }
+        public float KhatAndaz { get; set; }
+        public float LakPash { get; set; }
+        public float FelanchSar { get; set; }
+        public float FelachKaf { get; set; }
+        public float SimerSar { get; set; }
+        public float SimerKaf { get; set; }
+        public float Fider { get; set; }
+        public float Ghaleb { get; set; }
+        public float Kerling { get; set; }
+        public float LastikZan { get; set; }
+        public float Kore { get; set; }
+    }
+    public class TolidZayeatChap
+    {
+        public int Id { get; set; }
+        public int Year { get; set; }
+        public byte Month { get; set; }
+        public byte Day { get; set; }
+        [MaxLength(10)]
+        public string Date { get; set; }
+        public float TedadVorodi { get; set; }
+        public float TedadChapShode { get; set; }
+        public float Fider { get; set; }
+        public float ChapAval { get; set; }
+        public float ChapDovom { get; set; }
+        public float Verni { get; set; }
+        public float Kore { get; set; }
+        public float JamkonAkhar { get; set; }
     }
 }

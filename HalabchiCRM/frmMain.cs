@@ -524,5 +524,13 @@ order by start_time desc");
             pf.ShowDialog();
             this.Show();
         }
+
+        private void btnTolidHalabGhoti_Click(object sender, EventArgs e)
+        {
+            frmTolidHalabGhoti thg = new frmTolidHalabGhoti();
+            this.Hide();
+            thg.ShowDialog();
+            this.Show();
+        }
     }
 }

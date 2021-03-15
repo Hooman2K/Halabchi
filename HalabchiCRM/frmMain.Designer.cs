@@ -74,13 +74,25 @@
             this.btnSearchCostomer = new DevComponents.DotNetBar.ButtonX();
             this.btnAddCostomer = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
+            this.btnTolidHalabGhoti = new DevComponents.DotNetBar.ButtonX();
             this.btnProduction = new DevComponents.DotNetBar.ButtonX();
             this.grbxAdminTool = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
             this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             this.btnAddProduct = new DevComponents.DotNetBar.ButtonX();
             this.btnStorage = new DevComponents.DotNetBar.ButtonX();
             this.btnPipeLine = new DevComponents.DotNetBar.ButtonX();
             this.btnProduct = new DevComponents.DotNetBar.ButtonX();
+            this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
+            this.dgvContract = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSearchContract = new DevComponents.DotNetBar.ButtonX();
+            this.btnNewContract = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.grbxRestore = new System.Windows.Forms.GroupBox();
@@ -100,16 +112,6 @@
             this.comboItem2 = new DevComponents.Editors.ComboItem();
             this.comboItem3 = new DevComponents.Editors.ComboItem();
             this.btnSaveTheme = new DevComponents.DotNetBar.ButtonX();
-            this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
-            this.dgvContract = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column25 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnSearchContract = new DevComponents.DotNetBar.ButtonX();
-            this.btnNewContract = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
             this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.grbxEditUser = new DevComponents.DotNetBar.Controls.GroupPanel();
@@ -170,13 +172,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.ribbonPanel3.SuspendLayout();
             this.grbxAdminTool.SuspendLayout();
+            this.ribbonPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContract)).BeginInit();
             this.ribbonPanel5.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             this.grbxRestore.SuspendLayout();
             this.grbxBackup.SuspendLayout();
             this.groupPanel1.SuspendLayout();
-            this.ribbonPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvContract)).BeginInit();
             this.ribbonPanel6.SuspendLayout();
             this.grbxEditUser.SuspendLayout();
             this.ribbonPanel7.SuspendLayout();
@@ -213,11 +215,11 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel6);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel2);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel5);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel7);
             this.ribbonControl1.Dock = System.Windows.Forms.DockStyle.Top;
             this.ribbonControl1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
@@ -635,6 +637,7 @@
             // ribbonPanel3
             // 
             this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel3.Controls.Add(this.btnTolidHalabGhoti);
             this.ribbonPanel3.Controls.Add(this.btnProduction);
             this.ribbonPanel3.Controls.Add(this.grbxAdminTool);
             this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -657,6 +660,18 @@
             this.ribbonPanel3.TabIndex = 3;
             this.ribbonPanel3.Visible = false;
             // 
+            // btnTolidHalabGhoti
+            // 
+            this.btnTolidHalabGhoti.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTolidHalabGhoti.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnTolidHalabGhoti.Location = new System.Drawing.Point(363, 167);
+            this.btnTolidHalabGhoti.Name = "btnTolidHalabGhoti";
+            this.btnTolidHalabGhoti.Size = new System.Drawing.Size(103, 23);
+            this.btnTolidHalabGhoti.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTolidHalabGhoti.TabIndex = 5;
+            this.btnTolidHalabGhoti.Text = "آمار تولیدات";
+            this.btnTolidHalabGhoti.Click += new System.EventHandler(this.btnTolidHalabGhoti_Click);
+            // 
             // btnProduction
             // 
             this.btnProduction.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -673,6 +688,7 @@
             // 
             this.grbxAdminTool.CanvasColor = System.Drawing.SystemColors.Control;
             this.grbxAdminTool.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.grbxAdminTool.Controls.Add(this.buttonX2);
             this.grbxAdminTool.Controls.Add(this.buttonX1);
             this.grbxAdminTool.Controls.Add(this.btnAddProduct);
             this.grbxAdminTool.Controls.Add(this.btnStorage);
@@ -711,6 +727,18 @@
             this.grbxAdminTool.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.grbxAdminTool.TabIndex = 3;
             this.grbxAdminTool.Text = "ابزار مدیریتی تولید";
+            // 
+            // buttonX2
+            // 
+            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.Enabled = false;
+            this.buttonX2.Location = new System.Drawing.Point(339, 64);
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.Size = new System.Drawing.Size(103, 23);
+            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX2.TabIndex = 5;
+            this.buttonX2.Text = "سفارشی";
             // 
             // buttonX1
             // 
@@ -771,6 +799,131 @@
             this.btnProduct.TabIndex = 1;
             this.btnProduct.Text = "معرفی محصول";
             this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
+            // 
+            // ribbonPanel2
+            // 
+            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel2.Controls.Add(this.dgvContract);
+            this.ribbonPanel2.Controls.Add(this.btnSearchContract);
+            this.ribbonPanel2.Controls.Add(this.btnNewContract);
+            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel2.Location = new System.Drawing.Point(0, 26);
+            this.ribbonPanel2.Name = "ribbonPanel2";
+            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel2.Size = new System.Drawing.Size(629, 360);
+            // 
+            // 
+            // 
+            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel2.TabIndex = 2;
+            this.ribbonPanel2.Visible = false;
+            // 
+            // dgvContract
+            // 
+            this.dgvContract.AllowUserToAddRows = false;
+            this.dgvContract.AllowUserToDeleteRows = false;
+            this.dgvContract.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvContract.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column24,
+            this.Column25,
+            this.Column29,
+            this.Column26,
+            this.Column27,
+            this.Column28});
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvContract.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvContract.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgvContract.Location = new System.Drawing.Point(6, 56);
+            this.dgvContract.Name = "dgvContract";
+            this.dgvContract.ReadOnly = true;
+            this.dgvContract.Size = new System.Drawing.Size(610, 298);
+            this.dgvContract.TabIndex = 11;
+            // 
+            // Column24
+            // 
+            this.Column24.DataPropertyName = "ID";
+            this.Column24.HeaderText = "شماره";
+            this.Column24.Name = "Column24";
+            this.Column24.ReadOnly = true;
+            this.Column24.Visible = false;
+            // 
+            // Column25
+            // 
+            this.Column25.DataPropertyName = "ContractID";
+            this.Column25.HeaderText = "شماره قرارداد";
+            this.Column25.Name = "Column25";
+            this.Column25.ReadOnly = true;
+            this.Column25.Width = 120;
+            // 
+            // Column29
+            // 
+            this.Column29.DataPropertyName = "FactoryName";
+            this.Column29.HeaderText = "نام کارخانه";
+            this.Column29.Name = "Column29";
+            this.Column29.ReadOnly = true;
+            this.Column29.Width = 120;
+            // 
+            // Column26
+            // 
+            this.Column26.DataPropertyName = "CustomerID";
+            this.Column26.HeaderText = "شماره مشتری";
+            this.Column26.Name = "Column26";
+            this.Column26.ReadOnly = true;
+            this.Column26.Visible = false;
+            this.Column26.Width = 120;
+            // 
+            // Column27
+            // 
+            this.Column27.DataPropertyName = "ContractDate";
+            this.Column27.HeaderText = "تاریخ قرارداد";
+            this.Column27.Name = "Column27";
+            this.Column27.ReadOnly = true;
+            this.Column27.Width = 120;
+            // 
+            // Column28
+            // 
+            this.Column28.DataPropertyName = "ContractTitle";
+            this.Column28.HeaderText = "عنوان قرارداد";
+            this.Column28.Name = "Column28";
+            this.Column28.ReadOnly = true;
+            this.Column28.Width = 180;
+            // 
+            // btnSearchContract
+            // 
+            this.btnSearchContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSearchContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSearchContract.Location = new System.Drawing.Point(405, 18);
+            this.btnSearchContract.Name = "btnSearchContract";
+            this.btnSearchContract.Size = new System.Drawing.Size(75, 32);
+            this.btnSearchContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSearchContract.TabIndex = 10;
+            this.btnSearchContract.Text = "جست و جو";
+            // 
+            // btnNewContract
+            // 
+            this.btnNewContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnNewContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnNewContract.Location = new System.Drawing.Point(486, 18);
+            this.btnNewContract.Name = "btnNewContract";
+            this.btnNewContract.Size = new System.Drawing.Size(130, 32);
+            this.btnNewContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnNewContract.TabIndex = 9;
+            this.btnNewContract.Text = "ایجاد قرارداد جدید";
+            this.btnNewContract.Click += new System.EventHandler(this.btnNewContract_Click);
             // 
             // ribbonPanel5
             // 
@@ -1063,131 +1216,6 @@
             this.btnSaveTheme.TabIndex = 3;
             this.btnSaveTheme.Text = "ذخیره";
             this.btnSaveTheme.Click += new System.EventHandler(this.btnSaveTheme_Click);
-            // 
-            // ribbonPanel2
-            // 
-            this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel2.Controls.Add(this.dgvContract);
-            this.ribbonPanel2.Controls.Add(this.btnSearchContract);
-            this.ribbonPanel2.Controls.Add(this.btnNewContract);
-            this.ribbonPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel2.Location = new System.Drawing.Point(0, 26);
-            this.ribbonPanel2.Name = "ribbonPanel2";
-            this.ribbonPanel2.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel2.Size = new System.Drawing.Size(629, 360);
-            // 
-            // 
-            // 
-            this.ribbonPanel2.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel2.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel2.TabIndex = 2;
-            this.ribbonPanel2.Visible = false;
-            // 
-            // dgvContract
-            // 
-            this.dgvContract.AllowUserToAddRows = false;
-            this.dgvContract.AllowUserToDeleteRows = false;
-            this.dgvContract.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvContract.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column24,
-            this.Column25,
-            this.Column29,
-            this.Column26,
-            this.Column27,
-            this.Column28});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvContract.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvContract.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvContract.Location = new System.Drawing.Point(6, 56);
-            this.dgvContract.Name = "dgvContract";
-            this.dgvContract.ReadOnly = true;
-            this.dgvContract.Size = new System.Drawing.Size(610, 298);
-            this.dgvContract.TabIndex = 11;
-            // 
-            // Column24
-            // 
-            this.Column24.DataPropertyName = "ID";
-            this.Column24.HeaderText = "شماره";
-            this.Column24.Name = "Column24";
-            this.Column24.ReadOnly = true;
-            this.Column24.Visible = false;
-            // 
-            // Column25
-            // 
-            this.Column25.DataPropertyName = "ContractID";
-            this.Column25.HeaderText = "شماره قرارداد";
-            this.Column25.Name = "Column25";
-            this.Column25.ReadOnly = true;
-            this.Column25.Width = 120;
-            // 
-            // Column29
-            // 
-            this.Column29.DataPropertyName = "FactoryName";
-            this.Column29.HeaderText = "نام کارخانه";
-            this.Column29.Name = "Column29";
-            this.Column29.ReadOnly = true;
-            this.Column29.Width = 120;
-            // 
-            // Column26
-            // 
-            this.Column26.DataPropertyName = "CustomerID";
-            this.Column26.HeaderText = "شماره مشتری";
-            this.Column26.Name = "Column26";
-            this.Column26.ReadOnly = true;
-            this.Column26.Visible = false;
-            this.Column26.Width = 120;
-            // 
-            // Column27
-            // 
-            this.Column27.DataPropertyName = "ContractDate";
-            this.Column27.HeaderText = "تاریخ قرارداد";
-            this.Column27.Name = "Column27";
-            this.Column27.ReadOnly = true;
-            this.Column27.Width = 120;
-            // 
-            // Column28
-            // 
-            this.Column28.DataPropertyName = "ContractTitle";
-            this.Column28.HeaderText = "عنوان قرارداد";
-            this.Column28.Name = "Column28";
-            this.Column28.ReadOnly = true;
-            this.Column28.Width = 180;
-            // 
-            // btnSearchContract
-            // 
-            this.btnSearchContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSearchContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSearchContract.Location = new System.Drawing.Point(405, 18);
-            this.btnSearchContract.Name = "btnSearchContract";
-            this.btnSearchContract.Size = new System.Drawing.Size(75, 32);
-            this.btnSearchContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSearchContract.TabIndex = 10;
-            this.btnSearchContract.Text = "جست و جو";
-            // 
-            // btnNewContract
-            // 
-            this.btnNewContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnNewContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnNewContract.Location = new System.Drawing.Point(486, 18);
-            this.btnNewContract.Name = "btnNewContract";
-            this.btnNewContract.Size = new System.Drawing.Size(130, 32);
-            this.btnNewContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnNewContract.TabIndex = 9;
-            this.btnNewContract.Text = "ایجاد قرارداد جدید";
-            this.btnNewContract.Click += new System.EventHandler(this.btnNewContract_Click);
             // 
             // ribbonPanel4
             // 
@@ -1794,13 +1822,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             this.ribbonPanel3.ResumeLayout(false);
             this.grbxAdminTool.ResumeLayout(false);
+            this.ribbonPanel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContract)).EndInit();
             this.ribbonPanel5.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             this.grbxRestore.ResumeLayout(false);
             this.grbxBackup.ResumeLayout(false);
             this.groupPanel1.ResumeLayout(false);
-            this.ribbonPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvContract)).EndInit();
             this.ribbonPanel6.ResumeLayout(false);
             this.grbxEditUser.ResumeLayout(false);
             this.grbxEditUser.PerformLayout();
@@ -1942,5 +1970,7 @@
         private DevComponents.DotNetBar.ButtonX btnAddProduct;
         private DevComponents.DotNetBar.ButtonX btnProduction;
         private DevComponents.DotNetBar.ButtonX buttonX1;
+        private DevComponents.DotNetBar.ButtonX btnTolidHalabGhoti;
+        private DevComponents.DotNetBar.ButtonX buttonX2;
     }
 }

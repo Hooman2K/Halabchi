@@ -43,6 +43,24 @@
                 context.Storages.Add(storage);
                 base.Seed(context);
             }
+            if(!context.TolidHalabGhotis.Any())
+            {
+                TolidHalabGhoti thg = new TolidHalabGhoti()
+                {
+                    Year = 0,
+                    Month = 0,
+                    Day = 0,
+                    Date = "0000/00/00",
+                    PipeLineName = "بدون خط تولید",
+                    MojodiAval = 0,
+                    Tolid = 0,
+                    JamKol = 0,
+                    TahvilAnbar = 0,
+                    MandeAkhar = 0,
+                };
+                context.TolidHalabGhotis.Add(thg);
+                base.Seed(context);
+            }
         }
     }
 }

@@ -71,3 +71,4 @@ C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmP
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.BulkInsert.dll
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.MappingAPI.dll
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.Utilities.dll
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmTolidHalabGhoti.resources

@@ -70,6 +70,7 @@ namespace HalabchiCRM
                     db.SaveChanges();
                     FarsiMessageBox.MessageBox.Show("موفقیت", "خط با موفقیت ویرایش شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
                     LoadPipLine();
+                    btnRegister.Text = "ثبت";
                     _isNew = true;
                 }
             }
@@ -78,6 +79,7 @@ namespace HalabchiCRM
         private void dgvPipeLine_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             _isNew = false;
+            btnRegister.Text = "ویرایش";
             _id = int.Parse(dgvPipeLine.CurrentRow.Cells[0].Value.ToString());
             txtPipeLineName.Text = dgvPipeLine.CurrentRow.Cells[1].Value.ToString();
         }
@@ -85,6 +87,14 @@ namespace HalabchiCRM
         private void frmPipeLine_Load(object sender, EventArgs e)
         {
             LoadPipLine();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            _isNew = true;
+            btnRegister.Text = "ثبت";
+            LoadPipLine();
+            txtPipeLineName.Focus();
         }
     }
 }
