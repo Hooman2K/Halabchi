@@ -43,6 +43,8 @@
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.txtContractID = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.grbxType = new System.Windows.Forms.GroupBox();
+            this.cmbxSelectStorage = new System.Windows.Forms.ComboBox();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.labelX5 = new DevComponents.DotNetBar.LabelX();
             this.txtProductName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX7 = new DevComponents.DotNetBar.LabelX();
@@ -59,8 +61,7 @@
             this.contextMenuBar1 = new DevComponents.DotNetBar.ContextMenuBar();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
-            this.labelX6 = new DevComponents.DotNetBar.LabelX();
-            this.cmbxSelectStorage = new System.Windows.Forms.ComboBox();
+            this.lblDate = new DevComponents.DotNetBar.LabelX();
             this.grbxContractInfo.SuspendLayout();
             this.grbxType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
@@ -106,6 +107,7 @@
             // grbxContractInfo
             // 
             this.grbxContractInfo.BackColor = System.Drawing.Color.Transparent;
+            this.grbxContractInfo.Controls.Add(this.lblDate);
             this.grbxContractInfo.Controls.Add(this.txtContractDate);
             this.grbxContractInfo.Controls.Add(this.lblInfo);
             this.grbxContractInfo.Controls.Add(this.labelX3);
@@ -129,6 +131,7 @@
             this.txtContractDate.Size = new System.Drawing.Size(143, 23);
             this.txtContractDate.TabIndex = 12;
             this.txtContractDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtContractDate.DoubleClick += new System.EventHandler(this.txtContractDate_DoubleClick);
             // 
             // lblInfo
             // 
@@ -262,6 +265,30 @@
             this.grbxType.Size = new System.Drawing.Size(502, 256);
             this.grbxType.TabIndex = 1;
             this.grbxType.TabStop = false;
+            // 
+            // cmbxSelectStorage
+            // 
+            this.cmbxSelectStorage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxSelectStorage.FormattingEnabled = true;
+            this.cmbxSelectStorage.Location = new System.Drawing.Point(12, 20);
+            this.cmbxSelectStorage.Name = "cmbxSelectStorage";
+            this.cmbxSelectStorage.Size = new System.Drawing.Size(401, 24);
+            this.cmbxSelectStorage.TabIndex = 25;
+            this.cmbxSelectStorage.SelectedIndexChanged += new System.EventHandler(this.cmbxSelectStorage_SelectedIndexChanged);
+            // 
+            // labelX6
+            // 
+            this.labelX6.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX6.Location = new System.Drawing.Point(418, 20);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX6.Size = new System.Drawing.Size(78, 18);
+            this.labelX6.TabIndex = 24;
+            this.labelX6.Text = "انتخاب انبار : ";
             // 
             // labelX5
             // 
@@ -453,29 +480,20 @@
             this.buttonItem2.Text = "خذف از جدول";
             this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
             // 
-            // labelX6
+            // lblDate
             // 
-            this.labelX6.AutoSize = true;
+            this.lblDate.AutoSize = true;
             // 
             // 
             // 
-            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX6.Location = new System.Drawing.Point(418, 20);
-            this.labelX6.Name = "labelX6";
-            this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX6.Size = new System.Drawing.Size(78, 18);
-            this.labelX6.TabIndex = 24;
-            this.labelX6.Text = "انتخاب انبار : ";
-            // 
-            // cmbxSelectStorage
-            // 
-            this.cmbxSelectStorage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxSelectStorage.FormattingEnabled = true;
-            this.cmbxSelectStorage.Location = new System.Drawing.Point(12, 20);
-            this.cmbxSelectStorage.Name = "cmbxSelectStorage";
-            this.cmbxSelectStorage.Size = new System.Drawing.Size(401, 24);
-            this.cmbxSelectStorage.TabIndex = 25;
-            this.cmbxSelectStorage.SelectedIndexChanged += new System.EventHandler(this.cmbxSelectStorage_SelectedIndexChanged);
+            this.lblDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblDate.Location = new System.Drawing.Point(418, 76);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblDate.Size = new System.Drawing.Size(54, 18);
+            this.lblDate.TabIndex = 44;
+            this.lblDate.Text = "-----------";
+            this.lblDate.Visible = false;
             // 
             // frmContract
             // 
@@ -543,5 +561,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.ComboBox cmbxSelectStorage;
         private DevComponents.DotNetBar.LabelX labelX6;
+        private DevComponents.DotNetBar.LabelX lblDate;
     }
 }

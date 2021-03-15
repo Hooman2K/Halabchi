@@ -532,5 +532,21 @@ order by start_time desc");
             thg.ShowDialog();
             this.Show();
         }
+
+        private void btnChap_Click(object sender, EventArgs e)
+        {
+            frmTolidChap tch = new frmTolidChap();
+            this.Hide();
+            tch.ShowDialog();
+            this.Show();
+        }
+
+        private void btnAnbar_Click(object sender, EventArgs e)
+        {
+            frmAnbar anbar = new frmAnbar();
+            this.Hide();
+            anbar.ShowDialog();
+            this.Show();
+        }
     }
 }

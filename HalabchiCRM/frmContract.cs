@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
+using System.Globalization;
 
 namespace HalabchiCRM
 {
@@ -21,6 +22,7 @@ namespace HalabchiCRM
         string _factoryName = "";
         double _unit;
         bool _isSave = false;
+        DateTime dt;
         public class TypeOf
         {
             //کلاس جهت مقدار دهی دیتا گرید
@@ -312,6 +314,21 @@ namespace HalabchiCRM
                 e.Cancel = true;
                 FarsiMessageBox.MessageBox.Show("اخطار", "قرارداد در حال اجرا میباشد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
             }
+        }
+        private string PersianCalenders()
+        {
+            string date = "";
+            dt = DateTime.Now;
+            lblDate.Text = dt.Year + "/" + dt.Month + "/" + dt.Day;
+            PersianCalendar PC = new PersianCalendar();
+            dt = DateTime.Parse(lblDate.Text);
+            lblDate.Text = PC.GetYear(dt).ToString("0000") + "/" + PC.GetMonth(dt).ToString("00") + "/" + PC.GetDayOfMonth(dt).ToString("00");
+            date = lblDate.Text;
+            return date;
+        }
+        private void txtContractDate_DoubleClick(object sender, EventArgs e)
+        {
+            txtContractDate.Text = PersianCalenders();
         }
     }
 }

@@ -167,5 +167,10 @@ namespace HalabchiCRM
             else
                 return;
         }
+
+        private void txtDate_DoubleClick(object sender, EventArgs e)
+        {
+            txtDate.Text = PersianCalenders();
+        }
     }
 }

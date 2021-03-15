@@ -72,3 +72,5 @@ C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.MappingAPI.dll
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.Utilities.dll
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmTolidHalabGhoti.resources
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmTolidChap.resources
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmAnbar.resources
