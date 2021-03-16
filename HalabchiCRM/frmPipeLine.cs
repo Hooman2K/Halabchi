@@ -32,47 +32,56 @@ namespace HalabchiCRM
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            if (_isNew)
+            if (txtPipeLineName.Text != "")
             {
-                if (txtPipeLineName.Text != null)
+                if (_isNew)
                 {
-                    using (var db = new HalabchiDB())
+                    if (txtPipeLineName.Text != null)
                     {
-                        bool exist = db.PipeLines.Where(u => u.PipeLineName == txtPipeLineName.Text).Any();
-                        if (exist == false)
+                        using (var db = new HalabchiDB())
                         {
-                            PipeLine Pipe = new PipeLine()
+                            bool exist = db.PipeLines.Where(u => u.PipeLineName == txtPipeLineName.Text).Any();
+                            if (exist == false)
                             {
-                                PipeLineName = txtPipeLineName.Text
-                            };
-                            db.PipeLines.Add(Pipe);
-                            db.SaveChanges();
-                            FarsiMessageBox.MessageBox.Show("موفقیت", "خط جدید با موفقیت ثبت شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
-                            LoadPipLine();
+                                PipeLine Pipe = new PipeLine()
+                                {
+                                    PipeLineName = txtPipeLineName.Text
+                                };
+                                db.PipeLines.Add(Pipe);
+                                db.SaveChanges();
+                                FarsiMessageBox.MessageBox.Show("موفقیت", "خط جدید با موفقیت ثبت شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                                LoadPipLine();
+                            }
+                            else
+                            {
+                                FarsiMessageBox.MessageBox.Show("خطا", "نام خط تکراری است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                            }
                         }
-                        else
-                        {
-                            FarsiMessageBox.MessageBox.Show("خطا", "نام خط تکراری است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
-                        }
+                    }
+                    else
+                    {
+                        FarsiMessageBox.MessageBox.Show("خطا", "نام خط وارد نشده است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
                     }
                 }
                 else
                 {
-                    FarsiMessageBox.MessageBox.Show("خطا", "نام خط وارد نشده است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                    using (var db = new HalabchiDB())
+                    {
+                        var Pipe = db.PipeLines.Where(u => u.ID == _id).FirstOrDefault();
+                        Pipe.PipeLineName = txtPipeLineName.Text;
+                        db.SaveChanges();
+                        FarsiMessageBox.MessageBox.Show("موفقیت", "خط با موفقیت ویرایش شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                        LoadPipLine();
+                        btnRegister.Text = "ثبت";
+                        _isNew = true;
+                    }
                 }
             }
             else
             {
-                using (var db = new HalabchiDB())
-                {
-                    var Pipe = db.PipeLines.Where(u => u.ID == _id).FirstOrDefault();
-                    Pipe.PipeLineName = txtPipeLineName.Text;
-                    db.SaveChanges();
-                    FarsiMessageBox.MessageBox.Show("موفقیت", "خط با موفقیت ویرایش شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
-                    LoadPipLine();
-                    btnRegister.Text = "ثبت";
-                    _isNew = true;
-                }
+                FarsiMessageBox.MessageBox.Show("اخطار", "وارد کردن نام خط تولید الزامی میباشد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                txtPipeLineName.Focus();
+                return;
             }
         }
 
