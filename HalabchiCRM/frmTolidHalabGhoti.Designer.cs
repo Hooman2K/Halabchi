@@ -61,6 +61,7 @@
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.lblDate = new DevComponents.DotNetBar.LabelX();
             this.chbxAmarKhat = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTolid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -433,7 +434,7 @@
             // 
             // 
             this.lblDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblDate.Location = new System.Drawing.Point(665, 48);
+            this.lblDate.Location = new System.Drawing.Point(608, 43);
             this.lblDate.Name = "lblDate";
             this.lblDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.lblDate.Size = new System.Drawing.Size(54, 18);
@@ -456,11 +457,23 @@
             this.chbxAmarKhat.Text = "آمار خط";
             this.chbxAmarKhat.CheckedChanged += new System.EventHandler(this.chbxAmarKhat_CheckedChanged);
             // 
+            // btnExport
+            // 
+            this.btnExport.BackgroundImage = global::HalabchiCRM.Properties.Resources.pdf;
+            this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExport.Location = new System.Drawing.Point(725, 38);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(45, 37);
+            this.btnExport.TabIndex = 45;
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // frmTolidHalabGhoti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 252);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.chbxAmarKhat);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.btnCancel);
@@ -528,5 +541,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private DevComponents.DotNetBar.LabelX lblDate;
         private DevComponents.DotNetBar.Controls.CheckBoxX chbxAmarKhat;
+        private System.Windows.Forms.Button btnExport;
     }
 }

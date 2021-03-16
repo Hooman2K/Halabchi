@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using System.Globalization;
 
+using Stimulsoft.Report;
+
 namespace HalabchiCRM
 {
     public partial class frmAnbar : Office2007Form
@@ -19,6 +21,9 @@ namespace HalabchiCRM
             InitializeComponent();
         }
         DateTime dt;
+
+        StiReport report = new StiReport();
+        SaveFileDialog _save;
         private string PersianCalenders()
         {
             string date = "";
@@ -77,6 +82,24 @@ namespace HalabchiCRM
             else
             {
                 Mojodi(cmbxPipeLine.Text);
+            }
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            using (var db = new HalabchiDB())
+            {
+                var anbar = db.TahvilAnabrs.ToList();
+                report.Load(Application.StartupPath + "\\TahvilAnbar.mrt");
+                report.RegBusinessObject("TahvilAnbar", anbar);
+                report.Render(false);
+
+                _save = new SaveFileDialog();
+                _save.Filter = "PDF File (.pdf)|*.pdf";
+                if (_save.ShowDialog() == DialogResult.OK)
+                {
+                    report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                }
             }
         }
     }

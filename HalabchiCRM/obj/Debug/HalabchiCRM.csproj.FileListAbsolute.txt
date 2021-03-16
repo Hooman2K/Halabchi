@@ -75,3 +75,16 @@ C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmT
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmTolidChap.resources
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmAnbar.resources
 C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmZayeatHalabGhoti.resources
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Base.dll
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Controls.dll
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Controls.Win.dll
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Data.dll
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Report.dll
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Report.Win.dll
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Base.pdb
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Base.xml
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Controls.Win.pdb
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Controls.Win.xml
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Data.pdb
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Report.pdb
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Report.xml

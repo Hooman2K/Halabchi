@@ -285,28 +285,7 @@ namespace HalabchiCRM
 
         private void txtProductCount_Leave(object sender, EventArgs e)
         {
-            double mat1 = 0;
 
-            if (txtProductCount.Text != "")
-            {
-                lblHalab.Text = "";
-
-                using (var db = new HalabchiDB())
-                {
-                    var id = db.ProductionFormulaNames.Where(u => u.FormulaName == cmbxFormula.Text).FirstOrDefault();
-
-                    var item = db.ProductionFormulaTypes.Where(u => u.FormulaID == id.ID);
-                    foreach (var i in item)
-                    {
-                        mat1 = (double.Parse(i.ProductUnitPerOne) * double.Parse(txtProductCount.Text) / 1000);
-                        lblHalab.Text += i.MaterialName + " : " + mat1 + Environment.NewLine;
-                    }
-                }
-            }
-            else
-            {
-                lblHalab.Text = "-----";
-            }
         }
 
         private void txtProductCount_KeyPress(object sender, KeyPressEventArgs e)
@@ -343,13 +322,29 @@ namespace HalabchiCRM
 
         private void btnAdds_Click(object sender, EventArgs e)
         {
-            double lastCount = double.Parse(txtLastCount.Text);
-            double count = double.Parse(txtProductCount.Text);
+            double mat1 = 0;
 
-            txtLastCount.Text = (lastCount + count).ToString();
+            if (txtProductCount.Text != "")
+            {
+                lblHalab.Text = "";
 
-            count = 0;
-            lastCount = 0;
+                using (var db = new HalabchiDB())
+                {
+                    var id = db.ProductionFormulaNames.Where(u => u.FormulaName == cmbxFormula.Text).FirstOrDefault();
+
+                    var item = db.ProductionFormulaTypes.Where(u => u.FormulaID == id.ID);
+                    foreach (var i in item)
+                    {
+                        mat1 = (double.Parse(i.ProductUnitPerOne) * double.Parse(txtProductCount.Text) / 1000);
+                        lblHalab.Text += i.MaterialName + " : " + mat1 + Environment.NewLine;
+                    }
+                }
+                btnAdds.Enabled = false;
+            }
+            else
+            {
+                lblHalab.Text = "-----";
+            }
         }
     }
 }

@@ -34,11 +34,6 @@
             this.txtProductName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.dgvProduct = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.cmbxSelectStorage = new System.Windows.Forms.ComboBox();
-            this.cmbxUnit = new System.Windows.Forms.ComboBox();
-            this.labelX4 = new DevComponents.DotNetBar.LabelX();
-            this.btnAddProduct = new DevComponents.DotNetBar.ButtonX();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +41,11 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labelX3 = new DevComponents.DotNetBar.LabelX();
+            this.cmbxSelectStorage = new System.Windows.Forms.ComboBox();
+            this.cmbxUnit = new System.Windows.Forms.ComboBox();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.btnAddProduct = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,75 +139,6 @@
             this.dgvProduct.TabIndex = 5;
             this.dgvProduct.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduct_CellContentDoubleClick);
             // 
-            // labelX3
-            // 
-            this.labelX3.AutoSize = true;
-            this.labelX3.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX3.Location = new System.Drawing.Point(432, 38);
-            this.labelX3.Name = "labelX3";
-            this.labelX3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX3.Size = new System.Drawing.Size(78, 18);
-            this.labelX3.TabIndex = 5;
-            this.labelX3.Text = "انتخاب انبار : ";
-            // 
-            // cmbxSelectStorage
-            // 
-            this.cmbxSelectStorage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxSelectStorage.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.cmbxSelectStorage.FormattingEnabled = true;
-            this.cmbxSelectStorage.Location = new System.Drawing.Point(267, 37);
-            this.cmbxSelectStorage.Name = "cmbxSelectStorage";
-            this.cmbxSelectStorage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbxSelectStorage.Size = new System.Drawing.Size(159, 24);
-            this.cmbxSelectStorage.TabIndex = 2;
-            this.cmbxSelectStorage.SelectedIndexChanged += new System.EventHandler(this.cmbxSelectStorage_SelectedIndexChanged);
-            // 
-            // cmbxUnit
-            // 
-            this.cmbxUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxUnit.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.cmbxUnit.FormattingEnabled = true;
-            this.cmbxUnit.Items.AddRange(new object[] {
-            "کیلوگر",
-            "عدد",
-            "لیتر"});
-            this.cmbxUnit.Location = new System.Drawing.Point(133, 38);
-            this.cmbxUnit.Name = "cmbxUnit";
-            this.cmbxUnit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbxUnit.Size = new System.Drawing.Size(79, 24);
-            this.cmbxUnit.TabIndex = 3;
-            // 
-            // labelX4
-            // 
-            this.labelX4.AutoSize = true;
-            this.labelX4.BackColor = System.Drawing.Color.Transparent;
-            // 
-            // 
-            // 
-            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX4.Location = new System.Drawing.Point(218, 40);
-            this.labelX4.Name = "labelX4";
-            this.labelX4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX4.Size = new System.Drawing.Size(43, 18);
-            this.labelX4.TabIndex = 7;
-            this.labelX4.Text = "واحد : ";
-            // 
-            // btnAddProduct
-            // 
-            this.btnAddProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAddProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddProduct.Location = new System.Drawing.Point(11, 38);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(116, 23);
-            this.btnAddProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddProduct.TabIndex = 4;
-            this.btnAddProduct.Text = "اضافه کردن";
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
-            // 
             // Column1
             // 
             this.Column1.DataPropertyName = "ID";
@@ -262,6 +193,75 @@
             this.Column7.Name = "Column7";
             this.Column7.ReadOnly = true;
             this.Column7.Visible = false;
+            // 
+            // labelX3
+            // 
+            this.labelX3.AutoSize = true;
+            this.labelX3.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX3.Location = new System.Drawing.Point(432, 38);
+            this.labelX3.Name = "labelX3";
+            this.labelX3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX3.Size = new System.Drawing.Size(78, 18);
+            this.labelX3.TabIndex = 5;
+            this.labelX3.Text = "انتخاب انبار : ";
+            // 
+            // cmbxSelectStorage
+            // 
+            this.cmbxSelectStorage.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxSelectStorage.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cmbxSelectStorage.FormattingEnabled = true;
+            this.cmbxSelectStorage.Location = new System.Drawing.Point(267, 37);
+            this.cmbxSelectStorage.Name = "cmbxSelectStorage";
+            this.cmbxSelectStorage.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbxSelectStorage.Size = new System.Drawing.Size(159, 24);
+            this.cmbxSelectStorage.TabIndex = 2;
+            this.cmbxSelectStorage.SelectedIndexChanged += new System.EventHandler(this.cmbxSelectStorage_SelectedIndexChanged);
+            // 
+            // cmbxUnit
+            // 
+            this.cmbxUnit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxUnit.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cmbxUnit.FormattingEnabled = true;
+            this.cmbxUnit.Items.AddRange(new object[] {
+            "کیلوگرم",
+            "عدد",
+            "لیتر"});
+            this.cmbxUnit.Location = new System.Drawing.Point(133, 38);
+            this.cmbxUnit.Name = "cmbxUnit";
+            this.cmbxUnit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbxUnit.Size = new System.Drawing.Size(79, 24);
+            this.cmbxUnit.TabIndex = 3;
+            // 
+            // labelX4
+            // 
+            this.labelX4.AutoSize = true;
+            this.labelX4.BackColor = System.Drawing.Color.Transparent;
+            // 
+            // 
+            // 
+            this.labelX4.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX4.Location = new System.Drawing.Point(218, 40);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX4.Size = new System.Drawing.Size(43, 18);
+            this.labelX4.TabIndex = 7;
+            this.labelX4.Text = "واحد : ";
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddProduct.Location = new System.Drawing.Point(11, 38);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(116, 23);
+            this.btnAddProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddProduct.TabIndex = 4;
+            this.btnAddProduct.Text = "اضافه کردن";
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // frmProduct
             // 

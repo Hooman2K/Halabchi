@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using System.Globalization;
+using Stimulsoft.Report;
 
 namespace HalabchiCRM
 {
@@ -19,6 +20,9 @@ namespace HalabchiCRM
             InitializeComponent();
         }
         DateTime dt;
+        StiReport report = new StiReport();
+        SaveFileDialog _save;
+
         int _id;
         private void LoadPipeLine()
         {
@@ -171,6 +175,20 @@ namespace HalabchiCRM
         private void txtDate_DoubleClick(object sender, EventArgs e)
         {
             txtDate.Text = PersianCalenders();
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            report.Load(Application.StartupPath + "\\Tolid.mrt");
+            report.RegBusinessObject("TolidGhoti", dgvTolid.DataSource);
+            report.Render(false);
+
+            _save = new SaveFileDialog();
+            _save.Filter = "PDF File (.pdf)|*.pdf";
+            if (_save.ShowDialog() == DialogResult.OK)
+            {
+                report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+            }
         }
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvAnbar = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +40,7 @@
             this.cmbxPipeLine = new System.Windows.Forms.ComboBox();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.lblDate = new DevComponents.DotNetBar.LabelX();
+            this.btnExport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnbar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,21 +57,21 @@
             this.Column5,
             this.Column6,
             this.Column7});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAnbar.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvAnbar.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAnbar.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvAnbar.Location = new System.Drawing.Point(12, 38);
             this.dgvAnbar.Name = "dgvAnbar";
             this.dgvAnbar.ReadOnly = true;
             this.dgvAnbar.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvAnbar.Size = new System.Drawing.Size(392, 380);
-            this.dgvAnbar.TabIndex = 0;
+            this.dgvAnbar.TabIndex = 1;
             // 
             // Column1
             // 
@@ -137,7 +138,7 @@
             this.cmbxPipeLine.Name = "cmbxPipeLine";
             this.cmbxPipeLine.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxPipeLine.Size = new System.Drawing.Size(340, 24);
-            this.cmbxPipeLine.TabIndex = 43;
+            this.cmbxPipeLine.TabIndex = 0;
             this.cmbxPipeLine.SelectedIndexChanged += new System.EventHandler(this.cmbxPipeLine_SelectedIndexChanged);
             // 
             // labelX10
@@ -169,11 +170,23 @@
             this.lblDate.Text = "-----------";
             this.lblDate.Visible = false;
             // 
+            // btnExport
+            // 
+            this.btnExport.BackgroundImage = global::HalabchiCRM.Properties.Resources.pdf;
+            this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExport.Location = new System.Drawing.Point(329, 424);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 60);
+            this.btnExport.TabIndex = 2;
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
             // frmAnbar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 435);
+            this.ClientSize = new System.Drawing.Size(416, 483);
+            this.Controls.Add(this.btnExport);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.cmbxPipeLine);
             this.Controls.Add(this.labelX10);
@@ -207,5 +220,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private DevComponents.DotNetBar.LabelX lblDate;
+        private System.Windows.Forms.Button btnExport;
     }
 }

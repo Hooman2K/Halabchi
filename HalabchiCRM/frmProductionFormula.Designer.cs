@@ -314,7 +314,7 @@
             // 
             this.btnSave.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSave.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSave.Location = new System.Drawing.Point(6, 431);
+            this.btnSave.Location = new System.Drawing.Point(136, 431);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
             this.btnSave.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -399,13 +399,13 @@
             // 
             this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCancel.Location = new System.Drawing.Point(145, 431);
+            this.btnCancel.Location = new System.Drawing.Point(6, 431);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnCancel.Size = new System.Drawing.Size(124, 28);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnCancel.TabIndex = 18;
+            this.btnCancel.TabIndex = 10;
             this.btnCancel.Text = "لغو";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
@@ -418,7 +418,7 @@
             this.cmbxProductName.Name = "cmbxProductName";
             this.cmbxProductName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxProductName.Size = new System.Drawing.Size(168, 24);
-            this.cmbxProductName.TabIndex = 19;
+            this.cmbxProductName.TabIndex = 3;
             // 
             // cmbxMaterial
             // 
@@ -429,7 +429,7 @@
             this.cmbxMaterial.Name = "cmbxMaterial";
             this.cmbxMaterial.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxMaterial.Size = new System.Drawing.Size(195, 24);
-            this.cmbxMaterial.TabIndex = 20;
+            this.cmbxMaterial.TabIndex = 4;
             // 
             // grbxProductionFormula
             // 
@@ -452,7 +452,7 @@
             this.grbxProductionFormula.Location = new System.Drawing.Point(12, 46);
             this.grbxProductionFormula.Name = "grbxProductionFormula";
             this.grbxProductionFormula.Size = new System.Drawing.Size(515, 480);
-            this.grbxProductionFormula.TabIndex = 21;
+            this.grbxProductionFormula.TabIndex = 1;
             this.grbxProductionFormula.TabStop = false;
             // 
             // frmProductionFormula

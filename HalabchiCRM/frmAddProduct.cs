@@ -35,6 +35,7 @@ namespace HalabchiCRM
             txtProductCode.Enabled = txtProductName.Enabled = true;
             txtProductCode.SelectAll();
             txtProductCode.Focus();
+            btnAdd.Enabled = false;
         }
 
         private void LoadStorage()
@@ -112,6 +113,7 @@ namespace HalabchiCRM
             AutoComplit(cmbxSelectStorage.Text);
             btnAddProduct.Enabled = false;
             txtProductCount.Enabled = false;
+            btnAdd.Enabled = false;
         }
 
         private void cmbxSelectStorage_SelectedIndexChanged(object sender, EventArgs e)
@@ -146,6 +148,7 @@ namespace HalabchiCRM
             txtProductCount.Focus();
 
             btnAddProduct.Enabled = true;
+            btnAdd.Enabled = true;
 
             dgvProduct.Enabled = false;
         }
@@ -166,6 +169,7 @@ namespace HalabchiCRM
                     cmbxUnit.SelectedIndex = 0;
                     AutoComplit(cmbxSelectStorage.Text);
                     FillData(cmbxSelectStorage.Text);
+                    btnAdd.Enabled = true;
                 }
             }
             else
@@ -182,6 +186,17 @@ namespace HalabchiCRM
 
         private void txtProductCount_Leave(object sender, EventArgs e)
         {
+            
+        }
+
+        private void txtProductCount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            AppInfo pro = new AppInfo();
+            pro.JustNumber(sender, e);
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
             if (txtProductCount.Text != "")
             {
                 double lastCount = double.Parse(txtLastCount.Text);
@@ -191,13 +206,10 @@ namespace HalabchiCRM
 
                 count = 0;
                 lastCount = 0;
+                btnAdd.Enabled = false;
             }
-        }
-
-        private void txtProductCount_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            AppInfo pro = new AppInfo();
-            pro.JustNumber(sender, e);
+            else
+                return;
         }
     }
 }
