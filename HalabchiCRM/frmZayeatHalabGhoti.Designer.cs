@@ -36,6 +36,27 @@
             this.txtGheychi = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.dgvZayeat = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtJosh = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.txtNeyker = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -58,8 +79,6 @@
             this.labelX13 = new DevComponents.DotNetBar.LabelX();
             this.txtSimerSar = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX14 = new DevComponents.DotNetBar.LabelX();
-            this.txtJamekol = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.labelX15 = new DevComponents.DotNetBar.LabelX();
             this.txtKore = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.labelX16 = new DevComponents.DotNetBar.LabelX();
             this.txtLastikZani = new DevComponents.DotNetBar.Controls.TextBoxX();
@@ -70,27 +89,6 @@
             this.btnRegister = new DevComponents.DotNetBar.ButtonX();
             this.chbxAmarKhat = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.lblDate = new DevComponents.DotNetBar.LabelX();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column21 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZayeat)).BeginInit();
             this.SuspendLayout();
             // 
@@ -104,6 +102,7 @@
             this.cmbxPipeLine.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxPipeLine.Size = new System.Drawing.Size(167, 24);
             this.cmbxPipeLine.TabIndex = 1;
+            this.cmbxPipeLine.SelectedIndexChanged += new System.EventHandler(this.cmbxPipeLine_SelectedIndexChanged);
             // 
             // labelX10
             // 
@@ -209,12 +208,163 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvZayeat.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvZayeat.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvZayeat.Location = new System.Drawing.Point(12, 188);
+            this.dgvZayeat.Location = new System.Drawing.Point(12, 160);
             this.dgvZayeat.Name = "dgvZayeat";
             this.dgvZayeat.ReadOnly = true;
             this.dgvZayeat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dgvZayeat.Size = new System.Drawing.Size(1015, 275);
+            this.dgvZayeat.Size = new System.Drawing.Size(1015, 303);
             this.dgvZayeat.TabIndex = 21;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Id";
+            this.Column1.HeaderText = "شماره";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Year";
+            this.Column2.HeaderText = "سال";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "Month";
+            this.Column3.HeaderText = "ماه";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Day";
+            this.Column4.HeaderText = "روز";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "Date";
+            this.Column5.HeaderText = "تاریخ";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "PipeLineName";
+            this.Column6.HeaderText = "خط تولید";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "Gheychi";
+            this.Column7.HeaderText = "قیچی";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Josh";
+            this.Column8.HeaderText = "جوش";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "ChaharGosh";
+            this.Column9.HeaderText = "چهارگوش کن";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "Neyker";
+            this.Column10.HeaderText = "نیکر";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "KhatAndaz";
+            this.Column11.HeaderText = "خط انداز";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "LakPash";
+            this.Column12.HeaderText = "لاک پاش";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "FelanchSar";
+            this.Column13.HeaderText = "فلنچ سر";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "FelachKaf";
+            this.Column14.HeaderText = "فلنچ کف";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "SimerSar";
+            this.Column15.HeaderText = "سیمر سر";
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
+            // Column16
+            // 
+            this.Column16.DataPropertyName = "SimerKaf";
+            this.Column16.HeaderText = "سیمر کف";
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            // 
+            // Column17
+            // 
+            this.Column17.DataPropertyName = "Fider";
+            this.Column17.HeaderText = "فیدر";
+            this.Column17.Name = "Column17";
+            this.Column17.ReadOnly = true;
+            // 
+            // Column18
+            // 
+            this.Column18.DataPropertyName = "Ghaleb";
+            this.Column18.HeaderText = "قالب";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            // 
+            // Column19
+            // 
+            this.Column19.DataPropertyName = "Kerling";
+            this.Column19.HeaderText = "کرلینگ";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            // 
+            // Column20
+            // 
+            this.Column20.DataPropertyName = "LastikZan";
+            this.Column20.HeaderText = "لاستیک زنی";
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
+            // 
+            // Column21
+            // 
+            this.Column21.DataPropertyName = "Kore";
+            this.Column21.HeaderText = "کوره";
+            this.Column21.Name = "Column21";
+            this.Column21.ReadOnly = true;
             // 
             // txtJosh
             // 
@@ -546,37 +696,6 @@
             this.labelX14.TabIndex = 66;
             this.labelX14.Text = "سیمر سر : ";
             // 
-            // txtJamekol
-            // 
-            // 
-            // 
-            // 
-            this.txtJamekol.Border.Class = "TextBoxBorder";
-            this.txtJamekol.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtJamekol.Location = new System.Drawing.Point(10, 130);
-            this.txtJamekol.MaxLength = 20;
-            this.txtJamekol.Name = "txtJamekol";
-            this.txtJamekol.ReadOnly = true;
-            this.txtJamekol.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtJamekol.Size = new System.Drawing.Size(167, 23);
-            this.txtJamekol.TabIndex = 17;
-            this.txtJamekol.Text = "0";
-            this.txtJamekol.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // labelX15
-            // 
-            this.labelX15.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX15.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX15.Location = new System.Drawing.Point(183, 132);
-            this.labelX15.Name = "labelX15";
-            this.labelX15.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX15.Size = new System.Drawing.Size(63, 18);
-            this.labelX15.TabIndex = 80;
-            this.labelX15.Text = "جمع کل : ";
-            // 
             // txtKore
             // 
             // 
@@ -671,7 +790,7 @@
             // 
             this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnCancel.Location = new System.Drawing.Point(10, 159);
+            this.btnCancel.Location = new System.Drawing.Point(10, 131);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -683,7 +802,7 @@
             // 
             this.btnRegister.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnRegister.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnRegister.Location = new System.Drawing.Point(100, 159);
+            this.btnRegister.Location = new System.Drawing.Point(102, 131);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(75, 23);
             this.btnRegister.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -721,157 +840,6 @@
             this.lblDate.Text = "-----------";
             this.lblDate.Visible = false;
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Id";
-            this.Column1.HeaderText = "شماره";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Year";
-            this.Column2.HeaderText = "سال";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "Month";
-            this.Column3.HeaderText = "ماه";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Visible = false;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Day";
-            this.Column4.HeaderText = "روز";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Visible = false;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "Date";
-            this.Column5.HeaderText = "تاریخ";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "PipeLineName";
-            this.Column6.HeaderText = "خط تولید";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "Gheychi";
-            this.Column7.HeaderText = "قیچی";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Josh";
-            this.Column8.HeaderText = "جوش";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "ChaharGosh";
-            this.Column9.HeaderText = "چهارگوش کن";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "Neyker";
-            this.Column10.HeaderText = "نیکر";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "KhatAndaz";
-            this.Column11.HeaderText = "خط انداز";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.DataPropertyName = "LakPash";
-            this.Column12.HeaderText = "لاک پاش";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
-            // Column13
-            // 
-            this.Column13.DataPropertyName = "FelanchSar";
-            this.Column13.HeaderText = "فلنچ سر";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            // 
-            // Column14
-            // 
-            this.Column14.DataPropertyName = "FelachKaf";
-            this.Column14.HeaderText = "فلنچ کف";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            // 
-            // Column15
-            // 
-            this.Column15.DataPropertyName = "SimerSar";
-            this.Column15.HeaderText = "سیمر سر";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            // 
-            // Column16
-            // 
-            this.Column16.DataPropertyName = "SimerKaf";
-            this.Column16.HeaderText = "سیمر کف";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            // 
-            // Column17
-            // 
-            this.Column17.DataPropertyName = "Fider";
-            this.Column17.HeaderText = "فیدر";
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
-            // 
-            // Column18
-            // 
-            this.Column18.DataPropertyName = "Ghaleb";
-            this.Column18.HeaderText = "قالب";
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            // 
-            // Column19
-            // 
-            this.Column19.DataPropertyName = "Kerling";
-            this.Column19.HeaderText = "کرلینگ";
-            this.Column19.Name = "Column19";
-            this.Column19.ReadOnly = true;
-            // 
-            // Column20
-            // 
-            this.Column20.DataPropertyName = "LastikZan";
-            this.Column20.HeaderText = "لاستیک زنی";
-            this.Column20.Name = "Column20";
-            this.Column20.ReadOnly = true;
-            // 
-            // Column21
-            // 
-            this.Column21.DataPropertyName = "Kore";
-            this.Column21.HeaderText = "کوره";
-            this.Column21.Name = "Column21";
-            this.Column21.ReadOnly = true;
-            // 
             // frmZayeatHalabGhoti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -881,8 +849,6 @@
             this.Controls.Add(this.chbxAmarKhat);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.txtJamekol);
-            this.Controls.Add(this.labelX15);
             this.Controls.Add(this.txtKore);
             this.Controls.Add(this.labelX16);
             this.Controls.Add(this.txtLastikZani);
@@ -966,8 +932,6 @@
         private DevComponents.DotNetBar.LabelX labelX13;
         private DevComponents.DotNetBar.Controls.TextBoxX txtSimerSar;
         private DevComponents.DotNetBar.LabelX labelX14;
-        private DevComponents.DotNetBar.Controls.TextBoxX txtJamekol;
-        private DevComponents.DotNetBar.LabelX labelX15;
         private DevComponents.DotNetBar.Controls.TextBoxX txtKore;
         private DevComponents.DotNetBar.LabelX labelX16;
         private DevComponents.DotNetBar.Controls.TextBoxX txtLastikZani;

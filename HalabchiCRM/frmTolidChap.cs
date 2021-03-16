@@ -96,6 +96,7 @@ namespace HalabchiCRM
                         db.TolidZayeatChaps.Add(tzch);
                         db.SaveChanges();
                         FarsiMessageBox.MessageBox.Show("موفقیت", "آمار چاپ با موفقیت ثبت شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                        LoadChap();
                         Clear();
                     }
                 }

@@ -30,7 +30,7 @@ namespace HalabchiCRM
                         txt.ResetText();
                 }
             }
-            txtJamekol.Text = "0";
+            //txtJamekol.Text = "0";
             txtDate.ResetText();
             cmbxPipeLine.SelectedIndex = 0;
             chbxAmarKhat.Checked = false;
@@ -197,6 +197,14 @@ namespace HalabchiCRM
                     Clear();
                 }
             }
+        }
+
+        private void cmbxPipeLine_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (chbxAmarKhat.Checked == true)
+                AmareKhat(cmbxPipeLine.Text);
+            else
+                return;
         }
     }
 }

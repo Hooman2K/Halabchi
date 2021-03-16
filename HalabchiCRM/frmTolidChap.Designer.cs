@@ -290,7 +290,7 @@
             this.labelX7.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX7.Size = new System.Drawing.Size(102, 18);
             this.labelX7.TabIndex = 55;
-            this.labelX7.Text = "چاپ کرحله دوم : ";
+            this.labelX7.Text = "چاپ مرحله دوم : ";
             // 
             // txtJamkonAKhar
             // 
