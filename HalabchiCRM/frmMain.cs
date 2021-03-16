@@ -548,5 +548,13 @@ order by start_time desc");
             anbar.ShowDialog();
             this.Show();
         }
+
+        private void btnZayeat_Click(object sender, EventArgs e)
+        {
+            frmZayeatHalabGhoti zgh = new frmZayeatHalabGhoti();
+            this.Hide();
+            zgh.ShowDialog();
+            this.Show();
+        }
     }
 }
