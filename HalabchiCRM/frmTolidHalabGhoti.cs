@@ -179,6 +179,28 @@ namespace HalabchiCRM
 
         private void btnExport_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void buttonItem2_Click(object sender, EventArgs e)
+        {
+            using (var db = new HalabchiDB())
+            {
+                var data = db.TolidHalabGhotis.ToList();
+                report.Load(Application.StartupPath + "\\Tolid.mrt");
+                report.RegBusinessObject("TolidGhoti", data);
+                report.Render(false);
+
+                if (_save.ShowDialog() == DialogResult.OK)
+                {
+                    report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                }
+
+            }
+        }
+
+        private void buttonItem1_Click(object sender, EventArgs e)
+        {
             report.Load(Application.StartupPath + "\\Tolid.mrt");
             report.RegBusinessObject("TolidGhoti", dgvTolid.DataSource);
             report.Render(false);

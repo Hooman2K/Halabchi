@@ -61,8 +61,13 @@
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.lblDate = new DevComponents.DotNetBar.LabelX();
             this.chbxAmarKhat = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.btnExport = new System.Windows.Forms.Button();
+            this.cExport = new DevComponents.DotNetBar.ContextMenuBar();
+            this.btnExportContext = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTolid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cExport)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRegister
@@ -117,6 +122,7 @@
             this.Column9,
             this.Column10,
             this.Column11});
+            this.cExport.SetContextMenuEx(this.dgvTolid, this.btnExportContext);
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -457,23 +463,55 @@
             this.chbxAmarKhat.Text = "آمار خط";
             this.chbxAmarKhat.CheckedChanged += new System.EventHandler(this.chbxAmarKhat_CheckedChanged);
             // 
-            // btnExport
+            // cExport
             // 
-            this.btnExport.BackgroundImage = global::HalabchiCRM.Properties.Resources.pdf;
-            this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExport.Location = new System.Drawing.Point(725, 38);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(45, 37);
-            this.btnExport.TabIndex = 45;
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            this.cExport.AntiAlias = true;
+            this.cExport.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cExport.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnExportContext});
+            this.cExport.Location = new System.Drawing.Point(688, 43);
+            this.cExport.Name = "cExport";
+            this.cExport.Size = new System.Drawing.Size(75, 25);
+            this.cExport.Stretch = true;
+            this.cExport.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cExport.TabIndex = 46;
+            this.cExport.TabStop = false;
+            this.cExport.Text = "contextMenuBar1";
+            // 
+            // btnExportContext
+            // 
+            this.btnExportContext.AutoExpandOnClick = true;
+            this.btnExportContext.Name = "btnExportContext";
+            this.btnExportContext.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem3});
+            this.btnExportContext.Text = "خروجی";
+            // 
+            // buttonItem3
+            // 
+            this.buttonItem3.Name = "buttonItem3";
+            this.buttonItem3.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem1,
+            this.buttonItem2});
+            this.buttonItem3.Text = "خروجی";
+            // 
+            // buttonItem1
+            // 
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.Text = "از جدول";
+            this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
+            // 
+            // buttonItem2
+            // 
+            this.buttonItem2.Name = "buttonItem2";
+            this.buttonItem2.Text = "PDF";
+            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
             // 
             // frmTolidHalabGhoti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(775, 252);
-            this.Controls.Add(this.btnExport);
+            this.Controls.Add(this.cExport);
             this.Controls.Add(this.chbxAmarKhat);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.btnCancel);
@@ -504,6 +542,7 @@
             this.Text = "آمار تولیدات";
             this.Load += new System.EventHandler(this.frmTolidHalabGhoti_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTolid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cExport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -541,6 +580,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private DevComponents.DotNetBar.LabelX lblDate;
         private DevComponents.DotNetBar.Controls.CheckBoxX chbxAmarKhat;
-        private System.Windows.Forms.Button btnExport;
+        private DevComponents.DotNetBar.ContextMenuBar cExport;
+        private DevComponents.DotNetBar.ButtonItem btnExportContext;
+        private DevComponents.DotNetBar.ButtonItem buttonItem3;
+        private DevComponents.DotNetBar.ButtonItem buttonItem1;
+        private DevComponents.DotNetBar.ButtonItem buttonItem2;
     }
 }

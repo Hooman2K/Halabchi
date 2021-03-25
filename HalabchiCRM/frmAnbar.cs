@@ -87,6 +87,29 @@ namespace HalabchiCRM
 
         private void btnExport_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void buttonItem1_Click(object sender, EventArgs e)
+        {
+            using (var db = new HalabchiDB())
+            {
+                var anbar = db.TahvilAnabrs.ToList();
+                report.Load(Application.StartupPath + "\\TahvilAnbar.mrt");
+                report.RegBusinessObject("TahvilAnbar", dgvAnbar.DataSource);
+                report.Render(false);
+
+                _save = new SaveFileDialog();
+                _save.Filter = "PDF File (.pdf)|*.pdf";
+                if (_save.ShowDialog() == DialogResult.OK)
+                {
+                    report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                }
+            }
+        }
+
+        private void buttonItem2_Click(object sender, EventArgs e)
+        {
             using (var db = new HalabchiDB())
             {
                 var anbar = db.TahvilAnabrs.ToList();

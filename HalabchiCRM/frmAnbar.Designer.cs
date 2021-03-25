@@ -40,8 +40,13 @@
             this.cmbxPipeLine = new System.Windows.Forms.ComboBox();
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.lblDate = new DevComponents.DotNetBar.LabelX();
-            this.btnExport = new System.Windows.Forms.Button();
+            this.cExport = new DevComponents.DotNetBar.ContextMenuBar();
+            this.btnExportContext = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnbar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cExport)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvAnbar
@@ -57,6 +62,7 @@
             this.Column5,
             this.Column6,
             this.Column7});
+            this.cExport.SetContextMenuEx(this.dgvAnbar, this.btnExportContext);
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -170,23 +176,55 @@
             this.lblDate.Text = "-----------";
             this.lblDate.Visible = false;
             // 
-            // btnExport
+            // cExport
             // 
-            this.btnExport.BackgroundImage = global::HalabchiCRM.Properties.Resources.pdf;
-            this.btnExport.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExport.Location = new System.Drawing.Point(329, 424);
-            this.btnExport.Name = "btnExport";
-            this.btnExport.Size = new System.Drawing.Size(75, 60);
-            this.btnExport.TabIndex = 2;
-            this.btnExport.UseVisualStyleBackColor = true;
-            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            this.cExport.AntiAlias = true;
+            this.cExport.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cExport.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnExportContext});
+            this.cExport.Location = new System.Drawing.Point(83, 424);
+            this.cExport.Name = "cExport";
+            this.cExport.Size = new System.Drawing.Size(75, 25);
+            this.cExport.Stretch = true;
+            this.cExport.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cExport.TabIndex = 47;
+            this.cExport.TabStop = false;
+            this.cExport.Text = "contextMenuBar1";
+            // 
+            // btnExportContext
+            // 
+            this.btnExportContext.AutoExpandOnClick = true;
+            this.btnExportContext.Name = "btnExportContext";
+            this.btnExportContext.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem3});
+            this.btnExportContext.Text = "خروجی";
+            // 
+            // buttonItem3
+            // 
+            this.buttonItem3.Name = "buttonItem3";
+            this.buttonItem3.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem1,
+            this.buttonItem2});
+            this.buttonItem3.Text = "خروجی";
+            // 
+            // buttonItem1
+            // 
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.Text = "از جدول";
+            this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
+            // 
+            // buttonItem2
+            // 
+            this.buttonItem2.Name = "buttonItem2";
+            this.buttonItem2.Text = "PDF";
+            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
             // 
             // frmAnbar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 483);
-            this.Controls.Add(this.btnExport);
+            this.ClientSize = new System.Drawing.Size(416, 451);
+            this.Controls.Add(this.cExport);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.cmbxPipeLine);
             this.Controls.Add(this.labelX10);
@@ -202,6 +240,7 @@
             this.Text = "نمایش انبار";
             this.Load += new System.EventHandler(this.frmAnbar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAnbar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cExport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,6 +259,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private DevComponents.DotNetBar.LabelX lblDate;
-        private System.Windows.Forms.Button btnExport;
+        private DevComponents.DotNetBar.ContextMenuBar cExport;
+        private DevComponents.DotNetBar.ButtonItem btnExportContext;
+        private DevComponents.DotNetBar.ButtonItem buttonItem3;
+        private DevComponents.DotNetBar.ButtonItem buttonItem1;
+        private DevComponents.DotNetBar.ButtonItem buttonItem2;
     }
 }
