@@ -882,11 +882,13 @@
             // 
             this.buttonItem1.Name = "buttonItem1";
             this.buttonItem1.Text = "از جدول";
+            this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
             // 
             // buttonItem2
             // 
             this.buttonItem2.Name = "buttonItem2";
             this.buttonItem2.Text = "PDF";
+            this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
             // 
             // frmZayeatHalabGhoti
             // 
