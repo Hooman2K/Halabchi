@@ -206,5 +206,15 @@ namespace HalabchiCRM
             else
                 return;
         }
+
+        private void buttonItem1_Click(object sender, EventArgs e)
+        {
+            //خروجی از جدول
+        }
+
+        private void buttonItem2_Click(object sender, EventArgs e)
+        {
+            //PDF
+        }
     }
 }
