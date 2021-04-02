@@ -346,5 +346,15 @@ namespace HalabchiCRM
                 lblHalab.Text = "-----";
             }
         }
+
+        private void buttonItem1_Click(object sender, EventArgs e)
+        {
+            //از جدول
+        }
+
+        private void buttonItem2_Click(object sender, EventArgs e)
+        {
+            //از جدول
+        }
     }
 }

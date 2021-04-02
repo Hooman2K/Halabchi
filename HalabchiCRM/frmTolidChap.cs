@@ -145,5 +145,15 @@ namespace HalabchiCRM
                 txtJameKol.Text = (double.Parse(txtTedadChapShode.Text) + double.Parse(txtFider.Text) + double.Parse(txtChapAval.Text) + double.Parse(txtChapDovom.Text) + double.Parse(txtVerni.Text) + double.Parse(txtKore.Text) + double.Parse(txtJamkonAKhar.Text)).ToString();
             }
         }
+
+        private void buttonItem1_Click(object sender, EventArgs e)
+        {
+            //از جدول
+        }
+
+        private void buttonItem2_Click(object sender, EventArgs e)
+        {
+            //PDF
+        }
     }
 }
