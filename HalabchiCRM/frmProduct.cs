@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 
+using Stimulsoft.Report;
+
 namespace HalabchiCRM
 {
     public partial class frmProduct : Office2007Form
@@ -17,8 +19,12 @@ namespace HalabchiCRM
         {
             InitializeComponent();
         }
+
         public bool _isNew = true;
         public int _id;
+        StiReport report = new StiReport();
+        SaveFileDialog _save;
+
         private void Clear()
         {
             txtProductName.Text = txtProductCode.Text = "";
@@ -75,7 +81,7 @@ namespace HalabchiCRM
             cmbxSelectStorage.Text = dgvProduct.CurrentRow.Cells[1].Value.ToString();
             cmbxUnit.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
         }
-        private void Cancel(object sender,KeyEventArgs e)
+        private void Cancel(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape)
             {
@@ -150,12 +156,36 @@ namespace HalabchiCRM
 
         private void buttonItem1_Click(object sender, EventArgs e)
         {
-            //از جدول
+            report.Load(Application.StartupPath + "\\StorageTypes.mrt");
+            report.RegBusinessObject("StorageTypes", dgvProduct.DataSource);
+            report.Render(false);
+
+            _save = new SaveFileDialog();
+            _save.Filter = "PDF File (.pdf)|*.pdf";
+
+            if (_save.ShowDialog() == DialogResult.OK)
+            {
+                report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+            }
         }
 
         private void buttonItem2_Click(object sender, EventArgs e)
         {
-            //PDF
+            using (var db = new HalabchiDB())
+            {
+                var st = db.StorageTypes.Where(u => u.StorageName == cmbxSelectStorage.Text).ToList();
+                report.Load(Application.StartupPath + "\\StorageTypes.mrt");
+                report.RegBusinessObject("StorageTypes", st);
+                report.Render(false);
+
+                _save = new SaveFileDialog();
+                _save.Filter = "PDF File (.pdf)|*.pdf";
+
+                if (_save.ShowDialog() == DialogResult.OK)
+                {
+                    report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                }
+            }
         }
     }
 }

@@ -99,7 +99,7 @@
             <HeaderZayeatHalabGhotis_Date Ref="8" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>25,0,1.4,0.8</ClientRectangle>
+              <ClientRectangle>24.4,0,2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -116,7 +116,7 @@
             <HeaderZayeatHalabGhotis_PipeLineName Ref="9" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>23.4,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>22.2,0,2.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -133,7 +133,7 @@
             <HeaderZayeatHalabGhotis_Gheychi Ref="10" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>21.8,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>20.6,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -150,7 +150,7 @@
             <HeaderZayeatHalabGhotis_Josh Ref="11" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>20.2,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>19,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -167,7 +167,7 @@
             <HeaderZayeatHalabGhotis_ChaharGosh Ref="12" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>18.6,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>17.4,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,9,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -184,7 +184,7 @@
             <HeaderZayeatHalabGhotis_Neyker Ref="13" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>17,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>16.2,0,1.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -201,7 +201,7 @@
             <HeaderZayeatHalabGhotis_KhatAndaz Ref="14" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>15.4,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>14.6,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -218,7 +218,7 @@
             <HeaderZayeatHalabGhotis_LakPash Ref="15" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>13.8,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>13,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -235,7 +235,7 @@
             <HeaderZayeatHalabGhotis_FelanchSar Ref="16" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>12.2,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>11.4,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -252,7 +252,7 @@
             <HeaderZayeatHalabGhotis_FelachKaf Ref="17" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>10.6,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>9.8,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -269,7 +269,7 @@
             <HeaderZayeatHalabGhotis_SimerSar Ref="18" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>9,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>8.2,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -286,7 +286,7 @@
             <HeaderZayeatHalabGhotis_SimerKaf Ref="19" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>7.4,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>6.6,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -303,7 +303,7 @@
             <HeaderZayeatHalabGhotis_Fider Ref="20" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>5.8,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>5.4,0,1.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -320,7 +320,7 @@
             <HeaderZayeatHalabGhotis_Ghaleb Ref="21" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>4.2,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>4.2,0,1.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -417,9 +417,9 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>25,0,1.4,0.8</ClientRectangle>
+              <ClientRectangle>24.4,0,2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Tahoma,10,Bold</Font>
+              <Font>Tahoma,8,Bold</Font>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataZayeatHalabGhotis_Date</Name>
@@ -434,9 +434,9 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>23.4,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>22.2,0,2.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Tahoma,10,Bold</Font>
+              <Font>Tahoma,8,Bold</Font>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataZayeatHalabGhotis_PipeLineName</Name>
@@ -451,7 +451,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>21.8,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>20.6,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -468,7 +468,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>20.2,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>19,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -485,7 +485,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>18.6,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>17.4,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,9,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -502,7 +502,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>17,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>16.2,0,1.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -519,7 +519,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>15.4,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>14.6,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -536,7 +536,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>13.8,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>13,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -553,7 +553,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>12.2,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>11.4,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -570,7 +570,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>10.6,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>9.8,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -587,7 +587,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>9,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>8.2,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -604,7 +604,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>7.4,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>6.6,0,1.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -621,7 +621,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>5.8,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>5.4,0,1.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -638,7 +638,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>4.2,0,1.6,0.8</ClientRectangle>
+              <ClientRectangle>4.2,0,1.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -738,9 +738,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>4/2/2021 8:37:52 PM</ReportChanged>
+  <ReportChanged>4/2/2021 10:19:21 PM</ReportChanged>
   <ReportCreated>4/2/2021 7:45:05 PM</ReportCreated>
-  <ReportGuid>06b8b1f5f2f64a3a89271725cdd21728</ReportGuid>
+  <ReportFile>C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\ZayeatHalabGhotis.mrt</ReportFile>
+  <ReportGuid>23e0452f57314345a6a477126734670e</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.1.8.0</ReportVersion>

@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="1">
+      <StorageTypes Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>StorageTypes</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category />
+        <Columns isList="true" count="7">
+          <value>ID,System.String</value>
+          <value>StorageName,System.String</value>
+          <value>ProductCode,System.String</value>
+          <value>ProductName,System.String</value>
+          <value>ProductUnit,System.String</value>
+          <value>ProductType,System.String</value>
+          <value>PipeLineName,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>631785ae6a8943dca3bf14b9e5a0c36a</Guid>
+        <Name>StorageTypes</Name>
+      </StorageTypes>
+    </BusinessObjects>
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="3" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <HeaderBand1 Ref="4" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,0.6</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text1 Ref="5" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Yellow</Brush>
+              <ClientRectangle>0,-0.4,19,1</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>گزارش محصولات</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </HeaderBand1>
+        <Header Ref="6" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,1.8,19,0.8</ClientRectangle>
+          <Components isList="true" count="6">
+            <HeaderStorageTypes_ID Ref="7" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>16.6,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderStorageTypes_ID</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>شماره</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderStorageTypes_ID>
+            <HeaderStorageTypes_StorageName Ref="8" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>13.4,0,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderStorageTypes_StorageName</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>نام انبار</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderStorageTypes_StorageName>
+            <HeaderStorageTypes_ProductCode Ref="9" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>10.2,0,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderStorageTypes_ProductCode</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>کد محصول</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderStorageTypes_ProductCode>
+            <HeaderStorageTypes_ProductName Ref="10" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>6.2,0,4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderStorageTypes_ProductName</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>نام محصول</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderStorageTypes_ProductName>
+            <HeaderStorageTypes_ProductUnit Ref="11" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>3,0,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderStorageTypes_ProductUnit</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>تعداد محصول</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderStorageTypes_ProductUnit>
+            <HeaderStorageTypes_ProductType Ref="12" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>0,0,3,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderStorageTypes_ProductType</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>نوع محصول</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderStorageTypes_ProductType>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Header</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </Header>
+        <Data Ref="13" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid>631785ae6a8943dca3bf14b9e5a0c36a</BusinessObjectGuid>
+          <ClientRectangle>0,3.4,19,0.8</ClientRectangle>
+          <Components isList="true" count="6">
+            <DataStorageTypes_ID Ref="14" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>16.6,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataStorageTypes_ID</Name>
+              <Page isRef="3" />
+              <Parent isRef="13" />
+              <Text>{StorageTypes.ID}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataStorageTypes_ID>
+            <DataStorageTypes_StorageName Ref="15" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>13.4,0,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataStorageTypes_StorageName</Name>
+              <Page isRef="3" />
+              <Parent isRef="13" />
+              <Text>{StorageTypes.StorageName}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataStorageTypes_StorageName>
+            <DataStorageTypes_ProductCode Ref="16" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>10.2,0,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataStorageTypes_ProductCode</Name>
+              <Page isRef="3" />
+              <Parent isRef="13" />
+              <Text>{StorageTypes.ProductCode}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataStorageTypes_ProductCode>
+            <DataStorageTypes_ProductName Ref="17" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.2,0,4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataStorageTypes_ProductName</Name>
+              <Page isRef="3" />
+              <Parent isRef="13" />
+              <Text>{StorageTypes.ProductName}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataStorageTypes_ProductName>
+            <DataStorageTypes_ProductUnit Ref="18" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>3,0,3.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataStorageTypes_ProductUnit</Name>
+              <Page isRef="3" />
+              <Parent isRef="13" />
+              <Text>{StorageTypes.ProductUnit}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataStorageTypes_ProductUnit>
+            <DataStorageTypes_ProductType Ref="19" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,3,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,9</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataStorageTypes_ProductType</Name>
+              <Page isRef="3" />
+              <Parent isRef="13" />
+              <Text>{StorageTypes.ProductType}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataStorageTypes_ProductType>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Name>Data</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+          <Sort isList="true" count="0" />
+        </Data>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>0b2885e2f0824a319b16754eff5c7131</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="20" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="21" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>4/2/2021 10:43:37 PM</ReportChanged>
+  <ReportCreated>4/2/2021 10:28:42 PM</ReportCreated>
+  <ReportFile>C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\StorageTypes.mrt</ReportFile>
+  <ReportGuid>513fedd7cb824e4cb93e470597c43ae5</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2018.1.8.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+        #endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>
