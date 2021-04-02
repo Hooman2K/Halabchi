@@ -33,6 +33,7 @@
             this.btnConfirm = new DevComponents.DotNetBar.ButtonX();
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.grbxContractInfo = new System.Windows.Forms.GroupBox();
+            this.lblDate = new DevComponents.DotNetBar.LabelX();
             this.txtContractDate = new System.Windows.Forms.MaskedTextBox();
             this.lblInfo = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
@@ -61,7 +62,6 @@
             this.contextMenuBar1 = new DevComponents.DotNetBar.ContextMenuBar();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
-            this.lblDate = new DevComponents.DotNetBar.LabelX();
             this.grbxContractInfo.SuspendLayout();
             this.grbxType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
@@ -122,6 +122,21 @@
             this.grbxContractInfo.Size = new System.Drawing.Size(502, 179);
             this.grbxContractInfo.TabIndex = 0;
             this.grbxContractInfo.TabStop = false;
+            // 
+            // lblDate
+            // 
+            this.lblDate.AutoSize = true;
+            // 
+            // 
+            // 
+            this.lblDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblDate.Location = new System.Drawing.Point(418, 76);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblDate.Size = new System.Drawing.Size(54, 18);
+            this.lblDate.TabIndex = 44;
+            this.lblDate.Text = "-----------";
+            this.lblDate.Visible = false;
             // 
             // txtContractDate
             // 
@@ -479,21 +494,6 @@
             this.buttonItem2.Name = "buttonItem2";
             this.buttonItem2.Text = "خذف از جدول";
             this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
-            // 
-            // lblDate
-            // 
-            this.lblDate.AutoSize = true;
-            // 
-            // 
-            // 
-            this.lblDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.lblDate.Location = new System.Drawing.Point(418, 76);
-            this.lblDate.Name = "lblDate";
-            this.lblDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblDate.Size = new System.Drawing.Size(54, 18);
-            this.lblDate.TabIndex = 44;
-            this.lblDate.Text = "-----------";
-            this.lblDate.Visible = false;
             // 
             // frmContract
             // 

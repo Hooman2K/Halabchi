@@ -89,7 +89,13 @@
             this.btnRegister = new DevComponents.DotNetBar.ButtonX();
             this.chbxAmarKhat = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.lblDate = new DevComponents.DotNetBar.LabelX();
+            this.cExport = new DevComponents.DotNetBar.ContextMenuBar();
+            this.btnExportContext = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvZayeat)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cExport)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbxPipeLine
@@ -199,6 +205,7 @@
             this.Column19,
             this.Column20,
             this.Column21});
+            this.cExport.SetContextMenuEx(this.dgvZayeat, this.btnExportContext);
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
@@ -840,11 +847,53 @@
             this.lblDate.Text = "-----------";
             this.lblDate.Visible = false;
             // 
+            // cExport
+            // 
+            this.cExport.AntiAlias = true;
+            this.cExport.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cExport.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnExportContext});
+            this.cExport.Location = new System.Drawing.Point(349, 12);
+            this.cExport.Name = "cExport";
+            this.cExport.Size = new System.Drawing.Size(75, 25);
+            this.cExport.Stretch = true;
+            this.cExport.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cExport.TabIndex = 93;
+            this.cExport.TabStop = false;
+            this.cExport.Text = "contextMenuBar1";
+            // 
+            // btnExportContext
+            // 
+            this.btnExportContext.AutoExpandOnClick = true;
+            this.btnExportContext.Name = "btnExportContext";
+            this.btnExportContext.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem3});
+            this.btnExportContext.Text = "خروجی";
+            // 
+            // buttonItem3
+            // 
+            this.buttonItem3.Name = "buttonItem3";
+            this.buttonItem3.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem1,
+            this.buttonItem2});
+            this.buttonItem3.Text = "خروجی";
+            // 
+            // buttonItem1
+            // 
+            this.buttonItem1.Name = "buttonItem1";
+            this.buttonItem1.Text = "از جدول";
+            // 
+            // buttonItem2
+            // 
+            this.buttonItem2.Name = "buttonItem2";
+            this.buttonItem2.Text = "PDF";
+            // 
             // frmZayeatHalabGhoti
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1031, 475);
+            this.Controls.Add(this.cExport);
             this.Controls.Add(this.lblDate);
             this.Controls.Add(this.chbxAmarKhat);
             this.Controls.Add(this.btnRegister);
@@ -896,6 +945,7 @@
             this.Load += new System.EventHandler(this.frmZayeatHalabGhoti_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtKerling_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.dgvZayeat)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cExport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -963,5 +1013,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column21;
+        private DevComponents.DotNetBar.ContextMenuBar cExport;
+        private DevComponents.DotNetBar.ButtonItem btnExportContext;
+        private DevComponents.DotNetBar.ButtonItem buttonItem3;
+        private DevComponents.DotNetBar.ButtonItem buttonItem1;
+        private DevComponents.DotNetBar.ButtonItem buttonItem2;
     }
 }
