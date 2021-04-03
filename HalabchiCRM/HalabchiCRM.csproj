@@ -100,7 +100,7 @@
   <ItemGroup>
     <Compile Include="AESAlgorithm.cs" />
     <Compile Include="AppInfo.cs" />
-    <Compile Include="Formula.cs" />
+    <Compile Include="ADO.cs" />
     <Compile Include="frmAddProduct.cs">
       <SubType>Form</SubType>
     </Compile>

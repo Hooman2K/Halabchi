@@ -593,11 +593,67 @@ order by start_time desc");
 
         private void buttonItem6_Click(object sender, EventArgs e)
         {
-            using (var db = new HalabchiDB())
+            //PDF
+        }
+
+        private void dgvContract_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = int.Parse(dgvContract.CurrentRow.Cells[1].Value.ToString());
+
+            ADO db = new ADO();
+            //using (var db = new HalabchiDB())
+            //{
+            //    var con = from a in db.Contracts
+            //              join b in db.Types
+            //              on a.ContractID equals b.ContractID
+            //              where (a.CustomerID == id.ToString())
+            //              select new
+            //              {
+            //                  a.ID,
+            //                  a.ContractID,
+            //                  a.CustomerID,
+            //                  a.FactoryName,
+            //                  a.ContractDate,
+            //                  a.ContractTitle,
+            //                  //b.ID,
+            //                  //b.CustomerID,
+            //                  //b.ContractID,
+            //                  //b.FactoryName,
+            //                  b.ProductCode,
+            //                  b.ProductName,
+            //                  b.ProductUnit
+            //              };
+            //    report.Load(Application.StartupPath + "\\Contracts.mrt");
+            //    report.RegBusinessObject("Contracts", con);
+            //    report.Render(false);
+
+            //    _save = new SaveFileDialog();
+            //    if (_save.ShowDialog() == DialogResult.OK)
+            //    {
+            //        report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+            //    }
+            //}
+
+            DataTable dt1 = new DataTable();
+            DataTable dt2 = new DataTable();
+
+            dt1 = db.Select("select * from Contracts where CustomerID = " + id.ToString());
+            dt2 = db.Select("select * from Types where CustomerID = " + id.ToString());
+
+            DataSet ds = new DataSet();
+            ds.Merge(dt1);
+            ds.Tables[0].TableName = "ReportContract";
+            ds.Merge(dt2);
+            ds.Tables[1].TableName = "ReportType";
+
+            report.Load(Application.StartupPath + "\\Contracts.mrt");
+            report.RegData(ds);
+            report.Render(false);
+
+            _save = new SaveFileDialog();
+            if (_save.ShowDialog() == DialogResult.OK)
             {
-                var con = db.Contracts.Where(u => u.ContractID ==);
-
-
+                report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
             }
         }
     }

@@ -1,7 +1,7 @@
 from a in db.Contracts
                           join b in db.Types
                           on a.ContractID equals b.ContractID
-                          select new(
+                          select new
                               {
                               a.ID,
                               a.ContractID,
@@ -16,4 +16,4 @@ from a in db.Contracts
                               b.ProductCode,
                               b.ProductName,
                               b.ProductUnit
-                          });
+                          };
