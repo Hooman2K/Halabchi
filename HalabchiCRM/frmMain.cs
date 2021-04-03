@@ -572,5 +572,13 @@ order by start_time desc");
             rcontract.ShowDialog();
             this.Show();
         }
+
+        private void buttonX4_Click(object sender, EventArgs e)
+        {
+            frmReportTolidChap rtolidChap = new frmReportTolidChap();
+            this.Hide();
+            rtolidChap.ShowDialog();
+            this.Show();
+        }
     }
 }

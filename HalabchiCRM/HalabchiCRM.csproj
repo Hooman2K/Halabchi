@@ -185,6 +185,12 @@
     <Compile Include="frmReportCustomer.Designer.cs">
       <DependentUpon>frmReportCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportTolidChap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportTolidChap.Designer.cs">
+      <DependentUpon>frmReportTolidChap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSearchCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -272,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmReportCustomer.resx">
       <DependentUpon>frmReportCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportTolidChap.resx">
+      <DependentUpon>frmReportTolidChap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSearchCustomer.resx">
       <DependentUpon>frmSearchCustomer.cs</DependentUpon>
