@@ -173,6 +173,18 @@
     <Compile Include="frmRegisterAdmin.Designer.cs">
       <DependentUpon>frmRegisterAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportContract.Designer.cs">
+      <DependentUpon>frmReportContract.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmReportCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportCustomer.Designer.cs">
+      <DependentUpon>frmReportCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSearchCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,6 +266,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegisterAdmin.resx">
       <DependentUpon>frmRegisterAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportContract.resx">
+      <DependentUpon>frmReportContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportCustomer.resx">
+      <DependentUpon>frmReportCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSearchCustomer.resx">
       <DependentUpon>frmSearchCustomer.cs</DependentUpon>

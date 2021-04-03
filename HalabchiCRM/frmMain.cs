@@ -556,5 +556,21 @@ order by start_time desc");
             zgh.ShowDialog();
             this.Show();
         }
+
+        private void btnReportCustomer_Click(object sender, EventArgs e)
+        {
+            frmReportCustomer rcustomer = new frmReportCustomer();
+            this.Hide();
+            rcustomer.ShowDialog();
+            this.Show();
+        }
+
+        private void btnReportContract_Click(object sender, EventArgs e)
+        {
+            frmReportContract rcontract = new frmReportContract();
+            this.Hide();
+            rcontract.ShowDialog();
+            this.Show();
+        }
     }
 }

@@ -124,3 +124,5 @@ C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmPr
 C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmTolidChap.resources
 C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmTolidHalabGhoti.resources
 C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmZayeatHalabGhoti.resources
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmReportCustomer.resources
+C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmReportContract.resources
