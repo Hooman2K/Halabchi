@@ -580,5 +580,15 @@ order by start_time desc");
             rtolidChap.ShowDialog();
             this.Show();
         }
+
+        private void buttonItem5_Click(object sender, EventArgs e)
+        {
+            //از جدول
+        }
+
+        private void buttonItem6_Click(object sender, EventArgs e)
+        {
+            //PDF
+        }
     }
 }
