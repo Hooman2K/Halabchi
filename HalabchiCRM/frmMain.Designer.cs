@@ -40,9 +40,9 @@
             this.q3 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1 = new DevComponents.DotNetBar.RibbonControl();
             this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
-            this.buttonX5 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX4 = new DevComponents.DotNetBar.ButtonX();
+            this.btnReportAmarTolidat = new DevComponents.DotNetBar.ButtonX();
+            this.btnReportTolidGhotiHalab = new DevComponents.DotNetBar.ButtonX();
+            this.btnReportTolidChap = new DevComponents.DotNetBar.ButtonX();
             this.btnReportTolidKala = new DevComponents.DotNetBar.ButtonX();
             this.btnReportContract = new DevComponents.DotNetBar.ButtonX();
             this.btnReportCustomer = new DevComponents.DotNetBar.ButtonX();
@@ -277,9 +277,9 @@
             // ribbonPanel4
             // 
             this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel4.Controls.Add(this.buttonX5);
-            this.ribbonPanel4.Controls.Add(this.buttonX3);
-            this.ribbonPanel4.Controls.Add(this.buttonX4);
+            this.ribbonPanel4.Controls.Add(this.btnReportAmarTolidat);
+            this.ribbonPanel4.Controls.Add(this.btnReportTolidGhotiHalab);
+            this.ribbonPanel4.Controls.Add(this.btnReportTolidChap);
             this.ribbonPanel4.Controls.Add(this.btnReportTolidKala);
             this.ribbonPanel4.Controls.Add(this.btnReportContract);
             this.ribbonPanel4.Controls.Add(this.btnReportCustomer);
@@ -303,38 +303,39 @@
             this.ribbonPanel4.TabIndex = 4;
             this.ribbonPanel4.Visible = false;
             // 
-            // buttonX5
+            // btnReportAmarTolidat
             // 
-            this.buttonX5.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX5.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX5.Location = new System.Drawing.Point(303, 94);
-            this.buttonX5.Name = "buttonX5";
-            this.buttonX5.Size = new System.Drawing.Size(232, 23);
-            this.buttonX5.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX5.TabIndex = 10;
-            this.buttonX5.Text = "گزارش تولیدات";
+            this.btnReportAmarTolidat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportAmarTolidat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportAmarTolidat.Location = new System.Drawing.Point(303, 94);
+            this.btnReportAmarTolidat.Name = "btnReportAmarTolidat";
+            this.btnReportAmarTolidat.Size = new System.Drawing.Size(232, 23);
+            this.btnReportAmarTolidat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportAmarTolidat.TabIndex = 10;
+            this.btnReportAmarTolidat.Text = "گزارش تولیدات";
             // 
-            // buttonX3
+            // btnReportTolidGhotiHalab
             // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX3.Location = new System.Drawing.Point(303, 56);
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(232, 23);
-            this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX3.TabIndex = 9;
-            this.buttonX3.Text = "گزارش ضایعات قوطی و حلب";
+            this.btnReportTolidGhotiHalab.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportTolidGhotiHalab.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportTolidGhotiHalab.Location = new System.Drawing.Point(303, 56);
+            this.btnReportTolidGhotiHalab.Name = "btnReportTolidGhotiHalab";
+            this.btnReportTolidGhotiHalab.Size = new System.Drawing.Size(232, 23);
+            this.btnReportTolidGhotiHalab.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportTolidGhotiHalab.TabIndex = 9;
+            this.btnReportTolidGhotiHalab.Text = "گزارش ضایعات قوطی و حلب";
             // 
-            // buttonX4
+            // btnReportTolidChap
             // 
-            this.buttonX4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX4.Location = new System.Drawing.Point(303, 18);
-            this.buttonX4.Name = "buttonX4";
-            this.buttonX4.Size = new System.Drawing.Size(232, 23);
-            this.buttonX4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX4.TabIndex = 8;
-            this.buttonX4.Text = "گزارش تولید و ضایعات چاپ";
+            this.btnReportTolidChap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportTolidChap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportTolidChap.Location = new System.Drawing.Point(303, 18);
+            this.btnReportTolidChap.Name = "btnReportTolidChap";
+            this.btnReportTolidChap.Size = new System.Drawing.Size(232, 23);
+            this.btnReportTolidChap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportTolidChap.TabIndex = 8;
+            this.btnReportTolidChap.Text = "گزارش تولید و ضایعات چاپ";
+            this.btnReportTolidChap.Click += new System.EventHandler(this.buttonX4_Click);
             // 
             // btnReportTolidKala
             // 
@@ -2158,8 +2159,8 @@
         private DevComponents.DotNetBar.ButtonX btnReportTolidKala;
         private DevComponents.DotNetBar.ButtonX btnReportContract;
         private DevComponents.DotNetBar.ButtonX btnReportCustomer;
-        private DevComponents.DotNetBar.ButtonX buttonX5;
-        private DevComponents.DotNetBar.ButtonX buttonX3;
-        private DevComponents.DotNetBar.ButtonX buttonX4;
+        private DevComponents.DotNetBar.ButtonX btnReportAmarTolidat;
+        private DevComponents.DotNetBar.ButtonX btnReportTolidGhotiHalab;
+        private DevComponents.DotNetBar.ButtonX btnReportTolidChap;
     }
 }
