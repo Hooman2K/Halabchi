@@ -11,6 +11,8 @@ using DevComponents.DotNetBar;
 using System.Data.Entity;
 using EntityFramework.Utilities;
 
+using Stimulsoft.Report;
+
 namespace HalabchiCRM
 {
     public partial class frmProduction : Office2007Form
@@ -24,6 +26,8 @@ namespace HalabchiCRM
         int _id;
         int thicknes;
         int _error = 0;
+        StiReport report = new StiReport();
+        SaveFileDialog _save;
 
         private void Clear()
         {
@@ -349,12 +353,36 @@ namespace HalabchiCRM
 
         private void buttonItem1_Click(object sender, EventArgs e)
         {
-            //از جدول
+            report.Load(Application.StartupPath + "\\StorageTypes2.mrt");
+            report.RegBusinessObject("StorageTypes", dgvProduct.DataSource);
+            report.Render(false);
+
+            _save = new SaveFileDialog();
+            _save.Filter = "PDF File (.pdf)|*.pdf";
+
+            if (_save.ShowDialog() == DialogResult.OK)
+            {
+                report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+            }
         }
 
         private void buttonItem2_Click(object sender, EventArgs e)
         {
-            //از pdf
+            using (var db = new HalabchiDB())
+            {
+                var st2 = db.StorageTypes.Where(u => u.StorageName == cmbxSelectStorage.Text).ToList();
+                report.Load(Application.StartupPath + "\\StorageTypes2.mrt");
+                report.RegBusinessObject("StorageTypes", st2);
+                report.Render(false);
+
+                _save = new SaveFileDialog();
+                _save.Filter = "PDF File (.pdf)|*.pdf";
+
+                if (_save.ShowDialog() == DialogResult.OK)
+                {
+                    report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                }
+            }
         }
     }
 }
