@@ -85,7 +85,6 @@
             this.lblDate.Location = new System.Drawing.Point(7, 43);
             this.lblDate.Name = "lblDate";
             this.lblDate.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lblDate.Size = new System.Drawing.Size(54, 18);
             this.lblDate.TabIndex = 46;
             this.lblDate.Text = "-----------";
             this.lblDate.Visible = false;
@@ -567,6 +566,7 @@
             this.cExport.TabIndex = 64;
             this.cExport.TabStop = false;
             this.cExport.Text = "contextMenuBar1";
+            this.cExport.WrapItemsDock = true;
             // 
             // btnExportContext
             // 

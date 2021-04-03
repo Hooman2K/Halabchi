@@ -240,7 +240,7 @@ namespace HalabchiCRM
                 _save = new SaveFileDialog();
                 _save.Filter = "PDF File (.pdf)|*.pdf";
 
-                if(_save .ShowDialog ()==DialogResult.OK )
+                if (_save.ShowDialog() == DialogResult.OK)
                 {
                     report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
                 }

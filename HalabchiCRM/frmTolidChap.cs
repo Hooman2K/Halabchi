@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using System.Globalization;
 
+using Stimulsoft.Report;
+
 namespace HalabchiCRM
 {
     public partial class frmTolidChap : Office2007Form
@@ -18,7 +20,12 @@ namespace HalabchiCRM
         {
             InitializeComponent();
         }
+
         DateTime dt;
+        StiReport report = new StiReport();
+        SaveFileDialog _save;
+
+
         private void LoadChap()
         {
             using (var db = new HalabchiDB())
@@ -148,12 +155,36 @@ namespace HalabchiCRM
 
         private void buttonItem1_Click(object sender, EventArgs e)
         {
-            //از جدول
+            report.Load(Application.StartupPath + "\\TolidZayeatChaps.mrt");
+            report.RegBusinessObject("TolidZayeatChaps", dgvChap.DataSource);
+            report.Render(false);
+
+            _save = new SaveFileDialog();
+            _save.Filter = "PDFf File(.pdf)|*.pdf";
+
+            if (_save.ShowDialog() == DialogResult.OK)
+            {
+                report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+            }
         }
 
         private void buttonItem2_Click(object sender, EventArgs e)
         {
-            //PDF
+            using (var db = new HalabchiDB())
+            {
+                var tzc = db.TolidZayeatChaps.ToList();
+                report.Load(Application.StartupPath + "\\TolidZayeatChaps.mrt");
+                report.RegBusinessObject("TolidZayeatChaps", tzc);
+                report.Render(false);
+
+                _save = new SaveFileDialog();
+                _save.Filter = "PDFf File(.pdf)|*.pdf";
+
+                if (_save.ShowDialog() == DialogResult.OK)
+                {
+                    report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                }
+            }
         }
     }
 }

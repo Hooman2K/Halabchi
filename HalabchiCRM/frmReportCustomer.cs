@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using System.Data.Entity;
 
+using Stimulsoft.Report;
+
 namespace HalabchiCRM
 {
     public partial class frmReportCustomer : Office2007Form
@@ -18,8 +20,11 @@ namespace HalabchiCRM
         {
             InitializeComponent();
         }
+
         HalabchiDB db = new HalabchiDB();
         AppInfo app = new AppInfo();
+        StiReport report = new StiReport();
+        SaveFileDialog _save;
 
         private void frmReportCustomer_Load(object sender, EventArgs e)
         {
@@ -106,12 +111,36 @@ namespace HalabchiCRM
 
         private void buttonItem1_Click(object sender, EventArgs e)
         {
-            //از جدول
+            report.Load(Application.StartupPath + "\\Customers.mrt");
+            report.RegBusinessObject("Customers", dgvCustomer.DataSource);
+            report.Render(false);
+
+            _save = new SaveFileDialog();
+            _save.Filter = "PDF File(.pdf)|*.pdf";
+
+            if (_save.ShowDialog() == DialogResult.OK)
+            {
+                report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+            }
         }
 
         private void buttonItem2_Click(object sender, EventArgs e)
         {
-            //PDF
+            using (var db = new HalabchiDB())
+            {
+                var rcus = db.Customers.ToList();
+                report.Load(Application.StartupPath + "\\Customers.mrt");
+                report.RegBusinessObject("Customers", rcus);
+                report.Render(false);
+
+                _save = new SaveFileDialog();
+                _save.Filter = "PDF File(.pdf)|*.pdf";
+
+                if (_save.ShowDialog()==DialogResult.OK)
+                {
+                    report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                }
+            }
         }
     }
 }
