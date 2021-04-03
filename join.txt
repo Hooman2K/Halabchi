@@ -1,0 +1,19 @@
+from a in db.Contracts
+                          join b in db.Types
+                          on a.ContractID equals b.ContractID
+                          select new(
+                              {
+                              a.ID,
+                              a.ContractID,
+                              a.CustomerID,
+                              a.FactoryName,
+                              a.ContractDate,
+                              a.ContractTitle,
+                              b.ID,
+                              b.CustomerID,
+                              b.ContractID,
+                              b.FactoryName,
+                              b.ProductCode,
+                              b.ProductName,
+                              b.ProductUnit
+                          });

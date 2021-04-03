@@ -11,6 +11,8 @@ using DevComponents.DotNetBar;
 using System.IO;
 using System.Globalization;
 
+using Stimulsoft.Report;
+
 namespace HalabchiCRM
 {
     public partial class frmMain : Office2007Form
@@ -22,8 +24,11 @@ namespace HalabchiCRM
 
         bool _isBackup = false;
         string _timeLength = string.Empty;
-        int _time=0;
+        int _time = 0;
         DateTime dt;
+
+        StiReport report = new StiReport();
+        SaveFileDialog _save;
 
         public class BackupLength
         {
@@ -588,7 +593,12 @@ order by start_time desc");
 
         private void buttonItem6_Click(object sender, EventArgs e)
         {
-            //PDF
+            using (var db = new HalabchiDB())
+            {
+                var con = db.Contracts.Where(u => u.ContractID ==);
+
+
+            }
         }
     }
 }
