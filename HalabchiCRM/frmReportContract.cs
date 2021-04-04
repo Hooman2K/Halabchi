@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevComponents.DotNetBar;
 
+using Stimulsoft.Report;
+
 namespace HalabchiCRM
 {
     public partial class frmReportContract : Office2007Form
@@ -17,6 +19,10 @@ namespace HalabchiCRM
         {
             InitializeComponent();
         }
+
+        StiReport report = new StiReport();
+        SaveFileDialog _save;
+
         private void LoadContract()
         {
             using (var db = new HalabchiDB())
@@ -95,17 +101,108 @@ namespace HalabchiCRM
 
         private void btnSingleReport1_Click(object sender, EventArgs e)
         {
-            //report 1
+            using (var db = new HalabchiDB())
+            {
+                var data = db.Contracts.Where(u => u.ContractID == cmbxContractNumber.Text).FirstOrDefault();
+                string cunumber = data.CustomerID.ToString();
+                string connumber = data.ContractID.ToString();
+
+                ADO ad = new HalabchiCRM.ADO();
+                DataTable dt1 = new DataTable();
+                DataTable dt2 = new DataTable();
+                DataTable dt3 = new DataTable();
+                DataSet ds = new DataSet();
+
+                dt1 = ad.Select("select * from Contracts where CustomerID = " + cunumber.ToString() + " and ContractID = " + connumber.ToString());
+                dt2 = ad.Select("select * from Types where CustomerID = " + cunumber.ToString() + " and ContractID = " + connumber.ToString());
+                dt3 = ad.Select("select * from Customers where CustomerID = " + cunumber.ToString());
+
+                ds.Merge(dt1);
+                ds.Tables[0].TableName = "ReportContract";
+                ds.Merge(dt2);
+                ds.Tables[1].TableName = "ReportType";
+                ds.Merge(dt3);
+                ds.Tables[2].TableName = "ReportCustomer";
+
+                report.Load(Application.StartupPath + "\\Contracts.mrt");
+                report.RegData(ds);
+                report.Render(false);
+
+                _save = new SaveFileDialog();
+                if (_save.ShowDialog() == DialogResult.OK)
+                    report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+            }
+
         }
 
         private void btnSingleReport2_Click(object sender, EventArgs e)
         {
-            //report 2
+            using (var db = new HalabchiDB())
+            {
+                var data = db.Contracts.Where(u => u.ContractID == cmbxContractNumber1.Text && u.CustomerID ==cmbxCustomerNumber.Text ).FirstOrDefault();
+                string cunumber = data.CustomerID.ToString();
+                string connumber = data.ContractID.ToString();
+
+                ADO ad = new HalabchiCRM.ADO();
+                DataTable dt1 = new DataTable();
+                DataTable dt2 = new DataTable();
+                DataTable dt3 = new DataTable();
+                DataSet ds = new DataSet();
+
+                dt1 = ad.Select("select * from Contracts where CustomerID = " + cunumber.ToString() + " and ContractID = " + connumber.ToString());
+                dt2 = ad.Select("select * from Types where CustomerID = " + cunumber.ToString() + " and ContractID = " + connumber.ToString());
+                dt3 = ad.Select("select * from Customers where CustomerID = " + cunumber.ToString());
+
+                ds.Merge(dt1);
+                ds.Tables[0].TableName = "ReportContract";
+                ds.Merge(dt2);
+                ds.Tables[1].TableName = "ReportType";
+                ds.Merge(dt3);
+                ds.Tables[2].TableName = "ReportCustomer";
+
+                report.Load(Application.StartupPath + "\\Contracts.mrt");
+                report.RegData(ds);
+                report.Render(false);
+
+                _save = new SaveFileDialog();
+                if (_save.ShowDialog() == DialogResult.OK)
+                    report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+            }
         }
 
         private void btnSingleReport3_Click(object sender, EventArgs e)
         {
-            //report 3
+            using (var db = new HalabchiDB())
+            {
+                var data = db.Contracts.Where(u => u.FactoryName == cmbxCustomerFactory.Text && u.ContractTitle ==cmbxContractNumber2.Text  ).FirstOrDefault();
+                string cunumber = data.CustomerID.ToString();
+                string connumber = data.ContractID.ToString();
+
+                ADO ad = new HalabchiCRM.ADO();
+                DataTable dt1 = new DataTable();
+                DataTable dt2 = new DataTable();
+                DataTable dt3 = new DataTable();
+                DataSet ds = new DataSet();
+
+                dt1 = ad.Select("select * from Contracts where CustomerID = " + cunumber.ToString() + " and ContractID = " + connumber.ToString());
+                dt2 = ad.Select("select * from Types where CustomerID = " + cunumber.ToString() + " and ContractID = " + connumber.ToString());
+                dt3 = ad.Select("select * from Customers where CustomerID = " + cunumber.ToString());
+
+                ds.Merge(dt1);
+                ds.Tables[0].TableName = "ReportContract";
+                ds.Merge(dt2);
+                ds.Tables[1].TableName = "ReportType";
+                ds.Merge(dt3);
+                ds.Tables[2].TableName = "ReportCustomer";
+
+                report.Load(Application.StartupPath + "\\Contracts.mrt");
+                report.RegData(ds);
+                report.Render(false);
+
+                _save = new SaveFileDialog();
+                if (_save.ShowDialog() == DialogResult.OK)
+                    report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+            }
         }
     }
 }
