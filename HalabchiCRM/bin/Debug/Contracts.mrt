@@ -6,16 +6,21 @@
     <DataSources isList="true" count="3">
       <DataSource1 Ref="2" type="DataTableSource" isKey="true">
         <Alias>DataSource1</Alias>
-        <Columns isList="true" count="9">
-          <value>address,System.String</value>
-          <value>tell,System.String</value>
-          <value>factoryName,System.String</value>
-          <value>managerName,System.String</value>
-          <value>customerID,System.String</value>
-          <value>postCode,System.String</value>
-          <value>economicCode,System.String</value>
-          <value>mobile,System.String</value>
-          <value>other,System.String</value>
+        <Columns isList="true" count="14">
+          <value>ID,System.String</value>
+          <value>CustomerID,System.String</value>
+          <value>PostCode,System.String</value>
+          <value>EconomyCode,System.String</value>
+          <value>ManagerName,System.String</value>
+          <value>Mobile,System.String</value>
+          <value>FactoryName,System.String</value>
+          <value>Brand,System.String</value>
+          <value>Tell,System.String</value>
+          <value>Fax,System.String</value>
+          <value>Email,System.String</value>
+          <value>WebSite,System.String</value>
+          <value>Other,System.String</value>
+          <value>Address,System.String</value>
         </Columns>
         <Dictionary isRef="1" />
         <Name>DataSource1</Name>
@@ -71,7 +76,7 @@
           <Components isList="true" count="19">
             <Text1 Ref="7" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[146:208:80]</Brush>
+              <Brush>[10:255:255]</Brush>
               <ClientRectangle>3.2,0.1,4.1,1.1</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,36,Bold</Font>
@@ -87,10 +92,10 @@
             </Text1>
             <Text3 Ref="8" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[146:208:80]</Brush>
+              <Brush>[202:255:10]</Brush>
               <ClientRectangle>9.3,0.1,1,0.2</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Tahoma,11</Font>
+              <Font>Arial,11,Bold</Font>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>Text3</Name>
@@ -103,10 +108,10 @@
             </Text3>
             <Text5 Ref="9" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[146:208:80]</Brush>
+              <Brush>[202:255:10]</Brush>
               <ClientRectangle>9.3,1.3,1,0.2</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Tahoma,11</Font>
+              <Font>Arial,11,Bold</Font>
               <Guid>b48fc2e76ad443008e2c975205196b7c</Guid>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -120,10 +125,10 @@
             </Text5>
             <Text9 Ref="10" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[146:208:80]</Brush>
+              <Brush>[202:255:10]</Brush>
               <ClientRectangle>9.3,0.7,1,0.2</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Tahoma,11</Font>
+              <Font>Arial,11,Bold</Font>
               <Guid>e138a75f1f404995a977f4cdb4ee88bd</Guid>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -137,10 +142,10 @@
             </Text9>
             <Text10 Ref="11" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[146:208:80]</Brush>
+              <Brush>[202:255:10]</Brush>
               <ClientRectangle>9.3,0.4,1,0.2</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Tahoma,11</Font>
+              <Font>Arial,11,Bold</Font>
               <Guid>1bb141c72e764f27ad2a6f5790126db7</Guid>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -154,10 +159,10 @@
             </Text10>
             <Text11 Ref="12" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[146:208:80]</Brush>
+              <Brush>[202:255:10]</Brush>
               <ClientRectangle>2,0.7,1,0.2</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Tahoma,11</Font>
+              <Font>Arial,11,Bold</Font>
               <Guid>29142ebb56a8487981b0e300314dcdc4</Guid>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -169,102 +174,12 @@
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text11>
-            <Text12 Ref="13" type="Text" isKey="true">
+            <Text19 Ref="13" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[251:213:181]</Brush>
-              <ClientRectangle>7.5,0.1,1.7,0.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,10</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text12</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
-              <Text>{DataSource1.customerID}</Text>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Text12>
-            <Text2 Ref="14" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[251:213:181]</Brush>
-              <ClientRectangle>7.5,0.7,1.7,0.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,10</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text2</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
-              <Text>{DataSource1.managerName}</Text>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Text2>
-            <Text8 Ref="15" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[251:213:181]</Brush>
-              <ClientRectangle>0.1,1.3,9.1,0.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,10</Font>
-              <HorAlignment>Right</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text8</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
-              <Text>{DataSource1.address}</Text>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Text8>
-            <Text4 Ref="16" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[251:213:181]</Brush>
-              <ClientRectangle>7.5,0.4,1.7,0.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,10</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text4</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
-              <Text>{DataSource1.factoryName}</Text>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Text4>
-            <Text6 Ref="17" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[251:213:181]</Brush>
-              <ClientRectangle>0.1,0.7,1.8,0.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,10</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text6</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
-              <Text>{DataSource1.tell}</Text>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Text6>
-            <Text18 Ref="18" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[251:213:181]</Brush>
-              <ClientRectangle>0.1,0.4,1.8,0.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,10</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text18</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
-              <Text>{DataSource1.postCode}</Text>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Text18>
-            <Text19 Ref="19" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[146:208:80]</Brush>
+              <Brush>[202:255:10]</Brush>
               <ClientRectangle>2,0.4,1,0.2</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Tahoma,11</Font>
+              <Font>Arial,11,Bold</Font>
               <Guid>d28aa2fd3d6b46ebbb6ff927096c00bd</Guid>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -276,27 +191,12 @@
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text19>
-            <Text20 Ref="20" type="Text" isKey="true">
+            <Text21 Ref="14" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[251:213:181]</Brush>
-              <ClientRectangle>0.1,0.1,1.8,0.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,10</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text20</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
-              <Text>{DataSource1.economicCode}</Text>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Text20>
-            <Text21 Ref="21" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[146:208:80]</Brush>
+              <Brush>[202:255:10]</Brush>
               <ClientRectangle>2,0.1,1,0.2</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Tahoma,11</Font>
+              <Font>Arial,11,Bold</Font>
               <Guid>296fff62fae64a7b8d699d0d0fcbe515</Guid>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -308,27 +208,12 @@
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text21>
-            <Text22 Ref="22" type="Text" isKey="true">
+            <Text23 Ref="15" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[251:213:181]</Brush>
-              <ClientRectangle>7.5,1,1.7,0.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,10</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text22</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
-              <Text>{DataSource1.mobile}</Text>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Text22>
-            <Text23 Ref="23" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[146:208:80]</Brush>
+              <Brush>[202:255:10]</Brush>
               <ClientRectangle>9.3,1,1,0.2</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Tahoma,11</Font>
+              <Font>Arial,11,Bold</Font>
               <Guid>33d10d825a144727be5b059d7ea09128</Guid>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -340,27 +225,12 @@
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text23>
-            <Text24 Ref="24" type="Text" isKey="true">
+            <Text25 Ref="16" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[251:213:181]</Brush>
-              <ClientRectangle>0.1,1,1.8,0.2</ClientRectangle>
-              <Conditions isList="true" count="0" />
-              <Font>Arial,10</Font>
-              <HorAlignment>Center</HorAlignment>
-              <Margins>0,0,0,0</Margins>
-              <Name>Text24</Name>
-              <Page isRef="5" />
-              <Parent isRef="6" />
-              <Text>{DataSource1.other}</Text>
-              <TextBrush>Black</TextBrush>
-              <VertAlignment>Center</VertAlignment>
-            </Text24>
-            <Text25 Ref="25" type="Text" isKey="true">
-              <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[146:208:80]</Brush>
+              <Brush>[202:255:10]</Brush>
               <ClientRectangle>2,1,1,0.2</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Tahoma,11</Font>
+              <Font>Arial,11,Bold</Font>
               <Guid>399f68658b174cfcaaa12c2a41b8a8e7</Guid>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -372,6 +242,141 @@
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
             </Text25>
+            <Text7 Ref="17" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:250:78]</Brush>
+              <ClientRectangle>7.5,0.1,1.7,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text7</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DataSource1.CustomerID}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text7>
+            <Text4 Ref="18" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:250:78]</Brush>
+              <ClientRectangle>7.5,0.4,1.7,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text4</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DataSource1.FactoryName}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text4>
+            <Text2 Ref="19" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:250:78]</Brush>
+              <ClientRectangle>7.5,0.7,1.7,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text2</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DataSource1.ManagerName}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text2>
+            <Text12 Ref="20" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:250:78]</Brush>
+              <ClientRectangle>7.5,1,1.7,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text12</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DataSource1.Mobile}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text12>
+            <Text13 Ref="21" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:250:78]</Brush>
+              <ClientRectangle>0.1,0.1,1.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text13</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DataSource1.EconomyCode}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text13>
+            <Text14 Ref="22" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:250:78]</Brush>
+              <ClientRectangle>0.1,0.4,1.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text14</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DataSource1.PostCode}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text14>
+            <Text6 Ref="23" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:250:78]</Brush>
+              <ClientRectangle>0.1,0.7,1.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text6</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DataSource1.Tell}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text6>
+            <Text15 Ref="24" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:250:78]</Brush>
+              <ClientRectangle>0.1,1,1.8,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text15</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DataSource1.Other}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text15>
+            <Text8 Ref="25" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[255:250:78]</Brush>
+              <ClientRectangle>0.1,1.3,9.1,0.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Right</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text8</Name>
+              <Page isRef="5" />
+              <Parent isRef="6" />
+              <Text>{DataSource1.Address}</Text>
+              <TextBrush>Black</TextBrush>
+              <VertAlignment>Center</VertAlignment>
+            </Text8>
           </Components>
           <Conditions isList="true" count="0" />
           <Name>PageHeaderBand1</Name>
@@ -384,7 +389,7 @@
           <Components isList="true" count="3">
             <HeaderDataSource3_ContractDate Ref="27" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[84:141:212]</Brush>
+              <Brush>[75:172:198]</Brush>
               <ClientRectangle>3.4,0,3.5,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,14,Bold</Font>
@@ -401,7 +406,7 @@
             </HeaderDataSource3_ContractDate>
             <HeaderDataSource3_ContractTitle Ref="28" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[84:141:212]</Brush>
+              <Brush>[75:172:198]</Brush>
               <ClientRectangle>0,0,3.4,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,14,Bold</Font>
@@ -418,7 +423,7 @@
             </HeaderDataSource3_ContractTitle>
             <HeaderDataSource3_ContractID Ref="29" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[84:141:212]</Brush>
+              <Brush>[75:172:198]</Brush>
               <ClientRectangle>6.9,0,3.5,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,14,Bold</Font>
@@ -446,11 +451,11 @@
           <Components isList="true" count="3">
             <DataDataSource3_ContractDate Ref="31" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[141:179:226]</Brush>
+              <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>3.4,0,3.5,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Arial,10</Font>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource3_ContractDate</Name>
@@ -463,11 +468,11 @@
             </DataDataSource3_ContractDate>
             <DataDataSource3_ContractTitle Ref="32" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[141:179:226]</Brush>
+              <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>0,0,3.4,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Arial,10</Font>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource3_ContractTitle</Name>
@@ -480,11 +485,11 @@
             </DataDataSource3_ContractTitle>
             <DataDataSource3_ContractID Ref="33" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[141:179:226]</Brush>
+              <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>6.9,0,3.5,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Arial,10</Font>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource3_ContractID</Name>
@@ -510,7 +515,7 @@
           <Components isList="true" count="3">
             <HeaderDataSource2_ProductName Ref="35" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[49:133:155]</Brush>
+              <Brush>[10:255:17]</Brush>
               <ClientRectangle>3.4,0,3.5,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,14,Bold</Font>
@@ -527,7 +532,7 @@
             </HeaderDataSource2_ProductName>
             <HeaderDataSource2_ProductUnit Ref="36" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[49:133:155]</Brush>
+              <Brush>[10:255:17]</Brush>
               <ClientRectangle>0,0,3.4,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,14,Bold</Font>
@@ -544,7 +549,7 @@
             </HeaderDataSource2_ProductUnit>
             <HeaderDataSource2_ProductCode Ref="37" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[49:133:155]</Brush>
+              <Brush>[10:255:17]</Brush>
               <ClientRectangle>6.9,0,3.5,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,14,Bold</Font>
@@ -572,11 +577,11 @@
           <Components isList="true" count="3">
             <DataDataSource2_ProductName Ref="39" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[183:221:232]</Brush>
+              <Brush>[147:255:150]</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>3.4,0,3.5,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Arial,10</Font>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource2_ProductName</Name>
@@ -589,11 +594,11 @@
             </DataDataSource2_ProductName>
             <DataDataSource2_ProductUnit Ref="40" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[183:221:232]</Brush>
+              <Brush>[147:255:150]</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>0,0,3.4,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Arial,10</Font>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource2_ProductUnit</Name>
@@ -606,11 +611,11 @@
             </DataDataSource2_ProductUnit>
             <DataDataSource2_ProductCode Ref="41" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>[183:221:232]</Brush>
+              <Brush>[147:255:150]</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>6.9,0,3.5,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Arial,10</Font>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataDataSource2_ProductCode</Name>
@@ -658,10 +663,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>4/3/2021 11:59:46 PM</ReportChanged>
+  <ReportChanged>4/4/2021 4:51:55 PM</ReportChanged>
   <ReportCreated>9/17/2018 4:56:23 AM</ReportCreated>
-  <ReportFile>C:\Users\Hooman\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Contracts.mrt</ReportFile>
-  <ReportGuid>063a7b8053a84ff097a6d11b4fdabde3</ReportGuid>
+  <ReportFile>C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Contracts.mrt</ReportFile>
+  <ReportGuid>0c6ea3082f954ccea26d739c93363ce2</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Inches</ReportUnit>
   <ReportVersion>2018.1.8.0</ReportVersion>
