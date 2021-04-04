@@ -36,7 +36,7 @@ namespace HalabchiCRM
 
         private void btnReport1_Click(object sender, EventArgs e)
         {
-            if (txtDate.Text != null)
+            if (txtDate.Text != "")
             {
                 using (var db = new HalabchiDB())
                 {
@@ -49,22 +49,64 @@ namespace HalabchiCRM
                     _save = new SaveFileDialog();
                     _save.Filter = "PDF File (.pdf)|*.pdf";
 
-                    if (_save .ShowDialog() == DialogResult.OK)
+                    if (_save.ShowDialog() == DialogResult.OK)
                     {
                         report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
                     }
                 }
             }
+            else
+                FarsiMessageBox.MessageBox.Show("اخطار", "وارد کردن تاریخ الزامی می باشد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
         }
 
         private void btnReport2_Click(object sender, EventArgs e)
         {
-            //btn2
+            if (txtYear1.Text != "")
+            {
+                using (var db = new HalabchiDB())
+                {
+                    var year = db.TolidZayeatChaps.Where(u => u.Year == int.Parse(txtYear1.Text)).ToList();
+
+                    report.Load(Application.StartupPath + "\\TolidZayeatChaps.mrt");
+                    report.RegBusinessObject("TolidZayeatChaps", year);
+                    report.Render(false);
+
+                    _save = new SaveFileDialog();
+                    _save.Filter = "PDF File (.pdf)|*.pdf";
+
+                    if (_save.ShowDialog() == DialogResult.OK)
+                    {
+                        report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                    }
+                }
+            }
+            else
+                FarsiMessageBox.MessageBox.Show("اخطار", "وارد کردن تاریخ الزامی می باشد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
         }
 
         private void btnReport3_Click(object sender, EventArgs e)
         {
-            //btn3
+            if (txtYear2.Text != "" && txtMonth.Text !="")
+            {
+                using (var db = new HalabchiDB())
+                {
+                    var date = db.TolidZayeatChaps.Where(u => u.Year == int.Parse(txtYear2.Text) && u.Month == byte.Parse(txtMonth.Text)).ToList();
+
+                    report.Load(Application.StartupPath + "\\TolidZayeatChaps.mrt");
+                    report.RegBusinessObject("TolidZayeatChaps", date);
+                    report.Render(false);
+
+                    _save = new SaveFileDialog();
+                    _save.Filter = "PDF File (.pdf)|*.pdf"; 
+
+                    if (_save.ShowDialog() == DialogResult.OK)
+                    {
+                        report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                    }
+                }
+            }
+            else
+                FarsiMessageBox.MessageBox.Show("اخطار", "وارد کردن تاریخ الزامی می باشد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
         }
     }
 }
