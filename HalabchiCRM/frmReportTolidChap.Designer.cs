@@ -145,6 +145,7 @@
             this.btnReport2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnReport2.TabIndex = 3;
             this.btnReport2.Text = "ایجاد گزارش";
+            this.btnReport2.Click += new System.EventHandler(this.btnReport2_Click);
             // 
             // labelX9
             // 

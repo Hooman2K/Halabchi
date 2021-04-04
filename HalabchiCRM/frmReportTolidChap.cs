@@ -57,9 +57,14 @@ namespace HalabchiCRM
             }
         }
 
+        private void btnReport2_Click(object sender, EventArgs e)
+        {
+            //btn2
+        }
+
         private void btnReport3_Click(object sender, EventArgs e)
         {
-
+            //btn3
         }
     }
 }
