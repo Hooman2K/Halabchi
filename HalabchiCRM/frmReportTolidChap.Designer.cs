@@ -250,6 +250,7 @@
             this.Name = "frmReportTolidChap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "گزارش تولید و ضایعات چاپ";
+            this.Load += new System.EventHandler(this.frmReportTolidChap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
