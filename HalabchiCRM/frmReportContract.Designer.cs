@@ -80,6 +80,7 @@
             this.cmbxContractNumber.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxContractNumber.Size = new System.Drawing.Size(121, 24);
             this.cmbxContractNumber.TabIndex = 0;
+            this.cmbxContractNumber.SelectedIndexChanged += new System.EventHandler(this.cmbxContractNumber_SelectedIndexChanged);
             // 
             // labelX2
             // 
@@ -132,6 +133,7 @@
             this.cmbxCustomerNumber.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxCustomerNumber.Size = new System.Drawing.Size(121, 24);
             this.cmbxCustomerNumber.TabIndex = 2;
+            this.cmbxCustomerNumber.SelectedIndexChanged += new System.EventHandler(this.cmbxCustomerNumber_SelectedIndexChanged);
             // 
             // btnSingleReport2
             // 
@@ -182,6 +184,7 @@
             this.cmbxCustomerFactory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxCustomerFactory.Size = new System.Drawing.Size(121, 24);
             this.cmbxCustomerFactory.TabIndex = 5;
+            this.cmbxCustomerFactory.SelectedIndexChanged += new System.EventHandler(this.cmbxCustomerFactory_SelectedIndexChanged);
             // 
             // btnSingleReport3
             // 
@@ -258,6 +261,7 @@
             this.Name = "frmReportContract";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "گزارش قرارداد ها";
+            this.Load += new System.EventHandler(this.frmReportContract_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

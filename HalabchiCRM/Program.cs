@@ -16,7 +16,7 @@ namespace HalabchiCRM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmReportTolidChap());
+            Application.Run(new frmReportContract());
         }
     }
 
