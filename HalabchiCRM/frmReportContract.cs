@@ -92,5 +92,20 @@ namespace HalabchiCRM
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnSingleReport1_Click(object sender, EventArgs e)
+        {
+            //report 1
+        }
+
+        private void btnSingleReport2_Click(object sender, EventArgs e)
+        {
+            //report 2
+        }
+
+        private void btnSingleReport3_Click(object sender, EventArgs e)
+        {
+            //report 3
+        }
     }
 }

@@ -70,6 +70,7 @@
             this.btnSingleReport1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSingleReport1.TabIndex = 1;
             this.btnSingleReport1.Text = "ایجاد گزارش";
+            this.btnSingleReport1.Click += new System.EventHandler(this.btnSingleReport1_Click);
             // 
             // cmbxContractNumber
             // 
@@ -146,6 +147,7 @@
             this.btnSingleReport2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSingleReport2.TabIndex = 4;
             this.btnSingleReport2.Text = "ایجاد گزارش";
+            this.btnSingleReport2.Click += new System.EventHandler(this.btnSingleReport2_Click);
             // 
             // labelX6
             // 
@@ -197,6 +199,7 @@
             this.btnSingleReport3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSingleReport3.TabIndex = 7;
             this.btnSingleReport3.Text = "ایجاد گزارش";
+            this.btnSingleReport3.Click += new System.EventHandler(this.btnSingleReport3_Click);
             // 
             // labelX9
             // 
