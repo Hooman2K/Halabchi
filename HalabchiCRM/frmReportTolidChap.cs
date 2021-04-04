@@ -52,6 +52,7 @@ namespace HalabchiCRM
                     if (_save.ShowDialog() == DialogResult.OK)
                     {
                         report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                        Clear();
                     }
                 }
             }
@@ -63,9 +64,11 @@ namespace HalabchiCRM
         {
             if (txtYear1.Text != "")
             {
+                int year1 = int.Parse(txtYear1.Text);
+
                 using (var db = new HalabchiDB())
                 {
-                    var year = db.TolidZayeatChaps.Where(u => u.Year == int.Parse(txtYear1.Text)).ToList();
+                    var year = db.TolidZayeatChaps.Where(u => u.Year == year1).ToList();
 
                     report.Load(Application.StartupPath + "\\TolidZayeatChaps.mrt");
                     report.RegBusinessObject("TolidZayeatChaps", year);
@@ -77,6 +80,7 @@ namespace HalabchiCRM
                     if (_save.ShowDialog() == DialogResult.OK)
                     {
                         report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                        Clear();
                     }
                 }
             }
@@ -86,22 +90,26 @@ namespace HalabchiCRM
 
         private void btnReport3_Click(object sender, EventArgs e)
         {
-            if (txtYear2.Text != "" && txtMonth.Text !="")
+            if (txtYear2.Text != "" && txtMonth.Text != "")
             {
+                int year2 = int.Parse(txtYear2.Text);
+                byte month = byte.Parse(txtMonth.Text);
+
                 using (var db = new HalabchiDB())
                 {
-                    var date = db.TolidZayeatChaps.Where(u => u.Year == int.Parse(txtYear2.Text) && u.Month == byte.Parse(txtMonth.Text)).ToList();
+                    var date = db.TolidZayeatChaps.Where(u => u.Year == year2 && u.Month == month).ToList();
 
                     report.Load(Application.StartupPath + "\\TolidZayeatChaps.mrt");
                     report.RegBusinessObject("TolidZayeatChaps", date);
                     report.Render(false);
 
                     _save = new SaveFileDialog();
-                    _save.Filter = "PDF File (.pdf)|*.pdf"; 
+                    _save.Filter = "PDF File (.pdf)|*.pdf";
 
                     if (_save.ShowDialog() == DialogResult.OK)
                     {
                         report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                        Clear();
                     }
                 }
             }
