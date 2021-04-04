@@ -598,9 +598,11 @@ order by start_time desc");
 
         private void dgvContract_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            int id = int.Parse(dgvContract.CurrentRow.Cells[1].Value.ToString());
+            string id = dgvContract.CurrentRow.Cells[2].Value.ToString();
+            string id2 = dgvContract.CurrentRow.Cells[1].Value.ToString();
 
             ADO db = new ADO();
+
             //using (var db = new HalabchiDB())
             //{
             //    var con = from a in db.Contracts
@@ -636,15 +638,19 @@ order by start_time desc");
 
             DataTable dt1 = new DataTable();
             DataTable dt2 = new DataTable();
+            DataTable dt3 = new DataTable();
 
-            dt1 = db.Select("select * from Contracts where CustomerID = " + id.ToString());
-            dt2 = db.Select("select * from Types where CustomerID = " + id.ToString());
+            dt1 = db.Select("select * from Contracts where CustomerID = " + id2.ToString() + " and ContractID = " + id.ToString());
+            dt2 = db.Select("select * from Types where CustomerID = " + id2.ToString() + " and ContractID = " + id.ToString());
+            dt3 = db.Select("select * from Customers where CustomerID = " + id2.ToString());
 
             DataSet ds = new DataSet();
             ds.Merge(dt1);
             ds.Tables[0].TableName = "ReportContract";
             ds.Merge(dt2);
             ds.Tables[1].TableName = "ReportType";
+            ds.Merge(dt3);
+            ds.Tables[2].TableName = "ReportCustomer";
 
             report.Load(Application.StartupPath + "\\Contracts.mrt");
             report.RegData(ds);
