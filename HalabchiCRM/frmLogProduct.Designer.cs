@@ -49,6 +49,12 @@
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.chbxLine = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.txtEndDate = new System.Windows.Forms.MaskedTextBox();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
+            this.txtStartDate = new System.Windows.Forms.MaskedTextBox();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.btnFilter = new DevComponents.DotNetBar.ButtonX();
+            this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cExport)).BeginInit();
             this.SuspendLayout();
@@ -84,7 +90,7 @@
             this.dgvLog.Name = "dgvLog";
             this.dgvLog.ReadOnly = true;
             this.dgvLog.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dgvLog.Size = new System.Drawing.Size(560, 267);
+            this.dgvLog.Size = new System.Drawing.Size(633, 267);
             this.dgvLog.TabIndex = 0;
             // 
             // Column1
@@ -171,7 +177,7 @@
             // 
             this.cmbxStorge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbxStorge.FormattingEnabled = true;
-            this.cmbxStorge.Location = new System.Drawing.Point(387, 12);
+            this.cmbxStorge.Location = new System.Drawing.Point(460, 10);
             this.cmbxStorge.Name = "cmbxStorge";
             this.cmbxStorge.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxStorge.Size = new System.Drawing.Size(121, 24);
@@ -185,7 +191,7 @@
             // 
             // 
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(514, 14);
+            this.labelX1.Location = new System.Drawing.Point(587, 12);
             this.labelX1.Name = "labelX1";
             this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.labelX1.Size = new System.Drawing.Size(58, 18);
@@ -198,7 +204,7 @@
             this.cExport.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cExport.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnExportContext});
-            this.cExport.Location = new System.Drawing.Point(12, 12);
+            this.cExport.Location = new System.Drawing.Point(25, 255);
             this.cExport.Name = "cExport";
             this.cExport.Size = new System.Drawing.Size(75, 25);
             this.cExport.Stretch = true;
@@ -241,7 +247,7 @@
             // 
             // 
             this.chbxLine.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.chbxLine.Location = new System.Drawing.Point(310, 9);
+            this.chbxLine.Location = new System.Drawing.Point(383, 10);
             this.chbxLine.Name = "chbxLine";
             this.chbxLine.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.chbxLine.Size = new System.Drawing.Size(71, 23);
@@ -250,11 +256,89 @@
             this.chbxLine.Text = "آمار انبار";
             this.chbxLine.CheckedChanged += new System.EventHandler(this.chbxLine_CheckedChanged);
             // 
+            // txtEndDate
+            // 
+            this.txtEndDate.Location = new System.Drawing.Point(129, 10);
+            this.txtEndDate.Mask = "0000/00/00";
+            this.txtEndDate.Name = "txtEndDate";
+            this.txtEndDate.Size = new System.Drawing.Size(89, 23);
+            this.txtEndDate.TabIndex = 51;
+            this.txtEndDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelX6
+            // 
+            this.labelX6.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX6.Location = new System.Drawing.Point(222, 12);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX6.Size = new System.Drawing.Size(27, 18);
+            this.labelX6.TabIndex = 54;
+            this.labelX6.Text = "تا : ";
+            // 
+            // txtStartDate
+            // 
+            this.txtStartDate.Location = new System.Drawing.Point(255, 10);
+            this.txtStartDate.Mask = "0000/00/00";
+            this.txtStartDate.Name = "txtStartDate";
+            this.txtStartDate.Size = new System.Drawing.Size(89, 23);
+            this.txtStartDate.TabIndex = 50;
+            this.txtStartDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelX5
+            // 
+            this.labelX5.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.Location = new System.Drawing.Point(350, 12);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX5.Size = new System.Drawing.Size(27, 18);
+            this.labelX5.TabIndex = 53;
+            this.labelX5.Text = "از : ";
+            // 
+            // btnFilter
+            // 
+            this.btnFilter.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnFilter.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnFilter.Location = new System.Drawing.Point(67, 10);
+            this.btnFilter.Name = "btnFilter";
+            this.btnFilter.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnFilter.Size = new System.Drawing.Size(49, 23);
+            this.btnFilter.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnFilter.TabIndex = 52;
+            this.btnFilter.Text = "فیلتر";
+            this.btnFilter.Click += new System.EventHandler(this.btnFilter_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCancel.Location = new System.Drawing.Point(12, 10);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnCancel.Size = new System.Drawing.Size(49, 23);
+            this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnCancel.TabIndex = 55;
+            this.btnCancel.Text = "لغو";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // frmLogProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 321);
+            this.ClientSize = new System.Drawing.Size(657, 321);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.txtEndDate);
+            this.Controls.Add(this.labelX6);
+            this.Controls.Add(this.txtStartDate);
+            this.Controls.Add(this.labelX5);
+            this.Controls.Add(this.btnFilter);
             this.Controls.Add(this.chbxLine);
             this.Controls.Add(this.cExport);
             this.Controls.Add(this.labelX1);
@@ -299,5 +383,11 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
         private DevComponents.DotNetBar.ButtonItem buttonItem2;
         private DevComponents.DotNetBar.Controls.CheckBoxX chbxLine;
+        private System.Windows.Forms.MaskedTextBox txtEndDate;
+        private DevComponents.DotNetBar.LabelX labelX6;
+        private System.Windows.Forms.MaskedTextBox txtStartDate;
+        private DevComponents.DotNetBar.LabelX labelX5;
+        private DevComponents.DotNetBar.ButtonX btnFilter;
+        private DevComponents.DotNetBar.ButtonX btnCancel;
     }
 }

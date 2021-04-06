@@ -104,6 +104,7 @@ namespace HalabchiCRM
         {
             if (chbxLine.Checked == true)
             {
+                btnCancel_Click(null, null);
                 cmbxStorge.Enabled = true;
                 LoadLogs(cmbxStorge.Text);
             }
@@ -113,6 +114,33 @@ namespace HalabchiCRM
                 cmbxStorge.Enabled = false;
                 LoadLog();
             }
+        }
+
+        private void btnFilter_Click(object sender, EventArgs e)
+        {
+            if (txtStartDate.Text != "" && txtEndDate.Text != "")
+            {
+                try
+                {
+                    using (var db = new HalabchiDB())
+                    {
+                        string start = txtStartDate.Text;
+                        string end = txtEndDate.Text;
+
+                        dgvLog.DataSource = db.LogAddProducts.Where(u => string.Compare(u.Date, start) >= 0 && string.Compare(u.Date, end) <= 0).ToList();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtStartDate.Text = txtEndDate.Text = "";
+            LoadLog();
         }
     }
 }
