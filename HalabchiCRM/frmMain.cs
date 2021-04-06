@@ -647,5 +647,13 @@ order by start_time desc");
             rtolidChap.ShowDialog();
             this.Show();
         }
+
+        private void buttonX3_Click(object sender, EventArgs e)
+        {
+            frmLogProduct lp = new frmLogProduct();
+            this.Hide();
+            lp.ShowDialog();
+            this.Show();
+        }
     }
 }

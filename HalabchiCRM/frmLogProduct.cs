@@ -49,9 +49,17 @@ namespace HalabchiCRM
                 dgvLog.DataSource = db.LogAddProducts.ToList();
             }
         }
+        public void LoadLogs(string name)
+        {
+            using (var db = new HalabchiDB())
+            {
+                dgvLog.DataSource = db.LogAddProducts.Where(u => u.StorageName == name).ToList();
+            }
+        }
 
         private void frmLogProduct_Load(object sender, EventArgs e)
         {
+            cmbxStorge.Enabled = false;
             LoadStorage();
             LoadLog();
         }
@@ -76,7 +84,7 @@ namespace HalabchiCRM
                 var lp = db.LogAddProducts.ToList();
 
                 report.Load(Application.StartupPath + "\\LogAddProducts.mrt");
-                report.RegBusinessObject("LogAddProducts", "lp");
+                report.RegBusinessObject("LogAddProducts", lp);
                 report.Render(false);
 
                 _save = new SaveFileDialog();
@@ -89,7 +97,22 @@ namespace HalabchiCRM
 
         private void cmbxStorge_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //تغییر ایندکس
+            LoadLogs(cmbxStorge.Text);
+        }
+
+        private void chbxLine_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chbxLine.Checked == true)
+            {
+                cmbxStorge.Enabled = true;
+                LoadLogs(cmbxStorge.Text);
+            }
+            else
+            {
+                cmbxStorge.SelectedIndex = 0;
+                cmbxStorge.Enabled = false;
+                LoadLog();
+            }
         }
     }
 }

@@ -73,6 +73,14 @@
             this.lblWelCome = new DevComponents.DotNetBar.LabelX();
             this.btnSearchCostomer = new DevComponents.DotNetBar.ButtonX();
             this.btnAddCostomer = new DevComponents.DotNetBar.ButtonX();
+            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
+            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
+            this.btnReportAmarTolidat = new DevComponents.DotNetBar.ButtonX();
+            this.btnReportTolidGhotiHalab = new DevComponents.DotNetBar.ButtonX();
+            this.btnReportTolidChap = new DevComponents.DotNetBar.ButtonX();
+            this.btnReportTolidKala = new DevComponents.DotNetBar.ButtonX();
+            this.btnReportContract = new DevComponents.DotNetBar.ButtonX();
+            this.btnReportCustomer = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel2 = new DevComponents.DotNetBar.RibbonPanel();
             this.dgvContract = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.Column24 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -106,13 +114,6 @@
             this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtUserName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnEdit = new DevComponents.DotNetBar.ButtonX();
-            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
-            this.btnReportAmarTolidat = new DevComponents.DotNetBar.ButtonX();
-            this.btnReportTolidGhotiHalab = new DevComponents.DotNetBar.ButtonX();
-            this.btnReportTolidChap = new DevComponents.DotNetBar.ButtonX();
-            this.btnReportTolidKala = new DevComponents.DotNetBar.ButtonX();
-            this.btnReportContract = new DevComponents.DotNetBar.ButtonX();
-            this.btnReportCustomer = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
             this.btnAnbar = new DevComponents.DotNetBar.ButtonX();
             this.btnZayeat = new DevComponents.DotNetBar.ButtonX();
@@ -173,17 +174,16 @@
             this.lblTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel7 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
+            this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContract)).BeginInit();
             this.ribbonPanel6.SuspendLayout();
             this.grbxEditUser.SuspendLayout();
-            this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
             this.grbxAdminTool.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
@@ -644,6 +644,119 @@
             this.btnAddCostomer.Text = "ایجاد مشتری جدید";
             this.btnAddCostomer.Click += new System.EventHandler(this.btnAddCostomer_Click);
             // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel4.Controls.Add(this.buttonX3);
+            this.ribbonPanel4.Controls.Add(this.btnReportAmarTolidat);
+            this.ribbonPanel4.Controls.Add(this.btnReportTolidGhotiHalab);
+            this.ribbonPanel4.Controls.Add(this.btnReportTolidChap);
+            this.ribbonPanel4.Controls.Add(this.btnReportTolidKala);
+            this.ribbonPanel4.Controls.Add(this.btnReportContract);
+            this.ribbonPanel4.Controls.Add(this.btnReportCustomer);
+            this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel4.Location = new System.Drawing.Point(0, 26);
+            this.ribbonPanel4.Name = "ribbonPanel4";
+            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel4.Size = new System.Drawing.Size(629, 360);
+            // 
+            // 
+            // 
+            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel4.TabIndex = 4;
+            this.ribbonPanel4.Visible = false;
+            // 
+            // buttonX3
+            // 
+            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX3.Location = new System.Drawing.Point(541, 129);
+            this.buttonX3.Name = "buttonX3";
+            this.buttonX3.Size = new System.Drawing.Size(75, 23);
+            this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX3.TabIndex = 11;
+            this.buttonX3.Text = "گردش کالا";
+            this.buttonX3.Click += new System.EventHandler(this.buttonX3_Click);
+            // 
+            // btnReportAmarTolidat
+            // 
+            this.btnReportAmarTolidat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportAmarTolidat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportAmarTolidat.Location = new System.Drawing.Point(303, 94);
+            this.btnReportAmarTolidat.Name = "btnReportAmarTolidat";
+            this.btnReportAmarTolidat.Size = new System.Drawing.Size(232, 23);
+            this.btnReportAmarTolidat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportAmarTolidat.TabIndex = 10;
+            this.btnReportAmarTolidat.Text = "گزارش تولیدات";
+            this.btnReportAmarTolidat.Click += new System.EventHandler(this.btnReportAmarTolidat_Click);
+            // 
+            // btnReportTolidGhotiHalab
+            // 
+            this.btnReportTolidGhotiHalab.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportTolidGhotiHalab.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportTolidGhotiHalab.Location = new System.Drawing.Point(303, 56);
+            this.btnReportTolidGhotiHalab.Name = "btnReportTolidGhotiHalab";
+            this.btnReportTolidGhotiHalab.Size = new System.Drawing.Size(232, 23);
+            this.btnReportTolidGhotiHalab.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportTolidGhotiHalab.TabIndex = 9;
+            this.btnReportTolidGhotiHalab.Text = "گزارش ضایعات قوطی و حلب";
+            this.btnReportTolidGhotiHalab.Click += new System.EventHandler(this.btnReportTolidGhotiHalab_Click);
+            // 
+            // btnReportTolidChap
+            // 
+            this.btnReportTolidChap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportTolidChap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportTolidChap.Location = new System.Drawing.Point(303, 18);
+            this.btnReportTolidChap.Name = "btnReportTolidChap";
+            this.btnReportTolidChap.Size = new System.Drawing.Size(232, 23);
+            this.btnReportTolidChap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportTolidChap.TabIndex = 8;
+            this.btnReportTolidChap.Text = "گزارش تولید و ضایعات چاپ";
+            this.btnReportTolidChap.Click += new System.EventHandler(this.buttonX4_Click);
+            // 
+            // btnReportTolidKala
+            // 
+            this.btnReportTolidKala.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportTolidKala.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportTolidKala.Location = new System.Drawing.Point(541, 94);
+            this.btnReportTolidKala.Name = "btnReportTolidKala";
+            this.btnReportTolidKala.Size = new System.Drawing.Size(75, 23);
+            this.btnReportTolidKala.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportTolidKala.TabIndex = 2;
+            this.btnReportTolidKala.Text = "تولید کالا";
+            // 
+            // btnReportContract
+            // 
+            this.btnReportContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportContract.Location = new System.Drawing.Point(541, 56);
+            this.btnReportContract.Name = "btnReportContract";
+            this.btnReportContract.Size = new System.Drawing.Size(75, 23);
+            this.btnReportContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportContract.TabIndex = 1;
+            this.btnReportContract.Text = "قرارداد";
+            this.btnReportContract.Click += new System.EventHandler(this.btnReportContract_Click);
+            // 
+            // btnReportCustomer
+            // 
+            this.btnReportCustomer.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportCustomer.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportCustomer.Location = new System.Drawing.Point(541, 18);
+            this.btnReportCustomer.Name = "btnReportCustomer";
+            this.btnReportCustomer.Size = new System.Drawing.Size(75, 23);
+            this.btnReportCustomer.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportCustomer.TabIndex = 0;
+            this.btnReportCustomer.Text = "مشتریان";
+            this.btnReportCustomer.Click += new System.EventHandler(this.btnReportCustomer_Click);
+            // 
             // ribbonPanel2
             // 
             this.ribbonPanel2.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1099,107 +1212,6 @@
             this.btnEdit.TabIndex = 55;
             this.btnEdit.Text = "ویرایش";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
-            // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel4.Controls.Add(this.buttonX3);
-            this.ribbonPanel4.Controls.Add(this.btnReportAmarTolidat);
-            this.ribbonPanel4.Controls.Add(this.btnReportTolidGhotiHalab);
-            this.ribbonPanel4.Controls.Add(this.btnReportTolidChap);
-            this.ribbonPanel4.Controls.Add(this.btnReportTolidKala);
-            this.ribbonPanel4.Controls.Add(this.btnReportContract);
-            this.ribbonPanel4.Controls.Add(this.btnReportCustomer);
-            this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel4.Location = new System.Drawing.Point(0, 26);
-            this.ribbonPanel4.Name = "ribbonPanel4";
-            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel4.Size = new System.Drawing.Size(629, 360);
-            // 
-            // 
-            // 
-            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel4.TabIndex = 4;
-            this.ribbonPanel4.Visible = false;
-            // 
-            // btnReportAmarTolidat
-            // 
-            this.btnReportAmarTolidat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnReportAmarTolidat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnReportAmarTolidat.Location = new System.Drawing.Point(303, 94);
-            this.btnReportAmarTolidat.Name = "btnReportAmarTolidat";
-            this.btnReportAmarTolidat.Size = new System.Drawing.Size(232, 23);
-            this.btnReportAmarTolidat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnReportAmarTolidat.TabIndex = 10;
-            this.btnReportAmarTolidat.Text = "گزارش تولیدات";
-            this.btnReportAmarTolidat.Click += new System.EventHandler(this.btnReportAmarTolidat_Click);
-            // 
-            // btnReportTolidGhotiHalab
-            // 
-            this.btnReportTolidGhotiHalab.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnReportTolidGhotiHalab.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnReportTolidGhotiHalab.Location = new System.Drawing.Point(303, 56);
-            this.btnReportTolidGhotiHalab.Name = "btnReportTolidGhotiHalab";
-            this.btnReportTolidGhotiHalab.Size = new System.Drawing.Size(232, 23);
-            this.btnReportTolidGhotiHalab.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnReportTolidGhotiHalab.TabIndex = 9;
-            this.btnReportTolidGhotiHalab.Text = "گزارش ضایعات قوطی و حلب";
-            this.btnReportTolidGhotiHalab.Click += new System.EventHandler(this.btnReportTolidGhotiHalab_Click);
-            // 
-            // btnReportTolidChap
-            // 
-            this.btnReportTolidChap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnReportTolidChap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnReportTolidChap.Location = new System.Drawing.Point(303, 18);
-            this.btnReportTolidChap.Name = "btnReportTolidChap";
-            this.btnReportTolidChap.Size = new System.Drawing.Size(232, 23);
-            this.btnReportTolidChap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnReportTolidChap.TabIndex = 8;
-            this.btnReportTolidChap.Text = "گزارش تولید و ضایعات چاپ";
-            this.btnReportTolidChap.Click += new System.EventHandler(this.buttonX4_Click);
-            // 
-            // btnReportTolidKala
-            // 
-            this.btnReportTolidKala.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnReportTolidKala.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnReportTolidKala.Location = new System.Drawing.Point(541, 94);
-            this.btnReportTolidKala.Name = "btnReportTolidKala";
-            this.btnReportTolidKala.Size = new System.Drawing.Size(75, 23);
-            this.btnReportTolidKala.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnReportTolidKala.TabIndex = 2;
-            this.btnReportTolidKala.Text = "تولید کالا";
-            // 
-            // btnReportContract
-            // 
-            this.btnReportContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnReportContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnReportContract.Location = new System.Drawing.Point(541, 56);
-            this.btnReportContract.Name = "btnReportContract";
-            this.btnReportContract.Size = new System.Drawing.Size(75, 23);
-            this.btnReportContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnReportContract.TabIndex = 1;
-            this.btnReportContract.Text = "قرارداد";
-            this.btnReportContract.Click += new System.EventHandler(this.btnReportContract_Click);
-            // 
-            // btnReportCustomer
-            // 
-            this.btnReportCustomer.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnReportCustomer.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnReportCustomer.Location = new System.Drawing.Point(541, 18);
-            this.btnReportCustomer.Name = "btnReportCustomer";
-            this.btnReportCustomer.Size = new System.Drawing.Size(75, 23);
-            this.btnReportCustomer.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnReportCustomer.TabIndex = 0;
-            this.btnReportCustomer.Text = "مشتریان";
-            this.btnReportCustomer.Click += new System.EventHandler(this.btnReportCustomer_Click);
             // 
             // ribbonPanel3
             // 
@@ -1913,17 +1925,6 @@
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // buttonX3
-            // 
-            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX3.Location = new System.Drawing.Point(541, 129);
-            this.buttonX3.Name = "buttonX3";
-            this.buttonX3.Size = new System.Drawing.Size(75, 23);
-            this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX3.TabIndex = 11;
-            this.buttonX3.Text = "گردش کالا";
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1947,12 +1948,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
+            this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContract)).EndInit();
             this.ribbonPanel6.ResumeLayout(false);
             this.grbxEditUser.ResumeLayout(false);
             this.grbxEditUser.PerformLayout();
-            this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel3.ResumeLayout(false);
             this.grbxAdminTool.ResumeLayout(false);
             this.ribbonPanel5.ResumeLayout(false);

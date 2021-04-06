@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvLog = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.cmbxStorge = new System.Windows.Forms.ComboBox();
-            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,11 +41,14 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbxStorge = new System.Windows.Forms.ComboBox();
+            this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.cExport = new DevComponents.DotNetBar.ContextMenuBar();
             this.btnExportContext = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.chbxLine = new DevComponents.DotNetBar.Controls.CheckBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cExport)).BeginInit();
             this.SuspendLayout();
@@ -70,14 +71,14 @@
             this.Column10,
             this.Column11});
             this.cExport.SetContextMenuEx(this.dgvLog, this.btnExportContext);
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLog.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvLog.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvLog.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvLog.Location = new System.Drawing.Point(12, 42);
             this.dgvLog.Name = "dgvLog";
@@ -85,31 +86,6 @@
             this.dgvLog.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dgvLog.Size = new System.Drawing.Size(560, 267);
             this.dgvLog.TabIndex = 0;
-            // 
-            // cmbxStorge
-            // 
-            this.cmbxStorge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbxStorge.FormattingEnabled = true;
-            this.cmbxStorge.Location = new System.Drawing.Point(387, 12);
-            this.cmbxStorge.Name = "cmbxStorge";
-            this.cmbxStorge.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cmbxStorge.Size = new System.Drawing.Size(121, 24);
-            this.cmbxStorge.TabIndex = 0;
-            this.cmbxStorge.SelectedIndexChanged += new System.EventHandler(this.cmbxStorge_SelectedIndexChanged);
-            // 
-            // labelX1
-            // 
-            this.labelX1.AutoSize = true;
-            // 
-            // 
-            // 
-            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.labelX1.Location = new System.Drawing.Point(514, 14);
-            this.labelX1.Name = "labelX1";
-            this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.labelX1.Size = new System.Drawing.Size(58, 18);
-            this.labelX1.TabIndex = 1;
-            this.labelX1.Text = "نام انبار : ";
             // 
             // Column1
             // 
@@ -191,6 +167,31 @@
             this.Column11.Name = "Column11";
             this.Column11.ReadOnly = true;
             // 
+            // cmbxStorge
+            // 
+            this.cmbxStorge.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxStorge.FormattingEnabled = true;
+            this.cmbxStorge.Location = new System.Drawing.Point(387, 12);
+            this.cmbxStorge.Name = "cmbxStorge";
+            this.cmbxStorge.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbxStorge.Size = new System.Drawing.Size(121, 24);
+            this.cmbxStorge.TabIndex = 0;
+            this.cmbxStorge.SelectedIndexChanged += new System.EventHandler(this.cmbxStorge_SelectedIndexChanged);
+            // 
+            // labelX1
+            // 
+            this.labelX1.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX1.Location = new System.Drawing.Point(514, 14);
+            this.labelX1.Name = "labelX1";
+            this.labelX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX1.Size = new System.Drawing.Size(58, 18);
+            this.labelX1.TabIndex = 1;
+            this.labelX1.Text = "نام انبار : ";
+            // 
             // cExport
             // 
             this.cExport.AntiAlias = true;
@@ -234,11 +235,27 @@
             this.buttonItem2.Text = "PDF";
             this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
             // 
+            // chbxLine
+            // 
+            // 
+            // 
+            // 
+            this.chbxLine.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.chbxLine.Location = new System.Drawing.Point(310, 9);
+            this.chbxLine.Name = "chbxLine";
+            this.chbxLine.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.chbxLine.Size = new System.Drawing.Size(71, 23);
+            this.chbxLine.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.chbxLine.TabIndex = 49;
+            this.chbxLine.Text = "آمار انبار";
+            this.chbxLine.CheckedChanged += new System.EventHandler(this.chbxLine_CheckedChanged);
+            // 
             // frmLogProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 321);
+            this.Controls.Add(this.chbxLine);
             this.Controls.Add(this.cExport);
             this.Controls.Add(this.labelX1);
             this.Controls.Add(this.cmbxStorge);
@@ -281,5 +298,6 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem3;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
         private DevComponents.DotNetBar.ButtonItem buttonItem2;
+        private DevComponents.DotNetBar.Controls.CheckBoxX chbxLine;
     }
 }
