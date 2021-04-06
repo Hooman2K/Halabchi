@@ -38,6 +38,7 @@ namespace HalabchiCRM
         public virtual DbSet<TahvilAnabr> TahvilAnabrs { get; set; }
         public virtual DbSet<ZayeatHalabGhoti> ZayeatHalabGhotis { get; set; }
         public virtual DbSet<TolidZayeatChap> TolidZayeatChaps { get; set; }
+        public virtual DbSet<LogAddProduct> LogAddProducts { get; set; }
     }
 
     public class User
@@ -245,6 +246,19 @@ namespace HalabchiCRM
     public class LogAddProduct
     {
         public int ID { get; set; }
-
+        public int Year { get; set; }
+        public byte Month { get; set; }
+        public byte Day { get; set; }
+        [MaxLength(10)]
+        public string Date { get; set; }
+        [MaxLength(100)]
+        public string StorageName { get; set; }
+        [MaxLength(10)]
+        public string ProductCode { get; set; }
+        [MaxLength(50)]
+        public string ProductName { get; set; }
+        public float MeghdarGhabli { get; set; }
+        public float MeghdarJadid { get; set; }
+        public float Sum { get; set; }
     }
 }

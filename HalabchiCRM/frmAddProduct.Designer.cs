@@ -53,6 +53,7 @@
             this.txtLastCount = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             this.btnAdd = new DevComponents.DotNetBar.ButtonX();
+            this.lblDate = new DevComponents.DotNetBar.LabelX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             this.SuspendLayout();
             // 
@@ -369,6 +370,17 @@
             this.btnAdd.Text = "+";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // lblDate
+            // 
+            // 
+            // 
+            // 
+            this.lblDate.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.lblDate.Location = new System.Drawing.Point(0, 0);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.TabIndex = 0;
+            this.lblDate.Visible = false;
+            // 
             // frmAddProduct
             // 
             this.AcceptButton = this.btnAddProduct;
@@ -434,5 +446,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private DevComponents.DotNetBar.ButtonX btnCancel;
         private DevComponents.DotNetBar.ButtonX btnAdd;
+        private DevComponents.DotNetBar.LabelX lblDate;
     }
 }

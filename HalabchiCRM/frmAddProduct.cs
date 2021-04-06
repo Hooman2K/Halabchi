@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevComponents.DotNetBar;
 using System.Data.Entity;
 
+using System.Globalization;
+
 namespace HalabchiCRM
 {
     public partial class frmAddProduct : Office2007Form
@@ -21,6 +23,18 @@ namespace HalabchiCRM
 
         bool _itemSelect = false;
         int _id;
+        DateTime dt;
+        private string PersianCalenders()
+        {
+            string date = "";
+            dt = DateTime.Now;
+            lblDate.Text = dt.Year + "/" + dt.Month + "/" + dt.Day;
+            PersianCalendar PC = new PersianCalendar();
+            dt = DateTime.Parse(lblDate.Text);
+            lblDate.Text = PC.GetYear(dt).ToString("0000") + "/" + PC.GetMonth(dt).ToString("00") + "/" + PC.GetDayOfMonth(dt).ToString("00");
+            date = lblDate.Text;
+            return date;
+        }
 
         private void Clear()
         {
@@ -159,7 +173,34 @@ namespace HalabchiCRM
             {
                 using (var db = new HalabchiDB())
                 {
+                    dt = DateTime.Now;
+                    lblDate.Text = dt.Year + "/" + dt.Month + "/" + dt.Day;
+                    PersianCalendar PC = new PersianCalendar();
+                    dt = DateTime.Parse(lblDate.Text);
+                    lblDate.Text = PC.GetYear(dt).ToString("0000") + "/" + PC.GetMonth(dt).ToString("00") + "/" + PC.GetDayOfMonth(dt).ToString("00");
+
                     var pro = db.StorageTypes.Where(u => u.ID == _id).FirstOrDefault();
+
+                    float meghdarGhabli = float.Parse(pro.ProductUnit.ToString());
+                    float meghdarJadid = float.Parse (txtProductCount.Text);
+                    float sum = meghdarGhabli + meghdarJadid;
+
+                    LogAddProduct lap = new LogAddProduct()
+                    {
+                        Year = int.Parse(PC.GetYear(dt).ToString("0000")),
+                        Month = byte.Parse(PC.GetMonth(dt).ToString("00")),
+                        Day = byte.Parse(PC.GetDayOfMonth(dt).ToString("00")),
+                        Date = lblDate.Text,
+                        ProductCode = pro.ProductCode,
+                        ProductName = pro.ProductName,
+                        StorageName = pro.StorageName,
+                        MeghdarGhabli = meghdarGhabli,
+                        MeghdarJadid = meghdarJadid,
+                        Sum = sum
+                    };
+                    db.LogAddProducts.Add(lap);
+                    db.SaveChanges();
+
                     pro.ProductUnit = txtLastCount.Text;
 
                     db.SaveChanges();
