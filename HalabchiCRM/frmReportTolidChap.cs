@@ -31,7 +31,7 @@ namespace HalabchiCRM
         }
         private void Clear()
         {
-            txtDate.Text = txtMonth.Text = txtYear1.Text = txtYear2.Text = "";
+            txtDate.Text = txtMonth.Text = txtYear1.Text = txtYear2.Text = txtStartDate.Text = txtEndDate.Text = "";
             txtDate.Focus();
         }
 
@@ -259,7 +259,6 @@ namespace HalabchiCRM
             }
             else if (_name == "گزارش تولیدات")
             {
-                //code
                 if (txtYear2.Text != "" && txtMonth.Text != "")
                 {
                     int year2 = int.Parse(txtYear2.Text);
@@ -291,6 +290,94 @@ namespace HalabchiCRM
         private void frmReportTolidChap_Load(object sender, EventArgs e)
         {
             _name = this.Text;
+        }
+
+        private void btnReport4_Click(object sender, EventArgs e)
+        {
+            if (_name == "گزارش تولید و ضایعات چاپ")
+            {
+                if (txtStartDate.Text != "" && txtEndDate.Text != "")
+                {
+                    string start = txtStartDate.Text;
+                    string end = txtEndDate.Text;
+
+                    using (var db = new HalabchiDB())
+                    {
+                        var date = db.TolidZayeatChaps.Where(u => string.Compare(u.Date, start) >= 0 && string.Compare(u.Date, end) <= 0).ToList();
+
+                        report.Load(Application.StartupPath + "\\TolidZayeatChaps.mrt");
+                        report.RegBusinessObject("TolidZayeatChaps", date);
+                        report.Render(false);
+
+                        _save = new SaveFileDialog();
+                        _save.Filter = "PDF File (.pdf)|*.pdf";
+
+                        if (_save.ShowDialog() == DialogResult.OK)
+                        {
+                            report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                            Clear();
+                        }
+                    }
+                }
+                else
+                    FarsiMessageBox.MessageBox.Show("اخطار", "وارد کردن تاریخ الزامی می باشد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+            }
+            else if (_name == "گزارش ضایعات قوطی و حلب")
+            {
+                if (txtStartDate.Text != "" && txtEndDate.Text != "")
+                {
+                    string start = txtStartDate.Text;
+                    string end = txtEndDate.Text;
+
+                    using (var db = new HalabchiDB())
+                    {
+                        var date = db.ZayeatHalabGhotis.Where(u => string.Compare(u.Date, start) >= 0 && string.Compare(u.Date, end) <= 0).ToList();
+
+                        report.Load(Application.StartupPath + "\\ZayeatHalabGhotis.mrt");
+                        report.RegBusinessObject("ZayeatHalabGhotis", date);
+                        report.Render(false);
+
+                        _save = new SaveFileDialog();
+                        _save.Filter = "PDF File (.pdf)|*.pdf";
+
+                        if (_save.ShowDialog() == DialogResult.OK)
+                        {
+                            report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                            Clear();
+                        }
+                    }
+                }
+                else
+                    FarsiMessageBox.MessageBox.Show("اخطار", "وارد کردن تاریخ الزامی می باشد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+            }
+            else if (_name == "گزارش تولیدات")
+            {
+                if (txtStartDate.Text != "" && txtEndDate.Text != "")
+                {
+                    string start = txtStartDate.Text;
+                    string end = txtEndDate.Text;
+
+                    using (var db = new HalabchiDB())
+                    {
+                        var date = db.TolidHalabGhotis.Where(u => string.Compare(u.Date, start) >= 0 && string.Compare(u.Date, end) <= 0).ToList();
+
+                        report.Load(Application.StartupPath + "\\Tolid.mrt");
+                        report.RegBusinessObject("TolidGhoti", date);
+                        report.Render(false);
+
+                        _save = new SaveFileDialog();
+                        _save.Filter = "PDF File (.pdf)|*.pdf";
+
+                        if (_save.ShowDialog() == DialogResult.OK)
+                        {
+                            report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                            Clear();
+                        }
+                    }
+                }
+                else
+                    FarsiMessageBox.MessageBox.Show("اخطار", "وارد کردن تاریخ الزامی می باشد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+            }
         }
     }
 }

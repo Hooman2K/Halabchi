@@ -41,6 +41,11 @@
             this.labelX10 = new DevComponents.DotNetBar.LabelX();
             this.txtYear2 = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtMonth = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtStartDate = new System.Windows.Forms.MaskedTextBox();
+            this.labelX5 = new DevComponents.DotNetBar.LabelX();
+            this.btnReport4 = new DevComponents.DotNetBar.ButtonX();
+            this.txtEndDate = new System.Windows.Forms.MaskedTextBox();
+            this.labelX6 = new DevComponents.DotNetBar.LabelX();
             this.SuspendLayout();
             // 
             // btnReport1
@@ -223,11 +228,75 @@
             this.txtMonth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtMonth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtYear1_KeyPress);
             // 
+            // txtStartDate
+            // 
+            this.txtStartDate.Location = new System.Drawing.Point(268, 123);
+            this.txtStartDate.Mask = "0000/00/00";
+            this.txtStartDate.Name = "txtStartDate";
+            this.txtStartDate.Size = new System.Drawing.Size(128, 23);
+            this.txtStartDate.TabIndex = 7;
+            this.txtStartDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelX5
+            // 
+            this.labelX5.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX5.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX5.Location = new System.Drawing.Point(398, 125);
+            this.labelX5.Name = "labelX5";
+            this.labelX5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX5.Size = new System.Drawing.Size(27, 18);
+            this.labelX5.TabIndex = 31;
+            this.labelX5.Text = "از : ";
+            // 
+            // btnReport4
+            // 
+            this.btnReport4.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReport4.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReport4.Location = new System.Drawing.Point(12, 123);
+            this.btnReport4.Name = "btnReport4";
+            this.btnReport4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnReport4.Size = new System.Drawing.Size(75, 23);
+            this.btnReport4.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReport4.TabIndex = 9;
+            this.btnReport4.Text = "ایجاد گزارش";
+            this.btnReport4.Click += new System.EventHandler(this.btnReport4_Click);
+            // 
+            // txtEndDate
+            // 
+            this.txtEndDate.Location = new System.Drawing.Point(93, 123);
+            this.txtEndDate.Mask = "0000/00/00";
+            this.txtEndDate.Name = "txtEndDate";
+            this.txtEndDate.Size = new System.Drawing.Size(128, 23);
+            this.txtEndDate.TabIndex = 8;
+            this.txtEndDate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // labelX6
+            // 
+            this.labelX6.AutoSize = true;
+            // 
+            // 
+            // 
+            this.labelX6.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.labelX6.Location = new System.Drawing.Point(223, 125);
+            this.labelX6.Name = "labelX6";
+            this.labelX6.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.labelX6.Size = new System.Drawing.Size(27, 18);
+            this.labelX6.TabIndex = 34;
+            this.labelX6.Text = "تا : ";
+            // 
             // frmReportTolidChap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(431, 128);
+            this.ClientSize = new System.Drawing.Size(431, 160);
+            this.Controls.Add(this.txtEndDate);
+            this.Controls.Add(this.labelX6);
+            this.Controls.Add(this.txtStartDate);
+            this.Controls.Add(this.labelX5);
+            this.Controls.Add(this.btnReport4);
             this.Controls.Add(this.txtMonth);
             this.Controls.Add(this.txtYear2);
             this.Controls.Add(this.btnReport2);
@@ -271,5 +340,10 @@
         private DevComponents.DotNetBar.LabelX labelX10;
         private DevComponents.DotNetBar.Controls.TextBoxX txtYear2;
         private DevComponents.DotNetBar.Controls.TextBoxX txtMonth;
+        private System.Windows.Forms.MaskedTextBox txtStartDate;
+        private DevComponents.DotNetBar.LabelX labelX5;
+        private DevComponents.DotNetBar.ButtonX btnReport4;
+        private System.Windows.Forms.MaskedTextBox txtEndDate;
+        private DevComponents.DotNetBar.LabelX labelX6;
     }
 }

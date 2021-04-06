@@ -242,4 +242,9 @@ namespace HalabchiCRM
         public float Kore { get; set; }
         public float JamkonAkhar { get; set; }
     }
+    public class LogAddProduct
+    {
+        public int ID { get; set; }
+
+    }
 }
