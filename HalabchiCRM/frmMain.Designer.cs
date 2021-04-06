@@ -82,26 +82,6 @@
             this.Column27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnNewContract = new DevComponents.DotNetBar.ButtonX();
-            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
-            this.btnReportAmarTolidat = new DevComponents.DotNetBar.ButtonX();
-            this.btnReportTolidGhotiHalab = new DevComponents.DotNetBar.ButtonX();
-            this.btnReportTolidChap = new DevComponents.DotNetBar.ButtonX();
-            this.btnReportTolidKala = new DevComponents.DotNetBar.ButtonX();
-            this.btnReportContract = new DevComponents.DotNetBar.ButtonX();
-            this.btnReportCustomer = new DevComponents.DotNetBar.ButtonX();
-            this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
-            this.btnAnbar = new DevComponents.DotNetBar.ButtonX();
-            this.btnZayeat = new DevComponents.DotNetBar.ButtonX();
-            this.btnChap = new DevComponents.DotNetBar.ButtonX();
-            this.btnTolidHalabGhoti = new DevComponents.DotNetBar.ButtonX();
-            this.btnProduction = new DevComponents.DotNetBar.ButtonX();
-            this.grbxAdminTool = new DevComponents.DotNetBar.Controls.GroupPanel();
-            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.btnAddProduct = new DevComponents.DotNetBar.ButtonX();
-            this.btnStorage = new DevComponents.DotNetBar.ButtonX();
-            this.btnPipeLine = new DevComponents.DotNetBar.ButtonX();
-            this.btnProduct = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel6 = new DevComponents.DotNetBar.RibbonPanel();
             this.grbxEditUser = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.labelX17 = new DevComponents.DotNetBar.LabelX();
@@ -126,6 +106,26 @@
             this.txtPassword = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.txtUserName = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnEdit = new DevComponents.DotNetBar.ButtonX();
+            this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
+            this.btnReportAmarTolidat = new DevComponents.DotNetBar.ButtonX();
+            this.btnReportTolidGhotiHalab = new DevComponents.DotNetBar.ButtonX();
+            this.btnReportTolidChap = new DevComponents.DotNetBar.ButtonX();
+            this.btnReportTolidKala = new DevComponents.DotNetBar.ButtonX();
+            this.btnReportContract = new DevComponents.DotNetBar.ButtonX();
+            this.btnReportCustomer = new DevComponents.DotNetBar.ButtonX();
+            this.ribbonPanel3 = new DevComponents.DotNetBar.RibbonPanel();
+            this.btnAnbar = new DevComponents.DotNetBar.ButtonX();
+            this.btnZayeat = new DevComponents.DotNetBar.ButtonX();
+            this.btnChap = new DevComponents.DotNetBar.ButtonX();
+            this.btnTolidHalabGhoti = new DevComponents.DotNetBar.ButtonX();
+            this.btnProduction = new DevComponents.DotNetBar.ButtonX();
+            this.grbxAdminTool = new DevComponents.DotNetBar.Controls.GroupPanel();
+            this.buttonX2 = new DevComponents.DotNetBar.ButtonX();
+            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
+            this.btnAddProduct = new DevComponents.DotNetBar.ButtonX();
+            this.btnStorage = new DevComponents.DotNetBar.ButtonX();
+            this.btnPipeLine = new DevComponents.DotNetBar.ButtonX();
+            this.btnProduct = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel5 = new DevComponents.DotNetBar.RibbonPanel();
             this.groupPanel2 = new DevComponents.DotNetBar.Controls.GroupPanel();
             this.grbxRestore = new System.Windows.Forms.GroupBox();
@@ -173,6 +173,7 @@
             this.lblTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel7 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).BeginInit();
@@ -180,11 +181,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.ribbonPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContract)).BeginInit();
+            this.ribbonPanel6.SuspendLayout();
+            this.grbxEditUser.SuspendLayout();
             this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel3.SuspendLayout();
             this.grbxAdminTool.SuspendLayout();
-            this.ribbonPanel6.SuspendLayout();
-            this.grbxEditUser.SuspendLayout();
             this.ribbonPanel5.SuspendLayout();
             this.groupPanel2.SuspendLayout();
             this.grbxRestore.SuspendLayout();
@@ -224,9 +225,9 @@
             // 
             this.ribbonControl1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.ribbonControl1.Controls.Add(this.ribbonPanel1);
+            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel2);
             this.ribbonControl1.Controls.Add(this.ribbonPanel6);
-            this.ribbonControl1.Controls.Add(this.ribbonPanel4);
             this.ribbonControl1.Controls.Add(this.ribbonPanel3);
             this.ribbonControl1.Controls.Add(this.ribbonPanel5);
             this.ribbonControl1.Controls.Add(this.ribbonPanel7);
@@ -757,311 +758,6 @@
             this.btnNewContract.Text = "ایجاد قرارداد جدید";
             this.btnNewContract.Click += new System.EventHandler(this.btnNewContract_Click);
             // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel4.Controls.Add(this.btnReportAmarTolidat);
-            this.ribbonPanel4.Controls.Add(this.btnReportTolidGhotiHalab);
-            this.ribbonPanel4.Controls.Add(this.btnReportTolidChap);
-            this.ribbonPanel4.Controls.Add(this.btnReportTolidKala);
-            this.ribbonPanel4.Controls.Add(this.btnReportContract);
-            this.ribbonPanel4.Controls.Add(this.btnReportCustomer);
-            this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel4.Location = new System.Drawing.Point(0, 26);
-            this.ribbonPanel4.Name = "ribbonPanel4";
-            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel4.Size = new System.Drawing.Size(629, 360);
-            // 
-            // 
-            // 
-            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel4.TabIndex = 4;
-            this.ribbonPanel4.Visible = false;
-            // 
-            // btnReportAmarTolidat
-            // 
-            this.btnReportAmarTolidat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnReportAmarTolidat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnReportAmarTolidat.Location = new System.Drawing.Point(303, 94);
-            this.btnReportAmarTolidat.Name = "btnReportAmarTolidat";
-            this.btnReportAmarTolidat.Size = new System.Drawing.Size(232, 23);
-            this.btnReportAmarTolidat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnReportAmarTolidat.TabIndex = 10;
-            this.btnReportAmarTolidat.Text = "گزارش تولیدات";
-            this.btnReportAmarTolidat.Click += new System.EventHandler(this.btnReportAmarTolidat_Click);
-            // 
-            // btnReportTolidGhotiHalab
-            // 
-            this.btnReportTolidGhotiHalab.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnReportTolidGhotiHalab.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnReportTolidGhotiHalab.Location = new System.Drawing.Point(303, 56);
-            this.btnReportTolidGhotiHalab.Name = "btnReportTolidGhotiHalab";
-            this.btnReportTolidGhotiHalab.Size = new System.Drawing.Size(232, 23);
-            this.btnReportTolidGhotiHalab.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnReportTolidGhotiHalab.TabIndex = 9;
-            this.btnReportTolidGhotiHalab.Text = "گزارش ضایعات قوطی و حلب";
-            this.btnReportTolidGhotiHalab.Click += new System.EventHandler(this.btnReportTolidGhotiHalab_Click);
-            // 
-            // btnReportTolidChap
-            // 
-            this.btnReportTolidChap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnReportTolidChap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnReportTolidChap.Location = new System.Drawing.Point(303, 18);
-            this.btnReportTolidChap.Name = "btnReportTolidChap";
-            this.btnReportTolidChap.Size = new System.Drawing.Size(232, 23);
-            this.btnReportTolidChap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnReportTolidChap.TabIndex = 8;
-            this.btnReportTolidChap.Text = "گزارش تولید و ضایعات چاپ";
-            this.btnReportTolidChap.Click += new System.EventHandler(this.buttonX4_Click);
-            // 
-            // btnReportTolidKala
-            // 
-            this.btnReportTolidKala.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnReportTolidKala.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnReportTolidKala.Location = new System.Drawing.Point(541, 94);
-            this.btnReportTolidKala.Name = "btnReportTolidKala";
-            this.btnReportTolidKala.Size = new System.Drawing.Size(75, 23);
-            this.btnReportTolidKala.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnReportTolidKala.TabIndex = 2;
-            this.btnReportTolidKala.Text = "تولید کالا";
-            // 
-            // btnReportContract
-            // 
-            this.btnReportContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnReportContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnReportContract.Location = new System.Drawing.Point(541, 56);
-            this.btnReportContract.Name = "btnReportContract";
-            this.btnReportContract.Size = new System.Drawing.Size(75, 23);
-            this.btnReportContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnReportContract.TabIndex = 1;
-            this.btnReportContract.Text = "قرارداد";
-            this.btnReportContract.Click += new System.EventHandler(this.btnReportContract_Click);
-            // 
-            // btnReportCustomer
-            // 
-            this.btnReportCustomer.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnReportCustomer.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnReportCustomer.Location = new System.Drawing.Point(541, 18);
-            this.btnReportCustomer.Name = "btnReportCustomer";
-            this.btnReportCustomer.Size = new System.Drawing.Size(75, 23);
-            this.btnReportCustomer.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnReportCustomer.TabIndex = 0;
-            this.btnReportCustomer.Text = "مشتریان";
-            this.btnReportCustomer.Click += new System.EventHandler(this.btnReportCustomer_Click);
-            // 
-            // ribbonPanel3
-            // 
-            this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel3.Controls.Add(this.btnAnbar);
-            this.ribbonPanel3.Controls.Add(this.btnZayeat);
-            this.ribbonPanel3.Controls.Add(this.btnChap);
-            this.ribbonPanel3.Controls.Add(this.btnTolidHalabGhoti);
-            this.ribbonPanel3.Controls.Add(this.btnProduction);
-            this.ribbonPanel3.Controls.Add(this.grbxAdminTool);
-            this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel3.Location = new System.Drawing.Point(0, 26);
-            this.ribbonPanel3.Name = "ribbonPanel3";
-            this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel3.Size = new System.Drawing.Size(629, 360);
-            // 
-            // 
-            // 
-            this.ribbonPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel3.TabIndex = 3;
-            this.ribbonPanel3.Visible = false;
-            // 
-            // btnAnbar
-            // 
-            this.btnAnbar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAnbar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAnbar.Location = new System.Drawing.Point(492, 243);
-            this.btnAnbar.Name = "btnAnbar";
-            this.btnAnbar.Size = new System.Drawing.Size(103, 23);
-            this.btnAnbar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAnbar.TabIndex = 8;
-            this.btnAnbar.Text = "نمایش انبار";
-            this.btnAnbar.Click += new System.EventHandler(this.btnAnbar_Click);
-            // 
-            // btnZayeat
-            // 
-            this.btnZayeat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnZayeat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnZayeat.Location = new System.Drawing.Point(363, 212);
-            this.btnZayeat.Name = "btnZayeat";
-            this.btnZayeat.Size = new System.Drawing.Size(232, 23);
-            this.btnZayeat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnZayeat.TabIndex = 7;
-            this.btnZayeat.Text = "آمار ضایعات قوطی و حلب";
-            this.btnZayeat.Click += new System.EventHandler(this.btnZayeat_Click);
-            // 
-            // btnChap
-            // 
-            this.btnChap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnChap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnChap.Location = new System.Drawing.Point(363, 181);
-            this.btnChap.Name = "btnChap";
-            this.btnChap.Size = new System.Drawing.Size(232, 23);
-            this.btnChap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnChap.TabIndex = 6;
-            this.btnChap.Text = "آمار تولید و ضایعات چاپ";
-            this.btnChap.Click += new System.EventHandler(this.btnChap_Click);
-            // 
-            // btnTolidHalabGhoti
-            // 
-            this.btnTolidHalabGhoti.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnTolidHalabGhoti.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnTolidHalabGhoti.Location = new System.Drawing.Point(363, 150);
-            this.btnTolidHalabGhoti.Name = "btnTolidHalabGhoti";
-            this.btnTolidHalabGhoti.Size = new System.Drawing.Size(103, 23);
-            this.btnTolidHalabGhoti.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnTolidHalabGhoti.TabIndex = 5;
-            this.btnTolidHalabGhoti.Text = "آمار تولیدات";
-            this.btnTolidHalabGhoti.Click += new System.EventHandler(this.btnTolidHalabGhoti_Click);
-            // 
-            // btnProduction
-            // 
-            this.btnProduction.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnProduction.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnProduction.Location = new System.Drawing.Point(492, 150);
-            this.btnProduction.Name = "btnProduction";
-            this.btnProduction.Size = new System.Drawing.Size(103, 23);
-            this.btnProduction.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnProduction.TabIndex = 4;
-            this.btnProduction.Text = "تولید کالا";
-            this.btnProduction.Click += new System.EventHandler(this.btnProduction_Click);
-            // 
-            // grbxAdminTool
-            // 
-            this.grbxAdminTool.CanvasColor = System.Drawing.SystemColors.Control;
-            this.grbxAdminTool.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
-            this.grbxAdminTool.Controls.Add(this.buttonX2);
-            this.grbxAdminTool.Controls.Add(this.buttonX1);
-            this.grbxAdminTool.Controls.Add(this.btnAddProduct);
-            this.grbxAdminTool.Controls.Add(this.btnStorage);
-            this.grbxAdminTool.Controls.Add(this.btnPipeLine);
-            this.grbxAdminTool.Controls.Add(this.btnProduct);
-            this.grbxAdminTool.Location = new System.Drawing.Point(21, 18);
-            this.grbxAdminTool.Name = "grbxAdminTool";
-            this.grbxAdminTool.Size = new System.Drawing.Size(590, 120);
-            // 
-            // 
-            // 
-            this.grbxAdminTool.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
-            this.grbxAdminTool.Style.BackColorGradientAngle = 90;
-            this.grbxAdminTool.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
-            this.grbxAdminTool.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.grbxAdminTool.Style.BorderBottomWidth = 1;
-            this.grbxAdminTool.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
-            this.grbxAdminTool.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.grbxAdminTool.Style.BorderLeftWidth = 1;
-            this.grbxAdminTool.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.grbxAdminTool.Style.BorderRightWidth = 1;
-            this.grbxAdminTool.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
-            this.grbxAdminTool.Style.BorderTopWidth = 1;
-            this.grbxAdminTool.Style.CornerDiameter = 4;
-            this.grbxAdminTool.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
-            this.grbxAdminTool.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
-            this.grbxAdminTool.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
-            this.grbxAdminTool.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
-            // 
-            // 
-            // 
-            this.grbxAdminTool.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.grbxAdminTool.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.grbxAdminTool.TabIndex = 3;
-            this.grbxAdminTool.Text = "ابزار مدیریتی تولید";
-            // 
-            // buttonX2
-            // 
-            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX2.Enabled = false;
-            this.buttonX2.Location = new System.Drawing.Point(339, 64);
-            this.buttonX2.Name = "buttonX2";
-            this.buttonX2.Size = new System.Drawing.Size(103, 23);
-            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX2.TabIndex = 5;
-            this.buttonX2.Text = "سفارشی";
-            // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Location = new System.Drawing.Point(339, 35);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(103, 23);
-            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.buttonX1.TabIndex = 4;
-            this.buttonX1.Text = "فرمول ساخت";
-            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
-            // 
-            // btnAddProduct
-            // 
-            this.btnAddProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAddProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddProduct.Location = new System.Drawing.Point(339, 6);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(103, 23);
-            this.btnAddProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddProduct.TabIndex = 3;
-            this.btnAddProduct.Text = "اضافه کردن کالا";
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
-            // 
-            // btnStorage
-            // 
-            this.btnStorage.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnStorage.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnStorage.Location = new System.Drawing.Point(468, 6);
-            this.btnStorage.Name = "btnStorage";
-            this.btnStorage.Size = new System.Drawing.Size(103, 23);
-            this.btnStorage.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnStorage.TabIndex = 0;
-            this.btnStorage.Text = "معرفی انبار";
-            this.btnStorage.Click += new System.EventHandler(this.btnStorage_Click);
-            // 
-            // btnPipeLine
-            // 
-            this.btnPipeLine.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnPipeLine.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnPipeLine.Location = new System.Drawing.Point(468, 64);
-            this.btnPipeLine.Name = "btnPipeLine";
-            this.btnPipeLine.Size = new System.Drawing.Size(103, 23);
-            this.btnPipeLine.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnPipeLine.TabIndex = 2;
-            this.btnPipeLine.Text = "معرفی خط تولید";
-            this.btnPipeLine.Click += new System.EventHandler(this.btnPipeLine_Click);
-            // 
-            // btnProduct
-            // 
-            this.btnProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnProduct.Location = new System.Drawing.Point(468, 35);
-            this.btnProduct.Name = "btnProduct";
-            this.btnProduct.Size = new System.Drawing.Size(103, 23);
-            this.btnProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnProduct.TabIndex = 1;
-            this.btnProduct.Text = "معرفی محصول";
-            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
-            // 
             // ribbonPanel6
             // 
             this.ribbonPanel6.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
@@ -1403,6 +1099,312 @@
             this.btnEdit.TabIndex = 55;
             this.btnEdit.Text = "ویرایش";
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click_1);
+            // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel4.Controls.Add(this.buttonX3);
+            this.ribbonPanel4.Controls.Add(this.btnReportAmarTolidat);
+            this.ribbonPanel4.Controls.Add(this.btnReportTolidGhotiHalab);
+            this.ribbonPanel4.Controls.Add(this.btnReportTolidChap);
+            this.ribbonPanel4.Controls.Add(this.btnReportTolidKala);
+            this.ribbonPanel4.Controls.Add(this.btnReportContract);
+            this.ribbonPanel4.Controls.Add(this.btnReportCustomer);
+            this.ribbonPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel4.Location = new System.Drawing.Point(0, 26);
+            this.ribbonPanel4.Name = "ribbonPanel4";
+            this.ribbonPanel4.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel4.Size = new System.Drawing.Size(629, 360);
+            // 
+            // 
+            // 
+            this.ribbonPanel4.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel4.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel4.TabIndex = 4;
+            this.ribbonPanel4.Visible = false;
+            // 
+            // btnReportAmarTolidat
+            // 
+            this.btnReportAmarTolidat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportAmarTolidat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportAmarTolidat.Location = new System.Drawing.Point(303, 94);
+            this.btnReportAmarTolidat.Name = "btnReportAmarTolidat";
+            this.btnReportAmarTolidat.Size = new System.Drawing.Size(232, 23);
+            this.btnReportAmarTolidat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportAmarTolidat.TabIndex = 10;
+            this.btnReportAmarTolidat.Text = "گزارش تولیدات";
+            this.btnReportAmarTolidat.Click += new System.EventHandler(this.btnReportAmarTolidat_Click);
+            // 
+            // btnReportTolidGhotiHalab
+            // 
+            this.btnReportTolidGhotiHalab.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportTolidGhotiHalab.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportTolidGhotiHalab.Location = new System.Drawing.Point(303, 56);
+            this.btnReportTolidGhotiHalab.Name = "btnReportTolidGhotiHalab";
+            this.btnReportTolidGhotiHalab.Size = new System.Drawing.Size(232, 23);
+            this.btnReportTolidGhotiHalab.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportTolidGhotiHalab.TabIndex = 9;
+            this.btnReportTolidGhotiHalab.Text = "گزارش ضایعات قوطی و حلب";
+            this.btnReportTolidGhotiHalab.Click += new System.EventHandler(this.btnReportTolidGhotiHalab_Click);
+            // 
+            // btnReportTolidChap
+            // 
+            this.btnReportTolidChap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportTolidChap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportTolidChap.Location = new System.Drawing.Point(303, 18);
+            this.btnReportTolidChap.Name = "btnReportTolidChap";
+            this.btnReportTolidChap.Size = new System.Drawing.Size(232, 23);
+            this.btnReportTolidChap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportTolidChap.TabIndex = 8;
+            this.btnReportTolidChap.Text = "گزارش تولید و ضایعات چاپ";
+            this.btnReportTolidChap.Click += new System.EventHandler(this.buttonX4_Click);
+            // 
+            // btnReportTolidKala
+            // 
+            this.btnReportTolidKala.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportTolidKala.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportTolidKala.Location = new System.Drawing.Point(541, 94);
+            this.btnReportTolidKala.Name = "btnReportTolidKala";
+            this.btnReportTolidKala.Size = new System.Drawing.Size(75, 23);
+            this.btnReportTolidKala.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportTolidKala.TabIndex = 2;
+            this.btnReportTolidKala.Text = "تولید کالا";
+            // 
+            // btnReportContract
+            // 
+            this.btnReportContract.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportContract.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportContract.Location = new System.Drawing.Point(541, 56);
+            this.btnReportContract.Name = "btnReportContract";
+            this.btnReportContract.Size = new System.Drawing.Size(75, 23);
+            this.btnReportContract.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportContract.TabIndex = 1;
+            this.btnReportContract.Text = "قرارداد";
+            this.btnReportContract.Click += new System.EventHandler(this.btnReportContract_Click);
+            // 
+            // btnReportCustomer
+            // 
+            this.btnReportCustomer.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnReportCustomer.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnReportCustomer.Location = new System.Drawing.Point(541, 18);
+            this.btnReportCustomer.Name = "btnReportCustomer";
+            this.btnReportCustomer.Size = new System.Drawing.Size(75, 23);
+            this.btnReportCustomer.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnReportCustomer.TabIndex = 0;
+            this.btnReportCustomer.Text = "مشتریان";
+            this.btnReportCustomer.Click += new System.EventHandler(this.btnReportCustomer_Click);
+            // 
+            // ribbonPanel3
+            // 
+            this.ribbonPanel3.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel3.Controls.Add(this.btnAnbar);
+            this.ribbonPanel3.Controls.Add(this.btnZayeat);
+            this.ribbonPanel3.Controls.Add(this.btnChap);
+            this.ribbonPanel3.Controls.Add(this.btnTolidHalabGhoti);
+            this.ribbonPanel3.Controls.Add(this.btnProduction);
+            this.ribbonPanel3.Controls.Add(this.grbxAdminTool);
+            this.ribbonPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel3.Location = new System.Drawing.Point(0, 26);
+            this.ribbonPanel3.Name = "ribbonPanel3";
+            this.ribbonPanel3.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel3.Size = new System.Drawing.Size(629, 360);
+            // 
+            // 
+            // 
+            this.ribbonPanel3.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel3.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel3.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel3.TabIndex = 3;
+            this.ribbonPanel3.Visible = false;
+            // 
+            // btnAnbar
+            // 
+            this.btnAnbar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAnbar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAnbar.Location = new System.Drawing.Point(492, 243);
+            this.btnAnbar.Name = "btnAnbar";
+            this.btnAnbar.Size = new System.Drawing.Size(103, 23);
+            this.btnAnbar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAnbar.TabIndex = 8;
+            this.btnAnbar.Text = "نمایش انبار";
+            this.btnAnbar.Click += new System.EventHandler(this.btnAnbar_Click);
+            // 
+            // btnZayeat
+            // 
+            this.btnZayeat.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnZayeat.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnZayeat.Location = new System.Drawing.Point(363, 212);
+            this.btnZayeat.Name = "btnZayeat";
+            this.btnZayeat.Size = new System.Drawing.Size(232, 23);
+            this.btnZayeat.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnZayeat.TabIndex = 7;
+            this.btnZayeat.Text = "آمار ضایعات قوطی و حلب";
+            this.btnZayeat.Click += new System.EventHandler(this.btnZayeat_Click);
+            // 
+            // btnChap
+            // 
+            this.btnChap.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnChap.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnChap.Location = new System.Drawing.Point(363, 181);
+            this.btnChap.Name = "btnChap";
+            this.btnChap.Size = new System.Drawing.Size(232, 23);
+            this.btnChap.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnChap.TabIndex = 6;
+            this.btnChap.Text = "آمار تولید و ضایعات چاپ";
+            this.btnChap.Click += new System.EventHandler(this.btnChap_Click);
+            // 
+            // btnTolidHalabGhoti
+            // 
+            this.btnTolidHalabGhoti.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTolidHalabGhoti.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnTolidHalabGhoti.Location = new System.Drawing.Point(363, 150);
+            this.btnTolidHalabGhoti.Name = "btnTolidHalabGhoti";
+            this.btnTolidHalabGhoti.Size = new System.Drawing.Size(103, 23);
+            this.btnTolidHalabGhoti.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnTolidHalabGhoti.TabIndex = 5;
+            this.btnTolidHalabGhoti.Text = "آمار تولیدات";
+            this.btnTolidHalabGhoti.Click += new System.EventHandler(this.btnTolidHalabGhoti_Click);
+            // 
+            // btnProduction
+            // 
+            this.btnProduction.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnProduction.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnProduction.Location = new System.Drawing.Point(492, 150);
+            this.btnProduction.Name = "btnProduction";
+            this.btnProduction.Size = new System.Drawing.Size(103, 23);
+            this.btnProduction.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnProduction.TabIndex = 4;
+            this.btnProduction.Text = "تولید کالا";
+            this.btnProduction.Click += new System.EventHandler(this.btnProduction_Click);
+            // 
+            // grbxAdminTool
+            // 
+            this.grbxAdminTool.CanvasColor = System.Drawing.SystemColors.Control;
+            this.grbxAdminTool.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.Office2007;
+            this.grbxAdminTool.Controls.Add(this.buttonX2);
+            this.grbxAdminTool.Controls.Add(this.buttonX1);
+            this.grbxAdminTool.Controls.Add(this.btnAddProduct);
+            this.grbxAdminTool.Controls.Add(this.btnStorage);
+            this.grbxAdminTool.Controls.Add(this.btnPipeLine);
+            this.grbxAdminTool.Controls.Add(this.btnProduct);
+            this.grbxAdminTool.Location = new System.Drawing.Point(21, 18);
+            this.grbxAdminTool.Name = "grbxAdminTool";
+            this.grbxAdminTool.Size = new System.Drawing.Size(590, 120);
+            // 
+            // 
+            // 
+            this.grbxAdminTool.Style.BackColor2SchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
+            this.grbxAdminTool.Style.BackColorGradientAngle = 90;
+            this.grbxAdminTool.Style.BackColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
+            this.grbxAdminTool.Style.BorderBottom = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.grbxAdminTool.Style.BorderBottomWidth = 1;
+            this.grbxAdminTool.Style.BorderColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBorder;
+            this.grbxAdminTool.Style.BorderLeft = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.grbxAdminTool.Style.BorderLeftWidth = 1;
+            this.grbxAdminTool.Style.BorderRight = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.grbxAdminTool.Style.BorderRightWidth = 1;
+            this.grbxAdminTool.Style.BorderTop = DevComponents.DotNetBar.eStyleBorderType.Solid;
+            this.grbxAdminTool.Style.BorderTopWidth = 1;
+            this.grbxAdminTool.Style.CornerDiameter = 4;
+            this.grbxAdminTool.Style.CornerType = DevComponents.DotNetBar.eCornerType.Rounded;
+            this.grbxAdminTool.Style.TextAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Center;
+            this.grbxAdminTool.Style.TextColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
+            this.grbxAdminTool.Style.TextLineAlignment = DevComponents.DotNetBar.eStyleTextAlignment.Near;
+            // 
+            // 
+            // 
+            this.grbxAdminTool.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.grbxAdminTool.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.grbxAdminTool.TabIndex = 3;
+            this.grbxAdminTool.Text = "ابزار مدیریتی تولید";
+            // 
+            // buttonX2
+            // 
+            this.buttonX2.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX2.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX2.Enabled = false;
+            this.buttonX2.Location = new System.Drawing.Point(339, 64);
+            this.buttonX2.Name = "buttonX2";
+            this.buttonX2.Size = new System.Drawing.Size(103, 23);
+            this.buttonX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX2.TabIndex = 5;
+            this.buttonX2.Text = "سفارشی";
+            // 
+            // buttonX1
+            // 
+            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX1.Location = new System.Drawing.Point(339, 35);
+            this.buttonX1.Name = "buttonX1";
+            this.buttonX1.Size = new System.Drawing.Size(103, 23);
+            this.buttonX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX1.TabIndex = 4;
+            this.buttonX1.Text = "فرمول ساخت";
+            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddProduct.Location = new System.Drawing.Point(339, 6);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(103, 23);
+            this.btnAddProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddProduct.TabIndex = 3;
+            this.btnAddProduct.Text = "اضافه کردن کالا";
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            // 
+            // btnStorage
+            // 
+            this.btnStorage.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnStorage.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnStorage.Location = new System.Drawing.Point(468, 6);
+            this.btnStorage.Name = "btnStorage";
+            this.btnStorage.Size = new System.Drawing.Size(103, 23);
+            this.btnStorage.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnStorage.TabIndex = 0;
+            this.btnStorage.Text = "معرفی انبار";
+            this.btnStorage.Click += new System.EventHandler(this.btnStorage_Click);
+            // 
+            // btnPipeLine
+            // 
+            this.btnPipeLine.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnPipeLine.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnPipeLine.Location = new System.Drawing.Point(468, 64);
+            this.btnPipeLine.Name = "btnPipeLine";
+            this.btnPipeLine.Size = new System.Drawing.Size(103, 23);
+            this.btnPipeLine.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnPipeLine.TabIndex = 2;
+            this.btnPipeLine.Text = "معرفی خط تولید";
+            this.btnPipeLine.Click += new System.EventHandler(this.btnPipeLine_Click);
+            // 
+            // btnProduct
+            // 
+            this.btnProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnProduct.Location = new System.Drawing.Point(468, 35);
+            this.btnProduct.Name = "btnProduct";
+            this.btnProduct.Size = new System.Drawing.Size(103, 23);
+            this.btnProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnProduct.TabIndex = 1;
+            this.btnProduct.Text = "معرفی محصول";
+            this.btnProduct.Click += new System.EventHandler(this.btnProduct_Click);
             // 
             // ribbonPanel5
             // 
@@ -1911,6 +1913,17 @@
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // buttonX3
+            // 
+            this.buttonX3.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.buttonX3.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.buttonX3.Location = new System.Drawing.Point(541, 129);
+            this.buttonX3.Name = "buttonX3";
+            this.buttonX3.Size = new System.Drawing.Size(75, 23);
+            this.buttonX3.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.buttonX3.TabIndex = 11;
+            this.buttonX3.Text = "گردش کالا";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -1936,12 +1949,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             this.ribbonPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContract)).EndInit();
-            this.ribbonPanel4.ResumeLayout(false);
-            this.ribbonPanel3.ResumeLayout(false);
-            this.grbxAdminTool.ResumeLayout(false);
             this.ribbonPanel6.ResumeLayout(false);
             this.grbxEditUser.ResumeLayout(false);
             this.grbxEditUser.PerformLayout();
+            this.ribbonPanel4.ResumeLayout(false);
+            this.ribbonPanel3.ResumeLayout(false);
+            this.grbxAdminTool.ResumeLayout(false);
             this.ribbonPanel5.ResumeLayout(false);
             this.groupPanel2.ResumeLayout(false);
             this.grbxRestore.ResumeLayout(false);
@@ -2095,5 +2108,6 @@
         private DevComponents.DotNetBar.ButtonX btnReportAmarTolidat;
         private DevComponents.DotNetBar.ButtonX btnReportTolidGhotiHalab;
         private DevComponents.DotNetBar.ButtonX btnReportTolidChap;
+        private DevComponents.DotNetBar.ButtonX buttonX3;
     }
 }
