@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="1">
+      <LogAddProducts Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>LogAddProducts</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category />
+        <Columns isList="true" count="11">
+          <value>ID,System.String</value>
+          <value>Year,System.String</value>
+          <value>Month,System.String</value>
+          <value>Day,System.String</value>
+          <value>Date,System.String</value>
+          <value>StorageName,System.String</value>
+          <value>ProductCode,System.String</value>
+          <value>ProductName,System.String</value>
+          <value>MeghdarGhabli,System.String</value>
+          <value>MeghdarJadid,System.String</value>
+          <value>Sum,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>1f95fcc076db46e3a3767ad46bdbe3f9</Guid>
+        <Name>LogAddProducts</Name>
+      </LogAddProducts>
+    </BusinessObjects>
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="3" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <HeaderBand1 Ref="4" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,19,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text1 Ref="5" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Yellow</Brush>
+              <ClientRectangle>0,-0.4,19,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>گزارش اضافه کردن محصولات</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </HeaderBand1>
+        <Header Ref="6" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2,19,0.8</ClientRectangle>
+          <Components isList="true" count="8">
+            <HeaderLogAddProducts_ID Ref="7" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>17,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderLogAddProducts_ID</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>شماره</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderLogAddProducts_ID>
+            <HeaderLogAddProducts_Date Ref="8" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>14.4,0,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderLogAddProducts_Date</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>تاریخ</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderLogAddProducts_Date>
+            <HeaderLogAddProducts_StorageName Ref="9" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>11.8,0,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderLogAddProducts_StorageName</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>نام انبار</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderLogAddProducts_StorageName>
+            <HeaderLogAddProducts_ProductCode Ref="10" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>9.4,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderLogAddProducts_ProductCode</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>کد محصول</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderLogAddProducts_ProductCode>
+            <HeaderLogAddProducts_ProductName Ref="11" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>7,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderLogAddProducts_ProductName</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>نام محصول</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderLogAddProducts_ProductName>
+            <HeaderLogAddProducts_MeghdarGhabli Ref="12" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>4.6,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderLogAddProducts_MeghdarGhabli</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>مقدار قبلی</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderLogAddProducts_MeghdarGhabli>
+            <HeaderLogAddProducts_MeghdarJadid Ref="13" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>2.2,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderLogAddProducts_MeghdarJadid</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>مقدار جدید</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderLogAddProducts_MeghdarJadid>
+            <HeaderLogAddProducts_Sum Ref="14" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>0,0,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderLogAddProducts_Sum</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>مانده جدید</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderLogAddProducts_Sum>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Header</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </Header>
+        <Data Ref="15" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid>1f95fcc076db46e3a3767ad46bdbe3f9</BusinessObjectGuid>
+          <ClientRectangle>0,3.6,19,0.8</ClientRectangle>
+          <Components isList="true" count="8">
+            <DataLogAddProducts_ID Ref="16" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>17,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataLogAddProducts_ID</Name>
+              <Page isRef="3" />
+              <Parent isRef="15" />
+              <Text>{LogAddProducts.ID}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataLogAddProducts_ID>
+            <DataLogAddProducts_Date Ref="17" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14.4,0,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataLogAddProducts_Date</Name>
+              <Page isRef="3" />
+              <Parent isRef="15" />
+              <Text>{LogAddProducts.Date}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataLogAddProducts_Date>
+            <DataLogAddProducts_StorageName Ref="18" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>11.8,0,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataLogAddProducts_StorageName</Name>
+              <Page isRef="3" />
+              <Parent isRef="15" />
+              <Text>{LogAddProducts.StorageName}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataLogAddProducts_StorageName>
+            <DataLogAddProducts_ProductCode Ref="19" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9.4,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataLogAddProducts_ProductCode</Name>
+              <Page isRef="3" />
+              <Parent isRef="15" />
+              <Text>{LogAddProducts.ProductCode}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataLogAddProducts_ProductCode>
+            <DataLogAddProducts_ProductName Ref="20" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>7,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataLogAddProducts_ProductName</Name>
+              <Page isRef="3" />
+              <Parent isRef="15" />
+              <Text>{LogAddProducts.ProductName}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataLogAddProducts_ProductName>
+            <DataLogAddProducts_MeghdarGhabli Ref="21" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>4.6,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataLogAddProducts_MeghdarGhabli</Name>
+              <Page isRef="3" />
+              <Parent isRef="15" />
+              <Text>{LogAddProducts.MeghdarGhabli}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataLogAddProducts_MeghdarGhabli>
+            <DataLogAddProducts_MeghdarJadid Ref="22" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>2.2,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataLogAddProducts_MeghdarJadid</Name>
+              <Page isRef="3" />
+              <Parent isRef="15" />
+              <Text>{LogAddProducts.MeghdarJadid}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataLogAddProducts_MeghdarJadid>
+            <DataLogAddProducts_Sum Ref="23" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,8</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataLogAddProducts_Sum</Name>
+              <Page isRef="3" />
+              <Parent isRef="15" />
+              <Text>{LogAddProducts.Sum}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataLogAddProducts_Sum>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Name>Data</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+          <Sort isList="true" count="0" />
+        </Data>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>3a4708402edd4febaaca1dbd0a8aa926</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <PageHeight>29.7</PageHeight>
+      <PageWidth>21</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="24" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="25" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>4/6/2021 7:08:31 PM</ReportChanged>
+  <ReportCreated>4/6/2021 7:00:02 PM</ReportCreated>
+  <ReportFile>C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\LogAddProducts.mrt</ReportFile>
+  <ReportGuid>1b82afb37cbf40e6a6d372faef6dba56</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2018.1.8.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+        #endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>
