@@ -655,5 +655,13 @@ order by start_time desc");
             lp.ShowDialog();
             this.Show();
         }
+
+        private void btnAddSupply_Click(object sender, EventArgs e)
+        {
+            frmSupply supply = new frmSupply();
+            this.Hide();
+            supply.ShowDialog();
+            this.Show();
+        }
     }
 }
