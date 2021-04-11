@@ -57,7 +57,7 @@
               <Name>Text1</Name>
               <Page isRef="3" />
               <Parent isRef="4" />
-              <Text>گزارش مشتریان</Text>
+              <Text>گزارش تامین کنندگان</Text>
               <TextBrush>Black</TextBrush>
               <Type>Expression</Type>
               <VertAlignment>Center</VertAlignment>
@@ -126,7 +126,7 @@
             <HeaderCustomers_EconomyCode Ref="10" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>18.8,0,2.4,0.8</ClientRectangle>
+              <ClientRectangle>18.6,0,2.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -143,7 +143,7 @@
             <HeaderCustomers_ManagerName Ref="11" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>16.2,0,2.6,0.8</ClientRectangle>
+              <ClientRectangle>16.2,0,2.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -325,7 +325,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>18.8,0,2.4,0.8</ClientRectangle>
+              <ClientRectangle>18.6,0,2.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10</Font>
               <HorAlignment>Center</HorAlignment>
@@ -342,7 +342,7 @@
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>16.2,0,2.6,0.8</ClientRectangle>
+              <ClientRectangle>16.2,0,2.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10</Font>
               <HorAlignment>Center</HorAlignment>
@@ -493,10 +493,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>4/11/2021 8:59:48 PM</ReportChanged>
+  <ReportChanged>4/11/2021 9:19:50 PM</ReportChanged>
   <ReportCreated>4/3/2021 7:30:06 PM</ReportCreated>
   <ReportFile>C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Supplys.mrt</ReportFile>
-  <ReportGuid>85965839d9764125ba832f88c0f5a7ab</ReportGuid>
+  <ReportGuid>80fe221aec014568944cf9ee782c34ea</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.1.8.0</ReportVersion>
