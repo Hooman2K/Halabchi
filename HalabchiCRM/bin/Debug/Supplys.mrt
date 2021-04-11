@@ -75,7 +75,7 @@
             <HeaderCustomers_ID Ref="7" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>25.8,0,1.8,0.8</ClientRectangle>
+              <ClientRectangle>25.6,0,2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -92,7 +92,7 @@
             <HeaderCustomers_CustomerID Ref="8" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>23.6,0,2.2,0.8</ClientRectangle>
+              <ClientRectangle>23.4,0,2.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -109,7 +109,7 @@
             <HeaderCustomers_PostCode Ref="9" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>21.4,0,2.2,0.8</ClientRectangle>
+              <ClientRectangle>21.2,0,2.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -126,7 +126,7 @@
             <HeaderCustomers_EconomyCode Ref="10" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>19.2,0,2.2,0.8</ClientRectangle>
+              <ClientRectangle>18.8,0,2.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -143,7 +143,7 @@
             <HeaderCustomers_ManagerName Ref="11" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>16.6,0,2.6,0.8</ClientRectangle>
+              <ClientRectangle>16.2,0,2.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -160,7 +160,7 @@
             <HeaderCustomers_Mobile Ref="12" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>14.2,0,2.4,0.8</ClientRectangle>
+              <ClientRectangle>13.8,0,2.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -177,7 +177,7 @@
             <HeaderCustomers_FactoryName Ref="13" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>11.6,0,2.6,0.8</ClientRectangle>
+              <ClientRectangle>11,0,2.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -194,7 +194,7 @@
             <HeaderCustomers_Brand Ref="14" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>9,0,2.6,0.8</ClientRectangle>
+              <ClientRectangle>8.4,0,2.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -211,7 +211,7 @@
             <HeaderCustomers_Tell Ref="15" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>6.4,0,2.6,0.8</ClientRectangle>
+              <ClientRectangle>6,0,2.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -228,7 +228,7 @@
             <HeaderCustomers_Fax Ref="16" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
               <Brush>[78:255:140]</Brush>
-              <ClientRectangle>3.6,0,2.8,0.8</ClientRectangle>
+              <ClientRectangle>3.6,0,2.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Tahoma,10,Bold</Font>
               <HorAlignment>Center</HorAlignment>
@@ -271,11 +271,13 @@
           <ClientRectangle>0,3.6,27.7,0.8</ClientRectangle>
           <Components isList="true" count="11">
             <DataSupplys_ID Ref="19" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>25.8,0,2,0.8</ClientRectangle>
+              <ClientRectangle>25.6,0,2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataSupplys_ID</Name>
               <Page isRef="3" />
@@ -286,11 +288,13 @@
               <VertAlignment>Center</VertAlignment>
             </DataSupplys_ID>
             <DataSupplys_SupplyID Ref="20" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>23.6,0,2.2,0.8</ClientRectangle>
+              <ClientRectangle>23.4,0,2.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataSupplys_SupplyID</Name>
               <Page isRef="3" />
@@ -301,11 +305,13 @@
               <VertAlignment>Center</VertAlignment>
             </DataSupplys_SupplyID>
             <DataSupplys_PostCode Ref="21" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>21.4,0,2.2,0.8</ClientRectangle>
+              <ClientRectangle>21.2,0,2.2,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataSupplys_PostCode</Name>
               <Page isRef="3" />
@@ -316,11 +322,13 @@
               <VertAlignment>Center</VertAlignment>
             </DataSupplys_PostCode>
             <DataSupplys_EconomyCode Ref="22" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>19.2,0,2.2,0.8</ClientRectangle>
+              <ClientRectangle>18.8,0,2.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataSupplys_EconomyCode</Name>
               <Page isRef="3" />
@@ -331,11 +339,13 @@
               <VertAlignment>Center</VertAlignment>
             </DataSupplys_EconomyCode>
             <DataSupplys_ManagerName Ref="23" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>16.6,0,2.6,0.8</ClientRectangle>
+              <ClientRectangle>16.2,0,2.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataSupplys_ManagerName</Name>
               <Page isRef="3" />
@@ -346,11 +356,13 @@
               <VertAlignment>Center</VertAlignment>
             </DataSupplys_ManagerName>
             <DataSupplys_Mobile Ref="24" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>14.2,0,2.4,0.8</ClientRectangle>
+              <ClientRectangle>13.8,0,2.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataSupplys_Mobile</Name>
               <Page isRef="3" />
@@ -361,11 +373,13 @@
               <VertAlignment>Center</VertAlignment>
             </DataSupplys_Mobile>
             <DataSupplys_FactoryName Ref="25" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>11.6,0,2.6,0.8</ClientRectangle>
+              <ClientRectangle>11,0,2.8,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataSupplys_FactoryName</Name>
               <Page isRef="3" />
@@ -376,11 +390,13 @@
               <VertAlignment>Center</VertAlignment>
             </DataSupplys_FactoryName>
             <DataSupplys_Brand Ref="26" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>9,0,2.6,0.8</ClientRectangle>
+              <ClientRectangle>8.4,0,2.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataSupplys_Brand</Name>
               <Page isRef="3" />
@@ -391,11 +407,13 @@
               <VertAlignment>Center</VertAlignment>
             </DataSupplys_Brand>
             <DataSupplys_Tell Ref="27" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>6.4,0,2.6,0.8</ClientRectangle>
+              <ClientRectangle>6,0,2.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataSupplys_Tell</Name>
               <Page isRef="3" />
@@ -406,11 +424,13 @@
               <VertAlignment>Center</VertAlignment>
             </DataSupplys_Tell>
             <DataSupplys_Fax Ref="28" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
-              <ClientRectangle>3.6,0,2.8,0.8</ClientRectangle>
+              <ClientRectangle>3.6,0,2.4,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataSupplys_Fax</Name>
               <Page isRef="3" />
@@ -421,11 +441,13 @@
               <VertAlignment>Center</VertAlignment>
             </DataSupplys_Fax>
             <DataSupplys_SupplyList Ref="29" type="Text" isKey="true">
-              <Brush>Transparent</Brush>
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[183:221:232]</Brush>
               <CanGrow>True</CanGrow>
               <ClientRectangle>0,0,3.6,0.8</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,8</Font>
+              <Font>Tahoma,10</Font>
+              <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
               <Name>DataSupplys_SupplyList</Name>
               <Page isRef="3" />
@@ -471,10 +493,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>4/11/2021 8:22:52 PM</ReportChanged>
+  <ReportChanged>4/11/2021 8:59:48 PM</ReportChanged>
   <ReportCreated>4/3/2021 7:30:06 PM</ReportCreated>
-  <ReportFile>C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Customers.mrt</ReportFile>
-  <ReportGuid>e57e2f5b0c6a451c98931b539b992e14</ReportGuid>
+  <ReportFile>C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Supplys.mrt</ReportFile>
+  <ReportGuid>85965839d9764125ba832f88c0f5a7ab</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Centimeters</ReportUnit>
   <ReportVersion>2018.1.8.0</ReportVersion>

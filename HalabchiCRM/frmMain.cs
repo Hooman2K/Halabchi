@@ -664,6 +664,7 @@ order by start_time desc");
             this.Hide();
             supply.ShowDialog();
             this.Show();
+            LoadSupply();
         }
 
         private void buttonItem5_Click_1(object sender, EventArgs e)
