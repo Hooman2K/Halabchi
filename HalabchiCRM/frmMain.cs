@@ -157,6 +157,8 @@ namespace HalabchiCRM
 
                 //لود کردن قرارداد ها
                 LoadContract();
+
+                LoadSupply();
             }
             grbxAdminTool.Enabled = AppInfo.IsAdmin;
         }
@@ -666,12 +668,43 @@ order by start_time desc");
 
         private void buttonItem5_Click_1(object sender, EventArgs e)
         {
-            //jadval
+            report.Load(Application.StartupPath + "\\Supplys.mrt");
+            report.RegBusinessObject("Supplys", dgvSupply.DataSource);
+            report.Render(false);
+
+            _save = new SaveFileDialog();
+            _save.Filter = "PDF File (.pdf)|*.pdf";
+
+            if (_save.ShowDialog() == DialogResult.OK)
+            {
+                report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+            }
         }
 
         private void buttonItem6_Click_1(object sender, EventArgs e)
         {
-            //pdf
+            using (var db = new HalabchiDB())
+            {
+                var sup = db.Supplys.ToList();
+                report.Load(Application.StartupPath + "\\Supplys.mrt");
+                report.RegBusinessObject("Supplys", sup);
+                report.Render(false);
+
+                _save = new SaveFileDialog();
+                _save.Filter = "PDF File (.pdf)|*.pdf";
+
+                if (_save .ShowDialog()==DialogResult.OK)
+                {
+                    report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
+                }
+            }
+        }
+        private void LoadSupply()
+        {
+            using (var db = new HalabchiDB())
+            {
+                dgvSupply.DataSource = db.Supplys.ToList();
+            }
         }
     }
 }
