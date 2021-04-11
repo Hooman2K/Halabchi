@@ -39,6 +39,7 @@ namespace HalabchiCRM
         public virtual DbSet<ZayeatHalabGhoti> ZayeatHalabGhotis { get; set; }
         public virtual DbSet<TolidZayeatChap> TolidZayeatChaps { get; set; }
         public virtual DbSet<LogAddProduct> LogAddProducts { get; set; }
+        public virtual DbSet<Supply> Supplys { get; set; }
     }
 
     public class User
@@ -260,5 +261,35 @@ namespace HalabchiCRM
         public float MeghdarGhabli { get; set; }
         public float MeghdarJadid { get; set; }
         public float Sum { get; set; }
+    }
+    public class Supply
+    {
+        public int ID { get; set; }
+        [MaxLength(10)]
+        public string SupplyID { get; set; }
+        [MaxLength(10)]
+        public string PostCode { get; set; }
+        [MaxLength(15)]
+        public string EconomyCode { get; set; }
+        [MaxLength(50)]
+        public string ManagerName { get; set; }
+        [MaxLength(11)]
+        public string Mobile { get; set; }
+        [MaxLength(50)]
+        public string FactoryName { get; set; }
+        [MaxLength(50)]
+        public string Brand { get; set; }
+        [MaxLength(11)]
+        public string Tell { get; set; }
+        [MaxLength(11)]
+        public string Fax { get; set; }
+        [MaxLength(100)]
+        public string Email { get; set; }
+        [MaxLength(100)]
+        public string WebSite { get; set; }
+        [MaxLength(150)]
+        public string SupplyList { get; set; }
+        public string Address { get; set; }
+
     }
 }

@@ -518,6 +518,7 @@
             this.Name = "frmSupply";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "تامین کننده";
+            this.Load += new System.EventHandler(this.frmSupply_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -539,20 +540,20 @@
         private DevComponents.DotNetBar.LabelX labelX10;
         private DevComponents.DotNetBar.LabelX labelX11;
         private DevComponents.DotNetBar.LabelX labelX13;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtSupplyID;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtPostCode;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtEconomyCode;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtFactoryName;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtMobile;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtManagerName;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtFax;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtTell;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtBrand;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtAddress;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtSupply;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtWebSite;
-        public DevComponents.DotNetBar.Controls.TextBoxX txtEmail;
-        public DevComponents.DotNetBar.ButtonX btnRegister;
-        public DevComponents.DotNetBar.ButtonX btnClear;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtSupplyID;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtPostCode;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtEconomyCode;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtFactoryName;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMobile;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtManagerName;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtFax;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTell;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtBrand;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtAddress;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtSupply;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtWebSite;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtEmail;
+        private DevComponents.DotNetBar.ButtonX btnRegister;
+        private DevComponents.DotNetBar.ButtonX btnClear;
     }
 }
