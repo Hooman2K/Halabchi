@@ -663,5 +663,15 @@ order by start_time desc");
             supply.ShowDialog();
             this.Show();
         }
+
+        private void buttonItem5_Click_1(object sender, EventArgs e)
+        {
+            //jadval
+        }
+
+        private void buttonItem6_Click_1(object sender, EventArgs e)
+        {
+            //pdf
+        }
     }
 }

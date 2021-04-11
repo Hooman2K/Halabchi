@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.styleManager1 = new DevComponents.DotNetBar.StyleManager(this.components);
             this.q2 = new DevComponents.DotNetBar.ButtonItem();
             this.q = new DevComponents.DotNetBar.ButtonItem();
@@ -73,9 +73,27 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvSupply = new DevComponents.DotNetBar.Controls.DataGridViewX();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblWelCome = new DevComponents.DotNetBar.LabelX();
             this.btnSearchCostomer = new DevComponents.DotNetBar.ButtonX();
             this.btnAddCostomer = new DevComponents.DotNetBar.ButtonX();
+            this.ribbonPanel8 = new DevComponents.DotNetBar.RibbonPanel();
+            this.btnSearchSupply = new DevComponents.DotNetBar.ButtonX();
+            this.btnAddSupply = new DevComponents.DotNetBar.ButtonX();
             this.ribbonPanel4 = new DevComponents.DotNetBar.RibbonPanel();
             this.buttonX3 = new DevComponents.DotNetBar.ButtonX();
             this.btnReportAmarTolidat = new DevComponents.DotNetBar.ButtonX();
@@ -155,6 +173,7 @@
             this.ribbonTabItem2 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem3 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem4 = new DevComponents.DotNetBar.RibbonTabItem();
+            this.ribbonTabItem8 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem6 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem7 = new DevComponents.DotNetBar.RibbonTabItem();
             this.ribbonTabItem5 = new DevComponents.DotNetBar.RibbonTabItem();
@@ -177,30 +196,18 @@
             this.lblTime = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel7 = new System.Windows.Forms.ToolStripStatusLabel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.ribbonTabItem8 = new DevComponents.DotNetBar.RibbonTabItem();
-            this.ribbonPanel8 = new DevComponents.DotNetBar.RibbonPanel();
-            this.dgvSupply = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.btnSearchSupply = new DevComponents.DotNetBar.ButtonX();
-            this.btnAddSupply = new DevComponents.DotNetBar.ButtonX();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cExport = new DevComponents.DotNetBar.ContextMenuBar();
+            this.btnExportContext = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem4 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem5 = new DevComponents.DotNetBar.ButtonItem();
+            this.buttonItem6 = new DevComponents.DotNetBar.ButtonItem();
             this.ribbonControl1.SuspendLayout();
             this.ribbonPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupply)).BeginInit();
+            this.ribbonPanel8.SuspendLayout();
             this.ribbonPanel4.SuspendLayout();
             this.ribbonPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvContract)).BeginInit();
@@ -215,8 +222,7 @@
             this.groupPanel1.SuspendLayout();
             this.ribbonPanel7.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            this.ribbonPanel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSupply)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cExport)).BeginInit();
             this.SuspendLayout();
             // 
             // styleManager1
@@ -382,14 +388,14 @@
             this.Column22,
             this.Column23});
             this.contextMenuBar1.SetContextMenuEx(this.dgvUser, this.buttonItem3);
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvUser.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvUser.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvUser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvUser.Location = new System.Drawing.Point(12, 56);
             this.dgvUser.Name = "dgvUser";
@@ -473,14 +479,14 @@
             // 
             this.dgvCustomer.AllowUserToAddRows = false;
             this.dgvCustomer.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -630,6 +636,166 @@
             this.Column14.ReadOnly = true;
             this.Column14.Visible = false;
             // 
+            // dgvSupply
+            // 
+            this.dgvSupply.AllowUserToAddRows = false;
+            this.dgvSupply.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSupply.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            this.dgvSupply.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvSupply.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14});
+            this.cExport.SetContextMenuEx(this.dgvSupply, this.btnExportContext);
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSupply.DefaultCellStyle = dataGridViewCellStyle10;
+            this.dgvSupply.EnableHeadersVisualStyles = false;
+            this.dgvSupply.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
+            this.dgvSupply.Location = new System.Drawing.Point(12, 50);
+            this.dgvSupply.Name = "dgvSupply";
+            this.dgvSupply.ReadOnly = true;
+            this.dgvSupply.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSupply.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvSupply.Size = new System.Drawing.Size(605, 299);
+            this.dgvSupply.TabIndex = 10;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "شماره";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "CustomerID";
+            this.dataGridViewTextBoxColumn2.HeaderText = "شماره تامین کننده";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "PostCode";
+            this.dataGridViewTextBoxColumn3.HeaderText = "کد پستی";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "EconomyCode";
+            this.dataGridViewTextBoxColumn4.HeaderText = "کد اقتصاری";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "ManagerName";
+            this.dataGridViewTextBoxColumn5.HeaderText = "نام مدیر عامل";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Mobile";
+            this.dataGridViewTextBoxColumn6.HeaderText = "شماره موبایل";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "FactoryName";
+            this.dataGridViewTextBoxColumn7.HeaderText = "نام کارخانه";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Brand";
+            this.dataGridViewTextBoxColumn8.HeaderText = "برند";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Tell";
+            this.dataGridViewTextBoxColumn9.HeaderText = "تلفن";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Fax";
+            this.dataGridViewTextBoxColumn10.HeaderText = "فکس";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn11.HeaderText = "پست الکترونیکی";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "WebSite";
+            this.dataGridViewTextBoxColumn12.HeaderText = "تار نما";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn13
+            // 
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Other";
+            this.dataGridViewTextBoxColumn13.HeaderText = "سایر توضیحات";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
+            this.dataGridViewTextBoxColumn13.ReadOnly = true;
+            this.dataGridViewTextBoxColumn13.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Address";
+            this.dataGridViewTextBoxColumn14.HeaderText = "آدرس";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
+            this.dataGridViewTextBoxColumn14.ReadOnly = true;
+            this.dataGridViewTextBoxColumn14.Visible = false;
+            // 
             // lblWelCome
             // 
             this.lblWelCome.BackColor = System.Drawing.Color.Transparent;
@@ -669,6 +835,56 @@
             this.btnAddCostomer.TabIndex = 3;
             this.btnAddCostomer.Text = "ایجاد مشتری جدید";
             this.btnAddCostomer.Click += new System.EventHandler(this.btnAddCostomer_Click);
+            // 
+            // ribbonPanel8
+            // 
+            this.ribbonPanel8.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.ribbonPanel8.Controls.Add(this.cExport);
+            this.ribbonPanel8.Controls.Add(this.dgvSupply);
+            this.ribbonPanel8.Controls.Add(this.btnSearchSupply);
+            this.ribbonPanel8.Controls.Add(this.btnAddSupply);
+            this.ribbonPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ribbonPanel8.Location = new System.Drawing.Point(0, 26);
+            this.ribbonPanel8.Name = "ribbonPanel8";
+            this.ribbonPanel8.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
+            this.ribbonPanel8.Size = new System.Drawing.Size(629, 360);
+            // 
+            // 
+            // 
+            this.ribbonPanel8.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel8.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // 
+            // 
+            // 
+            this.ribbonPanel8.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.ribbonPanel8.TabIndex = 8;
+            this.ribbonPanel8.Visible = false;
+            // 
+            // btnSearchSupply
+            // 
+            this.btnSearchSupply.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnSearchSupply.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnSearchSupply.Location = new System.Drawing.Point(406, 12);
+            this.btnSearchSupply.Name = "btnSearchSupply";
+            this.btnSearchSupply.Size = new System.Drawing.Size(75, 32);
+            this.btnSearchSupply.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnSearchSupply.TabIndex = 9;
+            this.btnSearchSupply.Text = "جست و جو";
+            // 
+            // btnAddSupply
+            // 
+            this.btnAddSupply.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnAddSupply.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnAddSupply.Location = new System.Drawing.Point(487, 12);
+            this.btnAddSupply.Name = "btnAddSupply";
+            this.btnAddSupply.Size = new System.Drawing.Size(130, 32);
+            this.btnAddSupply.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnAddSupply.TabIndex = 8;
+            this.btnAddSupply.Text = "ایجاد تامین کننده جدید";
+            this.btnAddSupply.Click += new System.EventHandler(this.btnAddSupply_Click);
             // 
             // ribbonPanel4
             // 
@@ -820,14 +1036,14 @@
             this.Column26,
             this.Column27,
             this.Column28});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvContract.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvContract.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvContract.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dgvContract.Location = new System.Drawing.Point(6, 56);
             this.dgvContract.Name = "dgvContract";
@@ -1798,6 +2014,12 @@
             this.ribbonTabItem4.Panel = this.ribbonPanel4;
             this.ribbonTabItem4.Text = "گزارش گیری";
             // 
+            // ribbonTabItem8
+            // 
+            this.ribbonTabItem8.Name = "ribbonTabItem8";
+            this.ribbonTabItem8.Panel = this.ribbonPanel8;
+            this.ribbonTabItem8.Text = "تامین کننده";
+            // 
             // ribbonTabItem6
             // 
             this.ribbonTabItem6.Name = "ribbonTabItem6";
@@ -1951,220 +2173,49 @@
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // ribbonTabItem8
+            // cExport
             // 
-            this.ribbonTabItem8.Name = "ribbonTabItem8";
-            this.ribbonTabItem8.Panel = this.ribbonPanel8;
-            this.ribbonTabItem8.Text = "تامین کننده";
+            this.cExport.AntiAlias = true;
+            this.cExport.DockSide = DevComponents.DotNetBar.eDockSide.Document;
+            this.cExport.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cExport.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnExportContext});
+            this.cExport.Location = new System.Drawing.Point(12, 18);
+            this.cExport.Name = "cExport";
+            this.cExport.Size = new System.Drawing.Size(75, 25);
+            this.cExport.Stretch = true;
+            this.cExport.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.cExport.TabIndex = 48;
+            this.cExport.TabStop = false;
+            this.cExport.Text = "contextMenuBar1";
             // 
-            // ribbonPanel8
+            // btnExportContext
             // 
-            this.ribbonPanel8.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.ribbonPanel8.Controls.Add(this.dgvSupply);
-            this.ribbonPanel8.Controls.Add(this.btnSearchSupply);
-            this.ribbonPanel8.Controls.Add(this.btnAddSupply);
-            this.ribbonPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ribbonPanel8.Location = new System.Drawing.Point(0, 26);
-            this.ribbonPanel8.Name = "ribbonPanel8";
-            this.ribbonPanel8.Padding = new System.Windows.Forms.Padding(3, 0, 3, 3);
-            this.ribbonPanel8.Size = new System.Drawing.Size(629, 360);
+            this.btnExportContext.AutoExpandOnClick = true;
+            this.btnExportContext.Name = "btnExportContext";
+            this.btnExportContext.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem4});
+            this.btnExportContext.Text = "خروجی";
             // 
+            // buttonItem4
             // 
+            this.buttonItem4.Name = "buttonItem4";
+            this.buttonItem4.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.buttonItem5,
+            this.buttonItem6});
+            this.buttonItem4.Text = "خروجی";
             // 
-            this.ribbonPanel8.Style.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            // buttonItem5
             // 
+            this.buttonItem5.Name = "buttonItem5";
+            this.buttonItem5.Text = "از جدول";
+            this.buttonItem5.Click += new System.EventHandler(this.buttonItem5_Click_1);
             // 
+            // buttonItem6
             // 
-            this.ribbonPanel8.StyleMouseDown.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            // 
-            // 
-            // 
-            this.ribbonPanel8.StyleMouseOver.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.ribbonPanel8.TabIndex = 8;
-            this.ribbonPanel8.Visible = false;
-            // 
-            // dgvSupply
-            // 
-            this.dgvSupply.AllowUserToAddRows = false;
-            this.dgvSupply.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSupply.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvSupply.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSupply.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
-            this.dataGridViewTextBoxColumn7,
-            this.dataGridViewTextBoxColumn8,
-            this.dataGridViewTextBoxColumn9,
-            this.dataGridViewTextBoxColumn10,
-            this.dataGridViewTextBoxColumn11,
-            this.dataGridViewTextBoxColumn12,
-            this.dataGridViewTextBoxColumn13,
-            this.dataGridViewTextBoxColumn14});
-            this.contextMenuBar1.SetContextMenuEx(this.dgvSupply, this.buttonItem2);
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSupply.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvSupply.EnableHeadersVisualStyles = false;
-            this.dgvSupply.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dgvSupply.Location = new System.Drawing.Point(12, 50);
-            this.dgvSupply.Name = "dgvSupply";
-            this.dgvSupply.ReadOnly = true;
-            this.dgvSupply.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSupply.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvSupply.Size = new System.Drawing.Size(605, 299);
-            this.dgvSupply.TabIndex = 10;
-            // 
-            // btnSearchSupply
-            // 
-            this.btnSearchSupply.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnSearchSupply.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSearchSupply.Location = new System.Drawing.Point(406, 12);
-            this.btnSearchSupply.Name = "btnSearchSupply";
-            this.btnSearchSupply.Size = new System.Drawing.Size(75, 32);
-            this.btnSearchSupply.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnSearchSupply.TabIndex = 9;
-            this.btnSearchSupply.Text = "جست و جو";
-            // 
-            // btnAddSupply
-            // 
-            this.btnAddSupply.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.btnAddSupply.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddSupply.Location = new System.Drawing.Point(487, 12);
-            this.btnAddSupply.Name = "btnAddSupply";
-            this.btnAddSupply.Size = new System.Drawing.Size(130, 32);
-            this.btnAddSupply.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.btnAddSupply.TabIndex = 8;
-            this.btnAddSupply.Text = "ایجاد تامین کننده جدید";
-            this.btnAddSupply.Click += new System.EventHandler(this.btnAddSupply_Click);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "شماره";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "CustomerID";
-            this.dataGridViewTextBoxColumn2.HeaderText = "شماره تامین کننده";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "PostCode";
-            this.dataGridViewTextBoxColumn3.HeaderText = "کد پستی";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "EconomyCode";
-            this.dataGridViewTextBoxColumn4.HeaderText = "کد اقتصاری";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "ManagerName";
-            this.dataGridViewTextBoxColumn5.HeaderText = "نام مدیر عامل";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Mobile";
-            this.dataGridViewTextBoxColumn6.HeaderText = "شماره موبایل";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "FactoryName";
-            this.dataGridViewTextBoxColumn7.HeaderText = "نام کارخانه";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Brand";
-            this.dataGridViewTextBoxColumn8.HeaderText = "برند";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn9
-            // 
-            this.dataGridViewTextBoxColumn9.DataPropertyName = "Tell";
-            this.dataGridViewTextBoxColumn9.HeaderText = "تلفن";
-            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
-            this.dataGridViewTextBoxColumn9.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "Fax";
-            this.dataGridViewTextBoxColumn10.HeaderText = "فکس";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            this.dataGridViewTextBoxColumn10.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn11
-            // 
-            this.dataGridViewTextBoxColumn11.DataPropertyName = "Email";
-            this.dataGridViewTextBoxColumn11.HeaderText = "پست الکترونیکی";
-            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
-            this.dataGridViewTextBoxColumn11.ReadOnly = true;
-            this.dataGridViewTextBoxColumn11.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn12
-            // 
-            this.dataGridViewTextBoxColumn12.DataPropertyName = "WebSite";
-            this.dataGridViewTextBoxColumn12.HeaderText = "تار نما";
-            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
-            this.dataGridViewTextBoxColumn12.ReadOnly = true;
-            this.dataGridViewTextBoxColumn12.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn13
-            // 
-            this.dataGridViewTextBoxColumn13.DataPropertyName = "Other";
-            this.dataGridViewTextBoxColumn13.HeaderText = "سایر توضیحات";
-            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
-            this.dataGridViewTextBoxColumn13.ReadOnly = true;
-            this.dataGridViewTextBoxColumn13.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn14
-            // 
-            this.dataGridViewTextBoxColumn14.DataPropertyName = "Address";
-            this.dataGridViewTextBoxColumn14.HeaderText = "آدرس";
-            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
-            this.dataGridViewTextBoxColumn14.ReadOnly = true;
-            this.dataGridViewTextBoxColumn14.Visible = false;
+            this.buttonItem6.Name = "buttonItem6";
+            this.buttonItem6.Text = "PDF";
+            this.buttonItem6.Click += new System.EventHandler(this.buttonItem6_Click_1);
             // 
             // frmMain
             // 
@@ -2189,6 +2240,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.contextMenuBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSupply)).EndInit();
+            this.ribbonPanel8.ResumeLayout(false);
             this.ribbonPanel4.ResumeLayout(false);
             this.ribbonPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvContract)).EndInit();
@@ -2205,8 +2258,7 @@
             this.ribbonPanel7.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.ribbonPanel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSupply)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cExport)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2372,5 +2424,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private DevComponents.DotNetBar.ContextMenuBar cExport;
+        private DevComponents.DotNetBar.ButtonItem btnExportContext;
+        private DevComponents.DotNetBar.ButtonItem buttonItem4;
+        private DevComponents.DotNetBar.ButtonItem buttonItem5;
+        private DevComponents.DotNetBar.ButtonItem buttonItem6;
     }
 }

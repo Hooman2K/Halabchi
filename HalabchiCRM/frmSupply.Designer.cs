@@ -71,6 +71,7 @@
             this.btnRegister.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnRegister.TabIndex = 13;
             this.btnRegister.Text = "ثبت";
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // txtSupplyID
             // 
@@ -131,6 +132,7 @@
             this.txtPostCode.Size = new System.Drawing.Size(155, 23);
             this.txtPostCode.TabIndex = 1;
             this.txtPostCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtPostCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JustNumber);
             // 
             // labelX3
             // 
@@ -161,6 +163,7 @@
             this.txtEconomyCode.Size = new System.Drawing.Size(155, 23);
             this.txtEconomyCode.TabIndex = 2;
             this.txtEconomyCode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtEconomyCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JustNumber);
             // 
             // labelX4
             // 
@@ -220,6 +223,7 @@
             this.txtMobile.Size = new System.Drawing.Size(155, 23);
             this.txtMobile.TabIndex = 4;
             this.txtMobile.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtMobile.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JustNumber);
             // 
             // labelX6
             // 
@@ -279,6 +283,7 @@
             this.txtFax.Size = new System.Drawing.Size(155, 23);
             this.txtFax.TabIndex = 8;
             this.txtFax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtFax.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JustNumber);
             // 
             // labelX8
             // 
@@ -309,6 +314,7 @@
             this.txtTell.Size = new System.Drawing.Size(155, 23);
             this.txtTell.TabIndex = 7;
             this.txtTell.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtTell.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.JustNumber);
             // 
             // labelX9
             // 
@@ -475,6 +481,7 @@
             this.btnClear.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnClear.TabIndex = 14;
             this.btnClear.Text = "خالی کردن";
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // frmSupply
             // 
