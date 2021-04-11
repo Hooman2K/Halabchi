@@ -157,7 +157,7 @@
             this.txtEconomyCode.Border.Class = "TextBoxBorder";
             this.txtEconomyCode.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtEconomyCode.Location = new System.Drawing.Point(22, 11);
-            this.txtEconomyCode.MaxLength = 15;
+            this.txtEconomyCode.MaxLength = 12;
             this.txtEconomyCode.Name = "txtEconomyCode";
             this.txtEconomyCode.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtEconomyCode.Size = new System.Drawing.Size(155, 23);
