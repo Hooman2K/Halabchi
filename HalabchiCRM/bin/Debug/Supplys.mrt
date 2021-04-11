@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<StiSerializer version="1.02" type="Net" application="StiReport">
+  <Dictionary Ref="1" type="Dictionary" isKey="true">
+    <BusinessObjects isList="true" count="1">
+      <Supplys Ref="2" type="Stimulsoft.Report.Dictionary.StiBusinessObject" isKey="true">
+        <Alias>Supplys</Alias>
+        <BusinessObjects isList="true" count="0" />
+        <Category />
+        <Columns isList="true" count="14">
+          <value>ID,System.String</value>
+          <value>SupplyID,System.String</value>
+          <value>PostCode,System.String</value>
+          <value>EconomyCode,System.String</value>
+          <value>ManagerName,System.String</value>
+          <value>Mobile,System.String</value>
+          <value>FactoryName,System.String</value>
+          <value>Brand,System.String</value>
+          <value>Tell,System.String</value>
+          <value>Fax,System.String</value>
+          <value>Email,System.String</value>
+          <value>WebSite,System.String</value>
+          <value>SupplyList,System.String</value>
+          <value>Address,System.String</value>
+        </Columns>
+        <Dictionary isRef="1" />
+        <Guid>10486aeb53e447f2bcb99706ab55e6c2</Guid>
+        <Name>Supplys</Name>
+      </Supplys>
+    </BusinessObjects>
+    <Databases isList="true" count="0" />
+    <DataSources isList="true" count="0" />
+    <Relations isList="true" count="0" />
+    <Report isRef="0" />
+    <Resources isList="true" count="0" />
+    <Variables isList="true" count="0" />
+  </Dictionary>
+  <EngineVersion>EngineV2</EngineVersion>
+  <GlobalizationStrings isList="true" count="0" />
+  <MetaTags isList="true" count="0" />
+  <Pages isList="true" count="1">
+    <Page1 Ref="3" type="Page" isKey="true">
+      <Border>None;Black;2;Solid;False;4;Black</Border>
+      <Brush>Transparent</Brush>
+      <Components isList="true" count="3">
+        <HeaderBand1 Ref="4" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,0.4,27.7,0.8</ClientRectangle>
+          <Components isList="true" count="1">
+            <Text1 Ref="5" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Yellow</Brush>
+              <ClientRectangle>0,-0.4,27.6,1.2</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,14,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text1</Name>
+              <Page isRef="3" />
+              <Parent isRef="4" />
+              <Text>گزارش مشتریان</Text>
+              <TextBrush>Black</TextBrush>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text1>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>HeaderBand1</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </HeaderBand1>
+        <Header Ref="6" type="HeaderBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,2,27.7,0.8</ClientRectangle>
+          <Components isList="true" count="11">
+            <HeaderCustomers_ID Ref="7" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>25.8,0,1.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCustomers_ID</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>شماره</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCustomers_ID>
+            <HeaderCustomers_CustomerID Ref="8" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>23.6,0,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCustomers_CustomerID</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>شماره تامین کننده</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCustomers_CustomerID>
+            <HeaderCustomers_PostCode Ref="9" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>21.4,0,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCustomers_PostCode</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>کد پستی</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCustomers_PostCode>
+            <HeaderCustomers_EconomyCode Ref="10" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>19.2,0,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCustomers_EconomyCode</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>کد اقتصادی</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCustomers_EconomyCode>
+            <HeaderCustomers_ManagerName Ref="11" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>16.6,0,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCustomers_ManagerName</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>نام مدیر عامل</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCustomers_ManagerName>
+            <HeaderCustomers_Mobile Ref="12" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>14.2,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCustomers_Mobile</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>موبایل</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCustomers_Mobile>
+            <HeaderCustomers_FactoryName Ref="13" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>11.6,0,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCustomers_FactoryName</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>نام کارخانه</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCustomers_FactoryName>
+            <HeaderCustomers_Brand Ref="14" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>9,0,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCustomers_Brand</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>برند</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCustomers_Brand>
+            <HeaderCustomers_Tell Ref="15" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>6.4,0,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCustomers_Tell</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>تلفن</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCustomers_Tell>
+            <HeaderCustomers_Fax Ref="16" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>3.6,0,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCustomers_Fax</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>فکس</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCustomers_Fax>
+            <HeaderCustomers_Address Ref="17" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>[78:255:140]</Brush>
+              <ClientRectangle>0,0,3.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Tahoma,10,Bold</Font>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>HeaderCustomers_Address</Name>
+              <Page isRef="3" />
+              <Parent isRef="6" />
+              <Text>تامین کننده</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </HeaderCustomers_Address>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>Header</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+        </Header>
+        <Data Ref="18" type="DataBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <BusinessObjectGuid>10486aeb53e447f2bcb99706ab55e6c2</BusinessObjectGuid>
+          <ClientRectangle>0,3.6,27.7,0.8</ClientRectangle>
+          <Components isList="true" count="11">
+            <DataSupplys_ID Ref="19" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>25.8,0,2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataSupplys_ID</Name>
+              <Page isRef="3" />
+              <Parent isRef="18" />
+              <Text>{Supplys.ID}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataSupplys_ID>
+            <DataSupplys_SupplyID Ref="20" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>23.6,0,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataSupplys_SupplyID</Name>
+              <Page isRef="3" />
+              <Parent isRef="18" />
+              <Text>{Supplys.SupplyID}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataSupplys_SupplyID>
+            <DataSupplys_PostCode Ref="21" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>21.4,0,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataSupplys_PostCode</Name>
+              <Page isRef="3" />
+              <Parent isRef="18" />
+              <Text>{Supplys.PostCode}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataSupplys_PostCode>
+            <DataSupplys_EconomyCode Ref="22" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>19.2,0,2.2,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataSupplys_EconomyCode</Name>
+              <Page isRef="3" />
+              <Parent isRef="18" />
+              <Text>{Supplys.EconomyCode}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataSupplys_EconomyCode>
+            <DataSupplys_ManagerName Ref="23" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>16.6,0,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataSupplys_ManagerName</Name>
+              <Page isRef="3" />
+              <Parent isRef="18" />
+              <Text>{Supplys.ManagerName}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataSupplys_ManagerName>
+            <DataSupplys_Mobile Ref="24" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>14.2,0,2.4,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataSupplys_Mobile</Name>
+              <Page isRef="3" />
+              <Parent isRef="18" />
+              <Text>{Supplys.Mobile}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataSupplys_Mobile>
+            <DataSupplys_FactoryName Ref="25" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>11.6,0,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataSupplys_FactoryName</Name>
+              <Page isRef="3" />
+              <Parent isRef="18" />
+              <Text>{Supplys.FactoryName}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataSupplys_FactoryName>
+            <DataSupplys_Brand Ref="26" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>9,0,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataSupplys_Brand</Name>
+              <Page isRef="3" />
+              <Parent isRef="18" />
+              <Text>{Supplys.Brand}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataSupplys_Brand>
+            <DataSupplys_Tell Ref="27" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>6.4,0,2.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataSupplys_Tell</Name>
+              <Page isRef="3" />
+              <Parent isRef="18" />
+              <Text>{Supplys.Tell}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataSupplys_Tell>
+            <DataSupplys_Fax Ref="28" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>3.6,0,2.8,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataSupplys_Fax</Name>
+              <Page isRef="3" />
+              <Parent isRef="18" />
+              <Text>{Supplys.Fax}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataSupplys_Fax>
+            <DataSupplys_SupplyList Ref="29" type="Text" isKey="true">
+              <Brush>Transparent</Brush>
+              <CanGrow>True</CanGrow>
+              <ClientRectangle>0,0,3.6,0.8</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,8</Font>
+              <Margins>0,0,0,0</Margins>
+              <Name>DataSupplys_SupplyList</Name>
+              <Page isRef="3" />
+              <Parent isRef="18" />
+              <Text>{Supplys.SupplyList}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextOptions>,,,,WordWrap=True,A=0</TextOptions>
+              <VertAlignment>Center</VertAlignment>
+            </DataSupplys_SupplyList>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <DataSourceName isNull="true" />
+          <Filters isList="true" count="0" />
+          <Name>Data</Name>
+          <Page isRef="3" />
+          <Parent isRef="3" />
+          <Sort isList="true" count="0" />
+        </Data>
+      </Components>
+      <Conditions isList="true" count="0" />
+      <Guid>4e4492af1bf041768ad00674fb856d9a</Guid>
+      <Margins>1,1,1,1</Margins>
+      <Name>Page1</Name>
+      <Orientation>Landscape</Orientation>
+      <PageHeight>21</PageHeight>
+      <PageWidth>29.7</PageWidth>
+      <Report isRef="0" />
+      <Watermark Ref="30" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+        <Font>Arial,100</Font>
+        <TextBrush>[50:0:0:0]</TextBrush>
+      </Watermark>
+    </Page1>
+  </Pages>
+  <PrinterSettings Ref="31" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <ReferencedAssemblies isList="true" count="8">
+    <value>System.Dll</value>
+    <value>System.Drawing.Dll</value>
+    <value>System.Windows.Forms.Dll</value>
+    <value>System.Data.Dll</value>
+    <value>System.Xml.Dll</value>
+    <value>Stimulsoft.Controls.Dll</value>
+    <value>Stimulsoft.Base.Dll</value>
+    <value>Stimulsoft.Report.Dll</value>
+  </ReferencedAssemblies>
+  <ReportAlias>Report</ReportAlias>
+  <ReportChanged>4/11/2021 8:22:52 PM</ReportChanged>
+  <ReportCreated>4/3/2021 7:30:06 PM</ReportCreated>
+  <ReportFile>C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Customers.mrt</ReportFile>
+  <ReportGuid>e57e2f5b0c6a451c98931b539b992e14</ReportGuid>
+  <ReportName>Report</ReportName>
+  <ReportUnit>Centimeters</ReportUnit>
+  <ReportVersion>2018.1.8.0</ReportVersion>
+  <Script>using System;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Data;
+using Stimulsoft.Controls;
+using Stimulsoft.Base.Drawing;
+using Stimulsoft.Report;
+using Stimulsoft.Report.Dialogs;
+using Stimulsoft.Report.Components;
+
+namespace Reports
+{
+    public class Report : Stimulsoft.Report.StiReport
+    {
+        public Report()        {
+            this.InitializeComponent();
+        }
+
+        #region StiReport Designer generated code - do not modify
+		#endregion StiReport Designer generated code - do not modify
+    }
+}
+</Script>
+  <ScriptLanguage>CSharp</ScriptLanguage>
+  <Styles isList="true" count="0" />
+</StiSerializer>
