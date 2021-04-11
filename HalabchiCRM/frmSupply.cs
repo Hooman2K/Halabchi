@@ -25,6 +25,7 @@ namespace HalabchiCRM
         {
             txtAddress.Text = txtBrand.Text = txtSupplyID.Text = txtEconomyCode.Text = txtEmail.Text = txtFactoryName.Text = txtFax.Text = txtManagerName.Text = txtMobile.Text = txtSupply.Text = txtPostCode.Text = txtTell.Text = txtWebSite.Text = null;
             txtSupplyID.Focus();
+            errorProvider1.Clear();
         }
 
         public void JustNumber(object sender, KeyPressEventArgs e)
