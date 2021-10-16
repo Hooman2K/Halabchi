@@ -126,6 +126,7 @@ namespace HalabchiCRM
                 cmbxPipeLine.SelectedIndex = 0;
                 txtDate.Focus();
                 AmareKhat(cmbxPipeLine.Text);
+                btnRegister.Enabled = false;
             }
             else
             {
@@ -142,6 +143,7 @@ namespace HalabchiCRM
                     cmbxPipeLine.SelectedIndex = 0;
                     txtDate.Focus();
                     LoadZayeat();
+                    btnRegister.Enabled = true;
                 }
             }
         }

@@ -77,6 +77,7 @@ namespace HalabchiCRM
             _id = int.Parse(dgvProduct.CurrentRow.Cells[0].Value.ToString());
 
             txtProductCode.Text = dgvProduct.CurrentRow.Cells[2].Value.ToString();
+            txtProductCode.Enabled = false;
             txtProductName.Text = dgvProduct.CurrentRow.Cells[3].Value.ToString();
             cmbxSelectStorage.Text = dgvProduct.CurrentRow.Cells[1].Value.ToString();
             cmbxUnit.Text = dgvProduct.CurrentRow.Cells[5].Value.ToString();
@@ -186,6 +187,18 @@ namespace HalabchiCRM
                     report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
                 }
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            _isNew = true;
+            txtProductCode.Enabled = true;
+            txtProductName.Text = txtProductCode.Text = "";
+            txtProductCode.Select();
+            txtProductCode.Focus();
+            btnAddProduct.Text = "اضافه کردن";
+            cmbxSelectStorage.SelectedIndex = 0;
+            cmbxUnit.SelectedIndex = 0;
         }
     }
 }

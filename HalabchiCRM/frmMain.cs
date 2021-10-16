@@ -707,5 +707,10 @@ order by start_time desc");
                 dgvSupply.DataSource = db.Supplys.ToList();
             }
         }
+
+        private void btnReportTolidKala_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

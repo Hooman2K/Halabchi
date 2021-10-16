@@ -192,3 +192,5 @@ C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.csproj.C
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.csproj.CopyComplete
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.exe
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.pdb
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\DevComponents.DotNetBar2.xml
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\DevComponents.DotNetBar2.dll

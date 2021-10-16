@@ -31,23 +31,30 @@ namespace HalabchiCRM
 
         private void Clear()
         {
-            txtProductName.Text = txtProductCode.Text = txtProductCount.Text = txtLastCount.Text = "";
-            lblHalab.Text = "-----";
-            cmbxUnit.SelectedIndex = 0;
-            cmbxFormula.SelectedIndex = 0;
-            _itemSelect = false;
-            btnAddProduct.Enabled = false;
-            cmbxSelectStorage.Enabled = true;
-            cmbxUnit.Enabled = true;
-            dgvProduct.Enabled = true;
-            cmbxFormula.Enabled = false;
-            cmbxPipeLine.Enabled = false;
-            txtProductCount.Enabled = false;
-            btnAdds.Enabled = false;
-            txtProductCode.Enabled = txtProductName.Enabled = true;
-            txtProductCode.SelectAll();
-            txtProductCode.Focus();
-            _error = 0;
+            try
+            {
+                txtProductName.Text = txtProductCode.Text = txtProductCount.Text = txtLastCount.Text = "";
+                lblHalab.Text = "-----";
+                cmbxUnit.SelectedIndex = 0;
+                cmbxFormula.SelectedIndex = 0;
+                _itemSelect = false;
+                btnAddProduct.Enabled = false;
+                cmbxSelectStorage.Enabled = true;
+                cmbxUnit.Enabled = true;
+                dgvProduct.Enabled = true;
+                cmbxFormula.Enabled = false;
+                cmbxPipeLine.Enabled = false;
+                txtProductCount.Enabled = false;
+                btnAdds.Enabled = false;
+                txtProductCode.Enabled = txtProductName.Enabled = true;
+                txtProductCode.SelectAll();
+                txtProductCode.Focus();
+                _error = 0;
+            }
+            catch
+            {
+                
+            }
         }
 
         private void LoadFormula()
@@ -164,18 +171,25 @@ namespace HalabchiCRM
 
         private void frmProduction_Load(object sender, EventArgs e)
         {
-            LoadFormula();
-            LoadStorage();
-            LoadPipeLine();
-            LoadProduct(cmbxSelectStorage.Text);
-            cmbxUnit.SelectedIndex = 0;
-            cmbxFormula.SelectedIndex = 0;
-            AutoComplit(cmbxSelectStorage.Text);
-            btnAddProduct.Enabled = false;
-            cmbxFormula.Enabled = false;
-            cmbxPipeLine.Enabled = false;
-            txtProductCount.Enabled = false;
-            btnAdds.Enabled = false;
+            try
+            {
+                LoadFormula();
+                LoadStorage();
+                LoadPipeLine();
+                LoadProduct(cmbxSelectStorage.Text);
+                cmbxUnit.SelectedIndex = 0;
+                cmbxFormula.SelectedIndex = 0;
+                AutoComplit(cmbxSelectStorage.Text);
+                btnAddProduct.Enabled = false;
+                cmbxFormula.Enabled = false;
+                cmbxPipeLine.Enabled = false;
+                txtProductCount.Enabled = false;
+                btnAdds.Enabled = false;
+            }
+            catch
+            {
+                
+            }
         }
 
         private void cmbxSelectStorage_SelectedIndexChanged(object sender, EventArgs e)

@@ -51,6 +51,7 @@
             this.buttonItem3 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.btnCancel = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduct)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cExport)).BeginInit();
             this.SuspendLayout();
@@ -262,9 +263,9 @@
             // 
             this.btnAddProduct.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnAddProduct.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnAddProduct.Location = new System.Drawing.Point(11, 38);
+            this.btnAddProduct.Location = new System.Drawing.Point(58, 38);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(116, 23);
+            this.btnAddProduct.Size = new System.Drawing.Size(69, 23);
             this.btnAddProduct.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnAddProduct.TabIndex = 4;
             this.btnAddProduct.Text = "اضافه کردن";
@@ -274,6 +275,7 @@
             // 
             this.cExport.AntiAlias = true;
             this.cExport.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cExport.IsMaximized = false;
             this.cExport.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnExportContext});
             this.cExport.Location = new System.Drawing.Point(24, 102);
@@ -313,12 +315,25 @@
             this.buttonItem2.Text = "PDF";
             this.buttonItem2.Click += new System.EventHandler(this.buttonItem2_Click);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnCancel.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
+            this.btnCancel.Location = new System.Drawing.Point(12, 38);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(40, 23);
+            this.btnCancel.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.btnCancel.TabIndex = 6;
+            this.btnCancel.Text = "لغو";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // frmProduct
             // 
             this.AcceptButton = this.btnAddProduct;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 284);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.cExport);
             this.Controls.Add(this.btnAddProduct);
             this.Controls.Add(this.cmbxUnit);
@@ -370,5 +385,6 @@
         private DevComponents.DotNetBar.ButtonItem buttonItem3;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
         private DevComponents.DotNetBar.ButtonItem buttonItem2;
+        private DevComponents.DotNetBar.ButtonX btnCancel;
     }
 }
