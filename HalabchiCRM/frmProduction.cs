@@ -253,45 +253,45 @@ namespace HalabchiCRM
                     mat1 = (double.Parse(i.ProductUnitPerOne) * double.Parse(txtProductCount.Text) / 1000);
                     mat2 = double.Parse(mat.ProductUnit);
 
-                    if (mat2 < mat1)
-                    {
-                        FarsiMessageBox.MessageBox.Show("اخطار", "مقدار مواد اولیه انبار از سفارش شما کمتر است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
-                        _error++;
-                        break;
-                    }
-                    else
-                    {
-                        result = mat2 - mat1;
+                    //if (mat2 < mat1)
+                    //{
+                    //    FarsiMessageBox.MessageBox.Show("اخطار", "مقدار مواد اولیه انبار از سفارش شما کمتر است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                    //    _error++;
+                    //    break;
+                    //}
+                    //else
+                    //{
+                    result = mat2 - mat1;
 
-                        list.Add(new StorageType
-                        {
-                            ID = mat.ID,
-                            //StorageName = mat.StorageName,
-                            //ProductCode = mat.ProductCode,
-                            ProductName = mat.ProductName,
-                            ProductUnit = result.ToString(),
-                            //ProductType = mat.ProductType,
-                            //PipeLineName = mat.PipeLineName
-                        });
-                        mat1 = 0;
-                        mat2 = 0;
-                        result = 0;
-                    }
+                    list.Add(new StorageType
+                    {
+                        ID = mat.ID,
+                        //StorageName = mat.StorageName,
+                        //ProductCode = mat.ProductCode,
+                        ProductName = mat.ProductName,
+                        ProductUnit = result.ToString(),
+                        //ProductType = mat.ProductType,
+                        //PipeLineName = mat.PipeLineName
+                    });
+                    mat1 = 0;
+                    mat2 = 0;
+                    result = 0;
+                    //}
                 }
-                if (_error > 0)
-                {
-                    Clear();
-                }
-                else
-                {
-                    EFBatchOperation.For(db, db.StorageTypes).UpdateAll(list, u => u.ColumnsToUpdate(z => z.ProductUnit));
-                    var pro = db.StorageTypes.Where(u => u.ProductName == txtProductName.Text).FirstOrDefault();
-                    pro.ProductUnit = txtLastCount.Text;
-                    pro.PipeLineName = cmbxPipeLine.Text;
-                    db.SaveChanges();
-                    FarsiMessageBox.MessageBox.Show("موفقیت", "کالای مورد نظر با موفقیت ساخته و ثبت شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
-                    Clear();
-                }
+                //if (_error > 0)
+                //{
+                //    Clear();
+                //}
+                //else
+                //{
+                EFBatchOperation.For(db, db.StorageTypes).UpdateAll(list, u => u.ColumnsToUpdate(z => z.ProductUnit));
+                var pro = db.StorageTypes.Where(u => u.ProductName == txtProductName.Text).FirstOrDefault();
+                pro.ProductUnit = txtLastCount.Text;
+                pro.PipeLineName = cmbxPipeLine.Text;
+                db.SaveChanges();
+                FarsiMessageBox.MessageBox.Show("موفقیت", "کالای مورد نظر با موفقیت ساخته و ثبت شد", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Information);
+                Clear();
+                //}
 
             }
         }

@@ -46,21 +46,19 @@ namespace HalabchiCRM
                 }
             }
         }
-        private void LoadMaterial()
+        private void AutoCom()
         {
             using (var db = new HalabchiDB())
             {
                 var item = from i in db.StorageTypes where i.StorageName == "مواد اولیه" select i.ProductName;
-                cmbxMaterial.DataSource = item.ToList();
-                try
-                {
-                    if (item != null)
-                        cmbxMaterial.SelectedIndex = 0;
-                }
-                catch (Exception)
-                {
-                    return;
-                }
+
+                AutoCompleteStringCollection autoCom = new AutoCompleteStringCollection();
+
+                autoCom.AddRange(item.ToArray());
+
+                txtMaterial.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+                txtMaterial.AutoCompleteSource = AutoCompleteSource.CustomSource;
+                txtMaterial.AutoCompleteCustomSource = autoCom;
             }
         }
         private void Clear()
@@ -154,11 +152,14 @@ namespace HalabchiCRM
                     {
                         FormulaID = id.ID,
                         ProductName = cmbxProductName.Text,
-                        MaterialName = cmbxMaterial.Text,
+                        MaterialName = txtMaterial.Text,
                         ProductUnitPerOne = txtProductUnitPerOne.Text
                     };
                     dgvFormula.Rows.Add(data.FormulaID, data.ProductName, data.MaterialName, data.ProductUnitPerOne);
+                    txtMaterial.Text = "";
                     txtProductUnitPerOne.Text = "";
+                    txtMaterial.Select();
+                    txtMaterial.Focus();
                 }
             }
         }
@@ -189,7 +190,7 @@ namespace HalabchiCRM
         {
             LoadStorage();
             LoadFormula();
-            LoadMaterial();
+            AutoCom();
             LoadProduct(cmbxSelectStorage.Text);
             grbxProductionFormula.Enabled = false;
         }
@@ -216,6 +217,46 @@ namespace HalabchiCRM
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Clear();
+        }
+
+        private void DeleteF_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = FarsiMessageBox.MessageBox.Show("هشدار", "آیا مایل به حذف این فرمول میباشید؟", FarsiMessageBox.MessageBox.Buttons.YesNo, FarsiMessageBox.MessageBox.Icons.Question);
+            if (dr == DialogResult.Yes)
+            {
+                if (dgvProductionFormula.SelectedCells.Count > 0)
+                {
+                    _id = int.Parse(dgvProductionFormula.CurrentRow.Cells[0].Value.ToString());
+
+                    using (var db = new HalabchiDB())
+                    {
+                        var name = db.ProductionFormulaNames.Where(u => u.ID == _id).FirstOrDefault();
+                        var type = db.ProductionFormulaTypes.Where(u => u.FormulaID == _id).ToList();
+
+                        if (name != null)
+                        {
+                            db.ProductionFormulaNames.Remove(name);
+                            db.SaveChanges();
+                            LoadFormula();
+                        }
+                        else
+                            return;
+                        if (type != null)
+                        {
+                            db.ProductionFormulaTypes.RemoveRange(type);
+                            db.SaveChanges();
+                            LoadFormula();
+                        }
+                        else
+                            return;
+                    }
+                }
+                else
+                {
+                    FarsiMessageBox.MessageBox.Show("هشدار", "هیچ آیتمی انتخاب نشده است", FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                    LoadFormula();
+                }
+            }
         }
     }
 }

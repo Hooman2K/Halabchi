@@ -129,15 +129,15 @@ namespace HalabchiCRM
                 var info = db.Customers.Where(u => u.FactoryName == txtFactoryName.Text).FirstOrDefault();
                 if (product != null)
                 {
-                    if (_unit < double.Parse(txtProductUnit.Text))
-                    {
-                        FarsiMessageBox.MessageBox.Show("اخطار", "موجودی کالای انتخواب شده از موجوری انبار بیشتر است" + Environment.NewLine + "موجودی کالا : " + _unit, FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
-                        txtProductName.Text = txtProductUnit.Text = "";
-                        lblProductCode.Text = "کد کالا : ---";
-                        txtProductName.SelectAll();
-                        txtProductName.Focus();
-                        return;
-                    }
+                    //if (_unit < double.Parse(txtProductUnit.Text))
+                    //{
+                    //    FarsiMessageBox.MessageBox.Show("اخطار", "موجودی کالای انتخواب شده از موجوری انبار بیشتر است" + Environment.NewLine + "موجودی کالا : " + _unit, FarsiMessageBox.MessageBox.Buttons.OK, FarsiMessageBox.MessageBox.Icons.Warning);
+                    //    txtProductName.Text = txtProductUnit.Text = "";
+                    //    lblProductCode.Text = "کد کالا : ---";
+                    //    txtProductName.SelectAll();
+                    //    txtProductName.Focus();
+                    //    return;
+                    //}
                     var data = new TypeOf
                     {
                         ContractID = txtContractID.Text,

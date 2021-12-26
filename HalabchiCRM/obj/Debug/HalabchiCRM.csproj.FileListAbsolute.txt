@@ -142,12 +142,6 @@ C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.dll
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.MappingAPI.dll
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.Utilities.dll
-C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Base.dll
-C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Controls.dll
-C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Controls.Win.dll
-C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Data.dll
-C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Report.dll
-C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Report.Win.dll
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.xml
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Base.pdb
@@ -194,3 +188,14 @@ C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.exe
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.pdb
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\DevComponents.DotNetBar2.xml
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\DevComponents.DotNetBar2.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Microsoft.SqlServer.Types.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
