@@ -354,7 +354,7 @@ namespace HalabchiCRM
                     foreach (var i in item)
                     {
                         mat1 = (double.Parse(i.ProductUnitPerOne) * double.Parse(txtProductCount.Text) / 1000);
-                        lblHalab.Text += i.MaterialName + " : " + mat1 + Environment.NewLine;
+                        lblHalab.Text += i.MaterialName + " : " + mat1 + " Kg " +Environment.NewLine;
                     }
                 }
                 btnAdds.Enabled = false;

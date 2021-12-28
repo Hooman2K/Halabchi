@@ -28,7 +28,8 @@ namespace HalabchiCRM
         private void Clear()
         {
             txtProductName.Text = txtProductCode.Text = "";
-            cmbxUnit.SelectedIndex = 0;
+            //cmbxUnit.SelectedIndex = 0;
+            txtProductCode.Enabled = true;
             txtProductCode.SelectAll();
             txtProductCode.Focus();
             _isNew = true;
