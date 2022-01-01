@@ -694,7 +694,7 @@ order by start_time desc");
                 _save = new SaveFileDialog();
                 _save.Filter = "PDF File (.pdf)|*.pdf";
 
-                if (_save .ShowDialog()==DialogResult.OK)
+                if (_save.ShowDialog() == DialogResult.OK)
                 {
                     report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
                 }
@@ -711,6 +711,14 @@ order by start_time desc");
         private void btnReportTolidKala_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnErsaleKala_Click(object sender, EventArgs e)
+        {
+            frmErsaleKala ersaleKala = new frmErsaleKala();
+            this.Hide();
+            ersaleKala.ShowDialog();
+            this.Show();
         }
     }
 }

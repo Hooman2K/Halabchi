@@ -199,3 +199,5 @@ C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\pt\Microsoft.SqlServ
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\ru\Microsoft.SqlServer.Types.resources.dll
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\zh-Hans\Microsoft.SqlServer.Types.resources.dll
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmErsaleKala.resources
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmErsal.resources

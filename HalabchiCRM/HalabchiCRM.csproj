@@ -122,6 +122,18 @@
     <Compile Include="frmContract.Designer.cs">
       <DependentUpon>frmContract.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmErsal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmErsal.Designer.cs">
+      <DependentUpon>frmErsal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmErsaleKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmErsaleKala.Designer.cs">
+      <DependentUpon>frmErsaleKala.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSupply.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,6 +272,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmContract.resx">
       <DependentUpon>frmContract.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmErsal.resx">
+      <DependentUpon>frmErsal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmErsaleKala.resx">
+      <DependentUpon>frmErsaleKala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupply.resx">
       <DependentUpon>frmSupply.cs</DependentUpon>
