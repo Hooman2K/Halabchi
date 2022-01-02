@@ -65,7 +65,12 @@ namespace HalabchiCRM
 
         private void dgvContract_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            frmErsal ersal = new frmErsal();
+            ersal._ContractID = dgvContract.CurrentRow.Cells[1].Value.ToString();
 
+            this.Hide();
+            ersal.ShowDialog();
+            this.Show();
         }
     }
 }

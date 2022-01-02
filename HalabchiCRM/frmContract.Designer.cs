@@ -470,6 +470,7 @@
             // 
             this.contextMenuBar1.AntiAlias = true;
             this.contextMenuBar1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.contextMenuBar1.IsMaximized = false;
             this.contextMenuBar1.Items.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.buttonItem1});
             this.contextMenuBar1.Location = new System.Drawing.Point(12, 169);

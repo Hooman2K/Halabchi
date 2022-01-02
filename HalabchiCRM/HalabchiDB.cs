@@ -40,6 +40,7 @@ namespace HalabchiCRM
         public virtual DbSet<TolidZayeatChap> TolidZayeatChaps { get; set; }
         public virtual DbSet<LogAddProduct> LogAddProducts { get; set; }
         public virtual DbSet<Supply> Supplys { get; set; }
+        public virtual DbSet<Ersali> Ersalis { get; set; }
     }
 
     public class User
@@ -290,6 +291,24 @@ namespace HalabchiCRM
         [MaxLength(150)]
         public string SupplyList { get; set; }
         public string Address { get; set; }
+    }
 
+    public class Ersali
+    {
+        public int ID { get; set; }
+        [MaxLength(10)]
+        public string CustomerID { get; set; }
+        [MaxLength(10)]
+        public string ContractID { get; set; }
+        [MaxLength(10)]
+        public string ProductCode { get; set; }
+        [MaxLength(50)]
+        public string ProductName { get; set; }
+        [MaxLength(10)]
+        public string TarikhErsal { get; set; }
+        [MaxLength(20)]
+        public string MeghdareErsal { get; set; }
+        [MaxLength(20)]
+        public string Mandeh { get; set; }
     }
 }
