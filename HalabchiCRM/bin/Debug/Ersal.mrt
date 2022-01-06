@@ -709,8 +709,8 @@
           <Components isList="true" count="2">
             <Text17 Ref="47" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>2,0,2.1,0.4</ClientRectangle>
+              <Brush>[248:232:140]</Brush>
+              <ClientRectangle>2,0,2.1,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
               <Font>Arial,10</Font>
               <Guid>2b6c97348dc04c53b6ebb5bb27938cd5</Guid>
@@ -733,10 +733,10 @@
             </Text17>
             <Text18 Ref="49" type="Text" isKey="true">
               <Border>All;Black;1;Solid;False;4;Black</Border>
-              <Brush>Transparent</Brush>
-              <ClientRectangle>4.1,0,1.7,0.4</ClientRectangle>
+              <Brush>[255:192:0]</Brush>
+              <ClientRectangle>4.1,0,1.7,0.3</ClientRectangle>
               <Conditions isList="true" count="0" />
-              <Font>Arial,14</Font>
+              <Font>Arial,14,Bold</Font>
               <Guid>d1df376141224aa8b6b6e17e4a17685f</Guid>
               <HorAlignment>Center</HorAlignment>
               <Margins>0,0,0,0</Margins>
@@ -789,10 +789,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>1/6/2022 8:35:43 PM</ReportChanged>
+  <ReportChanged>1/6/2022 11:24:44 PM</ReportChanged>
   <ReportCreated>9/17/2018 4:56:23 AM</ReportCreated>
-  <ReportFile>C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Ersal.mrt</ReportFile>
-  <ReportGuid>5d63280e6d9b4626b0db4cad502a8cce</ReportGuid>
+  <ReportFile>C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Ersal.mrt</ReportFile>
+  <ReportGuid>0854938daa3e4cdeb468b58f2ba95e14</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Inches</ReportUnit>
   <ReportVersion>2018.1.8.0</ReportVersion>
