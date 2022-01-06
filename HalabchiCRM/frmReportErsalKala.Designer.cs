@@ -31,12 +31,20 @@ namespace HalabchiCRM
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.checkBoxX1 = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.rbtnAll = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.cmbxFactory = new System.Windows.Forms.ComboBox();
             this.dgvErsal = new DevComponents.DotNetBar.Controls.DataGridViewX();
-            this.chbxItemContract = new System.Windows.Forms.ComboBox();
-            this.checkBoxX2 = new DevComponents.DotNetBar.Controls.CheckBoxX();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbxItemContract = new System.Windows.Forms.ComboBox();
+            this.rbtnItem = new DevComponents.DotNetBar.Controls.CheckBoxX();
+            this.cmbxContactTitle = new System.Windows.Forms.ComboBox();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.cExport = new DevComponents.DotNetBar.ContextMenuBar();
             this.btnExportContext = new DevComponents.DotNetBar.ButtonItem();
@@ -50,14 +58,6 @@ namespace HalabchiCRM
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvErsal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cExport)).BeginInit();
             this.SuspendLayout();
@@ -75,21 +75,21 @@ namespace HalabchiCRM
             this.labelX1.TabIndex = 0;
             this.labelX1.Text = "نام شرکت : ";
             // 
-            // checkBoxX1
+            // rbtnAll
             // 
-            this.checkBoxX1.AutoSize = true;
+            this.rbtnAll.AutoSize = true;
             // 
             // 
             // 
-            this.checkBoxX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.checkBoxX1.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.checkBoxX1.Location = new System.Drawing.Point(401, 42);
-            this.checkBoxX1.Name = "checkBoxX1";
-            this.checkBoxX1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBoxX1.Size = new System.Drawing.Size(175, 18);
-            this.checkBoxX1.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.checkBoxX1.TabIndex = 2;
-            this.checkBoxX1.Text = "بر اساس تمامی مفاد قرارداد";
+            this.rbtnAll.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.rbtnAll.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.rbtnAll.Location = new System.Drawing.Point(401, 42);
+            this.rbtnAll.Name = "rbtnAll";
+            this.rbtnAll.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rbtnAll.Size = new System.Drawing.Size(175, 18);
+            this.rbtnAll.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.rbtnAll.TabIndex = 2;
+            this.rbtnAll.Text = "بر اساس تمامی مفاد قرارداد";
             // 
             // cmbxFactory
             // 
@@ -132,41 +132,101 @@ namespace HalabchiCRM
             this.dgvErsal.Size = new System.Drawing.Size(616, 169);
             this.dgvErsal.TabIndex = 3;
             // 
-            // chbxItemContract
+            // Column1
             // 
-            this.chbxItemContract.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.chbxItemContract.FormattingEnabled = true;
-            this.chbxItemContract.Location = new System.Drawing.Point(51, 39);
-            this.chbxItemContract.Name = "chbxItemContract";
-            this.chbxItemContract.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.chbxItemContract.Size = new System.Drawing.Size(181, 24);
-            this.chbxItemContract.TabIndex = 4;
+            this.Column1.DataPropertyName = "ID";
+            this.Column1.HeaderText = "شماره";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
             // 
-            // checkBoxX2
+            // Column2
             // 
-            this.checkBoxX2.AutoSize = true;
+            this.Column2.DataPropertyName = "CustomerID";
+            this.Column2.HeaderText = "شماره مشتری";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Visible = false;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "ContractID";
+            this.Column3.HeaderText = "شماره قرارداد";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Visible = false;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "ProductCode";
+            this.Column4.HeaderText = "کد محصول";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "ProductName";
+            this.Column5.HeaderText = "نام محصول";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 150;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "TarikhErsal";
+            this.Column6.HeaderText = "تاریخ ارسال";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "MeghdareErsal";
+            this.Column7.HeaderText = "بار ارسالی";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Mandeh";
+            this.Column8.HeaderText = "مانده";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // cmbxItemContract
+            // 
+            this.cmbxItemContract.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxItemContract.FormattingEnabled = true;
+            this.cmbxItemContract.Location = new System.Drawing.Point(51, 39);
+            this.cmbxItemContract.Name = "cmbxItemContract";
+            this.cmbxItemContract.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbxItemContract.Size = new System.Drawing.Size(181, 24);
+            this.cmbxItemContract.TabIndex = 4;
+            // 
+            // rbtnItem
+            // 
+            this.rbtnItem.AutoSize = true;
             // 
             // 
             // 
-            this.checkBoxX2.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.checkBoxX2.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
-            this.checkBoxX2.Location = new System.Drawing.Point(234, 42);
-            this.checkBoxX2.Name = "checkBoxX2";
-            this.checkBoxX2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.checkBoxX2.Size = new System.Drawing.Size(155, 18);
-            this.checkBoxX2.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
-            this.checkBoxX2.TabIndex = 3;
-            this.checkBoxX2.Text = "بر اساس ریز اقلام موجود";
+            this.rbtnItem.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.rbtnItem.CheckBoxStyle = DevComponents.DotNetBar.eCheckBoxStyle.RadioButton;
+            this.rbtnItem.Location = new System.Drawing.Point(234, 42);
+            this.rbtnItem.Name = "rbtnItem";
+            this.rbtnItem.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.rbtnItem.Size = new System.Drawing.Size(155, 18);
+            this.rbtnItem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.rbtnItem.TabIndex = 3;
+            this.rbtnItem.Text = "بر اساس ریز اقلام موجود";
             // 
-            // comboBox1
+            // cmbxContactTitle
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(51, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.comboBox1.Size = new System.Drawing.Size(181, 24);
-            this.comboBox1.TabIndex = 1;
+            this.cmbxContactTitle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbxContactTitle.FormattingEnabled = true;
+            this.cmbxContactTitle.Location = new System.Drawing.Point(51, 12);
+            this.cmbxContactTitle.Name = "cmbxContactTitle";
+            this.cmbxContactTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.cmbxContactTitle.Size = new System.Drawing.Size(181, 24);
+            this.cmbxContactTitle.TabIndex = 1;
             // 
             // labelX2
             // 
@@ -269,79 +329,19 @@ namespace HalabchiCRM
             this.dataGridViewTextBoxColumn8.HeaderText = "مانده";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "ID";
-            this.Column1.HeaderText = "شماره";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "CustomerID";
-            this.Column2.HeaderText = "شماره مشتری";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Visible = false;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "ContractID";
-            this.Column3.HeaderText = "شماره قرارداد";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Visible = false;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "ProductCode";
-            this.Column4.HeaderText = "کد محصول";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "ProductName";
-            this.Column5.HeaderText = "نام محصول";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 150;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "TarikhErsal";
-            this.Column6.HeaderText = "تاریخ ارسال";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "MeghdareErsal";
-            this.Column7.HeaderText = "بار ارسالی";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Mandeh";
-            this.Column8.HeaderText = "مانده";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
             // frmReportErsalKala
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(640, 237);
             this.Controls.Add(this.cExport);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbxContactTitle);
             this.Controls.Add(this.labelX2);
-            this.Controls.Add(this.chbxItemContract);
-            this.Controls.Add(this.checkBoxX2);
+            this.Controls.Add(this.cmbxItemContract);
+            this.Controls.Add(this.rbtnItem);
             this.Controls.Add(this.dgvErsal);
             this.Controls.Add(this.cmbxFactory);
-            this.Controls.Add(this.checkBoxX1);
+            this.Controls.Add(this.rbtnAll);
             this.Controls.Add(this.labelX1);
             this.DoubleBuffered = true;
             this.EnableGlass = false;
@@ -352,6 +352,7 @@ namespace HalabchiCRM
             this.Name = "frmReportErsalKala";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "گزارش ارسال کالا";
+            this.Load += new System.EventHandler(this.frmReportErsalKala_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvErsal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cExport)).EndInit();
             this.ResumeLayout(false);
@@ -362,7 +363,7 @@ namespace HalabchiCRM
         #endregion
 
         private DevComponents.DotNetBar.LabelX labelX1;
-        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX1;
+        private DevComponents.DotNetBar.Controls.CheckBoxX rbtnAll;
         private System.Windows.Forms.ComboBox cmbxFactory;
         private DevComponents.DotNetBar.Controls.DataGridViewX dgvErsal;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
@@ -373,9 +374,9 @@ namespace HalabchiCRM
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.ComboBox chbxItemContract;
-        private DevComponents.DotNetBar.Controls.CheckBoxX checkBoxX2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbxItemContract;
+        private DevComponents.DotNetBar.Controls.CheckBoxX rbtnItem;
+        private System.Windows.Forms.ComboBox cmbxContactTitle;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.ContextMenuBar cExport;
         private DevComponents.DotNetBar.ButtonItem btnExportContext;
