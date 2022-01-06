@@ -90,6 +90,7 @@ namespace HalabchiCRM
             this.rbtnAll.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.rbtnAll.TabIndex = 2;
             this.rbtnAll.Text = "بر اساس تمامی مفاد قرارداد";
+            this.rbtnAll.CheckedChanged += new System.EventHandler(this.rbtnAll_CheckedChanged);
             // 
             // cmbxFactory
             // 
@@ -100,6 +101,7 @@ namespace HalabchiCRM
             this.cmbxFactory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxFactory.Size = new System.Drawing.Size(180, 24);
             this.cmbxFactory.TabIndex = 0;
+            this.cmbxFactory.SelectedIndexChanged += new System.EventHandler(this.cmbxFactory_SelectedIndexChanged);
             // 
             // dgvErsal
             // 
@@ -201,6 +203,7 @@ namespace HalabchiCRM
             this.cmbxItemContract.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxItemContract.Size = new System.Drawing.Size(181, 24);
             this.cmbxItemContract.TabIndex = 4;
+            this.cmbxItemContract.SelectedIndexChanged += new System.EventHandler(this.cmbxItemContract_SelectedIndexChanged);
             // 
             // rbtnItem
             // 
@@ -217,6 +220,7 @@ namespace HalabchiCRM
             this.rbtnItem.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.rbtnItem.TabIndex = 3;
             this.rbtnItem.Text = "بر اساس ریز اقلام موجود";
+            this.rbtnItem.CheckedChanged += new System.EventHandler(this.rbtnItem_CheckedChanged);
             // 
             // cmbxContactTitle
             // 
@@ -227,6 +231,7 @@ namespace HalabchiCRM
             this.cmbxContactTitle.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.cmbxContactTitle.Size = new System.Drawing.Size(181, 24);
             this.cmbxContactTitle.TabIndex = 1;
+            this.cmbxContactTitle.SelectedIndexChanged += new System.EventHandler(this.cmbxContactTitle_SelectedIndexChanged);
             // 
             // labelX2
             // 
