@@ -69,7 +69,7 @@
     <Page1 Ref="5" type="Page" isKey="true">
       <Border>All;Black;2;Solid;False;4;Black</Border>
       <Brush>Transparent</Brush>
-      <Components isList="true" count="5">
+      <Components isList="true" count="6">
         <PageHeaderBand1 Ref="6" type="PageHeaderBand" isKey="true">
           <Border>All;Black;1;Solid;False;4;Black</Border>
           <Brush>Transparent</Brush>
@@ -703,6 +703,64 @@
           <Parent isRef="5" />
           <Sort isList="true" count="0" />
         </DataDataSource22>
+        <FooterBand1 Ref="46" type="FooterBand" isKey="true">
+          <Brush>Transparent</Brush>
+          <ClientRectangle>0,5,10.4,0.3</ClientRectangle>
+          <Components isList="true" count="2">
+            <Text17 Ref="47" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>2,0,2.1,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,10</Font>
+              <Guid>2b6c97348dc04c53b6ebb5bb27938cd5</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text17</Name>
+              <Page isRef="5" />
+              <Parent isRef="46" />
+              <Text>{cSum(DataSource2.MeghdareErsal)}</Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="48" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Totals</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text17>
+            <Text18 Ref="49" type="Text" isKey="true">
+              <Border>All;Black;1;Solid;False;4;Black</Border>
+              <Brush>Transparent</Brush>
+              <ClientRectangle>4.1,0,1.7,0.4</ClientRectangle>
+              <Conditions isList="true" count="0" />
+              <Font>Arial,14</Font>
+              <Guid>d1df376141224aa8b6b6e17e4a17685f</Guid>
+              <HorAlignment>Center</HorAlignment>
+              <Margins>0,0,0,0</Margins>
+              <Name>Text18</Name>
+              <Page isRef="5" />
+              <Parent isRef="46" />
+              <Text>مجموع ارسالی : </Text>
+              <TextBrush>Black</TextBrush>
+              <TextFormat Ref="50" type="NumberFormat" isKey="true">
+                <DecimalDigits>0</DecimalDigits>
+                <GroupSeparator>,</GroupSeparator>
+                <NegativePattern>1</NegativePattern>
+                <UseLocalSetting>False</UseLocalSetting>
+              </TextFormat>
+              <TextOptions>,,RightToLeft=True,,,A=0</TextOptions>
+              <Type>Expression</Type>
+              <VertAlignment>Center</VertAlignment>
+            </Text18>
+          </Components>
+          <Conditions isList="true" count="0" />
+          <Name>FooterBand1</Name>
+          <Page isRef="5" />
+          <Parent isRef="5" />
+        </FooterBand1>
       </Components>
       <Conditions isList="true" count="0" />
       <Guid>73c3c3beb11c430da29cbb6038826bcb</Guid>
@@ -713,13 +771,13 @@
       <PageWidth>11</PageWidth>
       <PaperSize>Letter</PaperSize>
       <Report isRef="0" />
-      <Watermark Ref="46" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
+      <Watermark Ref="51" type="Stimulsoft.Report.Components.StiWatermark" isKey="true">
         <Font>Arial,100</Font>
         <TextBrush>[50:0:0:0]</TextBrush>
       </Watermark>
     </Page1>
   </Pages>
-  <PrinterSettings Ref="47" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
+  <PrinterSettings Ref="52" type="Stimulsoft.Report.Print.StiPrinterSettings" isKey="true" />
   <ReferencedAssemblies isList="true" count="8">
     <value>System.Dll</value>
     <value>System.Drawing.Dll</value>
@@ -731,10 +789,10 @@
     <value>Stimulsoft.Report.Dll</value>
   </ReferencedAssemblies>
   <ReportAlias>Report</ReportAlias>
-  <ReportChanged>1/6/2022 7:40:59 PM</ReportChanged>
+  <ReportChanged>1/6/2022 8:35:43 PM</ReportChanged>
   <ReportCreated>9/17/2018 4:56:23 AM</ReportCreated>
-  <ReportFile>C:\Users\Parii\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Contracts.mrt</ReportFile>
-  <ReportGuid>7cc1314e6c6e464ba39d56468f17f8a1</ReportGuid>
+  <ReportFile>C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Ersal.mrt</ReportFile>
+  <ReportGuid>5d63280e6d9b4626b0db4cad502a8cce</ReportGuid>
   <ReportName>Report</ReportName>
   <ReportUnit>Inches</ReportUnit>
   <ReportVersion>2018.1.8.0</ReportVersion>

@@ -141,15 +141,23 @@ namespace HalabchiCRM
             DataTable dt3 = new DataTable();
 
             dt1 = db.Select("select * from Customers where CustomerID = " + _customerId);
-            dt2 = db.Select("select * from Types where CustomerID = " + _customerId + " and ContractID = " + _contractId);
-            dt3 = db.Select("select * from Ersalis where CustomerID = " + _customerId + " and ContractID = " + _contractId);
+            dt2 = db.Select("select * from Contracts where CustomerID = " + _customerId + " and ContractID = " + _contractId);
+
+            if (rbtnAll.Checked == true)
+            {
+                dt3 = db.Select("select * from Ersalis where CustomerID = " + _customerId + " and ContractID = " + _contractId);
+            }
+            if (rbtnItem.Checked == true)
+            {
+                dt3 = db.Select("select * from Ersalis where CustomerID = " + _customerId + " and ContractID = " + _contractId + " and ProductName = " + cmbxItemContract.Text);
+            }
 
             DataSet ds = new DataSet();
-            ds.Merge(dt1);
-            ds.Tables[0].TableName = "ReportContract";
             ds.Merge(dt2);
-            ds.Tables[1].TableName = "ReportType";
+            ds.Tables[0].TableName = "ReportContract";
             ds.Merge(dt3);
+            ds.Tables[1].TableName = "ReportType";
+            ds.Merge(dt1);
             ds.Tables[2].TableName = "ReportCustomer";
 
             report.Load(Application.StartupPath + "\\Ersal.mrt");
