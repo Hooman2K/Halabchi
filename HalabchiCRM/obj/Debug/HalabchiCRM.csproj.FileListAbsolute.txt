@@ -201,3 +201,10 @@ C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\zh-Hans\Microsoft.Sq
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmErsaleKala.resources
 C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmErsal.resources
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Base.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Controls.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Controls.Win.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Data.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Report.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\bin\Debug\Stimulsoft.Report.Win.dll
+C:\Users\HP\Documents\GitHub\Halabchi\HalabchiCRM\obj\Debug\HalabchiCRM.frmReportErsalKala.resources

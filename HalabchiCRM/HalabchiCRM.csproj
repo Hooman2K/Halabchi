@@ -134,6 +134,12 @@
     <Compile Include="frmErsaleKala.Designer.cs">
       <DependentUpon>frmErsaleKala.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReportErsalKala.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReportErsalKala.Designer.cs">
+      <DependentUpon>frmReportErsalKala.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSupply.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -278,6 +284,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmErsaleKala.resx">
       <DependentUpon>frmErsaleKala.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReportErsalKala.resx">
+      <DependentUpon>frmReportErsalKala.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSupply.resx">
       <DependentUpon>frmSupply.cs</DependentUpon>

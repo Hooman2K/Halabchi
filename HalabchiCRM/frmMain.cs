@@ -720,5 +720,13 @@ order by start_time desc");
             ersaleKala.ShowDialog();
             this.Show();
         }
+
+        private void btnReportErsal_Click(object sender, EventArgs e)
+        {
+            frmReportErsalKala reportErsalKala = new frmReportErsalKala();
+            this.Hide();
+            reportErsalKala.ShowDialog();
+            this.Show();
+        }
     }
 }
