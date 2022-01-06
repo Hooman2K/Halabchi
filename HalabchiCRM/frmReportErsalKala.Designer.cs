@@ -281,6 +281,7 @@ namespace HalabchiCRM
             // 
             this.buttonItem1.Name = "buttonItem1";
             this.buttonItem1.Text = "از جدول";
+            this.buttonItem1.Click += new System.EventHandler(this.buttonItem1_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 

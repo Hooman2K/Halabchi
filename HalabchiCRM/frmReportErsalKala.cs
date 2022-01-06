@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using DevComponents.DotNetBar;
+using Stimulsoft.Report;
 
 namespace HalabchiCRM
 {
@@ -16,6 +17,8 @@ namespace HalabchiCRM
     {
         string _contractId;
         string _customerId;
+        SaveFileDialog _save;
+        StiReport report = new StiReport();
 
         public frmReportErsalKala()
         {
@@ -126,6 +129,39 @@ namespace HalabchiCRM
             using (var db = new HalabchiDB())
             {
                 dgvErsal.DataSource = db.Ersalis.Where(u => u.ContractID == _contractId && u.CustomerID == _customerId && u.ProductName == cmbxItemContract.Text).ToList();
+            }
+        }
+
+        private void buttonItem1_Click(object sender, EventArgs e)
+        {
+            ADO db = new ADO();
+
+            DataTable dt1 = new DataTable();
+            DataTable dt2 = new DataTable();
+            DataTable dt3 = new DataTable();
+
+            dt1 = db.Select("select * from Customers where CustomerID = " + _customerId);
+            dt2 = db.Select("select * from Types where CustomerID = " + _customerId + " and ContractID = " + _contractId);
+            dt3 = db.Select("select * from Ersalis where CustomerID = " + _customerId + " and ContractID = " + _contractId);
+
+            DataSet ds = new DataSet();
+            ds.Merge(dt1);
+            ds.Tables[0].TableName = "ReportContract";
+            ds.Merge(dt2);
+            ds.Tables[1].TableName = "ReportType";
+            ds.Merge(dt3);
+            ds.Tables[2].TableName = "ReportCustomer";
+
+            report.Load(Application.StartupPath + "\\Ersal.mrt");
+            report.RegData(ds);
+            report.Render(false);
+
+            _save = new SaveFileDialog();
+            _save.Filter = "pdf file (.pdf) | *.pdf";
+
+            if (_save.ShowDialog() == DialogResult.OK)
+            {
+                report.ExportDocument(StiExportFormat.Pdf, _save.FileName);
             }
         }
     }
