@@ -104,6 +104,21 @@ namespace HalabchiCRM
             fc.txtWebSite.Text = dgvCustomer.CurrentRow.Cells[11].Value.ToString();
             fc.txtOther.Text = dgvCustomer.CurrentRow.Cells[12].Value.ToString();
             fc.txtAddress.Text = dgvCustomer.CurrentRow.Cells[13].Value.ToString();
+
+            fc.txtCusromerID.ReadOnly = true;
+            fc.txtPostCode.ReadOnly = true;
+            fc.txtEconomyCode.ReadOnly = true;
+            fc.txtManagerName.ReadOnly = true;
+            fc.txtMobile.ReadOnly = true;
+            fc.txtFactoryName.ReadOnly = true;
+            fc.txtBrand.ReadOnly = true;
+            fc.txtTell.ReadOnly = true;
+            fc.txtFax.ReadOnly = true;
+            fc.txtEmail.ReadOnly = true;
+            fc.txtWebSite.ReadOnly = true;
+            fc.txtOther.ReadOnly = true;
+            fc.txtAddress.ReadOnly = true;
+
             fc.btnRegister.Enabled = false;
             fc.btnClear.Enabled = false;
             fc.ShowDialog();
